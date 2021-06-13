@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core'
 import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { listVideos } from '../../graphql/queries'
-import { PlayArrow, Stop } from '@material-ui/icons'
+import { Computer, PlayArrow, StayCurrentLandscape, Stop, Tablet } from '@material-ui/icons'
 import ReactPlayer from 'react-player'
 import { Grid } from '@material-ui/core'
 
@@ -17,6 +17,7 @@ const VideoLibrary = () => {
 	const [videos, setVideos] = useState([]);
 	const [videoPlaying, setVideoPlaying] = useState('');
 	const [videoURL, setVideoURL] = useState('');
+	const [videoSize, setVideoSize] = useState('comp');
 
 	useEffect(() => {
 		fetchVideos();
@@ -41,6 +42,19 @@ const VideoLibrary = () => {
 		}
 	}
 
+	const resizeVideo = (display) => {
+		if (display === 'phone') {
+			setVideoSize("50%");
+			return;
+		} else if (display === 'tablet') {
+			setVideoSize("75%");
+			return;
+		} else if (display === 'comp') {
+			setVideoSize("100%");
+			return;
+		} 
+	}
+
 	const fetchVideos = async () => {
 		try {
 			const videoData = await API.graphql(graphqlOperation(listVideos));
@@ -58,7 +72,16 @@ const VideoLibrary = () => {
 			width="100%"
 			alignItems="center"
 			justify="center"
+			width={videoSize}
+			margin="auto"
 		>
+			<Grid
+				container
+			>
+				<Grid item><IconButton onClick={() => resizeVideo('phone')}><StayCurrentLandscape /></IconButton></Grid>
+				<Grid item><IconButton onClick={() => resizeVideo('tablet')}><Tablet /></IconButton></Grid>
+				<Grid item><IconButton onClick={() => resizeVideo('comp')}><Computer /></IconButton></Grid>
+			</Grid>
 			{videos.map((video, idx) => {
 				return <Paper variant="outlined" elevation={2} sx={{py: 2, px: 10, m: 1}} key={`video_${idx}`}>
 					<Grid
@@ -95,6 +118,7 @@ const VideoLibrary = () => {
 							>
 								<Grid
 									item
+									// width={videoSize}
 									sx={{
 										pt: 2
 									}}

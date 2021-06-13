@@ -1,0 +1,32 @@
+type Channel @model {
+  id: ID!
+  name: String!
+  description: String
+  category: String
+  operator: String 
+  target: Int
+}
+
+type Library @model {
+  showcaseId: ID!
+  videoId: ID!
+  title: String!
+  orig_title: String
+  orig_iframe: String
+  createDate: String 
+  orig_videoUrl: String
+  orig_thumbnail: String
+  description: String
+  order: Int
+}
+
+type Video @model {
+  id: ID!
+  title: String!
+  url: String!
+  description: String
+  order: Int
+  showcase: Int
+  ownerId: Int
+  ownerName: String
+}

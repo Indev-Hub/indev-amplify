@@ -1,0 +1,249 @@
+/* This sets the background to transparent so it "Floats" on the UGrow Webpage. We Also declare the font style and weight */
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* This is the class for the div that wraps around thumbnail photos in the columns; First appears at line  122 in main JS */
+.video-class {
+  margin-top: 1%;
+}
+
+/* This sets the margin for the row that holds the 2 columns */
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* This is the class for the embedded video; Declared at line 255 in main.js */
+.embedded-video {
+  text-align: center;
+  width: 100%;
+  height: 33.33vw;
+  object-fit: contain;
+}
+
+/* CSS for left column picture */
+#pictureOne {
+  /* height: auto;
+  width: auto; */
+  object-fit: contain;
+  object-position: top 75%;
+  margin-top: 1px;
+  text-align: left;
+
+  padding-top: 15px;
+  margin-bottom: -30px;
+}
+
+/* CSS for right column picture */
+#pictureTwo {
+  /* height: auto;
+  width: auto; */
+  object-fit: contain;
+  object-position: top 75%;
+  margin-top: 1px;
+  text-align: left;
+
+  padding-top: 15px;
+  margin-bottom: -30px;
+}
+
+/* This is the picture for mobile display */
+#pictureMobile {
+  object-fit: contain;
+  object-position: top 75%;
+  margin-top: 1px;
+  margin-bottom: -35px;
+}
+
+/* This is the container that wraps around the entire gallery */
+#main-container {
+  background-position-y: center;
+  background-position-x: center;
+  width: 100%;
+}
+
+/* Hero Title */
+#vid-header {
+  text-align: left;
+  margin-bottom: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  margin-top: -60px;
+}
+
+/* Hero Vid (there is a class for HeroVid and ID) */
+#vid {
+  width: inherit;
+  height: inherit;
+}
+
+#row1 {
+  background-position-y: center;
+  background-position-x: center;
+}
+
+#total {
+  text-align: center;
+  color: black;
+  font-size: 27px;
+}
+
+/* This is the container for the columns*/
+#videocontOne {
+}
+
+/* Left hand column on HTML */
+#colOne {
+  float: left;
+  width: 49.3%;
+}
+
+/* Right hand column on HTML */
+#colTwo {
+  width: 49.3%;
+  float: right;
+}
+
+/* This is the container for each of the thumbnails */
+#thumbCont {
+}
+
+/* Thumbnail Titles */
+#header-font {
+  font-size: 25px;
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+}
+
+#vid-cont {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media Queries */
+
+/* Mobile */
+@media only screen and (min-width: 1px) and (max-width: 768px) {
+  /* For mobile; Hides desktop display */
+  #desktop {
+    display: none;
+  }
+  /* Shows mobile display */
+  #mobile {
+    display: show;
+  }
+  /* We change the properties of the thubnail titles */
+  #header-font {
+    font-size: 25px;
+    text-align: left;
+    margin: 40px 0px 20px 0px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  /* We also Change Properties for the Hero vid title */
+  #vid-header {
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 3px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1026px) and (max-width: 2560px) {
+  /* For desktop we show the desktop display  */
+  #desktop {
+    display: show;
+  }
+  /* We hide the mobile display */
+  #mobile {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
+  /* Make a Slight adjustment to column Two */
+
+  /* Continue hiding mobile display! */
+  #mobile {
+    display: none;
+  }
+}
+
+/* All of this Below is UIkit. !!!NEED FOR EMBEDDED CONTENT!!! */
+/*! UIkit 3.5.6 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+
+/* Embedded content
+ ========================================================================== */
+/*
+ * Remove the gap between embedded content and the bottom of their containers.
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/*
+ * 1. Add responsiveness.
+ * 2. Auto-scale the height. Only needed if `height` attribute is present.
+ * 3. Corrects responsive `max-width` behavior if padding and border are used.
+ * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
+ */
+canvas,
+img,
+video {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  box-sizing: border-box;
+}
+/* 4 */
+@supports (display: block) {
+  svg {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+/*
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/*
+ * 1. Fix lazy loading images if parent element is set to `display: inline` and has `overflow: hidden`.
+ * 2. Hide `alt` text for lazy loading images.
+ * Note: Selector for background while loading img[data-src*='.jpg'][src*='data:image'] { background: grey; }
+ */
+img:not([src]) {
+  /* 1 */
+  min-width: 1px;
+  /* 2 */
+  visibility: hidden;
+}
+/*
+ * Iframe
+ * Remove border in all browsers
+ */
+iframe {
+  border: 0;
+}

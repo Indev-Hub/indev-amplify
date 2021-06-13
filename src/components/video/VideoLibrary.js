@@ -4,12 +4,14 @@ import {
 	Box,
 	IconButton,
 	Paper,
+	Typography,
 	// Typography
 } from '@material-ui/core'
 import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { listVideos } from '../../graphql/queries'
 import { PlayArrow, Stop } from '@material-ui/icons'
 import ReactPlayer from 'react-player'
+import { Grid } from '@material-ui/core'
 
 const VideoLibrary = () => {
 	const [videos, setVideos] = useState([]);
@@ -53,34 +55,63 @@ const VideoLibrary = () => {
 
 	return (
 		<Box
-			width="80%"
+			width="100%"
+			alignItems="center"
+			justify="center"
 		>
 			{videos.map((video, idx) => {
-				return <Paper variant="outlined" elevation={2} sx={{p: 2}} key={`video_${idx}`}>
-					<Box className="videoCard">
-						<IconButton aria-label="play" onClick={() => toggleVideo(idx)}>
-							{videoPlaying === idx ? <Stop /> : <PlayArrow />}
-						</IconButton>
-						<Box>
-							<Box className="videoTitle">{video.title}</Box>
-							<Box className="videoDescription">{video.description}</Box>
-						</Box>
-					</Box>
-					<Box>
-						{
-							videoPlaying === idx ? (
-								<ReactPlayer
-									url={videoURL}
-									controls
-									playing
-									width="80%"
-									height="auto"
-									config={{ file: { attributes: { controlsList: 'nodownload' } } }}
-									// onPause={() => toggleVideo(idx)}
-								/>
-							) : null
-						}
-					</Box>
+				return <Paper variant="outlined" elevation={2} sx={{py: 2, px: 10, m: 1}} key={`video_${idx}`}>
+					<Grid
+						container
+						display="flex"
+						className="videoCard"
+						direction="column"
+						alignItems="center"
+						justify="center"
+						onClick={() => toggleVideo(idx)}
+					>
+						<Grid item>
+							<IconButton aria-label="play" onClick={() => toggleVideo(idx)}>
+								{videoPlaying === idx ? <Stop /> : <PlayArrow />}
+							</IconButton>
+						</Grid>
+						<Grid xs={6}>
+							<Typography className="videoTitle">{video.title}</Typography>
+						</Grid>
+						<Grid item>
+							<Typography className="videoDescription">{video.description}</Typography>
+						</Grid>
+					</Grid>
+					{
+						videoPlaying === idx ? (
+							<Grid
+								container
+								display="flex"
+								className="videoCard"
+								direction="column"
+								alignItems="center"
+								justify="center"
+								onClick={() => toggleVideo(idx)}
+							>
+								<Grid
+									item
+									sx={{
+										pt: 2
+									}}
+								>
+									<ReactPlayer
+										url={videoURL}
+										controls
+										playing
+										width="100%"
+										height="auto"
+										config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+										// onPause={() => toggleVideo(idx)}
+									/>
+								</Grid>
+							</Grid>
+						) : null
+					}
 				</Paper>
 			})}
 		</Box>

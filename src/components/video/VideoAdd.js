@@ -43,7 +43,7 @@ const VideoAdd = ({ onUpload }) => {
 		console.log('unique id', videoId)
         console.log('videoData', videoData);
         const { title, description, showcase, ownerId } = videoData;
-        const { key } = await Storage.put(`user/video_${videoId}.mp4`, formatData, { contentType: 'video/*' });
+        const { key } = await Storage.put(`user/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
 
         const createVideoInput = {
             id: videoId,
@@ -58,9 +58,8 @@ const VideoAdd = ({ onUpload }) => {
     };
 
     return (
-		<Box bac>
+		<Box>
             <TextField
-				color="white"
                 label="Title"
                 value={videoData.title}
                 onChange={e => setVideoData({ ...videoData, title: e.target.value })}
@@ -70,7 +69,7 @@ const VideoAdd = ({ onUpload }) => {
                 value={videoData.description}
                 onChange={e => setVideoData({ ...videoData, description: e.target.value })}
             />
-			{/* <Box width="100%">
+			{/* <Box>
 				<FileDropzone
 				accept="video/*"
 				files={files}

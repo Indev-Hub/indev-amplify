@@ -5,28 +5,35 @@ type Channel @model {
   category: String
   operator: String 
   target: Int
+  projects: [Project]
 }
 
-type Library @model {
-  showcaseId: ID!
-  videoId: ID!
-  title: String!
-  orig_title: String
-  orig_iframe: String
-  createDate: String 
-  orig_videoUrl: String
-  orig_thumbnail: String
-  description: String
-  order: Int
-}
-
-type Video @model {
+type Project @model {
   id: ID!
-  title: String!
-  url: String!
+  name: String!
+  description: String
+  category: String
+  devs: String 
+  target: Int
+}
+
+type Showcase @model {
+  id: ID!
+  title: String
+  orig_title: String
+  orig_videoUrl: String
+  videos: [Videos] @connection(name: "byShowcase", fields: ["id"])
+}
+
+type Video @model 
+  @key(name: "byShowcase", fields: ["showcaseId"]) {
+  id: ID!
+  orig_title: String
+  title: String
+  url: String
   description: String
   order: Int
-  showcase: Int
-  ownerId: Int
+  showcaseId: String
+  ownerId: String
   ownerName: String
 }

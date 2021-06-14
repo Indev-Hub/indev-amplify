@@ -130,7 +130,7 @@ const VideoAdd = ({ onUpload }) => {
 				onChange={e => setformatData(e.target.files[0])}
 				/>
 			</Box> */}
-            <input type="file" accept="video/*" onChange={e => setformatData(e.target.files[0])} />
+            <input type="file" accept="video/*" onChange={e => setformatData(e.target.files)} /> {/* Removed [0] from e.target.files[0] */}
 			{/* {console.log('user', {userName, userId})} */}
             <IconButton onClick={uploadVideo}>
                 <Publish />

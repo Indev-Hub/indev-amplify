@@ -1,15 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-indevamplify-dev-212600-authRole",
-      "UnauthRoleArn": "arn:aws:iam::676066083317:role/amplify-indevamplify-dev-212600-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::676066083317:role/amplify-indevamplify-dev-212600-authRole",
-      "Region": "us-west-2",
-      "DeploymentBucketName": "amplify-indevamplify-dev-212600-deployment",
-      "UnauthRoleName": "amplify-indevamplify-dev-212600-unauthRole",
-      "StackName": "amplify-indevamplify-dev-212600",
-      "StackId": "arn:aws:cloudformation:us-west-2:676066083317:stack/amplify-indevamplify-dev-212600/22191fd0-ca6d-11eb-9072-06adbf368a99",
-      "AmplifyAppId": "d3g99ucam7xlf8"
+      "AuthRoleName": "amplify-vwindevampdb-dev-114602-authRole",
+      "UnauthRoleArn": "arn:aws:iam::595843283516:role/amplify-vwindevampdb-dev-114602-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::595843283516:role/amplify-vwindevampdb-dev-114602-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vwindevampdb-dev-114602-deployment",
+      "UnauthRoleName": "amplify-vwindevampdb-dev-114602-unauthRole",
+      "StackName": "amplify-vwindevampdb-dev-114602",
+      "StackId": "arn:aws:cloudformation:us-east-1:595843283516:stack/amplify-vwindevampdb-dev-114602/f18eb0a0-ce09-11eb-980b-0a479dbf9bdf",
+      "AmplifyAppId": "d2ok7rxmzu6q8k"
     },
     "categories": {
       "auth": {

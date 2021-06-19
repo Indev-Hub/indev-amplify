@@ -7,7 +7,7 @@ type Channel @model {
   target: Int
 }
 
-type Library @model {
+type Showcase @model {
   showcaseId: ID!
   videoId: ID!
   title: String!

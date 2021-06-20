@@ -13,6 +13,16 @@ export const createChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -30,6 +40,16 @@ export const updateChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -47,72 +67,163 @@ export const deleteChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const createLibrary = /* GraphQL */ `
-  mutation CreateLibrary(
-    $input: CreateLibraryInput!
-    $condition: ModelLibraryConditionInput
+export const createProject = /* GraphQL */ `
+  mutation CreateProject(
+    $input: CreateProjectInput!
+    $condition: ModelProjectConditionInput
   ) {
-    createLibrary(input: $input, condition: $condition) {
+    createProject(input: $input, condition: $condition) {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
+      name
       description
-      order
+      category
+      devs
+      target
       createdAt
       updatedAt
     }
   }
 `;
-export const updateLibrary = /* GraphQL */ `
-  mutation UpdateLibrary(
-    $input: UpdateLibraryInput!
-    $condition: ModelLibraryConditionInput
+export const updateProject = /* GraphQL */ `
+  mutation UpdateProject(
+    $input: UpdateProjectInput!
+    $condition: ModelProjectConditionInput
   ) {
-    updateLibrary(input: $input, condition: $condition) {
+    updateProject(input: $input, condition: $condition) {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
+      name
       description
-      order
+      category
+      devs
+      target
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteLibrary = /* GraphQL */ `
-  mutation DeleteLibrary(
-    $input: DeleteLibraryInput!
-    $condition: ModelLibraryConditionInput
+export const deleteProject = /* GraphQL */ `
+  mutation DeleteProject(
+    $input: DeleteProjectInput!
+    $condition: ModelProjectConditionInput
   ) {
-    deleteLibrary(input: $input, condition: $condition) {
+    deleteProject(input: $input, condition: $condition) {
       id
-      showcaseId
-      videoId
+      name
+      description
+      category
+      devs
+      target
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createShowcase = /* GraphQL */ `
+  mutation CreateShowcase(
+    $input: CreateShowcaseInput!
+    $condition: ModelShowcaseConditionInput
+  ) {
+    createShowcase(input: $input, condition: $condition) {
+      id
       title
       orig_title
-      orig_iframe
-      createDate
       orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateShowcase = /* GraphQL */ `
+  mutation UpdateShowcase(
+    $input: UpdateShowcaseInput!
+    $condition: ModelShowcaseConditionInput
+  ) {
+    updateShowcase(input: $input, condition: $condition) {
+      id
+      title
+      orig_title
+      orig_videoUrl
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteShowcase = /* GraphQL */ `
+  mutation DeleteShowcase(
+    $input: DeleteShowcaseInput!
+    $condition: ModelShowcaseConditionInput
+  ) {
+    deleteShowcase(input: $input, condition: $condition) {
+      id
+      title
+      orig_title
+      orig_videoUrl
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -125,11 +236,13 @@ export const createVideo = /* GraphQL */ `
   ) {
     createVideo(input: $input, condition: $condition) {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt
@@ -144,11 +257,13 @@ export const updateVideo = /* GraphQL */ `
   ) {
     updateVideo(input: $input, condition: $condition) {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt
@@ -163,11 +278,13 @@ export const deleteVideo = /* GraphQL */ `
   ) {
     deleteVideo(input: $input, condition: $condition) {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt

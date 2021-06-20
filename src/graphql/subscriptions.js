@@ -10,6 +10,16 @@ export const onCreateChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -24,6 +34,16 @@ export const onUpdateChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -38,63 +58,145 @@ export const onDeleteChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onCreateLibrary = /* GraphQL */ `
-  subscription OnCreateLibrary {
-    onCreateLibrary {
+export const onCreateProject = /* GraphQL */ `
+  subscription OnCreateProject {
+    onCreateProject {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
+      name
       description
-      order
+      category
+      devs
+      target
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateLibrary = /* GraphQL */ `
-  subscription OnUpdateLibrary {
-    onUpdateLibrary {
+export const onUpdateProject = /* GraphQL */ `
+  subscription OnUpdateProject {
+    onUpdateProject {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
+      name
       description
-      order
+      category
+      devs
+      target
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteLibrary = /* GraphQL */ `
-  subscription OnDeleteLibrary {
-    onDeleteLibrary {
+export const onDeleteProject = /* GraphQL */ `
+  subscription OnDeleteProject {
+    onDeleteProject {
       id
-      showcaseId
-      videoId
+      name
+      description
+      category
+      devs
+      target
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateShowcase = /* GraphQL */ `
+  subscription OnCreateShowcase {
+    onCreateShowcase {
+      id
       title
       orig_title
-      orig_iframe
-      createDate
       orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateShowcase = /* GraphQL */ `
+  subscription OnUpdateShowcase {
+    onUpdateShowcase {
+      id
+      title
+      orig_title
+      orig_videoUrl
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteShowcase = /* GraphQL */ `
+  subscription OnDeleteShowcase {
+    onDeleteShowcase {
+      id
+      title
+      orig_title
+      orig_videoUrl
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -104,11 +206,13 @@ export const onCreateVideo = /* GraphQL */ `
   subscription OnCreateVideo {
     onCreateVideo {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt
@@ -120,11 +224,13 @@ export const onUpdateVideo = /* GraphQL */ `
   subscription OnUpdateVideo {
     onUpdateVideo {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt
@@ -136,11 +242,13 @@ export const onDeleteVideo = /* GraphQL */ `
   subscription OnDeleteVideo {
     onDeleteVideo {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt

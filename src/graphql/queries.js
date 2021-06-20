@@ -10,6 +10,16 @@ export const getChannel = /* GraphQL */ `
       category
       operator
       target
+      projects {
+        id
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -29,6 +39,16 @@ export const listChannels = /* GraphQL */ `
         category
         operator
         target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -36,44 +56,85 @@ export const listChannels = /* GraphQL */ `
     }
   }
 `;
-export const getLibrary = /* GraphQL */ `
-  query GetLibrary($id: ID!) {
-    getLibrary(id: $id) {
+export const getProject = /* GraphQL */ `
+  query GetProject($id: ID!) {
+    getProject(id: $id) {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
+      name
       description
-      order
+      category
+      devs
+      target
       createdAt
       updatedAt
     }
   }
 `;
-export const listLibrarys = /* GraphQL */ `
-  query ListLibrarys(
-    $filter: ModelLibraryFilterInput
+export const listProjects = /* GraphQL */ `
+  query ListProjects(
+    $filter: ModelProjectFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listLibrarys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        showcaseId
-        videoId
+        name
+        description
+        category
+        devs
+        target
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getShowcase = /* GraphQL */ `
+  query GetShowcase($id: ID!) {
+    getShowcase(id: $id) {
+      id
+      title
+      orig_title
+      orig_videoUrl
+      videos {
+        items {
+          id
+          orig_title
+          title
+          url
+          description
+          duration
+          order
+          showcaseId
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listShowcases = /* GraphQL */ `
+  query ListShowcases(
+    $filter: ModelShowcaseFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listShowcases(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
         title
         orig_title
-        orig_iframe
-        createDate
         orig_videoUrl
-        orig_thumbnail
-        description
-        order
+        videos {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -85,11 +146,13 @@ export const getVideo = /* GraphQL */ `
   query GetVideo($id: ID!) {
     getVideo(id: $id) {
       id
+      orig_title
       title
       url
       description
+      duration
       order
-      showcase
+      showcaseId
       ownerId
       ownerName
       createdAt
@@ -106,11 +169,13 @@ export const listVideos = /* GraphQL */ `
     listVideos(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        orig_title
         title
         url
         description
+        duration
         order
-        showcase
+        showcaseId
         ownerId
         ownerName
         createdAt

@@ -67,38 +67,38 @@ const VideoAdd = ({ onUpload }) => {
 
 
     const uploadVideo = async () => {
-		//Get user attributes
-		const { signInUserSession } = await Auth.currentAuthenticatedUser();
-		const userName = signInUserSession.accessToken.payload.username;
-		const userId = signInUserSession.accessToken.payload.sub
+			//Get user attributes
+			const { signInUserSession } = await Auth.currentAuthenticatedUser();
+			const userName = signInUserSession.accessToken.payload.username;
+			const userId = signInUserSession.accessToken.payload.sub
 
-		console.log('user name', userName);
-		console.log('user id', userId);
+			console.log('user name', userName);
+			console.log('user id', userId);
 
-        //Upload the video
-		const videoId = uniqueId();
-		console.log('unique id', videoId)
-        console.log('videoData', videoData);
-        const { title, description, showcase, order, ownerName, ownerId } = videoData;
-        const { key } = await Storage.put(`${userId}/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
+			//Upload the video
+			const videoId = uniqueId();
+			console.log('unique id', videoId)
+			console.log('videoData', videoData);
+			const { title, description, showcase, order, ownerName, ownerId } = videoData;
+			const { key } = await Storage.put(`${userId}/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
 
-        const createVideoInput = {
-            id: videoId,
-            title,
-            description,
-            ownerId: userId,
-			ownerName: userName,
-            url: key,
-            showcase: '1',
-			order: '1'
-        };
-        await API.graphql(graphqlOperation(createVideo, { input: createVideoInput }));
-        onUpload();
-    };
+			const createVideoInput = {
+				id: videoId,
+				title,
+				description,
+				ownerId: userId,
+				ownerName: userName,
+				url: key,
+				showcase: '1',
+				order: '1'
+			};
+			await API.graphql(graphqlOperation(createVideo, { input: createVideoInput }));
+			onUpload();
+		};
 
-    return (
+		return (
 		<Box>
-            <TextField
+						<TextField
                 label="Title"
                 value={videoData.title}
                 onChange={e => setVideoData({ ...videoData, title: e.target.value })}

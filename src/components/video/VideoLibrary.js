@@ -83,7 +83,7 @@ const VideoLibrary = () => {
 				<Grid item><IconButton onClick={() => resizeVideo('comp')}><Computer /></IconButton></Grid>
 			</Grid>
 			{videos.map((video, idx) => {
-				return <Paper variant="outlined" elevation={2} sx={{py: 2, px: 5, m: 1}} key={`video_${idx}`}>
+				return <Paper variant="outlined" sx={{py: 2, px: 5, m: 1}} key={`video_${idx}`}>
 					<Grid
 						container
 						display="flex"
@@ -98,7 +98,7 @@ const VideoLibrary = () => {
 								{videoPlaying === idx ? <Stop /> : <PlayArrow />}
 							</IconButton>
 						</Grid>
-						<Grid xs={6}>
+						<Grid item xs={6}>
 							<Typography className="videoTitle">{video.title}</Typography>
 						</Grid>
 						<Grid item>

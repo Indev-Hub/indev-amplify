@@ -22,7 +22,7 @@ type Showcase @model {
   title: String
   orig_title: String
   orig_videoUrl: String
-  videos: [Videos] @connection(name: "byShowcase", fields: ["id"])
+  videos: [Video] @connection(name: "byShowcase", fields: ["id"])
 }
 
 type Video @model 
@@ -32,6 +32,7 @@ type Video @model
   title: String
   url: String
   description: String
+  duration: Int
   order: Int
   showcaseId: String
   ownerId: String

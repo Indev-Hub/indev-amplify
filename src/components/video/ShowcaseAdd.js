@@ -5,6 +5,7 @@ import {
   useTheme
 } from '@material-ui/core/styles';
 import {
+  Button,
   Box,
   Grid,
   Link,
@@ -86,7 +87,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 
-function Gallery() {
+function ShowcaseAdd() {
   // data state // storage
 
   // new state for the video player. Attribute values can be dynamically coded? Woo Jin
@@ -99,16 +100,16 @@ function Gallery() {
   const theme = useTheme();
 
   // Run loadData function 
-  useEffect(() => {
-    loadData();
-    // getData();
-  }, [])
+  // useEffect(() => {
+  //   loadData();
+  // }, [])
 
   // Get the vimeo showcase
-  const loadData = () => {
-    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+  const loadData = async () => {
+    await fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
       .then(response => response.json())
       .then(data => setData(data.data));
+      console.log('response', data)
   }
 
   // Get video duration in hours:minutes:seconds
@@ -132,8 +133,9 @@ function Gallery() {
   }
 
   return (
-    console.log(data),
+    // console.log(data),
     <Grid container spacing={0}>
+      <Button onClick={loadData()}>Load Data Now</Button>
 
       {/* Hero Video */}
 
@@ -161,8 +163,8 @@ function Gallery() {
 
       {/* Gallery */}
 
-      {data.map(data => (
-        <Grid item className={classes.gridItems} xs={12} md={6} lg={4}> 
+      {data.map((data, id) => (
+        <Grid item className={classes.gridItems} xs={12} md={6} lg={4} key={id}> 
           {/* <Link href="#" underline="none" color="textPrimary"> */} {/* Commented to prevent page from reloading - Woo Jin */}
           <Box className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(data.uri.replace("/videos/", ""))}> {/* Added new onClick function - Woo Jin */}
             <img className={classes.thumbnail} src={data.pictures.sizes[8].link} />
@@ -181,4 +183,4 @@ function Gallery() {
   );
 }
 
-export default Gallery
+export default ShowcaseAdd;

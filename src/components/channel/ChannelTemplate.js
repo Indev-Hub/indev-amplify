@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 import ChannelVideoAsk from './ChannelVideoAsk';
 // import { Gallery } from '../gallery';
-import GalleryFetchTest from '../gallery/GalleryFetchTest';
+import Gallery from '../gallery/Gallery';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   MuiButton: {
@@ -224,7 +224,7 @@ function ChannelTemplate(props) {
 
       {/* Logged In */}
       {/* <Gallery /> */}
-      <GalleryFetchTest />
+      <Gallery />
     </Box>
 
   );

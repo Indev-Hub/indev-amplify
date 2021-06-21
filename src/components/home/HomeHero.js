@@ -150,7 +150,7 @@ const HomeHero = (props) => (
       {/* <ChannelBrowse /> */}
       {/* <VideoUpdate /> */}
       {/* <UploadVideo /> */}
-      {/* <VideoLibrary /> */}
+      <VideoLibrary />
       {/* <VideoAdd /> */}
       {/* <ShowcaseAdd /> */}
       <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>

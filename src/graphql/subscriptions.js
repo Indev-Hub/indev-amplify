@@ -6,6 +6,40 @@ export const onCreateChannel = /* GraphQL */ `
     onCreateChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
@@ -13,12 +47,31 @@ export const onCreateChannel = /* GraphQL */ `
       projects {
         id
         name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
         description
         category
         devs
         target
+        featuredImg
         createdAt
         updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
       }
       createdAt
       updatedAt
@@ -30,6 +83,40 @@ export const onUpdateChannel = /* GraphQL */ `
     onUpdateChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
@@ -37,12 +124,31 @@ export const onUpdateChannel = /* GraphQL */ `
       projects {
         id
         name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
         description
         category
         devs
         target
+        featuredImg
         createdAt
         updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
       }
       createdAt
       updatedAt
@@ -54,6 +160,40 @@ export const onDeleteChannel = /* GraphQL */ `
     onDeleteChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
@@ -61,13 +201,239 @@ export const onDeleteChannel = /* GraphQL */ `
       projects {
         id
         name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
         description
         category
         devs
         target
+        featuredImg
         createdAt
         updatedAt
       }
+      featuredImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUser = /* GraphQL */ `
+  subscription OnCreateUser {
+    onCreateUser {
+      id
+      firstName
+      lastName
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUser = /* GraphQL */ `
+  subscription OnUpdateUser {
+    onUpdateUser {
+      id
+      firstName
+      lastName
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUser = /* GraphQL */ `
+  subscription OnDeleteUser {
+    onDeleteUser {
+      id
+      firstName
+      lastName
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
       createdAt
       updatedAt
     }
@@ -78,10 +444,45 @@ export const onCreateProject = /* GraphQL */ `
     onCreateProject {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       devs
       target
+      featuredImg
       createdAt
       updatedAt
     }
@@ -92,10 +493,45 @@ export const onUpdateProject = /* GraphQL */ `
     onUpdateProject {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       devs
       target
+      featuredImg
       createdAt
       updatedAt
     }
@@ -106,10 +542,45 @@ export const onDeleteProject = /* GraphQL */ `
     onDeleteProject {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       devs
       target
+      featuredImg
       createdAt
       updatedAt
     }
@@ -251,6 +722,405 @@ export const onDeleteVideo = /* GraphQL */ `
       showcaseId
       ownerId
       ownerName
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateSubscriptions = /* GraphQL */ `
+  subscription OnCreateSubscriptions {
+    onCreateSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateSubscriptions = /* GraphQL */ `
+  subscription OnUpdateSubscriptions {
+    onUpdateSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteSubscriptions = /* GraphQL */ `
+  subscription OnDeleteSubscriptions {
+    onDeleteSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUserProjects = /* GraphQL */ `
+  subscription OnCreateUserProjects {
+    onCreateUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUserProjects = /* GraphQL */ `
+  subscription OnUpdateUserProjects {
+    onUpdateUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUserProjects = /* GraphQL */ `
+  subscription OnDeleteUserProjects {
+    onDeleteUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

@@ -92,6 +92,9 @@ const VideoLibrary = () => {
 						alignItems="center"
 						justify="center"
 						onClick={() => toggleVideo(idx)}
+						style={{
+							cursor: 'pointer'
+						}}
 					>
 						<Grid item>
 							<IconButton aria-label="play" onClick={() => toggleVideo(idx)}>

@@ -13,7 +13,6 @@ import {
 } from '@material-ui/core';
 import { uniqueId } from 'lodash';
 import { Publish } from '@material-ui/icons';
-import UserID from '../user/UserID';
 // import FileDropzone from './FileDropzone';
 
 const VideoAdd = ({ onUpload }) => {

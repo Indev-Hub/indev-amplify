@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "indevAPI01",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authindevamplify5463d39f",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

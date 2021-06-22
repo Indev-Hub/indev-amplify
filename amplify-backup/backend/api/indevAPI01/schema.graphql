@@ -1,0 +1,79 @@
+# STANDARD TABLES
+type Channel @model {
+  id: ID!
+  name: String!
+  manager: User @connection
+  supporters: [Subscriptions] @connection(name: "supportUser")
+  description: String
+  category: String
+  operator: String 
+  target: Int
+  projects: [Project]
+  featuredImg: S3Object
+}
+
+type User @model {
+  id: ID!
+  firstName: String
+  lastName: String
+  displayName: String
+  email: String
+  supporting: [Subscriptions] @connection(name: "supportChannel")
+  developing: [UserProjects] @connection(name: "projectUser")
+  channel: Channel @connection
+  role: String
+}
+
+type Project @model {
+  id: ID!
+  name: String!
+  manager: User @connection
+  developers: [UserProjects] @connection(name: "userProject")
+  description: String
+  category: String
+  devs: String 
+  target: Int
+  featuredImg: String
+}
+
+type Showcase @model {
+  id: ID!
+  title: String
+  orig_title: String
+  orig_videoUrl: String
+  videos: [Video] @connection(name: "byShowcase", fields: ["id"])
+}
+
+type Video @model 
+  @key(name: "byShowcase", fields: ["showcaseId"]) {
+  id: ID!
+  orig_title: String
+  title: String
+  url: String
+  description: String
+  duration: Int
+  order: Int
+  showcaseId: String
+  ownerId: String
+  ownerName: String
+}
+
+# JOINING TABLES
+type Subscriptions @model {
+  id: ID!
+  channel: Channel @connection(name: "supportUser")
+  user: User @connection(name: "supportChannel")
+}
+
+type UserProjects @model {
+  id: ID!
+  project: Project @connection(name: "userProject")
+  user: User @connection(name: "projectUser")
+}
+
+# DATA TYPES
+type S3Object {
+  bucket: String!
+  key: String!
+  region: String!
+}

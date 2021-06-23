@@ -1,0 +1,29 @@
+Material Kit Pro uses reduxjs/toolkit
+
+* src/slices where you can find the implementation of the Redux reducer logic
+
+* src/store which exports a store and combines the reducers in one root reducer
+
+* using redux with material kit pro: https://react-material-kit.devias.io/docs/overview/redux
+
+* It looks like the Login page is using src\components\authentication\login\LoginJWT.js for functionality. But LoginAmplify, LoginAuth0, and LoginFirebase are also available
+
+* I was able to add a user to the list (getUserList) on the Swagger UI via a POST request on Postman. However, I am getting a 403 error when I try to GET user/check on Postman. Follow up on 403 error: Nitun showed me how to add the Bearer Token to the Auth tab in Postman; now success GET check and userList! - Tawnee
+
+* Code snippet from Nitun:
+  export const login = (usename, password) => {
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ "userName": usename, "password": password })// userName for spring boot
+    };
+
+    return dispatch => {
+      dispatch(requestLogin);
+      // http://localhost:8080/authenticate     http://localhost:5000/Users/authenticate
+      return fetch(`http://${process.env.REACT_APP_HOST_NAME}/adventureBook/authenticate`, requestOptions)
+    };
+  }
+
+* We do not need to install middleware in React. The EC2 instance holds the middleware and handles it there.

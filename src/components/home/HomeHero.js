@@ -5,7 +5,6 @@ import {
   Container,
   Typography
 } from '@material-ui/core';
-import VideoLibrary from '../video/VideoLibrary';
 import ChannelBrowse from '../../pages/channel/ChannelBrowse';
 import ChannelSlider from '../channel-slider/ChannelSlider';
 import FeaturedSlider from '../featured-slider/FeaturedSlider';
@@ -149,7 +148,6 @@ const HomeHero = (props) => (
       {/* <ChannelBrowse /> */}
       {/* <VideoUpdate /> */}
       {/* <UploadVideo /> */}
-      <VideoLibrary />
       {/* <ShowcaseAdd /> */}
       <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
       <ChannelSlider genre={game} sliderHeight="500px" />

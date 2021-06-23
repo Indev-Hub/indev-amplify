@@ -90,8 +90,7 @@ function Gallery() {
   // data state // storage
 
   // new state for the video player. Attribute values can be dynamically coded? Woo Jin
-  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "1920", height: "1080", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
-  const [title, setTitle] = useState('');
+  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "640", height: "360", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
 
   const [data, setData] = useState([]);
   const [channelId, setId] = useState(7868357);
@@ -123,15 +122,13 @@ function Gallery() {
   }
 
   // Retrieves selected video's ID from data and modifies iframe source  - Woo Jin
-  function onThumbnailClick(videoID, titleID) {
+
+  function onThumbnailClick(videoID) {
     // "...video" copies all of the video's current attributes, src overwrites the current src url by substituting the videoID
     setVideo({
       ...video,
       src: `https://player.vimeo.com/video/${videoID}?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959`
     });
-    console.log('videoID:', videoID) 
-    setTitle(titleID);
-    console.log('videoTitle:', titleID)
   }
 
   return (
@@ -141,36 +138,22 @@ function Gallery() {
       {/* Hero Video */}
 
       {/* iframe that embeds Vimeo's video player. "src" initialized as "", to be modified with onThumbnailClick - Woo Jin */}
-      <Grid
-        // display="flex"
-        className="videoCard"
-        direction="column"
-        alignItems="center"
-        justify="center"
-        xs={12}
-      >
-        <Grid item xs={12} className="heroContainer">
-          <iframe
-            src={video.src}
-            width="100%"
-            height={video.width*.3}
-            frameborder={video.frameborder}
-            allow={video.allow}
-            allowfullscreen={video.allowfullscreen}
-            title={video.title}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Typography>{title}</Typography>
-        </Grid>
-      </Grid>
+
+      <iframe
+        src={video.src}
+        width={video.width}
+        height={video.height}
+        frameborder={video.frameborder}
+        allow={video.allow}
+        allowfullscreen={video.allowfullscreen}
+        title={video.title} />
 
       {/* Gallery */}
 
       {data.map(data => (
-        <Grid item className={classes.gridItems} xs={12} md={6} lg={4}> 
+        <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
           {/* <Link href="#" underline="none" color="textPrimary"> */} {/* Commented to prevent page from reloading - Woo Jin */}
-          <Box className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(data.uri.replace("/videos/", ""), data.name)}> {/* Added new onClick function - Woo Jin */}
+          <Box className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(data.uri.replace("/videos/", ""))}> {/* Added new onClick function - Woo Jin */}
             <img className={classes.thumbnail} src={data.pictures.sizes[8].link} />
             <Box className={classes.gridText}>
               <Typography>{data.name}</Typography>

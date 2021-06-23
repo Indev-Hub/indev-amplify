@@ -593,23 +593,7 @@ export const onCreateShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      videos
       createdAt
       updatedAt
     }
@@ -622,23 +606,7 @@ export const onUpdateShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      videos
       createdAt
       updatedAt
     }
@@ -651,77 +619,7 @@ export const onDeleteShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onCreateVideo = /* GraphQL */ `
-  subscription OnCreateVideo {
-    onCreateVideo {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateVideo = /* GraphQL */ `
-  subscription OnUpdateVideo {
-    onUpdateVideo {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteVideo = /* GraphQL */ `
-  subscription OnDeleteVideo {
-    onDeleteVideo {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
+      videos
       createdAt
       updatedAt
     }

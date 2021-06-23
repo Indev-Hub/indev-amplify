@@ -623,23 +623,7 @@ export const createShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      videos
       createdAt
       updatedAt
     }
@@ -655,23 +639,7 @@ export const updateShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      videos
       createdAt
       updatedAt
     }
@@ -687,86 +655,7 @@ export const deleteShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createVideo = /* GraphQL */ `
-  mutation CreateVideo(
-    $input: CreateVideoInput!
-    $condition: ModelVideoConditionInput
-  ) {
-    createVideo(input: $input, condition: $condition) {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateVideo = /* GraphQL */ `
-  mutation UpdateVideo(
-    $input: UpdateVideoInput!
-    $condition: ModelVideoConditionInput
-  ) {
-    updateVideo(input: $input, condition: $condition) {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteVideo = /* GraphQL */ `
-  mutation DeleteVideo(
-    $input: DeleteVideoInput!
-    $condition: ModelVideoConditionInput
-  ) {
-    deleteVideo(input: $input, condition: $condition) {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
+      videos
       createdAt
       updatedAt
     }

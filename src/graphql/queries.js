@@ -325,23 +325,7 @@ export const getShowcase = /* GraphQL */ `
       title
       orig_title
       orig_videoUrl
-      videos {
-        items {
-          id
-          orig_title
-          title
-          url
-          description
-          duration
-          order
-          showcaseId
-          ownerId
-          ownerName
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
+      videos
       createdAt
       updatedAt
     }
@@ -359,52 +343,7 @@ export const listShowcases = /* GraphQL */ `
         title
         orig_title
         orig_videoUrl
-        videos {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getVideo = /* GraphQL */ `
-  query GetVideo($id: ID!) {
-    getVideo(id: $id) {
-      id
-      orig_title
-      title
-      url
-      description
-      duration
-      order
-      showcaseId
-      ownerId
-      ownerName
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listVideos = /* GraphQL */ `
-  query ListVideos(
-    $filter: ModelVideoFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listVideos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        orig_title
-        title
-        url
-        description
-        duration
-        order
-        showcaseId
-        ownerId
-        ownerName
+        videos
         createdAt
         updatedAt
       }

@@ -39,8 +39,8 @@ type Project @model {
 type Showcase @model {
   id: ID!
   title: String
-  orig_title: String
-  orig_videoUrl: String
+  manager: String
+  managerID: String
   videos: AWSJSON
 }
 

@@ -14,9 +14,9 @@
     "tab.unfocusedActiveBorder": "#fff",
     "editorIndentGuide.activeBackground": "#AAEE77",
     "editorIndentGuide.background": "#e6a8e677",
-    "titleBar.activeBackground": "#00ccff",
-    "titleBar.activeForeground":"#000000",
-    "activityBar.background": "#00ccff",
-    "activityBar.foreground": "#000000"
+    "titleBar.activeBackground": "#27aae1",
+    "titleBar.activeForeground":"#0f4055",
+    "activityBar.background": "#27aae1",
+    "activityBar.foreground": "#0f4055"
   }
 }

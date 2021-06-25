@@ -323,8 +323,8 @@ export const getShowcase = /* GraphQL */ `
     getShowcase(id: $id) {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt
@@ -341,8 +341,8 @@ export const listShowcases = /* GraphQL */ `
       items {
         id
         title
-        orig_title
-        orig_videoUrl
+        manager
+        managerID
         videos
         createdAt
         updatedAt

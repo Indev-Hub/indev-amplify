@@ -100,9 +100,9 @@ function ShowcaseAdd() {
   const theme = useTheme();
 
   // Run loadData function 
-  useEffect(() => {
-    loadData();
-  }, [])
+  // useEffect(() => {
+  //   loadData();
+  // }, [])
 
   // Get the vimeo showcase
   const loadData = async () => {

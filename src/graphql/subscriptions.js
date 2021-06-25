@@ -591,8 +591,8 @@ export const onCreateShowcase = /* GraphQL */ `
     onCreateShowcase {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt
@@ -604,8 +604,8 @@ export const onUpdateShowcase = /* GraphQL */ `
     onUpdateShowcase {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt
@@ -617,8 +617,8 @@ export const onDeleteShowcase = /* GraphQL */ `
     onDeleteShowcase {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt

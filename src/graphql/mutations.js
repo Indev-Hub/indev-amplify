@@ -621,8 +621,8 @@ export const createShowcase = /* GraphQL */ `
     createShowcase(input: $input, condition: $condition) {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt
@@ -637,8 +637,8 @@ export const updateShowcase = /* GraphQL */ `
     updateShowcase(input: $input, condition: $condition) {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt
@@ -653,8 +653,8 @@ export const deleteShowcase = /* GraphQL */ `
     deleteShowcase(input: $input, condition: $condition) {
       id
       title
-      orig_title
-      orig_videoUrl
+      manager
+      managerID
       videos
       createdAt
       updatedAt

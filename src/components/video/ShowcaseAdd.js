@@ -43,8 +43,8 @@ const ShowcaseAdd = ({ onUpload }) => {
         const createShowcaseInput = {
             id: showcaseID,
             title: `${userName}'s Showcase`,
-            orig_title:'',
-            orig_videoUrl:'',
+            manager: userName,
+            managerID: userId,
             videos: JSON.stringify(data)
         };
 
@@ -64,7 +64,7 @@ const ShowcaseAdd = ({ onUpload }) => {
             >
                 Load Data
             </Button>
-            <IconButton onClick={uploadShowcase()}>
+            <IconButton onClick={uploadShowcase}>
                 <Publish />
             </IconButton>
             {/* <TextField

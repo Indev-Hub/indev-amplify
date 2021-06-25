@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import Gallery from '../components/gallery/Gallery';
+import Gallery from '../components/gallery/Gallery';
 import {
   // HomeClients,
   HomeHero
@@ -23,7 +23,7 @@ const Home = () => {
       </Helmet>
       <div>
         <HomeHero />
-        {/* <Gallery /> */}
+        <Gallery />
         {/* <HomeOverview />
         <HomeRoles />
         <ChannelSlider />

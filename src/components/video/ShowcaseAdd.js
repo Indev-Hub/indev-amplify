@@ -50,8 +50,7 @@ const ShowcaseAdd = ({ onUpload }) => {
 
         console.log('Showcase Input:', createShowcaseInput)
         await API.graphql(graphqlOperation(createShowcase, { input: createShowcaseInput }));
-        // onUpload();
-        };
+    };
 
     return (
 		<Box>
@@ -67,30 +66,6 @@ const ShowcaseAdd = ({ onUpload }) => {
             <IconButton onClick={uploadShowcase}>
                 <Publish />
             </IconButton>
-            {/* <TextField
-				color="white"
-                label="Title"
-                value={showcaseData.title}
-                onChange={e => setShowcaseData({ ...showcaseData, title: e.target.value })}
-            />
-            <TextField
-                label="Description"
-                value={showcaseData.description}
-                onChange={e => setShowcaseData({ ...showcaseData, description: e.target.value })}
-            /> */}
-			{/* <Box width="100%">
-				<FileDropzone
-				accept="video/*"
-				files={files}
-				onDrop={handleDrop}
-				onRemove={handleRemove}
-				onRemoveAll={handleRemoveAll}
-				onChange={e => setformatData(e.target.files[0])}
-				/>
-			</Box> */}
-            {/* <IconButton onClick={uploadShowcase}>
-                <Publish />
-            </IconButton> */}
         </Box>
     );
 };

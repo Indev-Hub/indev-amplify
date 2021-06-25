@@ -13,6 +13,10 @@
     "tab.activeBorder": "#ff0000",
     "tab.unfocusedActiveBorder": "#fff",
     "editorIndentGuide.activeBackground": "#AAEE77",
-    "editorIndentGuide.background": "#e6a8e677"
+    "editorIndentGuide.background": "#e6a8e677",
+    "titleBar.activeBackground": "#00ccff",
+    "titleBar.activeForeground":"#000000",
+    "activityBar.background": "#00ccff",
+    "activityBar.foreground": "#fff"
   }
 }

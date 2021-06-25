@@ -9,6 +9,7 @@ import ChannelBrowse from '../../pages/channel/ChannelBrowse';
 import ChannelSlider from '../channel-slider/ChannelSlider';
 import FeaturedSlider from '../featured-slider/FeaturedSlider';
 import ShowcaseAdd from '../video/ShowcaseAdd';
+import VideoLibrary from '../video/VideoLibrary';
 // import HomeOverview from './HomeOverview';
 // import ChannelSlider1 from './ChannelSlider';
 
@@ -149,6 +150,7 @@ const HomeHero = (props) => (
       {/* <VideoUpdate /> */}
       {/* <UploadVideo /> */}
       {/* <ShowcaseAdd /> */}
+      <VideoLibrary />
       <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
       <ChannelSlider genre={game} sliderHeight="500px" />
       <Typography variant="h4" style={{ marginTop: '40px' }}>Software Development</Typography>

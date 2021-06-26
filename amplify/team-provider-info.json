@@ -14,7 +14,20 @@
     },
     "categories": {
       "auth": {
-        "indevamplify5463d39f": {}
+        "indevamplify5463d39f": {},
+        "indevamplify0333d2a1": {
+          "userPoolId": "us-west-2_LOMW2U7bN",
+          "userPoolName": "IndevUserPool",
+          "webClientId": "6eq2fbb1lj2ujgr0a5g8tufn3c",
+          "nativeClientId": "5iu2pmk562t94pn9dj1cadgtph",
+          "identityPoolId": "us-west-2:78db374d-4203-4097-9412-df63df95dbe0",
+          "identityPoolName": "IndevIdentityPool",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::676066083317:role/Cognito_IndevIdentityPoolAuth_Role",
+          "authRoleName": "Cognito_IndevIdentityPoolAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::676066083317:role/Cognito_IndevIdentityPoolUnauth_Role",
+          "unauthRoleName": "Cognito_IndevIdentityPoolUnauth_Role"
+        }
       }
     }
   },

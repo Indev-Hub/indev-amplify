@@ -1,13 +1,14 @@
+/* eslint-disable */
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { ThemeProvider } from '@material-ui/core';
-import Amplify from 'aws-amplify';
-import {
-  // AmplifySignIn,
-  // AmplifySignOut,
-  withAuthenticator
-} from '@aws-amplify/ui-react';
+import Amplify, { Auth } from 'aws-amplify';
+// import {
+//   AmplifySignIn,
+//   AmplifySignOut,
+//   withAuthenticator
+// } from '@aws-amplify/ui-react';
 import awsconfig from './aws-exports';
 import './i18n';
 import GlobalStyles from './components/GlobalStyles';
@@ -57,4 +58,4 @@ const App = () => {
   );
 };
 
-export default withAuthenticator(App);
+export default App;

@@ -12,10 +12,16 @@ type Channel @model {
   featuredImg: S3Object
 }
 
-type User @model {
+type User @model
+  @auth(rules: [
+    {allow: groups, groups: ["admin"] },
+    {allow: owner, ownerField: "username", operations: [read] }
+  ])
+{
   id: ID!
   firstName: String
   lastName: String
+  username: String
   displayName: String
   email: String
   supporting: [Subscriptions] @connection(name: "supportChannel")

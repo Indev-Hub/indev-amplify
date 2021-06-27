@@ -10,7 +10,8 @@
   },
   "files.eol": "\n",
   "workbench.colorCustomizations": {
-    "tab.activeBorder": "#ff0000",
+    "tab.activeBorder": "#27aae1",
+    "tab.activeBackground": "#0f475e",
     "tab.unfocusedActiveBorder": "#fff",
     "editorIndentGuide.activeBackground": "#AAEE77",
     "editorIndentGuide.background": "#e6a8e677",

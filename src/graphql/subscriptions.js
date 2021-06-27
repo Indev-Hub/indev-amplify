@@ -10,6 +10,7 @@ export const onCreateChannel = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -51,6 +52,7 @@ export const onCreateChannel = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -87,6 +89,7 @@ export const onUpdateChannel = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -128,6 +131,7 @@ export const onUpdateChannel = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -164,6 +168,7 @@ export const onDeleteChannel = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -205,6 +210,7 @@ export const onDeleteChannel = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -233,11 +239,12 @@ export const onDeleteChannel = /* GraphQL */ `
   }
 `;
 export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser {
-    onCreateUser {
+  subscription OnCreateUser($username: String) {
+    onCreateUser(username: $username) {
       id
       firstName
       lastName
+      username
       displayName
       email
       supporting {
@@ -263,6 +270,7 @@ export const onCreateUser = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -302,11 +310,12 @@ export const onCreateUser = /* GraphQL */ `
   }
 `;
 export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser {
-    onUpdateUser {
+  subscription OnUpdateUser($username: String) {
+    onUpdateUser(username: $username) {
       id
       firstName
       lastName
+      username
       displayName
       email
       supporting {
@@ -332,6 +341,7 @@ export const onUpdateUser = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -371,11 +381,12 @@ export const onUpdateUser = /* GraphQL */ `
   }
 `;
 export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser {
-    onDeleteUser {
+  subscription OnDeleteUser($username: String) {
+    onDeleteUser(username: $username) {
       id
       firstName
       lastName
+      username
       displayName
       email
       supporting {
@@ -401,6 +412,7 @@ export const onDeleteUser = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -448,6 +460,7 @@ export const onCreateProject = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -497,6 +510,7 @@ export const onUpdateProject = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -546,6 +560,7 @@ export const onDeleteProject = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -636,6 +651,7 @@ export const onCreateSubscriptions = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -672,6 +688,7 @@ export const onCreateSubscriptions = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -710,6 +727,7 @@ export const onUpdateSubscriptions = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -746,6 +764,7 @@ export const onUpdateSubscriptions = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -784,6 +803,7 @@ export const onDeleteSubscriptions = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -820,6 +840,7 @@ export const onDeleteSubscriptions = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -858,6 +879,7 @@ export const onCreateUserProjects = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -879,6 +901,7 @@ export const onCreateUserProjects = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -917,6 +940,7 @@ export const onUpdateUserProjects = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -938,6 +962,7 @@ export const onUpdateUserProjects = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -976,6 +1001,7 @@ export const onDeleteUserProjects = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -997,6 +1023,7 @@ export const onDeleteUserProjects = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {

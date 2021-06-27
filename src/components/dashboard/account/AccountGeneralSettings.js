@@ -24,6 +24,7 @@ import {
   createUser
   // updateUser
 } from '../../../graphql/mutations';
+import UserAdd from '../../user/UserAdd';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
 import countries from './countries';
@@ -93,6 +94,8 @@ const AccountGeneralSettings = (props) => {
                 </Link>
               </Typography>
             </Box>
+            <UserAdd />
+            <Typography>Here</Typography>
           </CardContent>
           <CardActions>
             <Button

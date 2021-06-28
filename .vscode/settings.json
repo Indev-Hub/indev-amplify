@@ -10,12 +10,12 @@
   },
   "files.eol": "\n",
   "workbench.colorCustomizations": {
-    "tab.activeBorder": "#ff0000",
+    "tab.activeBorder": "#27aae1",
     "tab.unfocusedActiveBorder": "#fff",
     "editorIndentGuide.activeBackground": "#AAEE77",
     "editorIndentGuide.background": "#e6a8e677",
     "titleBar.activeBackground": "#27aae1",
-    "titleBar.activeForeground":"#0f4055",
+    "titleBar.activeForeground": "#0f4055",
     "activityBar.background": "#27aae1",
     "activityBar.foreground": "#0f4055"
   }

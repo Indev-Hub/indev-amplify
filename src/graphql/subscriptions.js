@@ -239,8 +239,8 @@ export const onDeleteChannel = /* GraphQL */ `
   }
 `;
 export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser($username: String) {
-    onCreateUser(username: $username) {
+  subscription OnCreateUser {
+    onCreateUser {
       id
       firstName
       lastName
@@ -310,8 +310,8 @@ export const onCreateUser = /* GraphQL */ `
   }
 `;
 export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser($username: String) {
-    onUpdateUser(username: $username) {
+  subscription OnUpdateUser {
+    onUpdateUser {
       id
       firstName
       lastName
@@ -381,8 +381,8 @@ export const onUpdateUser = /* GraphQL */ `
   }
 `;
 export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser($username: String) {
-    onDeleteUser(username: $username) {
+  subscription OnDeleteUser {
+    onDeleteUser {
       id
       firstName
       lastName

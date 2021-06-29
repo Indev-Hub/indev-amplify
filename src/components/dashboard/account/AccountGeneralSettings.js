@@ -20,11 +20,12 @@ import {
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
+import VideoLibrary from '../../video/VideoLibrary';
 import {
   createUser
   // updateUser
 } from '../../../graphql/mutations';
-import UserAdd from '../../user/UserAdd';
+import UserInfo from '../../user/UserInfo';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
 import countries from './countries';
@@ -94,8 +95,8 @@ const AccountGeneralSettings = (props) => {
                 </Link>
               </Typography>
             </Box>
-            <UserAdd />
-            <Typography>Here</Typography>
+            <UserInfo />
+            <VideoLibrary />
           </CardContent>
           <CardActions>
             <Button

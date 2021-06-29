@@ -6,10 +6,75 @@ export const getChannel = /* GraphQL */ `
     getChannel(id: $id) {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
       target
+      projects {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }
@@ -25,10 +90,40 @@ export const listChannels = /* GraphQL */ `
       items {
         id
         name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
         description
         category
         operator
         target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
         createdAt
         updatedAt
       }
@@ -36,44 +131,108 @@ export const listChannels = /* GraphQL */ `
     }
   }
 `;
-export const getLibrary = /* GraphQL */ `
-  query GetLibrary($id: ID!) {
-    getLibrary(id: $id) {
+export const getUser = /* GraphQL */ `
+  query GetUser($id: ID!) {
+    getUser(id: $id) {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      firstName
+      lastName
+      username
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
       createdAt
       updatedAt
     }
   }
 `;
-export const listLibrarys = /* GraphQL */ `
-  query ListLibrarys(
-    $filter: ModelLibraryFilterInput
+export const listUsers = /* GraphQL */ `
+  query ListUsers(
+    $filter: ModelUserFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listLibrarys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        showcaseId
-        videoId
-        title
-        orig_title
-        orig_iframe
-        createDate
-        orig_videoUrl
-        orig_thumbnail
-        description
-        order
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
         createdAt
         updatedAt
       }
@@ -81,38 +240,330 @@ export const listLibrarys = /* GraphQL */ `
     }
   }
 `;
-export const getVideo = /* GraphQL */ `
-  query GetVideo($id: ID!) {
-    getVideo(id: $id) {
+export const getProject = /* GraphQL */ `
+  query GetProject($id: ID!) {
+    getProject(id: $id) {
       id
-      title
-      url
+      name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
-      order
-      showcase
-      ownerId
-      ownerName
+      category
+      devs
+      target
+      featuredImg
       createdAt
       updatedAt
     }
   }
 `;
-export const listVideos = /* GraphQL */ `
-  query ListVideos(
-    $filter: ModelVideoFilterInput
+export const listProjects = /* GraphQL */ `
+  query ListProjects(
+    $filter: ModelProjectFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listVideos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getShowcase = /* GraphQL */ `
+  query GetShowcase($id: ID!) {
+    getShowcase(id: $id) {
+      id
+      title
+      manager
+      managerID
+      videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listShowcases = /* GraphQL */ `
+  query ListShowcases(
+    $filter: ModelShowcaseFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listShowcases(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         title
-        url
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getSubscriptions = /* GraphQL */ `
+  query GetSubscriptions($id: ID!) {
+    getSubscriptions(id: $id) {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
         description
-        order
-        showcase
-        ownerId
-        ownerName
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listSubscriptionss = /* GraphQL */ `
+  query ListSubscriptionss(
+    $filter: ModelSubscriptionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSubscriptionss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        user {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getUserProjects = /* GraphQL */ `
+  query GetUserProjects($id: ID!) {
+    getUserProjects(id: $id) {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listUserProjectss = /* GraphQL */ `
+  query ListUserProjectss(
+    $filter: ModelUserProjectsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUserProjectss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        project {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        user {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }

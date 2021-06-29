@@ -58,6 +58,16 @@ const MainNavbar = (props) => {
           <Link
             color="text.reverse"
             component={RouterLink}
+            to="/channel"
+            underline="none"
+            variant="body1"
+            paddingRight="10px"
+          >
+            Channel
+          </Link>
+          <Link
+            color="text.reverse"
+            component={RouterLink}
             to="/authentication/register"
             underline="none"
             variant="body1"

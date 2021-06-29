@@ -6,10 +6,75 @@ export const onCreateChannel = /* GraphQL */ `
     onCreateChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
       target
+      projects {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }
@@ -20,10 +85,75 @@ export const onUpdateChannel = /* GraphQL */ `
     onUpdateChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
       target
+      projects {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }
@@ -34,115 +164,888 @@ export const onDeleteChannel = /* GraphQL */ `
     onDeleteChannel {
       id
       name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      supporters {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
       category
       operator
       target
+      projects {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      featuredImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onCreateLibrary = /* GraphQL */ `
-  subscription OnCreateLibrary {
-    onCreateLibrary {
+export const onCreateUser = /* GraphQL */ `
+  subscription OnCreateUser {
+    onCreateUser {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      firstName
+      lastName
+      username
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateLibrary = /* GraphQL */ `
-  subscription OnUpdateLibrary {
-    onUpdateLibrary {
+export const onUpdateUser = /* GraphQL */ `
+  subscription OnUpdateUser {
+    onUpdateUser {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      firstName
+      lastName
+      username
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteLibrary = /* GraphQL */ `
-  subscription OnDeleteLibrary {
-    onDeleteLibrary {
+export const onDeleteUser = /* GraphQL */ `
+  subscription OnDeleteUser {
+    onDeleteUser {
       id
-      showcaseId
-      videoId
-      title
-      orig_title
-      orig_iframe
-      createDate
-      orig_videoUrl
-      orig_thumbnail
-      description
-      order
+      firstName
+      lastName
+      username
+      displayName
+      email
+      supporting {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      developing {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      role
       createdAt
       updatedAt
     }
   }
 `;
-export const onCreateVideo = /* GraphQL */ `
-  subscription OnCreateVideo {
-    onCreateVideo {
+export const onCreateProject = /* GraphQL */ `
+  subscription OnCreateProject {
+    onCreateProject {
       id
-      title
-      url
+      name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
-      order
-      showcase
-      ownerId
-      ownerName
+      category
+      devs
+      target
+      featuredImg
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateVideo = /* GraphQL */ `
-  subscription OnUpdateVideo {
-    onUpdateVideo {
+export const onUpdateProject = /* GraphQL */ `
+  subscription OnUpdateProject {
+    onUpdateProject {
       id
-      title
-      url
+      name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       description
-      order
-      showcase
-      ownerId
-      ownerName
+      category
+      devs
+      target
+      featuredImg
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteVideo = /* GraphQL */ `
-  subscription OnDeleteVideo {
-    onDeleteVideo {
+export const onDeleteProject = /* GraphQL */ `
+  subscription OnDeleteProject {
+    onDeleteProject {
+      id
+      name
+      manager {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      developers {
+        items {
+          id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      description
+      category
+      devs
+      target
+      featuredImg
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateShowcase = /* GraphQL */ `
+  subscription OnCreateShowcase {
+    onCreateShowcase {
       id
       title
-      url
-      description
-      order
-      showcase
-      ownerId
-      ownerName
+      manager
+      managerID
+      videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateShowcase = /* GraphQL */ `
+  subscription OnUpdateShowcase {
+    onUpdateShowcase {
+      id
+      title
+      manager
+      managerID
+      videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteShowcase = /* GraphQL */ `
+  subscription OnDeleteShowcase {
+    onDeleteShowcase {
+      id
+      title
+      manager
+      managerID
+      videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateSubscriptions = /* GraphQL */ `
+  subscription OnCreateSubscriptions {
+    onCreateSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateSubscriptions = /* GraphQL */ `
+  subscription OnUpdateSubscriptions {
+    onUpdateSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteSubscriptions = /* GraphQL */ `
+  subscription OnDeleteSubscriptions {
+    onDeleteSubscriptions {
+      id
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters {
+          nextToken
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUserProjects = /* GraphQL */ `
+  subscription OnCreateUserProjects {
+    onCreateUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUserProjects = /* GraphQL */ `
+  subscription OnUpdateUserProjects {
+    onUpdateUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUserProjects = /* GraphQL */ `
+  subscription OnDeleteUserProjects {
+    onDeleteUserProjects {
+      id
+      project {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          nextToken
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
+      }
+      user {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        email
+        supporting {
+          nextToken
+        }
+        developing {
+          nextToken
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

@@ -19,6 +19,13 @@ import {
   TextField,
   Typography
 } from '@material-ui/core';
+import { API, graphqlOperation } from 'aws-amplify';
+import VideoLibrary from '../../video/VideoLibrary';
+import {
+  createUser
+  // updateUser
+} from '../../../graphql/mutations';
+import UserInfo from '../../user/UserInfo';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
 import countries from './countries';
@@ -26,6 +33,7 @@ import countries from './countries';
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
+  console.log('user', user);
 
   return (
     <Grid
@@ -87,6 +95,8 @@ const AccountGeneralSettings = (props) => {
                 </Link>
               </Typography>
             </Box>
+            <UserInfo />
+            <VideoLibrary />
           </CardContent>
           <CardActions>
             <Button
@@ -114,7 +124,9 @@ const AccountGeneralSettings = (props) => {
             country: user.country || '',
             email: user.email || '',
             isPublic: user.isPublic || false,
-            name: user.name || '',
+            firstName: user.firstName || '',
+            lastName: user.lastName || '',
+            displayName: user.displayName || '',
             phone: user.phone || '',
             state: user.state || '',
             submit: null
@@ -131,16 +143,31 @@ const AccountGeneralSettings = (props) => {
                 .max(255)
                 .required('Email is required'),
               isPublic: Yup.bool(),
-              name: Yup
-                .string()
-                .max(255)
-                .required('Name is required'),
               phone: Yup.string(),
-              state: Yup.string()
+              state: Yup.string(),
+              firstName: Yup
+                .string()
+                .min(2)
+                .required('Your first name is required'),
+              lastName: Yup
+                .string()
+                .min(2)
+                .required('Your last name is required')
             })}
           onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
             try {
               // NOTE: Make API request
+              const CreateUserInput = {
+                id: user.sub,
+                firstName: values.firstName,
+                lastName: values.lastName,
+                displayName: values.displayName,
+                email: user.email
+              };
+              console.log('user info', CreateUserInput);
+              await API.graphql(graphqlOperation(createUser, { input: CreateUserInput }));
+              console.log('user info', CreateUserInput);
+
               await wait(200);
               resetForm();
               setStatus({ success: true });
@@ -176,14 +203,14 @@ const AccountGeneralSettings = (props) => {
                       xs={12}
                     >
                       <TextField
-                        error={Boolean(touched.name && errors.name)}
+                        error={Boolean(touched.firstName && errors.firstName)}
                         fullWidth
-                        helperText={touched.name && errors.name}
+                        helperText={touched.firstName && errors.firstName}
                         label="First Name"
-                        name="first_name"
+                        name="firstName"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.first_name}
+                        value={values.firstName}
                         variant="outlined"
                       />
                     </Grid>
@@ -193,14 +220,14 @@ const AccountGeneralSettings = (props) => {
                       xs={12}
                     >
                       <TextField
-                        error={Boolean(touched.name && errors.name)}
+                        error={Boolean(touched.lastName && errors.lastName)}
                         fullWidth
-                        helperText={touched.name && errors.name}
+                        helperText={touched.lastName && errors.lastName}
                         label="Last Name"
-                        name="last_name"
+                        name="lastName"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.last_name}
+                        value={values.lastName}
                         variant="outlined"
                       />
                     </Grid>
@@ -210,14 +237,14 @@ const AccountGeneralSettings = (props) => {
                       xs={12}
                     >
                       <TextField
-                        error={Boolean(touched.name && errors.name)}
+                        error={Boolean(touched.displayName && errors.displayName)}
                         fullWidth
-                        helperText={touched.name && errors.name}
+                        helperText={touched.displayName && errors.displayName}
                         label="Display Name"
-                        name="display_name"
+                        name="displayName"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.display_name}
+                        value={values.displayName}
                         variant="outlined"
                       />
                     </Grid>

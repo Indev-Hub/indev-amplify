@@ -23,6 +23,7 @@ const RegisterAmplify = (props) => {
       <Formik
         initialValues={{
           email: '',
+          username: '',
           password: '',
           policy: true,
           submit: null
@@ -32,9 +33,13 @@ const RegisterAmplify = (props) => {
           .shape({
             email: Yup
               .string()
-              .email('Must be a valid email')
+              // .email('Must be a valid email')
               .max(255)
               .required('Email is required'),
+            username: Yup
+              .string()
+              .min(3)
+              .required('Username is required'),
             password: Yup
               .string()
               .min(7)
@@ -46,11 +51,11 @@ const RegisterAmplify = (props) => {
           })}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
           try {
-            await register(values.email, values.password);
+            await register(values.username, values.email, values.password);
 
             navigate('/authentication/verify-code', {
               state: {
-                username: values.email
+                username: values.username
               }
             });
           } catch (err) {
@@ -69,6 +74,19 @@ const RegisterAmplify = (props) => {
             onSubmit={handleSubmit}
             {...props}
           >
+            <TextField
+              error={Boolean(touched.username && errors.username)}
+              fullWidth
+              helperText={touched.username && errors.username}
+              label="Username"
+              margin="normal"
+              name="username"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              type="text"
+              value={values.username}
+              variant="outlined"
+            />
             <TextField
               error={Boolean(touched.email && errors.email)}
               fullWidth

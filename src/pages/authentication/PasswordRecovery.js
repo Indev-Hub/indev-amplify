@@ -114,7 +114,7 @@ const PasswordRecovery = () => {
                   mt: 3
                 }}
               >
-                {platform === 'JWT' && <PasswordRecoveryAmplify />}
+                {platform === 'Amplify' && <PasswordRecoveryAmplify />}
               </Box>
             </CardContent>
           </Card>

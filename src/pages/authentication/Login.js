@@ -127,7 +127,7 @@ const Login = () => {
               >
                 No account? Register
               </Link>
-              {platform === 'JWT' && (
+              {platform === 'Amplify' && (
                 <Link
                   color="textSecondary"
                   component={RouterLink}

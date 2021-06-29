@@ -66,7 +66,7 @@ export const AuthProvider = (props) => {
   useEffect(() => {
     const initialize = async () => {
       try {
-        const user = await Auth.currentAuthenticatedUser();
+        const { user } = await Auth.currentAuthenticatedUser();
 
         // Here you should extract the complete user profile to make it
         // available in your entire app.
@@ -77,10 +77,12 @@ export const AuthProvider = (props) => {
           payload: {
             isAuthenticated: true,
             user: {
-              id: user.sub,
+              id: user.attributes.sub,
               avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
               email: user.attributes.email,
-              name: 'Jane Rotanson',
+              firstName: user.attributes.firstName,
+              lastName: user.attributes.lastName,
+              displayName: user.attributes.displayName,
               plan: 'Premium'
             }
           }
@@ -114,7 +116,9 @@ export const AuthProvider = (props) => {
           id: user.attributes.sub,
           avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
           email: user.attributes.email,
-          name: 'Jane Rotanson',
+          firstName: user.attributes.firstName,
+          lastName: user.attributes.lastName,
+          displayName: user.attributes.displayName,
           plan: 'Premium'
         }
       }

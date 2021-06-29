@@ -28,6 +28,12 @@
           "unauthRoleArn": "arn:aws:iam::676066083317:role/Cognito_IndevIdentityPoolUnauth_Role",
           "unauthRoleName": "Cognito_IndevIdentityPoolUnauth_Role"
         }
+      },
+      "function": {
+        "AddCognitoUserToUserTable": {
+          "deploymentBucketName": "amplify-indevamplify-feat-194552-deployment",
+          "s3Key": "amplify-builds/AddCognitoUserToUserTable-624a58414b7549763350-build.zip"
+        }
       }
     }
   },

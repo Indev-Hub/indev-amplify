@@ -10,6 +10,7 @@ export const getChannel = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -51,6 +52,7 @@ export const getChannel = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -92,6 +94,7 @@ export const listChannels = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -134,6 +137,7 @@ export const getUser = /* GraphQL */ `
       id
       firstName
       lastName
+      username
       displayName
       email
       supporting {
@@ -159,6 +163,7 @@ export const getUser = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -208,6 +213,7 @@ export const listUsers = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -243,6 +249,7 @@ export const getProject = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -297,6 +304,7 @@ export const listProjects = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -362,6 +370,7 @@ export const getSubscriptions = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -398,6 +407,7 @@ export const getSubscriptions = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -448,6 +458,7 @@ export const listSubscriptionss = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -472,6 +483,7 @@ export const getUserProjects = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role
@@ -493,6 +505,7 @@ export const getUserProjects = /* GraphQL */ `
         id
         firstName
         lastName
+        username
         displayName
         email
         supporting {
@@ -544,6 +557,7 @@ export const listUserProjectss = /* GraphQL */ `
           id
           firstName
           lastName
+          username
           displayName
           email
           role

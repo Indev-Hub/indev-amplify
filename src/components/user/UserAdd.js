@@ -1,37 +1,32 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { createShowcase } from '../../graphql/mutations';
-// import { v4 as uuid } from 'uuid';
 import Amplify, { API, Auth, graphqlOperation, Storage } from 'aws-amplify';
 import {
-	// Card,
-	// CardHeader,
-	// CardContent,
+
 	IconButton,
 	TextField,
 	Box,
     Button
 } from '@material-ui/core';
-import { uniqueId } from 'lodash';
 import { Publish } from '@material-ui/icons';
-// import FileDropzone from './FileDropzone';
 
-const ShowcaseAdd = ({ onUpload }) => {
-    const [showcaseData, setShowcaseData] = useState({});
-    const [formatData, setformatData] = useState();
+const UserAdd = ({ onUpload }) => {
     const [data, setData] = useState([]);
     const [showcaseID, setShowcaseID] = useState(7868357);
     console.log('showcaseID:', showcaseID)
 
     const loadData = async () => {
         console.log('fire showcase ID:', showcaseID)
-        await fetch(`https://api.vimeo.com/me/albums/${showcaseID}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
-            .then(response => response.json())
-            .then(data => setData(data.data));
-            console.log('response', data)
+        const user = await Auth.currentAuthenticatedUser();
+        setData(user);
+        // await fetch(`https://api.vimeo.com/me/albums/${showcaseID}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+        //     .then(response => response.json())
+        //     .then(data => setData(data.data));
+        //     console.log('response', data)
     }
 
-    const uploadShowcase = async () => {
+    const uploadUser = async () => {
         //Get user attributes
         const { signInUserSession } = await Auth.currentAuthenticatedUser();
         const userName = signInUserSession.accessToken.payload.username;
@@ -64,35 +59,11 @@ const ShowcaseAdd = ({ onUpload }) => {
             >
                 Load Data
             </Button>
-            <IconButton onClick={uploadShowcase}>
+            <IconButton onClick={uploadUser}>
                 <Publish />
             </IconButton>
-            {/* <TextField
-				color="white"
-                label="Title"
-                value={showcaseData.title}
-                onChange={e => setShowcaseData({ ...showcaseData, title: e.target.value })}
-            />
-            <TextField
-                label="Description"
-                value={showcaseData.description}
-                onChange={e => setShowcaseData({ ...showcaseData, description: e.target.value })}
-            /> */}
-			{/* <Box width="100%">
-				<FileDropzone
-				accept="video/*"
-				files={files}
-				onDrop={handleDrop}
-				onRemove={handleRemove}
-				onRemoveAll={handleRemoveAll}
-				onChange={e => setformatData(e.target.files[0])}
-				/>
-			</Box> */}
-            {/* <IconButton onClick={uploadShowcase}>
-                <Publish />
-            </IconButton> */}
         </Box>
     );
 };
 
-export default ShowcaseAdd;
+export default UserAdd;

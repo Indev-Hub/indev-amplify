@@ -58,7 +58,7 @@ const PasswordReset = () => {
   return (
     <>
       <Helmet>
-        <title>Password Reset | Material Kit Pro</title>
+        <title>Password Reset | Indev</title>
       </Helmet>
       <Box
         sx={{
@@ -148,7 +148,7 @@ const PasswordReset = () => {
                   mt: 3
                 }}
               >
-                {visible && platform === 'JWT' && <PasswordResetAmplify />}
+                {visible && platform === 'Amplify' && <PasswordResetAmplify />}
               </Box>
               <Divider sx={{ my: 3 }} />
               {platform === 'Amplify' && (

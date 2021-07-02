@@ -4,11 +4,17 @@ import ReactDOM from "react-dom";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import {
   Box,
-  IconButton
+  Button,
+  Card,
+  Grid,
+  IconButton,
+  Paper,
+  TextField,
+  Typography
 } from "@material-ui/core";
 import { API, graphqlOperation } from "aws-amplify";
 import { getShowcase } from "src/graphql/queries";
-import { Publish, Undo } from '@material-ui/icons';
+import { Edit, Publish, Undo } from '@material-ui/icons';
 import { updateShowcase } from '../../graphql/mutations';
 
 // fake data generator
@@ -45,7 +51,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? "lightblue" : "lightgrey",
   padding: grid,
-  width: 250,
+  width: "100%",
   position: "relative"
 });
 
@@ -71,6 +77,7 @@ const Showcase = props => {
       const videoList = JSON.parse(showcaseVideoData);
       setVideos(videoList);
       setShowcaseData(videoData.data.getShowcase);
+      console.log('showcase response:', videos[0].pictures.sizes[5].link)
     } catch (error) {
       console.log('error on fetching videos', error);
     }
@@ -141,61 +148,168 @@ const Showcase = props => {
     });
   };
 
+  // Video title and description update
+  const [videoProps, setVideoProps] = useState({ name: 'Temp Video', description: '', uri: '', pic: '' });
+
+  const switchVideo = (i) => {
+    setVideoProps({ name: i.name, description: i.description, uri: i.uri, pic: i.pictures.sizes[5].link });
+    console.log('select video', videoProps)
+  }
+
+  const [editTitle, setEditTitle] = useState(true);
+  const toggleTitle = () => {
+    editTitle ? setEditTitle(false) : setEditTitle(true) 
+    console.log('Title:', editTitle)
+  }
+
+  const [editDescription, setEditDescription] = useState(true);
+  const toggleDescription = () => {
+    editDescription ? setEditDescription(false) : setEditDescription(true) 
+    console.log('Description:', editDescription)
+  }
+
   // Normally you would want to split things out into separate components.
   // But in this example everything is just done in one place for simplicity
   return (
-    <Box>
-    <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
-      <Droppable droppableId="droppable">
-        {(provided, snapshot) => (
-          <Box
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-            style={getListStyle(snapshot.isDraggingOver)}
-          >
-            {videos.map((item, index) => (
-              <Draggable key={item.uri} draggableId={item.uri} index={index}>
-                {(provided, snapshot) => (
-                  <Box
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    style={getItemStyle(
-                      snapshot.isDragging,
-                      provided.draggableProps.style
+    <Grid
+      container
+      sx={{
+        p:2
+      }}
+    >
+      <Grid
+        item
+      >
+        <Button sx={{ backgroundColor:'text.secondary', m:1 }} onClick={saveShowcaseChanges}>
+          Update Order
+        </Button>
+        <Button sx={{ backgroundColor:'text.secondary', m:1 }} onClick={undoChanges}>
+          <Undo
+            color="primary"
+            sx={{
+              mr: 1
+            }}
+          />
+          Revert
+        </Button>
+        <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <Card
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+                style={getListStyle(snapshot.isDraggingOver)}
+                sx={{
+                  p:2
+                }}
+              >
+                {videos.map((item, index) => (
+                  <Draggable key={item.uri} draggableId={item.uri} index={index}>
+                    {(provided, snapshot) => (
+                      <>
+                        <Grid
+                          container
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          style={getItemStyle(
+                            snapshot.isDragging,
+                            provided.draggableProps.style
+                          )}
+                          sx={{
+                            p:2
+                          }}
+                        >
+                          <Grid
+                            item
+                            xs={9}
+                          >
+                            {item.name}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={3}
+                          >
+                            <IconButton onClick={() => {switchVideo(item)}}>< Edit /></IconButton>
+                          </Grid>
+                        </Grid>
+
+                      </>
                     )}
-                  >
-                    {item.name}
-                  </Box>
-                )}
-              </Draggable>
-            ))}
+                  </Draggable>
+                ))}
 
-            {provided.placeholder}
-            {/* <CustomPlaceholder snapshot={snapshot} /> */}
-            <Box style={{
-              position: "absolute",
-              top: placeholderProps.clientY,
-              left: placeholderProps.clientX,
-              height: placeholderProps.clientHeight,
-              background: "tomato",
-              width: placeholderProps.clientWidth
-            }} />
-          </Box>
-        )}
-      </Droppable>
-    </DragDropContext>
-
-    <IconButton onClick={saveShowcaseChanges}>
-				<Publish 
-					color="primary"/>
-			</IconButton>
-
-    <IconButton onClick={undoChanges}>
-        <Undo
-          color="primary" />
-    </IconButton>
-    </Box>
+                {provided.placeholder}
+                {/* <CustomPlaceholder snapshot={snapshot} /> */}
+                <Box style={{
+                  position: "absolute",
+                  top: placeholderProps.clientY,
+                  left: placeholderProps.clientX,
+                  height: placeholderProps.clientHeight,
+                  background: "tomato",
+                  width: placeholderProps.clientWidth
+                }} />
+              </Card>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </Grid>
+      <Grid
+        item
+        sx={{
+          p:6
+        }}
+      >
+        <Paper
+          sx={{
+            width: '720px',
+            p:3
+          }}
+        >
+          <img src={videoProps.pic} width="100%" alt="temp" />
+          <Grid container>
+            <Grid item xs={11} sx={{my:1}}>
+              {
+                editTitle ? (
+                  <Typography variant="h4">{videoProps.name}</Typography>
+                ) : (
+                  <TextField
+                    label="Video Title"
+                    placeholder={videoProps.name}
+                    value={videoProps.name}
+                    fullWidth
+                  />
+                )
+              }
+            </Grid>
+            <Grid item xs={1} sx={{my:1}}>
+              <IconButton onClick={() => {toggleTitle()}}><Edit /></IconButton>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={11}>
+              {
+                editDescription ? (
+                  <Typography variant="h6" display="block" sx={{ wordWrap: "break-word"}}>Description will go here. There are currently no descriptions saved in the vimeo showcases.</Typography>
+                ) : (
+                  <TextField
+                    label="Video Description"
+                    placeholder={videoProps.description}
+                    value={videoProps.description}
+                    fullWidth={true}
+                  />
+                )
+              }
+            </Grid>
+            <Grid item xs={1}>
+              <IconButton onClick={() => {toggleDescription()}}><Edit /></IconButton>
+            </Grid>
+          </Grid>
+        </Paper>
+        {console.log('name:', videoProps.name, 'uri:', videoProps.uri, 'pic:', videoProps.pic)}
+        {/* <Typography>{videos[selectVideo].uri}</Typography> */}
+      </Grid>
+    </Grid>
   );
 };
 

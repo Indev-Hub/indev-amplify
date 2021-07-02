@@ -149,7 +149,7 @@ const HomeHero = (props) => (
       {/* <ChannelBrowse /> */}
       {/* <VideoUpdate /> */}
       {/* <UploadVideo /> */}
-      <ShowcaseAdd />
+      {/* <ShowcaseAdd /> */}
       <ShowcaseLibrary />
       <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
       <ChannelSlider genre={game} sliderHeight="500px" />

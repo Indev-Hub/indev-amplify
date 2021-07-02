@@ -11,6 +11,7 @@ import gtm from '../../lib/gtm';
 import { getBoard, moveCard } from '../../slices/kanban';
 import { useDispatch, useSelector } from '../../store';
 import ShowcaseLibrary from 'src/components/video/ShowcaseLibrary';
+import Showcase from './Showcase';
 
 const VideoLibrary = () => {
   const dispatch = useDispatch();
@@ -107,7 +108,8 @@ const VideoLibrary = () => {
             </Typography>
           </Breadcrumbs>
         </Box>
-        <ShowcaseLibrary />
+        {/* <ShowcaseLibrary /> */}
+        <Showcase />
       </Box>
     </>
   );

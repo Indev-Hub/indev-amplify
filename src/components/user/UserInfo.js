@@ -19,7 +19,7 @@ function UserInfo() {
 
   const getUserInfo = async () => {  
     try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: '5db18a01-deb2-46c4-bf53-624300b67ae1' }));
+      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
       const userList = userData.data.getUser;
       setUserInfo(userList);
       
@@ -31,10 +31,7 @@ function UserInfo() {
 
   return (
     <div>
-      <TextField
-        label="text"
-        // value={e.value}
-      />
+
     </div>
   )
 }

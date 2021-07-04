@@ -22,8 +22,7 @@ import {
 import { API, graphqlOperation } from 'aws-amplify';
 import VideoLibrary from '../../video/VideoLibrary';
 import {
-  createUser
-  // updateUser
+  updateUser
 } from '../../../graphql/mutations';
 import UserInfo from '../../user/UserInfo';
 import useAuth from '../../../hooks/useAuth';
@@ -157,16 +156,17 @@ const AccountGeneralSettings = (props) => {
           onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
             try {
               // NOTE: Make API request
-              const CreateUserInput = {
-                id: user.sub,
+              const UpdateUserInput = {
+                id: user.id,
                 firstName: values.firstName,
                 lastName: values.lastName,
                 displayName: values.displayName,
                 email: user.email
               };
-              console.log('user info', CreateUserInput);
-              await API.graphql(graphqlOperation(createUser, { input: CreateUserInput }));
-              console.log('user info', CreateUserInput);
+              console.log('user info', UpdateUserInput);
+              console.log('user.id:', user.id, 'user.sub', user.sub);
+              await API.graphql(graphqlOperation(updateUser, { input: UpdateUserInput }));
+              console.log('user info', UpdateUserInput);
 
               await wait(200);
               resetForm();

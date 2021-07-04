@@ -1,7 +1,7 @@
 /* eslint-disable */
+import React, { useEffect, useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import React, { useEffect, useState } from 'react';
 import * as queries from 'src/graphql/queries';
 import {
   getUser
@@ -11,7 +11,7 @@ import useAuth from 'src/hooks/useAuth';
 function UserInfo() {
   const { user } = useAuth();
   const [userInfo, setUserInfo] = useState([]);
-  console.log('user', user.id);
+  // console.log('user', user.id);
 
   useEffect(() => {
       getUserInfo();
@@ -19,11 +19,11 @@ function UserInfo() {
 
   const getUserInfo = async () => {  
     try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: '5db18a01-deb2-46c4-bf53-624300b67ae1' }));
+      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
       const userList = userData.data.getUser;
       setUserInfo(userList);
       
-      console.log('list', userList);
+      // console.log('list', userList);
     } catch (error) {
       console.log('error on fetching videos', error);
     }
@@ -31,10 +31,7 @@ function UserInfo() {
 
   return (
     <div>
-      <TextField
-        label="text"
-        // value={e.value}
-      />
+
     </div>
   )
 }

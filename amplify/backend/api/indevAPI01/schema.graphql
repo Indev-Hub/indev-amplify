@@ -28,6 +28,7 @@ type User @model
   developing: [UserProjects] @connection(name: "projectUser")
   channel: Channel @connection
   role: String
+  canHire: Boolean
 }
 
 type Project @model {

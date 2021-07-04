@@ -30,6 +30,7 @@ export const getChannel = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -56,6 +57,7 @@ export const getChannel = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -98,6 +100,7 @@ export const listChannels = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -167,6 +170,7 @@ export const getUser = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -197,6 +201,7 @@ export const getUser = /* GraphQL */ `
         updatedAt
       }
       role
+      canHire
       createdAt
       updatedAt
     }
@@ -233,6 +238,7 @@ export const listUsers = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -269,6 +275,7 @@ export const getProject = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -308,6 +315,7 @@ export const listProjects = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -374,6 +382,7 @@ export const getSubscriptions = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -427,6 +436,7 @@ export const getSubscriptions = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -462,6 +472,7 @@ export const listSubscriptionss = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -487,6 +498,7 @@ export const getUserProjects = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -525,6 +537,7 @@ export const getUserProjects = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -561,6 +574,7 @@ export const listUserProjectss = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }

@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { useSnackbar } from 'notistack';
 import {
-  Autocomplete,
+  // Autocomplete,
   Avatar,
   Box,
   Button,
@@ -20,19 +21,35 @@ import {
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import VideoLibrary from '../../video/VideoLibrary';
+import * as queries from '../../../graphql/queries';
 import {
   updateUser
 } from '../../../graphql/mutations';
-import UserInfo from '../../user/UserInfo';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
-import countries from './countries';
+// import countries from './countries';
 
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
+  const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
   console.log('user', user);
+  console.log('userInfo:', userInfo);
+
+  const getUserInfo = async () => {
+    try {
+      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+      const userList = userData.data.getUser;
+      setUserInfo(userList);
+      console.log('list', userList);
+    } catch (error) {
+      console.log('error on fetching videos', error);
+    }
+  };
+
+  useEffect(() => {
+    getUserInfo();
+  }, []);
 
   return (
     <Grid
@@ -94,8 +111,6 @@ const AccountGeneralSettings = (props) => {
                 </Link>
               </Typography>
             </Box>
-            <UserInfo />
-            <VideoLibrary />
           </CardContent>
           <CardActions>
             <Button
@@ -118,14 +133,14 @@ const AccountGeneralSettings = (props) => {
         <Formik
           enableReinitialize
           initialValues={{
-            canHire: user.canHire || false,
+            canHire: userInfo.canHire,
             city: user.city || '',
             country: user.country || '',
             email: user.email || '',
             isPublic: user.isPublic || false,
-            firstName: user.firstName || '',
-            lastName: user.lastName || '',
-            displayName: user.displayName || '',
+            firstName: userInfo.firstName || '',
+            lastName: userInfo.lastName || '',
+            displayName: userInfo.displayName || '',
             phone: user.phone || '',
             state: user.state || '',
             submit: null
@@ -161,7 +176,8 @@ const AccountGeneralSettings = (props) => {
                 firstName: values.firstName,
                 lastName: values.lastName,
                 displayName: values.displayName,
-                email: user.email
+                email: user.email,
+                canHire: values.canHire
               };
               console.log('user info', UpdateUserInput);
               console.log('user.id:', user.id, 'user.sub', user.sub);
@@ -269,7 +285,7 @@ const AccountGeneralSettings = (props) => {
                         variant="outlined"
                       />
                     </Grid>
-                    <Grid
+                    {/* <Grid
                       item
                       md={6}
                       xs={12}
@@ -340,7 +356,7 @@ const AccountGeneralSettings = (props) => {
                         variant="outlined"
                       />
                     </Grid>
-                    {/* <Grid
+                    <Grid
                       item
                       md={6}
                       xs={12}
@@ -382,7 +398,7 @@ const AccountGeneralSettings = (props) => {
                         xs={12}
                       >
                         <Switch
-                          checked={values.accept_work}
+                          checked={values.canHire}
                           color="primary"
                           edge="start"
                           name="canHire"

@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Box, Button, Card, FormHelperText, Paper, Radio, Typography } from '@material-ui/core';
+/* eslint-disable */
+import React, { useState } from "react";
+import { Box, Button, Card, FormControlLabel, FormHelperText, Paper, Radio, RadioGroup, Typography } from '@material-ui/core';
 
 const typeOptions = [
   {
@@ -20,40 +20,18 @@ const typeOptions = [
   }
 ];
 
-const ChannelOwnerForm = (props) => {
-  const { onBack, onNext, ...other } = props;
-  const [type, setType] = useState();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState(null);
+const ChannelDetails = (props) => {
+  const { data, handleChange, next } = props;
+  const [selectedValue, setSelectedValue] = useState();
 
-  const handleRadio = (newType) => {
-    setType(newType);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      setIsSubmitting(true);
-
-      // NOTE: Make API request
-
-      if (onNext) {
-        onNext();
-      }
-    } catch (err) {
-      console.error(err);
-      setError(err.message);
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleRadio = (event) => {
+    setSelectedValue(event.target.value);
+    console.log('value', data);
+    console.log('selected value', selectedValue);
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      {...other}
-    >
+    <form>
       <Card sx={{ p: 3 }}>
         <Typography
           color="textPrimary"
@@ -80,9 +58,12 @@ const ChannelOwnerForm = (props) => {
               variant="outlined"
             >
               <Radio
-                checked={type === typeOption.value}
+                checked={selectedValue === typeOption.value}
                 color="primary"
-                onClick={() => handleRadio(typeOption.value)}
+                name="operator"
+                value={typeOption.value}
+                onClick={handleRadio}
+                onChange={handleChange}
               />
               <Box sx={{ ml: 2 }}>
                 <Typography
@@ -101,47 +82,26 @@ const ChannelOwnerForm = (props) => {
             </Paper>
           ))}
         </Box>
-        {error && (
-          <Box sx={{ mt: 2 }}>
-            <FormHelperText error>
-              {error}
-            </FormHelperText>
-          </Box>
-        )}
         <Box
           sx={{
             display: 'flex',
             mt: 6
           }}
         >
-          {onBack && (
+          <Box sx={{ flexGrow: 1 }} />
+
+            {/* Send channel_title and channel_category to db */}
             <Button
               color="primary"
-              onClick={onBack}
+              onClick={next}
               size="large"
-              variant="text"
+              variant="contained"
             >
-              Previous
+              Next
             </Button>
-          )}
-          <Box sx={{ flexGrow: 1 }} />
-          <Button
-            color="primary"
-            disabled={isSubmitting}
-            type="submit"
-            variant="contained"
-          >
-            Next
-          </Button>
-        </Box>
+          </Box>
       </Card>
     </form>
   );
 };
-
-ChannelOwnerForm.propTypes = {
-  onBack: PropTypes.func,
-  onNext: PropTypes.func
-};
-
-export default ChannelOwnerForm;
+export default ChannelDetails;

@@ -45,20 +45,25 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? "lightblue" : "lightgrey",
   padding: grid,
-  width: 250,
+  width: 300,
   position: "relative"
 });
+
+const getThumbnailStyle = {
+  borderRadius: '12px 12px 0 0',
+  // margin: '10px',
+  maxWidth: '100%'};
 
 const queryAttr = "data-rbd-drag-handle-draggable-id";
 
 const Showcase = props => {
   const [placeholderProps, setPlaceholderProps] = useState({});
-  const [items, setItems] = useState(getItems(10));
 
   // START CODE from ShowcaseLibrary //
   const [showcaseData, setShowcaseData] = useState({});
   const [showcaseID, setShowcaseID] = useState(7868357)
   const [videos, setVideos] = useState([]);
+
 
   useEffect(() => {
     fetchVideos();
@@ -70,7 +75,8 @@ const Showcase = props => {
       const showcaseVideoData = videoData.data.getShowcase.videos;
       const videoList = JSON.parse(showcaseVideoData);
       setVideos(videoList);
-      setShowcaseData(videoData.data.getShowcase);
+      setShowcaseData(videoData);
+
     } catch (error) {
       console.log('error on fetching videos', error);
     }
@@ -145,56 +151,59 @@ const Showcase = props => {
   // But in this example everything is just done in one place for simplicity
   return (
     <Box>
-    <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
-      <Droppable droppableId="droppable">
-        {(provided, snapshot) => (
-          <Box
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-            style={getListStyle(snapshot.isDraggingOver)}
-          >
-            {videos.map((item, index) => (
-              <Draggable key={item.uri} draggableId={item.uri} index={index}>
-                {(provided, snapshot) => (
-                  <Box
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    style={getItemStyle(
-                      snapshot.isDragging,
-                      provided.draggableProps.style
-                    )}
-                  >
-                    {item.name}
-                  </Box>
-                )}
-              </Draggable>
-            ))}
+      <IconButton onClick={saveShowcaseChanges}>
+        <Publish
+          color="primary" />
+      </IconButton>
 
-            {provided.placeholder}
-            {/* <CustomPlaceholder snapshot={snapshot} /> */}
-            <Box style={{
-              position: "absolute",
-              top: placeholderProps.clientY,
-              left: placeholderProps.clientX,
-              height: placeholderProps.clientHeight,
-              background: "tomato",
-              width: placeholderProps.clientWidth
-            }} />
-          </Box>
-        )}
-      </Droppable>
-    </DragDropContext>
-
-    <IconButton onClick={saveShowcaseChanges}>
-				<Publish 
-					color="primary"/>
-			</IconButton>
-
-    <IconButton onClick={undoChanges}>
+      <IconButton onClick={undoChanges}>
         <Undo
           color="primary" />
-    </IconButton>
+      </IconButton>
+
+      <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
+        <Droppable droppableId="droppable">
+          {(provided, snapshot) => (
+            <Box
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              style={getListStyle(snapshot.isDraggingOver)}
+            >
+              {videos.map((item, index, pictures) => (
+
+                <Draggable key={item.uri} draggableId={item.uri} index={index}>
+                  {(provided, snapshot) => (
+                    <Box
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      style={getItemStyle(
+                        snapshot.isDragging,
+                        provided.draggableProps.style
+                      )}
+                    >
+                      {index + 1}. {item.name}
+                      <img style={getThumbnailStyle} src={item.pictures.sizes[index].link} />
+                    </Box>
+                  )}
+                </Draggable>
+              ))}
+
+              {provided.placeholder}
+              {/* <CustomPlaceholder snapshot={snapshot} />  */}
+              <Box style={{
+                position: "absolute",
+                top: placeholderProps.clientY,
+                left: placeholderProps.clientX,
+                height: placeholderProps.clientHeight,
+                background: "tomato",
+                width: placeholderProps.clientWidth
+              }} />
+            </Box>
+          )}
+        </Droppable>
+      </DragDropContext>
+
     </Box>
   );
 };

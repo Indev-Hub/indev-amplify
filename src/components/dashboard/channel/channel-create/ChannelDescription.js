@@ -26,15 +26,18 @@ const ChannelDescription = (props) => {
         <Box sx={{ mt: 2 }}>
           <TextField
             // error={Boolean(touched.channel_title && errors.channel_title)}
-            fullWidth
             // helperText={touched.channel_title && errors.channel_title}
+            fullWidth
             label="Channel Description"
             name="description"
+            multiline="true"
+            maxRows="2"
             // onBlur={handleBlur}
             onChange={handleChange}
             value={data.description}
             variant="outlined"
           />
+          <Typography fontSize="12px" sx={{ml:2}}>Max 250 characters</Typography>
         </Box>
         <Typography
           color="textPrimary"

@@ -1,6 +1,18 @@
 /* eslint-disable */
-import React, { useState } from "react";
-import { Box, Button, Card, FormControlLabel, FormHelperText, Paper, Radio, RadioGroup, Typography } from '@material-ui/core';
+import React, { useState, useEffect } from "react";
+import {
+  Box,
+  Button,
+  Card,
+  FormControl,
+  FormControlLabel,
+  FormHelperText,
+  FormLabel,
+  Paper,
+  Radio,
+  RadioGroup,
+  Typography
+} from '@material-ui/core';
 
 const typeOptions = [
   {
@@ -23,12 +35,23 @@ const typeOptions = [
 const ChannelDetails = (props) => {
   const { data, handleChange, next } = props;
   const [selectedValue, setSelectedValue] = useState();
+  // const [sectedType, setSelectedType] = useState();
+  const [value, setValue] = useState(
+    data.operator ? data.operator : ''
+  );
 
-  const handleRadio = (event) => {
-    setSelectedValue(event.target.value);
-    console.log('value', data);
-    console.log('selected value', selectedValue);
-  };
+  useEffect(() => {
+    setValue(value);
+    console.log(value)
+    // handleChange();
+    data.operator = value;
+    console.log('data:', data)
+  }, [value])
+
+  const continueNext = (e) => {
+    // handleChange();
+    next();
+  }
 
   return (
     <form>
@@ -45,10 +68,41 @@ const ChannelDetails = (props) => {
         >
           You can update this later if your operating status changes.
         </Typography>
-        <Box sx={{ mt: 2 }}>
-          {typeOptions.map((typeOption) => (
+        <FormControl component="fieldset">
+          <RadioGroup name="operator" value={value} sx={{ mt: 2 }}>
             <Paper
-              key={typeOption.value}
+              sx={{
+                alignItems: 'flex-start',
+                display: 'flex',
+                mb: 2,
+                padding: 2,
+              }}
+              variant="outlined"
+            >
+              <Radio
+                  // checked={value}
+                  color="primary"
+                  name="solo"
+                  value="solo"
+                  // onClick={handleRadio}
+                  onChange={(e) => setValue(e.target.value)}
+              />
+              <Box sx={{ ml: 2 }}>
+                <Typography
+                  color="textPrimary"
+                  variant="subtitle2"
+                >
+                  I’m an independent developer
+                </Typography>
+                <Typography
+                  color="textSecondary"
+                  variant="body2"
+                >
+                  I work alone
+                </Typography>
+              </Box>
+            </Paper>
+            <Paper
               sx={{
                 alignItems: 'flex-start',
                 display: 'flex',
@@ -58,30 +112,63 @@ const ChannelDetails = (props) => {
               variant="outlined"
             >
               <Radio
-                checked={selectedValue === typeOption.value}
-                color="primary"
-                name="operator"
-                value={typeOption.value}
-                onClick={handleRadio}
-                onChange={handleChange}
+                  // checked={value}
+                  color="primary"
+                  name="group"
+                  value="group"
+                  onChange={(e) => setValue(e.target.value)}
               />
               <Box sx={{ ml: 2 }}>
                 <Typography
                   color="textPrimary"
                   variant="subtitle2"
                 >
-                  {typeOption.title}
+                  I represent a collective of independent developers
                 </Typography>
                 <Typography
                   color="textSecondary"
                   variant="body2"
                 >
-                  {typeOption.description}
+                  I am part of a collective of devs working on projects together
                 </Typography>
               </Box>
             </Paper>
-          ))}
-        </Box>
+            <Paper
+              sx={{
+                alignItems: 'flex-start',
+                display: 'flex',
+                mb: 2,
+                padding: 2
+              }}
+              variant="outlined"
+            >
+              <Radio
+                  // checked={value}
+                  color="primary"
+                  name="studio"
+                  value="studio"
+                  onChange={(e) => setValue(e.target.value)}
+              />
+              <Box sx={{ ml: 2 }}>
+                <Typography
+                  color="textPrimary"
+                  variant="subtitle2"
+                >
+                  I represent an independent development studio
+                </Typography>
+                <Typography
+                  color="textSecondary"
+                  variant="body2"
+                >
+                  I am operating the channel for a studio with 2 or more developers
+                </Typography>
+              </Box>
+            </Paper>
+
+            <FormControlLabel value="group" control={<Radio />} label="Male" />
+            <FormControlLabel value="studio" control={<Radio />} label="Other" />
+          </RadioGroup>
+        </FormControl>
         <Box
           sx={{
             display: 'flex',
@@ -93,7 +180,7 @@ const ChannelDetails = (props) => {
             {/* Send channel_title and channel_category to db */}
             <Button
               color="primary"
-              onClick={next}
+              onClick={continueNext}
               size="large"
               variant="contained"
             >

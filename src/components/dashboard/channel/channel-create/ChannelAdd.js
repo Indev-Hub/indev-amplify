@@ -19,10 +19,10 @@ const ChannelAdd = () => {
     description: '',
     featuredImg: ''  
   });
-  const handleChange = (event) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
     console.log('Change:', formData)
   };

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -9,6 +10,8 @@ import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
 import { getBoard, moveCard } from '../../slices/kanban';
 import { useDispatch, useSelector } from '../../store';
+import ShowcaseLibrary from 'src/components/video/ShowcaseLibrary';
+import Showcase from './Showcase';
 
 const VideoLibrary = () => {
   const dispatch = useDispatch();
@@ -105,33 +108,8 @@ const VideoLibrary = () => {
             </Typography>
           </Breadcrumbs>
         </Box>
-        <DragDropContext onDragEnd={handleDragEnd}>
-          <Box
-            sx={{
-              display: 'flex',
-              flexGrow: 1,
-              flexShrink: 1,
-              overflowX: 'auto',
-              overflowY: 'hidden'
-            }}
-          >
-            <Box
-              sx={{
-                display: 'flex',
-                px: 1,
-                py: 3
-              }}
-            >
-              {columns.allIds.map((columnId) => (
-                <VideoLibraryColumn
-                  columnId={columnId}
-                  key={columnId}
-                />
-              ))}
-              {/* <VideoLibraryColumnAdd /> */}
-            </Box>
-          </Box>
-        </DragDropContext>
+        {/* <ShowcaseLibrary /> */}
+        <Showcase />
       </Box>
     </>
   );

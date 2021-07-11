@@ -43,7 +43,6 @@ const ChannelDetails = (props) => {
   useEffect(() => {
     setValue(value);
     console.log(value)
-    // handleChange();
     data.operator = value;
     console.log('data:', data)
   }, [value])
@@ -164,9 +163,6 @@ const ChannelDetails = (props) => {
                 </Typography>
               </Box>
             </Paper>
-
-            <FormControlLabel value="group" control={<Radio />} label="Male" />
-            <FormControlLabel value="studio" control={<Radio />} label="Other" />
           </RadioGroup>
         </FormControl>
         <Box

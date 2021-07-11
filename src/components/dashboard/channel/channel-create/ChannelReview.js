@@ -17,7 +17,7 @@ const ChannelReview = (props) => {
           color="textSecondary"
           variant="body1"
         >
-          If everything looks good then go ahead and submit your channel.
+          If everything looks good then go ahead and create your channel.
         </Typography>
           <Grid container display="flex">
             <Grid item textAlign="center" alignContent="center" pr={1}>
@@ -56,18 +56,22 @@ const ChannelReview = (props) => {
             Go Back
           </Button>
           <Box sx={{ flexGrow: 1 }} />
-
-            {/* Send channel_title and channel_category to db */}
-            <Button
-              color="primary"
-              onClick={addChannel}
-              size="large"
-              variant="contained"
-            >
-              Create Channel
-            </Button>
-          </Box>
+        </Box>
       </Card>
+        {/* Send channel_title and channel_category to db */}
+        <Button
+          color="primary"
+          onClick={addChannel}
+          size="large"
+          variant="contained"
+          fullWidth
+          sx={{
+            p:2,
+            mt:2
+          }}
+        >
+          Create Channel
+        </Button>
     </>
   );
 };

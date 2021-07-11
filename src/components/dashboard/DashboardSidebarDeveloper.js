@@ -60,6 +60,11 @@ const sections = [
     title: 'Content',
     items: [
       {
+        title: 'Channel',
+        path: '/dashboard/channel',
+        icon: <CalendarIcon fontSize="small" />
+      },
+      {
         title: 'Channels',
         path: '/dashboard/channels',
         icon: <BriefcaseIcon fontSize="small" />,

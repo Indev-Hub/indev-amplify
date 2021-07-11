@@ -87,7 +87,8 @@ const AccountPopover = () => {
             color="textPrimary"
             variant="subtitle2"
           >
-            {user.name}
+            {user.firstName} {user.lastName} {user.displayName}
+            {console.log('user', user)}
           </Typography>
           <Typography
             color="textSecondary"
@@ -100,7 +101,7 @@ const AccountPopover = () => {
         <Box sx={{ mt: 2 }}>
           <MenuItem
             component={RouterLink}
-            to="/dashboard/social/profile"
+            to="/dashboard/account"
           >
             <ListItemIcon>
               <UserIcon fontSize="small" />
@@ -118,7 +119,7 @@ const AccountPopover = () => {
           </MenuItem>
           <MenuItem
             component={RouterLink}
-            to="/dashboard/account"
+            to="/dashboard/"
           >
             <ListItemIcon>
               <CogIcon fontSize="small" />
@@ -129,7 +130,7 @@ const AccountPopover = () => {
                   color="textPrimary"
                   variant="subtitle2"
                 >
-                  Settings
+                  Dashboard
                 </Typography>
               )}
             />

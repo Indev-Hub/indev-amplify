@@ -33,7 +33,7 @@ const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
   const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
-  console.log('user', user);
+  console.log('user', user.id);
   console.log('userInfo:', userInfo);
 
   const getUserInfo = async () => {
@@ -133,7 +133,8 @@ const AccountGeneralSettings = (props) => {
         <Formik
           enableReinitialize
           initialValues={{
-            canHire: userInfo.canHire,
+            // canHire: userInfo.canHire = userInfo.canHire ? userInfo.canHire : false,
+            canHire: userInfo.canHire || false,
             city: user.city || '',
             country: user.country || '',
             email: user.email || '',

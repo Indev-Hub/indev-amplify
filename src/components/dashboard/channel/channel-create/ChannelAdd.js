@@ -48,9 +48,8 @@ const ChannelAdd = () => {
 
     // Create Channel Inputs
     const CreateChannelInput = {
-      id: "001",
       name: name,
-      manager: userId,
+      channelManagerId: userId,
       description: description,
       category: category,
       operator: operator,
@@ -94,14 +93,6 @@ const ChannelAdd = () => {
       return (
         <>
           <ChannelReview data={formData} addChannel={addChannel} back={back} />
-          <Button
-            color="primary"
-            onClick={addChannel}
-            size="large"
-            variant="contained"
-          >
-            Create Channel
-          </Button>
         </>
       );
   }

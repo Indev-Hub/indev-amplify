@@ -1,7 +1,8 @@
-import { createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer, useState } from 'react';
 import PropTypes from 'prop-types';
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { API, Auth, graphqlOperation } from 'aws-amplify';
 import { amplifyConfig } from '../config';
+import { getUser } from '../graphql/queries';
 
 Amplify.configure(amplifyConfig);
 
@@ -62,11 +63,30 @@ const AuthContext = createContext({
 export const AuthProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [userInfo, setUserInfo] = useState([]);
+
+  const getUserInfo = async () => {
+    try {
+      // eslint-disable-next-line
+      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+      const userList = userData.data.getUser;
+      setUserInfo(userList);
+      console.log('list', userList);
+    } catch (error) {
+      console.log('error on fetching videos', error);
+    }
+  };
+
+  useEffect(() => {
+    getUserInfo();
+  }, []);
 
   useEffect(() => {
     const initialize = async () => {
       try {
         const { user } = await Auth.currentAuthenticatedUser();
+        getUserInfo();
+        console.log('user initialized context', userInfo);
 
         // Here you should extract the complete user profile to make it
         // available in your entire app.
@@ -83,7 +103,7 @@ export const AuthProvider = (props) => {
               firstName: user.attributes.firstName,
               lastName: user.attributes.lastName,
               displayName: user.attributes.displayName,
-              plan: 'Premium'
+              plan: userInfo.role
             }
           }
         });
@@ -119,7 +139,7 @@ export const AuthProvider = (props) => {
           firstName: user.attributes.firstName,
           lastName: user.attributes.lastName,
           displayName: user.attributes.displayName,
-          plan: 'Premium'
+          plan: userInfo.role
         }
       }
     });

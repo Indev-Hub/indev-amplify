@@ -5,11 +5,12 @@ import {
   Container,
   Typography
 } from '@material-ui/core';
-import ChannelBrowse from '../../pages/channel/ChannelBrowse';
+// import ChannelBrowse from '../../pages/channel/ChannelBrowse';
 import ChannelSlider from '../channel-slider/ChannelSlider';
+// import ChannelCreate from '../dashboard/channel/channel-create/ChannelAdd';
 import FeaturedSlider from '../featured-slider/FeaturedSlider';
-import ShowcaseAdd from '../video/ShowcaseAdd';
-import Showcase from '../../pages/dashboard/Showcase';
+// import ShowcaseAdd from '../video/ShowcaseAdd';
+// import VideoLibrary from '../video/VideoLibrary';
 // import HomeOverview from './HomeOverview';
 // import ChannelSlider1 from './ChannelSlider';
 
@@ -150,7 +151,8 @@ const HomeHero = (props) => (
       {/* <VideoUpdate /> */}
       {/* <UploadVideo /> */}
       {/* <ShowcaseAdd /> */}
-      <Showcase />
+      {/* <VideoLibrary /> */}
+      {/* <ChannelCreate /> */}
       <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
       <ChannelSlider genre={game} sliderHeight="500px" />
       <Typography variant="h4" style={{ marginTop: '40px' }}>Software Development</Typography>

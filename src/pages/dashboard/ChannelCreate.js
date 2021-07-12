@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Box, Breadcrumbs, Container, Grid, Link, Typography } from '@material-ui/core';
-import { ChannelCreateWizard } from '../../components/dashboard/channel';
+// import { ChannelCreateWizard } from '../../components/dashboard/channel';
 import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
+import ChannelAdd from '../../components/dashboard/channel/channel-create/ChannelAdd';
 
 const ChannelCreate = () => {
   const { settings } = useSettings();
@@ -63,7 +64,7 @@ const ChannelCreate = () => {
             </Grid>
           </Grid>
           <Box sx={{ mt: 3 }}>
-            <ChannelCreateWizard />
+            <ChannelAdd />
           </Box>
         </Container>
       </Box>

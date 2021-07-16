@@ -77,6 +77,7 @@ const OrderList = Loadable(lazy(() => import('./pages/dashboard/OrderList')));
 const Overview = Loadable(lazy(() => import('./pages/dashboard/Overview')));
 const ProductCreate = Loadable(lazy(() => import('./pages/dashboard/ProductCreate')));
 const ProductList = Loadable(lazy(() => import('./pages/dashboard/ProductList')));
+const ChannelDashboard = Loadable(lazy(() => import('./pages/dashboard/ChannelDashboard')));
 const ChannelBrowse = Loadable(lazy(() => import('./pages/dashboard/ChannelBrowse')));
 const ChannelCreate = Loadable(lazy(() => import('./pages/dashboard/ChannelCreate')));
 const ChannelDetails = Loadable(lazy(() => import('./pages/dashboard/ChannelDetails')));
@@ -390,6 +391,10 @@ const routes = [
       //     }
       //   ]
       // },
+      {
+        path: 'channel',
+        element: <ChannelDashboard />
+      },
       {
         path: 'channels',
         children: [

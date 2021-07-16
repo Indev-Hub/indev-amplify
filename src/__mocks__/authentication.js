@@ -40,7 +40,7 @@ mock
             avatar: user.avatar,
             email: user.email,
             name: user.name,
-            plan: user.plan
+            plan: user.role
           }
         }
       ];
@@ -86,7 +86,7 @@ mock
             avatar: user.avatar,
             email: user.email,
             name: user.name,
-            plan: user.plan
+            plan: user.role
           }
         }
       ];

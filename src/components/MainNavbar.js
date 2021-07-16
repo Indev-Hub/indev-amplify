@@ -13,16 +13,20 @@ import {
   Toolbar
   // Typography
 } from '@material-ui/core';
+import useAuth from '../hooks/useAuth';
 // import Amplify, { Auth } from 'aws-amplify';
 // import { AmplifySignIn, AmplifySignOut, withAuthenticator } from '@aws-amplify/ui-react';
 // import awsconfig from '../aws-exports';
 import MenuIcon from '../icons/Menu';
 import LogoIcon from './LogoIcon';
+import AccountPopover from './dashboard/AccountPopover';
+// import AccountPopover from './dashboard/AccountPopover';
 
 // Amplify.configure(awsconfig);
 
 const MainNavbar = (props) => {
   const { onSidebarMobileOpen } = props;
+  const { isAuthenticated } = useAuth();
 
   return (
     <AppBar
@@ -68,6 +72,16 @@ const MainNavbar = (props) => {
           <Link
             color="text.reverse"
             component={RouterLink}
+            to="/dashboard"
+            underline="none"
+            variant="body1"
+            paddingRight="10px"
+          >
+            Dashboard
+          </Link>
+          <Link
+            color="text.reverse"
+            component={RouterLink}
             to="/authentication/register"
             underline="none"
             variant="body1"
@@ -75,6 +89,19 @@ const MainNavbar = (props) => {
           >
             Register
           </Link>
+          { isAuthenticated === false ? (
+            <Link
+              color="text.reverse"
+              component={RouterLink}
+              to="/authentication/login"
+              underline="none"
+              variant="body1"
+            >
+              Login
+            </Link>
+          ) : (
+            <AccountPopover />
+          )}
           {/* <Chip
             color="primary"
             label="YES!"
@@ -85,15 +112,7 @@ const MainNavbar = (props) => {
               mr: 2
             }}
           /> */}
-          <Link
-            color="text.reverse"
-            component={RouterLink}
-            to="/authentication/login"
-            underline="none"
-            variant="body1"
-          >
-            Login
-          </Link>
+
           {/* <Divider
               orientation="vertical"
               sx={{

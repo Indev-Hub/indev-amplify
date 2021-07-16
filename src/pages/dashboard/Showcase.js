@@ -88,7 +88,7 @@ const Showcase = props => {
 
       console.log('order cache 0', orderCache);
 
-      console.log('order list ', orderOptions()));
+      console.log('order list ', orderOptions());
     } catch (error) {
       console.log('error on fetching videos', error);
     }
@@ -173,16 +173,16 @@ const Showcase = props => {
   };
 
   // populates dropdown list as orderCache is updated. Currently does not work. - Woo Jin
-  const orderOptions = () => {
+  // const orderOptions = () => {
     
-    // orderCache.forEach((order, index) => {
-      //   { label: index, value: order }
-      // }); 
+  //   // orderCache.forEach((order, index) => {
+  //     //   { label: index, value: order }
+  //     // }); 
       
-      const orderList = orderCache.map(order => { return { label: index, value: order }});
-      console.log('order list ', orderList);
-      return orderList;
-  }
+  //     const orderList = orderCache.map(order => { return { label: index, value: order }});
+  //     console.log('order list ', orderList);
+  //     return orderList;
+  // }
   
   // changes the displayed Library to the Order you've selected from the dropdown. Currently does not work - Woo Jin
 
@@ -210,7 +210,7 @@ const Showcase = props => {
 
 
       {/* Dropdown order cache list. Currently doesn't function properly */}
-      <Select options={orderOptions()} />
+      {/* <select options={orderOptions()} /> */}
 
       <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
         <Droppable droppableId="droppable">

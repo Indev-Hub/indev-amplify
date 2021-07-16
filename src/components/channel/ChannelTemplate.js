@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router';
 import {
   makeStyles,
   useTheme
@@ -11,8 +12,9 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
+import { API, graphqlOperation } from 'aws-amplify';
+import { getChannel } from '../../graphql/queries';
 import ChannelVideoAsk from './ChannelVideoAsk';
-// import { Gallery } from '../gallery';
 import Gallery from '../gallery/Gallery';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
@@ -99,134 +101,160 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 
 // eslint-disable-next-line
 function ChannelTemplate(props) {
-  const { title, author, supporters, videos, updates, stage, weeks, est, amount, target, price1, price2 } = props;
+  const { title, supporters, author, videos, updates, stage, weeks, est, amount, target, price1, price2 } = props;
   const classes = useStyles();
   const theme = useTheme();
 
+  const { channelId } = useParams();
+  console.log('Channel ID:', channelId);
+  const [channelData, setChannelData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    getChannelInfo();
+  }, []);
+
+  const getChannelInfo = async () => {
+    try {
+      const getChannelData = await API.graphql(graphqlOperation(getChannel, { id: channelId }));
+      const listChannelData = getChannelData.data.getChannel;
+      setChannelData(listChannelData);
+      console.log('list', listChannelData);
+      setIsLoading(false);
+    } catch (error) {
+      console.log('error on fetching videos', error);
+    }
+  };
+
   return (
     // Container
-    <Box
-      className={classes.container}
-    >
+    <>
+      {isLoading ? (
+        <Typography>Form is loading...</Typography>
+      ) : (
+        <Box
+          className={classes.container}
+        >
+          {/* Trailer video */}
+          {/* <Box>
+            <div style={{ padding: '56% 0 0 0', position: 'relative' }}>
+              <iframe
+                src={`https://player.vimeo.com/video/${props.trailer}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+                title="Easy Interface&amp;#039;s Zoom Meeting2021 02 12T19:41:10Z"
+              />
+            </div>
+            <script src="https://player.vimeo.com/api/player.js" />
+          </Box> */}
+          <Box margin="63px 0 0 0">
+            <ChannelVideoAsk border="0" borderRadius="0" margin="0" />
+          </Box>
+          {/* Channel title */}
+          <Box
+            className={classes.section}
+            backgroundColor={theme.palette.brand.background1}
+          >
+            <Typography variant="h2" style={{ textTransform: 'uppercase' }}>{channelData.name ? channelData.name : title}</Typography>
+            <Typography variant="h6">
+              {`by ${author}`}
+            </Typography>
+          </Box>
 
-      {/* Trailer video */}
-      {/* <Box>
-        <div style={{ padding: '56% 0 0 0', position: 'relative' }}>
-          <iframe
-            src={`https://player.vimeo.com/video/${props.trailer}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
-            title="Easy Interface&amp;#039;s Zoom Meeting2021 02 12T19:41:10Z"
-          />
-        </div>
-        <script src="https://player.vimeo.com/api/player.js" />
-      </Box> */}
-      <Box margin="63px 0 0 0">
-        <ChannelVideoAsk border="0" borderRadius="0" margin="0" />
-      </Box>
-      {/* Channel title */}
-      <Box
-        className={classes.section}
-        backgroundColor={theme.palette.brand.background1}
-      >
-        <Typography variant="h2" style={{ textTransform: 'uppercase' }}>{title}</Typography>
-        <Typography variant="h6">
-          {`by ${author}`}
-        </Typography>
-      </Box>
-
-      {/* Info boxes */}
-      <Grid container spacing={0}>
-        <Grid item className={classes.gridInfoItem} xs>
-          <Typography>Supporters</Typography>
-          <Typography variant="h4">{supporters}</Typography>
-        </Grid>
-        <Grid item className={classes.gridInfoItem} xs>
-          <Typography>Videos</Typography>
-          <Typography variant="h4">{videos}</Typography>
-        </Grid>
-        <Grid item className={classes.gridInfoItem} xs>
-          <Typography>Updates</Typography>
-          <Typography variant="h4">{updates}</Typography>
-        </Grid>
-      </Grid>
-
-      {/* Project Section */}
-      <Box
-        className={classes.section}
-        backgroundColor={theme.palette.brand.background1}
-        marginTop="50px"
-      >
-        <Typography variant="h3">PROJECT</Typography>
-      </Box>
-      <Grid container spacing={0}>
-        <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
-          <Typography>Description of project goes here.</Typography>
-        </Grid>
-        <Grid item className={classes.gridProjectColumnItem} xs>
-          <Grid container direction="column" className={classes.subSection}>
-            <Grid item backgroundColor={theme.palette.brand.background1} padding="5px">
-              <Typography>Target goal</Typography>
+          {/* Info boxes */}
+          <Grid container spacing={0}>
+            <Grid item className={classes.gridInfoItem} xs>
+              <Typography>Supporters</Typography>
+              <Typography variant="h4">{channelData.supporters ? channelData.supporters : supporters}</Typography>
             </Grid>
-            <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-              <Typography variant="h5">{`$${amount}`}</Typography>
-              <Typography>{`of the $${target} target`}</Typography>
+            <Grid item className={classes.gridInfoItem} xs>
+              <Typography>Videos</Typography>
+              <Typography variant="h4">{videos}</Typography>
             </Grid>
-            <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
-              <Typography>Weeks in Development</Typography>
-            </Grid>
-            <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-              <Typography variant="h5">{`Week ${weeks}`}</Typography>
-              <Typography>{`of ${est} expected weeks`}</Typography>
-            </Grid>
-            <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
-              <Typography>Development Stage</Typography>
-            </Grid>
-            <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-              <Typography variant="h5">{`${stage}`}</Typography>
-              <Typography>{`Week ${weeks} of ${stage} stage`}</Typography>
+            <Grid item className={classes.gridInfoItem} xs>
+              <Typography>Updates</Typography>
+              <Typography variant="h4">{updates}</Typography>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
 
-      {/* Video Section Unsupported */}
-      <Box
-        className={classes.section}
-        backgroundColor={theme.palette.brand.background1}
-        marginTop="50px"
-      >
-        <Typography variant="h3">VIDEO COLLECTION</Typography>
-      </Box>
-
-      {/* Logged Out */}
-      <Grid container backgroundColor={theme.palette.brand.background0} spacing={0}>
-        <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
-          <Typography>Support [channel title] and get access to all of the videos and updates.</Typography>
-        </Grid>
-        <Grid item className={classes.gridProjectColumnItem} xs>
-          <Grid container direction="column" className={classes.subSection}>
-            <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0" margin="10px 20px 20px 20px">
-              <Typography variant="h5">{`$${price1}`}</Typography>
-              <Typography>per month</Typography>
+          {/* Project Section */}
+          <Box
+            className={classes.section}
+            backgroundColor={theme.palette.brand.background1}
+            marginTop="50px"
+          >
+            <Typography variant="h3">PROJECT</Typography>
+          </Box>
+          <Grid container spacing={0}>
+            <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
+              <Typography>Description of project goes here.</Typography>
             </Grid>
-            <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0" margin="0px 20px 20px 20px">
-              <Typography variant="h5">{`$${price2}`}</Typography>
-              <Typography>per month</Typography>
+            <Grid item className={classes.gridProjectColumnItem} xs>
+              <Grid container direction="column" className={classes.subSection}>
+                <Grid item backgroundColor={theme.palette.brand.background1} padding="5px">
+                  <Typography>Target goal</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                  <Typography variant="h5">{`$${amount}`}</Typography>
+                  <Typography>{`of the $${target} target`}</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
+                  <Typography>Weeks in Development</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                  <Typography variant="h5">{`Week ${weeks}`}</Typography>
+                  <Typography>{`of ${est} expected weeks`}</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
+                  <Typography>Development Stage</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                  <Typography variant="h5">{`${stage}`}</Typography>
+                  <Typography>{`Week ${weeks} of ${stage} stage`}</Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
-      <Box backgroundColor={theme.palette.brand.background3} padding="10px">
-        <Button>SUPPORT</Button>
-      </Box>
 
-      {/* Logged In */}
-      {/* <Gallery /> */}
-      <Gallery />
-    </Box>
+          {/* Video Section Unsupported */}
+          <Box
+            className={classes.section}
+            backgroundColor={theme.palette.brand.background1}
+            marginTop="50px"
+          >
+            <Typography variant="h3">VIDEO COLLECTION</Typography>
+          </Box>
 
+          {/* Logged Out */}
+          <Grid container backgroundColor={theme.palette.brand.background0} spacing={0}>
+            <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
+              <Typography>Support [channel title] and get access to all of the videos and updates.</Typography>
+            </Grid>
+            <Grid item className={classes.gridProjectColumnItem} xs>
+              <Grid container direction="column" className={classes.subSection}>
+                <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0" margin="10px 20px 20px 20px">
+                  <Typography variant="h5">{`$${price1}`}</Typography>
+                  <Typography>per month</Typography>
+                </Grid>
+                <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0" margin="0px 20px 20px 20px">
+                  <Typography variant="h5">{`$${price2}`}</Typography>
+                  <Typography>per month</Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Box backgroundColor={theme.palette.brand.background3} padding="10px">
+            <Button>SUPPORT</Button>
+          </Box>
+
+          {/* Logged In */}
+          {/* <Gallery /> */}
+          <Gallery />
+        </Box>
+      )}
+    </>
   );
 }
 

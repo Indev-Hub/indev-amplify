@@ -1,10 +1,13 @@
 /* eslint-disable */
+import React, { useEffect, useState } from 'react';
 // import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Container,
   Typography
 } from '@material-ui/core';
+import { API, graphqlOperation } from 'aws-amplify';
+import { listChannels } from '../../graphql/queries';
 // import ChannelBrowse from '../../pages/channel/ChannelBrowse';
 import ChannelSlider from '../channel-slider/ChannelSlider';
 // import ChannelCreate from '../dashboard/channel/channel-create/ChannelAdd';
@@ -40,7 +43,6 @@ const featured = [
     image: 'nintendo'
   }
 ];
-
 const game = [
   {
     title: 'Game Dev 1',
@@ -120,49 +122,75 @@ const mobile = [
   }
 ];
 
-const HomeHero = (props) => (
+const HomeHero = (props) => {
+  const [channelData, setChannelData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  <Box
-    sx={{
-      backgroundColor: 'brand.background2',
-      pt: 0
-    }}
-    {...props}
-  >
-    <Container
-      maxWidth="100%"
-      sx={{
-        alignItems: 'center',
-        // display: 'flex',
-        flexDirection: 'column',
-        px: {
-          md: '0px !important'
-        }
-      }}
-    >
-      <FeaturedSlider genre={featured} sliderHeight="800px" />
-    </Container>
+  useEffect(() => {
+    getChannelInfo();
+  }, []);  
+  
+  const getChannelInfo = async () => {
+    try {
+      const getChannelData = await API.graphql(graphqlOperation(listChannels));
+      const listChannelData = getChannelData.data.listChannels.items;
+      setChannelData(listChannelData);
+      setIsLoading(false);
+      console.log('list', listChannelData);
+    } catch (error) {
+      console.log('error on fetching channels', error);
+    }
+  };
+
+  return (
     <Box
-      margin="0 8.33%"
-      padding="50px 0"
+      sx={{
+        backgroundColor: 'brand.background2',
+        pt: 0
+      }}
+      {...props}
     >
-      {/* <HomeOverview /> */}
-      {/* <ChannelBrowse /> */}
-      {/* <VideoUpdate /> */}
-      {/* <UploadVideo /> */}
-      {/* <ShowcaseAdd /> */}
-      {/* <VideoLibrary /> */}
-      {/* <ChannelCreate /> */}
-      <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
-      <ChannelSlider genre={game} sliderHeight="500px" />
-      <Typography variant="h4" style={{ marginTop: '40px' }}>Software Development</Typography>
-      <ChannelSlider genre={software} sliderHeight="500px" />
-      <Typography variant="h4" marginTop="40px">Mobile App Development</Typography>
-      <ChannelSlider genre={mobile} sliderHeight="500px" />
-      {/* <Typography variant="h4">Mobile App Development</Typography> */}
-      {/* <ChannelSlider genre={nice} /> */}
+      <Container
+        maxWidth="100%"
+        sx={{
+          alignItems: 'center',
+          // display: 'flex',
+          flexDirection: 'column',
+          px: {
+            md: '0px !important'
+          }
+        }}
+      >
+        <FeaturedSlider genre={featured} sliderHeight="800px" />
+      </Container>
+      <Box
+        margin="0 8.33%"
+        padding="50px 0"
+      >
+        {/* <HomeOverview /> */}
+        {/* <ChannelBrowse /> */}
+        {/* <VideoUpdate /> */}
+        {/* <UploadVideo /> */}
+        {/* <ShowcaseAdd /> */}
+        {/* <VideoLibrary /> */}
+        {/* <ChannelCreate /> */}
+        {isLoading ? (
+          <Typography>Form is loading...</Typography>
+        ) : (
+          <>
+            <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
+            <ChannelSlider genre={channelData} sliderHeight="500px" />
+            <Typography variant="h4" style={{ marginTop: '40px' }}>Software Development</Typography>
+            <ChannelSlider genre={channelData} sliderHeight="500px" />
+            <Typography variant="h4" marginTop="40px">Mobile App Development</Typography>
+            <ChannelSlider genre={channelData} sliderHeight="500px" />
+          </>
+          )}
+        {/* <Typography variant="h4">Mobile App Development</Typography> */}
+        {/* <ChannelSlider genre={nice} /> */}
+      </Box>
     </Box>
-  </Box>
-);
+  )
+};
 
 export default HomeHero;

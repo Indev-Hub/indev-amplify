@@ -25,3 +25,8 @@ export const firebaseConfig = {
 export const gtmConfig = {
   containerId: process.env.REACT_APP_GTM_CONTAINER_ID
 };
+
+export const stripeConfig = {
+  stripe_secret_key: process.env.STRIPE_SECRET_KEY,
+  stripe_public_key: process.env.STRIPE_PUBLIC_KEY
+};

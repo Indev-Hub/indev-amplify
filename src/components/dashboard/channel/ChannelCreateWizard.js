@@ -9,6 +9,22 @@ import ChannelOwnerForm from './ChannelOwnerForm';
 const ChannelCreateWizard = (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState(false);
+  const [formInput, setFormInput] = useState({
+    id: '',
+    name: '',
+    manager: '',
+    category: '',
+    description: '',
+    featuredImg: ''
+  });
+
+  const handleChange = (event) => {
+    setFormInput({
+      ...formInput,
+      [event.target.name]: event.target.value
+    });
+    console.log('formInput:', formInput);
+  };
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -28,7 +44,11 @@ const ChannelCreateWizard = (props) => {
         ? (
           <>
             {activeStep === 0 && (
-              <ChannelOwnerForm onNext={handleNext} />
+              <ChannelOwnerForm
+                formInput={formInput}
+                handleChange={handleChange}
+                onNext={handleNext}
+              />
             )}
             {activeStep === 1 && (
               <ChannelDetailsForm

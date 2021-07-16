@@ -1,4 +1,4 @@
-// import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { AppBar, Box, Hidden, IconButton, Toolbar } from '@material-ui/core';
 import { experimentalStyled } from '@material-ui/core/styles';
@@ -41,11 +41,13 @@ const DashboardNavbar = (props) => {
           </IconButton>
         </Hidden>
         <Hidden lgDown>
-          <img
-            src={indevLogo}
-            alt="Indev Logo"
-            width="40px"
-          />
+          <RouterLink to="/">
+            <img
+              src={indevLogo}
+              alt="Indev Logo"
+              width="40px"
+            />
+          </RouterLink>
           {/* <RouterLink to="/">
             <Logo
               sx={{

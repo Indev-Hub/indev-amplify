@@ -23,6 +23,7 @@ type User @model
   lastName: String
   username: String
   displayName: String
+  canHire: Boolean
   email: String
   supporting: [Subscriptions] @connection(name: "supportChannel")
   developing: [UserProjects] @connection(name: "projectUser")

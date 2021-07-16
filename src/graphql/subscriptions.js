@@ -30,6 +30,7 @@ export const onCreateChannel = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -56,6 +57,7 @@ export const onCreateChannel = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -109,6 +111,7 @@ export const onUpdateChannel = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -135,6 +138,7 @@ export const onUpdateChannel = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -188,6 +192,7 @@ export const onDeleteChannel = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -214,6 +219,7 @@ export const onDeleteChannel = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -274,6 +280,7 @@ export const onCreateUser = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -304,6 +311,7 @@ export const onCreateUser = /* GraphQL */ `
         updatedAt
       }
       role
+      canHire
       createdAt
       updatedAt
     }
@@ -345,6 +353,7 @@ export const onUpdateUser = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -375,6 +384,7 @@ export const onUpdateUser = /* GraphQL */ `
         updatedAt
       }
       role
+      canHire
       createdAt
       updatedAt
     }
@@ -416,6 +426,7 @@ export const onDeleteUser = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -446,6 +457,7 @@ export const onDeleteUser = /* GraphQL */ `
         updatedAt
       }
       role
+      canHire
       createdAt
       updatedAt
     }
@@ -480,6 +492,7 @@ export const onCreateProject = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -530,6 +543,7 @@ export const onUpdateProject = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -580,6 +594,7 @@ export const onDeleteProject = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -655,6 +670,7 @@ export const onCreateSubscriptions = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -708,6 +724,7 @@ export const onCreateSubscriptions = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -731,6 +748,7 @@ export const onUpdateSubscriptions = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -784,6 +802,7 @@ export const onUpdateSubscriptions = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -807,6 +826,7 @@ export const onDeleteSubscriptions = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -860,6 +880,7 @@ export const onDeleteSubscriptions = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -883,6 +904,7 @@ export const onCreateUserProjects = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -921,6 +943,7 @@ export const onCreateUserProjects = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -944,6 +967,7 @@ export const onUpdateUserProjects = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -982,6 +1006,7 @@ export const onUpdateUserProjects = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }
@@ -1005,6 +1030,7 @@ export const onDeleteUserProjects = /* GraphQL */ `
           displayName
           email
           role
+          canHire
           createdAt
           updatedAt
         }
@@ -1043,6 +1069,7 @@ export const onDeleteUserProjects = /* GraphQL */ `
           updatedAt
         }
         role
+        canHire
         createdAt
         updatedAt
       }

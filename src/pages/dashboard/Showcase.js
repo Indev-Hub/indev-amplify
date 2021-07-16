@@ -1,22 +1,18 @@
 /* eslint-disable */
-import React, { Component, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import React, { Component, useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import {
   Box,
-  IconButton
-} from "@material-ui/core";
-import { API, graphqlOperation } from "aws-amplify";
-import { getShowcase } from "src/graphql/queries";
+  Card,
+  Grid,
+  IconButton,
+  Typography
+} from '@material-ui/core';
+import { API, graphqlOperation } from 'aws-amplify';
+import { getShowcase } from 'src/graphql/queries';
 import { Publish, Undo } from '@material-ui/icons';
 import { updateShowcase } from '../../graphql/mutations';
-
-// fake data generator
-const getItems = count =>
-  Array.from({ length: count }, (v, k) => k).map(k => ({
-    id: `item-${k}`,
-    content: `item ${k}`
-  }));
 
 // a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
@@ -31,30 +27,30 @@ const grid = 8;
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
-  userSelect: "none",
-  padding: grid * 2,
-  margin: `0 0 ${grid}px 0`,
+  userSelect: 'none',
+  padding: 0,
 
   // change background colour if dragging
-  background: isDragging ? "lightgreen" : "grey",
+  background: isDragging ? 'lightgreen' : 'grey',
 
   // styles we need to apply on draggables
   ...draggableStyle
 });
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? "lightblue" : "lightgrey",
-  padding: grid,
-  width: 300,
-  position: "relative"
+  background: isDraggingOver ? 'lightblue' : 'lightgrey',
+  // padding: grid,
+  width: '50%',
+  position: 'relative'
 });
 
 const getThumbnailStyle = {
-  borderRadius: '12px 12px 0 0',
   // margin: '10px',
-  maxWidth: '100%'};
+  // maxWidth: '100%'
+  width: '100%'
+};
 
-const queryAttr = "data-rbd-drag-handle-draggable-id";
+const queryAttr = 'data-rbd-drag-handle-draggable-id';
 
 const Showcase = props => {
   const [placeholderProps, setPlaceholderProps] = useState({});
@@ -68,7 +64,6 @@ const Showcase = props => {
 
   useEffect(() => {
     fetchVideos();
-
   }, [])
 
   const fetchVideos = async () => {
@@ -191,15 +186,19 @@ const Showcase = props => {
     setSelectedOrder([]);
   }
       
-      // Normally you would want to split things out into separate components.
-      // But in this example everything is just done in one place for simplicity
-      return (
-    <Box>
-
+  // Normally you would want to split things out into separate components.
+  // But in this example everything is just done in one place for simplicity
+  return (
+    <Grid container display="column" m="auto" xs={8}>
       {/* save button */}
       <IconButton onClick={saveShowcaseChanges}>
+        <Typography>Save video order</Typography>
         <Publish
-          color="primary" />
+          color="primary"
+          sx={{
+            ml: 1
+          }}
+        />
       </IconButton>
 
       {/* undo button */}
@@ -215,7 +214,7 @@ const Showcase = props => {
       <DragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
-            <Box
+            <Card
               {...provided.droppableProps}
               ref={provided.innerRef}
               style={getListStyle(snapshot.isDraggingOver)}
@@ -224,7 +223,7 @@ const Showcase = props => {
 
                 <Draggable key={item.uri} draggableId={item.uri} index={index}>
                   {(provided, snapshot) => (
-                    <Box
+                    <Card
                       ref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
@@ -232,30 +231,41 @@ const Showcase = props => {
                         snapshot.isDragging,
                         provided.draggableProps.style
                       )}
+                      sx={{
+                        m:1
+                      }}
                     >
-                      {index + 1}. {item.name}
-                      <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
-                    </Box>
+                      {/* <Card> */}
+                        <Grid container>
+                          <Grid item xs={4}>
+                            <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
+                          </Grid>
+                          <Grid item xs={8} p={2}>
+                            <Typography>{index + 1}. {item.name}</Typography>
+                          </Grid>
+                        </Grid>
+                      {/* </Card> */}
+                    </Card>
                   )}
                 </Draggable>
               ))}
 
               {provided.placeholder}
               {/* <CustomPlaceholder snapshot={snapshot} />  */}
-              <Box style={{
-                position: "absolute",
+              <Card style={{
+                position: 'absolute',
                 top: placeholderProps.clientY,
                 left: placeholderProps.clientX,
                 height: placeholderProps.clientHeight,
-                background: "tomato",
+                background: 'tomato',
                 width: placeholderProps.clientWidth
               }} />
-            </Box>
+            </Card>
           )}
         </Droppable>
       </DragDropContext>
 
-    </Box>
+    </Grid>
   );
 };
 

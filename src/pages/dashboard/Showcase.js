@@ -31,7 +31,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   padding: 0,
 
   // change background colour if dragging
-  background: isDragging ? 'lightgreen' : 'grey',
+  background: isDragging ? 'lightgreen' : 'white',
 
   // styles we need to apply on draggables
   ...draggableStyle
@@ -40,14 +40,15 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? 'lightblue' : 'lightgrey',
   // padding: grid,
-  width: '50%',
+  // width: '50%',
   position: 'relative'
 });
 
 const getThumbnailStyle = {
   // margin: '10px',
   // maxWidth: '100%'
-  width: '100%'
+  width: '100%',
+  height: '100%'
 };
 
 const queryAttr = 'data-rbd-drag-handle-draggable-id';
@@ -87,6 +88,16 @@ const Showcase = props => {
     } catch (error) {
       console.log('error on fetching videos', error);
     }
+  }
+
+  // Get video duration in hours:minutes:seconds
+  const formatTime = (time) => {
+    // Hours, minutes and seconds
+    const hrs = ~~(time / 3600);
+    const mins = ~~((time % 3600) / 60);
+    const secs = ~~time % 60;
+
+    return `${hrs}:${mins}:${secs}`
   }
 
   // Currently updates showcase information in database and adds order to orderCache. Might want to split functionalities. Or at least make a condition if the order is the same as the last saved order - Woo Jin
@@ -189,7 +200,7 @@ const Showcase = props => {
   // Normally you would want to split things out into separate components.
   // But in this example everything is just done in one place for simplicity
   return (
-    <Grid container display="column" m="auto" xs={8}>
+    <Grid container display="column" m="auto" xs={6}>
       {/* save button */}
       <IconButton onClick={saveShowcaseChanges}>
         <Typography>Save video order</Typography>
@@ -241,7 +252,8 @@ const Showcase = props => {
                             <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
                           </Grid>
                           <Grid item xs={8} p={2}>
-                            <Typography>{index + 1}. {item.name}</Typography>
+                            <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
+                            <Typography fontWeight="400">{formatTime(item.duration)}</Typography>
                           </Grid>
                         </Grid>
                       {/* </Card> */}
@@ -254,8 +266,8 @@ const Showcase = props => {
               {/* <CustomPlaceholder snapshot={snapshot} />  */}
               <Card style={{
                 position: 'absolute',
-                top: placeholderProps.clientY,
-                left: placeholderProps.clientX,
+                top: placeholderProps.clientY+grid,
+                left: placeholderProps.clientX=grid,
                 height: placeholderProps.clientHeight,
                 background: 'tomato',
                 width: placeholderProps.clientWidth

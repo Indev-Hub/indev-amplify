@@ -3,7 +3,7 @@ type Channel @model {
   id: ID!
   name: String!
   manager: User @connection
-  supporters: [User]
+  supporters: [String]
   description: String
   category: String
   operator: String 

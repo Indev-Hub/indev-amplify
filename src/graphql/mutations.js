@@ -20,6 +20,7 @@ export const createChannel = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -41,6 +42,7 @@ export const createChannel = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -52,49 +54,7 @@ export const createChannel = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      supporters {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        canHire
-        email
-        supporting {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        developing {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        createdAt
-        updatedAt
-      }
+      supporters
       description
       category
       operator
@@ -163,6 +123,7 @@ export const updateChannel = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -184,6 +145,7 @@ export const updateChannel = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -195,49 +157,7 @@ export const updateChannel = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      supporters {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        canHire
-        email
-        supporting {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        developing {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        createdAt
-        updatedAt
-      }
+      supporters
       description
       category
       operator
@@ -306,6 +226,7 @@ export const deleteChannel = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -327,6 +248,7 @@ export const deleteChannel = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -338,49 +260,7 @@ export const deleteChannel = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      supporters {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        canHire
-        email
-        supporting {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        developing {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        createdAt
-        updatedAt
-      }
+      supporters
       description
       category
       operator
@@ -458,18 +338,7 @@ export const createUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -543,18 +412,7 @@ export const createUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -612,18 +470,7 @@ export const updateUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -697,18 +544,7 @@ export const updateUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -766,18 +602,7 @@ export const deleteUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -851,18 +676,7 @@ export const deleteUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        supporters {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
+        supporters
         description
         category
         operator
@@ -911,6 +725,7 @@ export const createProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -932,6 +747,7 @@ export const createProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -954,6 +770,7 @@ export const createProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -975,6 +792,7 @@ export const createProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -1015,6 +833,7 @@ export const updateProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -1036,6 +855,7 @@ export const updateProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -1058,6 +878,7 @@ export const updateProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -1079,6 +900,7 @@ export const updateProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -1119,6 +941,7 @@ export const deleteProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -1140,6 +963,7 @@ export const deleteProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator
@@ -1162,6 +986,7 @@ export const deleteProject = /* GraphQL */ `
         supporting {
           id
           name
+          supporters
           description
           category
           operator
@@ -1183,6 +1008,7 @@ export const deleteProject = /* GraphQL */ `
         channel {
           id
           name
+          supporters
           description
           category
           operator

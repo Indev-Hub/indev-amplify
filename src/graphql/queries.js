@@ -12,12 +12,28 @@ export const getChannel = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -30,17 +46,51 @@ export const getChannel = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       supporters {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -55,14 +105,23 @@ export const getChannel = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         developers {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -98,14 +157,23 @@ export const listChannels = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         supporters {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -142,22 +210,92 @@ export const getUser = /* GraphQL */ `
       lastName
       username
       displayName
+      canHire
       email
       supporting {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        supporters {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
       }
       developing {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
       }
       channel {
         id
@@ -168,14 +306,23 @@ export const getUser = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         supporters {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -201,7 +348,6 @@ export const getUser = /* GraphQL */ `
         updatedAt
       }
       role
-      canHire
       createdAt
       updatedAt
     }
@@ -220,12 +366,28 @@ export const listUsers = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -238,7 +400,6 @@ export const listUsers = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
@@ -257,12 +418,28 @@ export const getProject = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -275,17 +452,51 @@ export const getProject = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       developers {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -313,14 +524,23 @@ export const listProjects = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         developers {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -360,224 +580,6 @@ export const listShowcases = /* GraphQL */ `
         manager
         managerID
         videos
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getSubscriptions = /* GraphQL */ `
-  query GetSubscriptions($id: ID!) {
-    getSubscriptions(id: $id) {
-      id
-      channel {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        supporters {
-          nextToken
-        }
-        description
-        category
-        operator
-        target
-        projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        featuredImg {
-          bucket
-          key
-          region
-        }
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listSubscriptionss = /* GraphQL */ `
-  query ListSubscriptionss(
-    $filter: ModelSubscriptionsFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listSubscriptionss(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        user {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getUserProjects = /* GraphQL */ `
-  query GetUserProjects($id: ID!) {
-    getUserProjects(id: $id) {
-      id
-      project {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        developers {
-          nextToken
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listUserProjectss = /* GraphQL */ `
-  query ListUserProjectss(
-    $filter: ModelUserProjectsFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listUserProjectss(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        project {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        user {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
         createdAt
         updatedAt
       }

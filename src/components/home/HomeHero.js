@@ -136,7 +136,7 @@ const HomeHero = (props) => {
       const listChannelData = getChannelData.data.listChannels.items;
       setChannelData(listChannelData);
       setIsLoading(false);
-      console.log('list', listChannelData);
+      // console.log('list', listChannelData);
     } catch (error) {
       console.log('error on fetching channels', error);
     }

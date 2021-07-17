@@ -15,12 +15,28 @@ export const createChannel = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -33,17 +49,51 @@ export const createChannel = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       supporters {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -58,14 +108,23 @@ export const createChannel = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         developers {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -99,12 +158,28 @@ export const updateChannel = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -117,17 +192,51 @@ export const updateChannel = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       supporters {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -142,14 +251,23 @@ export const updateChannel = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         developers {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -183,12 +301,28 @@ export const deleteChannel = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -201,17 +335,51 @@ export const deleteChannel = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       supporters {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -226,14 +394,23 @@ export const deleteChannel = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         developers {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -264,22 +441,92 @@ export const createUser = /* GraphQL */ `
       lastName
       username
       displayName
+      canHire
       email
       supporting {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        supporters {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
       }
       developing {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
       }
       channel {
         id
@@ -290,14 +537,23 @@ export const createUser = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         supporters {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -323,7 +579,6 @@ export const createUser = /* GraphQL */ `
         updatedAt
       }
       role
-      canHire
       createdAt
       updatedAt
     }
@@ -340,22 +595,92 @@ export const updateUser = /* GraphQL */ `
       lastName
       username
       displayName
+      canHire
       email
       supporting {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        supporters {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
       }
       developing {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
       }
       channel {
         id
@@ -366,14 +691,23 @@ export const updateUser = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         supporters {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -399,7 +733,6 @@ export const updateUser = /* GraphQL */ `
         updatedAt
       }
       role
-      canHire
       createdAt
       updatedAt
     }
@@ -416,22 +749,92 @@ export const deleteUser = /* GraphQL */ `
       lastName
       username
       displayName
+      canHire
       email
       supporting {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        supporters {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        operator
+        target
+        projects {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
       }
       developing {
-        items {
+        id
+        name
+        manager {
           id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
           createdAt
           updatedAt
         }
-        nextToken
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        devs
+        target
+        featuredImg
+        createdAt
+        updatedAt
       }
       channel {
         id
@@ -442,14 +845,23 @@ export const deleteUser = /* GraphQL */ `
           lastName
           username
           displayName
+          canHire
           email
           role
-          canHire
           createdAt
           updatedAt
         }
         supporters {
-          nextToken
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
         }
         description
         category
@@ -475,7 +887,6 @@ export const deleteUser = /* GraphQL */ `
         updatedAt
       }
       role
-      canHire
       createdAt
       updatedAt
     }
@@ -495,12 +906,28 @@ export const createProject = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -513,17 +940,51 @@ export const createProject = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       developers {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -549,12 +1010,28 @@ export const updateProject = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -567,17 +1044,51 @@ export const updateProject = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       developers {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -603,12 +1114,28 @@ export const deleteProject = /* GraphQL */ `
         lastName
         username
         displayName
+        canHire
         email
         supporting {
-          nextToken
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
         }
         developing {
-          nextToken
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
         }
         channel {
           id
@@ -621,17 +1148,51 @@ export const deleteProject = /* GraphQL */ `
           updatedAt
         }
         role
-        canHire
         createdAt
         updatedAt
       }
       developers {
-        items {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
           id
+          name
+          description
+          category
+          operator
+          target
           createdAt
           updatedAt
         }
-        nextToken
+        developing {
+          id
+          name
+          description
+          category
+          devs
+          target
+          featuredImg
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
       }
       description
       category
@@ -686,447 +1247,6 @@ export const deleteShowcase = /* GraphQL */ `
       manager
       managerID
       videos
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createSubscriptions = /* GraphQL */ `
-  mutation CreateSubscriptions(
-    $input: CreateSubscriptionsInput!
-    $condition: ModelSubscriptionsConditionInput
-  ) {
-    createSubscriptions(input: $input, condition: $condition) {
-      id
-      channel {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        supporters {
-          nextToken
-        }
-        description
-        category
-        operator
-        target
-        projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        featuredImg {
-          bucket
-          key
-          region
-        }
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateSubscriptions = /* GraphQL */ `
-  mutation UpdateSubscriptions(
-    $input: UpdateSubscriptionsInput!
-    $condition: ModelSubscriptionsConditionInput
-  ) {
-    updateSubscriptions(input: $input, condition: $condition) {
-      id
-      channel {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        supporters {
-          nextToken
-        }
-        description
-        category
-        operator
-        target
-        projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        featuredImg {
-          bucket
-          key
-          region
-        }
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteSubscriptions = /* GraphQL */ `
-  mutation DeleteSubscriptions(
-    $input: DeleteSubscriptionsInput!
-    $condition: ModelSubscriptionsConditionInput
-  ) {
-    deleteSubscriptions(input: $input, condition: $condition) {
-      id
-      channel {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        supporters {
-          nextToken
-        }
-        description
-        category
-        operator
-        target
-        projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
-        }
-        featuredImg {
-          bucket
-          key
-          region
-        }
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createUserProjects = /* GraphQL */ `
-  mutation CreateUserProjects(
-    $input: CreateUserProjectsInput!
-    $condition: ModelUserProjectsConditionInput
-  ) {
-    createUserProjects(input: $input, condition: $condition) {
-      id
-      project {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        developers {
-          nextToken
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateUserProjects = /* GraphQL */ `
-  mutation UpdateUserProjects(
-    $input: UpdateUserProjectsInput!
-    $condition: ModelUserProjectsConditionInput
-  ) {
-    updateUserProjects(input: $input, condition: $condition) {
-      id
-      project {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        developers {
-          nextToken
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteUserProjects = /* GraphQL */ `
-  mutation DeleteUserProjects(
-    $input: DeleteUserProjectsInput!
-    $condition: ModelUserProjectsConditionInput
-  ) {
-    deleteUserProjects(input: $input, condition: $condition) {
-      id
-      project {
-        id
-        name
-        manager {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          email
-          role
-          canHire
-          createdAt
-          updatedAt
-        }
-        developers {
-          nextToken
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
-      }
-      user {
-        id
-        firstName
-        lastName
-        username
-        displayName
-        email
-        supporting {
-          nextToken
-        }
-        developing {
-          nextToken
-        }
-        channel {
-          id
-          name
-          description
-          category
-          operator
-          target
-          createdAt
-          updatedAt
-        }
-        role
-        canHire
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
     }

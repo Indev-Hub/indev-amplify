@@ -120,7 +120,7 @@ function ChannelTemplate(props) {
       const getChannelData = await API.graphql(graphqlOperation(getChannel, { id: channelId }));
       const listChannelData = getChannelData.data.getChannel;
       setChannelData(listChannelData);
-      console.log('list', listChannelData);
+      console.log('channel list', listChannelData);
       setIsLoading(false);
     } catch (error) {
       console.log('error on fetching videos', error);

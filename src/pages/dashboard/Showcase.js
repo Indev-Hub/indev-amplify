@@ -329,6 +329,7 @@ const Showcase = props => {
                                       <TextField
                                         label="Video Name"
                                         fullWidth
+                                        value={item.name}
                                       />
                                     </Box>
                                     <Box marginTop={1}>
@@ -342,7 +343,7 @@ const Showcase = props => {
                                         maxRows="2"
                                         // onBlur={handleBlur}
                                         // onChange={handleChange}
-                                        // value={data.description}
+                                        value={item.description}
                                         // variant="outlined"
                                       />
                                     </Box>

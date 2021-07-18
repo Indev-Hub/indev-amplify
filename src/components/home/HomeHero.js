@@ -12,6 +12,7 @@ import { listChannels } from '../../graphql/queries';
 import ChannelSlider from '../channel-slider/ChannelSlider';
 // import ChannelCreate from '../dashboard/channel/channel-create/ChannelAdd';
 import FeaturedSlider from '../featured-slider/FeaturedSlider';
+// import UploadVideo from 'src/pages/channel/UploadVideo';
 // import ShowcaseAdd from '../video/ShowcaseAdd';
 // import VideoLibrary from '../video/VideoLibrary';
 // import HomeOverview from './HomeOverview';

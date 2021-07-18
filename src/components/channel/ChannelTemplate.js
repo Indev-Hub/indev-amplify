@@ -12,6 +12,7 @@ import {
   Button,
   Card,
   Grid,
+  Hidden,
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
@@ -168,12 +169,12 @@ function ChannelTemplate(props) {
           >
             <Typography variant="h2" style={{ textTransform: 'uppercase' }}>{channelData.name ? channelData.name : title}</Typography>
             <Typography variant="h6">
-              {`by ${author}`}
+              {`by ${channelData.manager.username}`}
             </Typography>
           </Box>
 
           {/* Info boxes */}
-          <Grid container spacing={0} sx={{ backgroundColor: 'white', padding: 2 }}>
+          <Grid container spacing={0} sx={{ backgroundColor: 'transparent', padding: 2 }}>
             <Grid item className={classes.gridInfo} xs>
               <Card className={classes.gridInfoItem} alignItems="center">
                 <Typography>Supporters</Typography>
@@ -208,6 +209,14 @@ function ChannelTemplate(props) {
                 <Typography variant="h4">{updates}</Typography>
               </Card>
             </Grid>
+            <Hidden smDown>
+              <Grid item className={classes.gridInfo} xs>
+                <Card className={classes.gridInfoItem}>
+                  <Typography>Target</Typography>
+                  <Typography variant="h4">{channelData.target ? channelData.target : '--'}</Typography>
+                </Card>
+              </Grid>
+            </Hidden>
           </Grid>
 
           {/* Project Section */}
@@ -220,7 +229,7 @@ function ChannelTemplate(props) {
             </Box>
             <Grid container spacing={0}>
               <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
-                <Typography>Description of project goes here.</Typography>
+                <Typography>{channelData.description}</Typography>
               </Grid>
               <Grid item className={classes.gridProjectColumnItem} xs lg={4}>
                 <Grid container direction="column" className={classes.subSection}>

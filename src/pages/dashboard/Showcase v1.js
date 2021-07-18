@@ -13,9 +13,8 @@ import {
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
 import { getShowcase } from 'src/graphql/queries';
-import { Close, Edit, Publish, Undo } from '@material-ui/icons';
+import { Edit, Publish, Undo } from '@material-ui/icons';
 import { updateShowcase } from '../../graphql/mutations';
-import wait from 'src/utils/wait';
 
 // a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
@@ -86,9 +85,9 @@ const Showcase = props => {
         setOrderCache([videoLibrary]);
       }
 
-      // console.log('order cache 0', orderCache);
+      console.log('order cache 0', orderCache);
 
-      // console.log('order list ', orderOptions());
+      console.log('order list ', orderOptions());
     } catch (error) {
       console.log('error on fetching videos', error);
     }
@@ -183,24 +182,10 @@ const Showcase = props => {
   };
 
   // Show/Hide Edit functionality for each video
-  const [videoEdit, setVideoEdit] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState('');
-
-  const showVideoEdit = (index) => {
-    setVideoEdit(true);
-    setCurrentVideo(index);
+  const [videoEdit, setVideoEdit] = useState(false)
+  const switchVideoEdit = () => {
+    videoEdit === true ? setVideoEdit(false) : setVideoEdit(true)    
   }
-  const hideVideoEdit = () => {
-    setVideoEdit(false);
-  }
-
-  // useEffect(() => {
-  //   videoEdit === true ? false : true
-  //   console.log('from useEffect', videoEdit);
-  // }, [switchVideoEdit])
-
-
-
 
   // populates dropdown list as orderCache is updated. Currently does not work. - Woo Jin
   // const orderOptions = () => {
@@ -311,56 +296,9 @@ const Showcase = props => {
                               <Typography fontStyle="italic" fontWeight="400">{item.description ? item.description : 'no description has been added yet'}</Typography>
                             </Grid>
                             <Grid item xs={1}>
-                              { videoEdit === false ?
-                                (  
-                                  <IconButton
-                                    onClick={showVideoEdit}
-                                  >
-                                    <Edit />
-                                  </IconButton>
-                                ) : null
-                              }
+                              <IconButton onClick={switchVideoEdit}><Edit /></IconButton>
+                              {console.log('video edit switch:', videoEdit)}
                             </Grid>
-                            <Grid item xs={12}>
-                              { videoEdit === true ?
-                                (
-                                  <Box p={2}>
-                                    <Box marginTop={0}>
-                                      <TextField
-                                        label="Video Name"
-                                        fullWidth
-                                      />
-                                    </Box>
-                                    <Box marginTop={1}>
-                                      <TextField
-                                        // error={Boolean(touched.channel_title && errors.channel_title)}
-                                        // helperText={touched.channel_title && errors.channel_title}
-                                        fullWidth
-                                        label="Channel Description"
-                                        name="description"
-                                        multiline="true"
-                                        maxRows="2"
-                                        // onBlur={handleBlur}
-                                        // onChange={handleChange}
-                                        // value={data.description}
-                                        // variant="outlined"
-                                      />
-                                    </Box>
-                                    <Box mt={2} display="flex" justifyContent="space-between">
-                                      <Button variant="contained" sx={{ backgroundColor: 'black'}} onClick={hideVideoEdit}>Cancel</Button>
-                                      <Button variant="contained" onClick={hideVideoEdit}>Update Video</Button>
-                                    </Box>
-                                  </Box>
-                                ) : null
-                              }
-                            </Grid>
-                            {/* <Grid item xs={12}>
-                              {
-                                switchVideoEdit === index ? (
-                                  <Typography>Test Succes</Typography>
-                                ) : <Typography>Test Failure</Typography>
-                              }
-                            </Grid> */}
                           </Grid>
                         {/* </Card> */}
                       </Card>

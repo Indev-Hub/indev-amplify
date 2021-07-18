@@ -123,7 +123,6 @@ const Checkout = Loadable(lazy(() => import('./pages/Checkout')));
 const Contact = Loadable(lazy(() => import('./pages/Contact')));
 const Home = Loadable(lazy(() => import('./pages/Home')));
 const Pricing = Loadable(lazy(() => import('./pages/Pricing')));
-const Features = Loadable(lazy(() => import('./pages/other/FeaturesPage')));
 
 const routes = [
   {
@@ -458,10 +457,6 @@ const routes = [
       {
         path: 'channel/:channelId',
         element: <Channel />
-      },
-      {
-        path: 'features/',
-        element: <Features />
       },
       {
         path: 'browse',

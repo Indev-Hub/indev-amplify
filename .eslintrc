@@ -12,6 +12,7 @@
     "airbnb"
   ],
   "rules": {
+    "operator-linebreak": "off",
     "import/prefer-default-export": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "comma-dangle": ["error", "never"],

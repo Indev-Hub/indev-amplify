@@ -17,7 +17,7 @@ function GalleryLibrary(props) {
         data.map(data => (
         <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
             <Box className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(data.uri.replace("/videos/", ""), data.name)}> {/* Added new onClick function - Woo Jin */}
-          <img className={classes.thumbnail} src={data.pictures.sizes[8].link} />
+          {/* <img className={classes.thumbnail} src={data.pictures.sizes[8].link} /> */}
           <Box className={classes.gridText}>
             <Typography>{data.name}</Typography>
             <Typography lineHeight="10px">{formatTime(data.duration)}</Typography>

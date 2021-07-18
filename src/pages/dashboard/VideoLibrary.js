@@ -77,7 +77,8 @@ const VideoLibrary = () => {
           display: 'flex',
           flexDirection: 'column',
           height: '100%',
-          overflow: 'hidden'
+          paddingBottom: 4
+          // overflow: 'hidden'
         }}
       >
         <Box sx={{ p: 3 }}>

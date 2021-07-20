@@ -4,12 +4,20 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const { resolve } = require("path");
 const session = require("express-session");
+const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
-const port = process.env.PORT || 4200;
+const port = process.env.PORT || 3001;
 
 app.use(express.static(process.env.STATIC_DIR));
+
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
+
 app.use(session({
   secret: "Set this to a random string that is kept secure",
   resave: false,
@@ -25,7 +33,8 @@ app.use((req, res, next) => {
   }
 });
 
-app.get("/", (req, res) => {
+// All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
   const path = resolve(process.env.STATIC_DIR + "/index.html");
   // const path = resolve('./../src/index.html')
   res.sendFile(path);

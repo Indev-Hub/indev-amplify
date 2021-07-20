@@ -1,3 +1,5 @@
+J:/Jobs/Indev/2021_001_Indev_React_App/indev-amplify
+
 Material Kit Pro uses reduxjs/toolkit
 
 * src/slices where you can find the implementation of the Redux reducer logic

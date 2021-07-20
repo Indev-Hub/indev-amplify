@@ -86,6 +86,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     marginLeft: '20px',
     '&:first-child': {
       marginLeft: 0
+    },
+    [breakpoints.down('sm')]: {
+      marginLeft: '10px'
     }
   },
   gridInfoItem: {
@@ -95,6 +98,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [breakpoints.down('sm')]: {
+      height: '100px'
+    }
   },
   gridProjectColumnItem: {
     padding: '0px',
@@ -174,7 +180,17 @@ function ChannelTemplate(props) {
           </Box>
 
           {/* Info boxes */}
-          <Grid container spacing={0} sx={{ backgroundColor: 'transparent', padding: 2 }}>
+          <Grid
+            container
+            spacing={0}
+            sx={{
+              backgroundColor: 'transparent',
+              padding: 2,
+              [theme.breakpoints.down('sm')]: {
+                padding: 1,
+              },
+            }}
+          >
             <Grid item className={classes.gridInfo} xs>
               <Card className={classes.gridInfoItem} alignItems="center">
                 <Typography>Supporters</Typography>

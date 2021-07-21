@@ -123,9 +123,6 @@ const Checkout = Loadable(lazy(() => import('./pages/Checkout')));
 const Contact = Loadable(lazy(() => import('./pages/Contact')));
 const Home = Loadable(lazy(() => import('./pages/Home')));
 const Pricing = Loadable(lazy(() => import('./pages/Pricing')));
-// const MembershipAlpha = Loadable(lazy(() => import('./pages/MembershipAlpha')));
-const MembershipBeta = Loadable(lazy(() => import('./pages/MembershipBeta')));
-const Features = Loadable(lazy(() => import('./pages/other/FeaturesPage')));
 
 const routes = [
   {
@@ -462,10 +459,6 @@ const routes = [
         element: <Channel />
       },
       {
-        path: 'features/',
-        element: <Features />
-      },
-      {
         path: 'browse',
         element: <BrowseLayout />,
         children: [
@@ -530,10 +523,6 @@ const routes = [
       {
         path: 'pricing',
         element: <Pricing />
-      },
-      {
-        path: 'membership/beta',
-        element: <MembershipBeta />
       },
       {
         path: '401',

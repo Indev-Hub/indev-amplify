@@ -3,7 +3,7 @@ type Channel @model {
   id: ID!
   name: String!
   manager: User @connection
-  supporters: [Subscriptions] @connection(name: "supportUser")
+  supporters: [String]
   description: String
   category: String
   operator: String 
@@ -25,18 +25,17 @@ type User @model
   displayName: String
   canHire: Boolean
   email: String
-  supporting: [Subscriptions] @connection(name: "supportChannel")
-  developing: [UserProjects] @connection(name: "projectUser")
+  supporting: [Channel]
+  developing: [Project]
   channel: Channel @connection
   role: String
-  canHire: Boolean
 }
 
 type Project @model {
   id: ID!
   name: String!
   manager: User @connection
-  developers: [UserProjects] @connection(name: "userProject")
+  developers: [User]
   description: String
   category: String
   devs: String 
@@ -50,19 +49,6 @@ type Showcase @model {
   manager: String
   managerID: String
   videos: AWSJSON
-}
-
-# JOINING TABLES
-type Subscriptions @model {
-  id: ID!
-  channel: Channel @connection(name: "supportUser")
-  user: User @connection(name: "supportChannel")
-}
-
-type UserProjects @model {
-  id: ID!
-  project: Project @connection(name: "userProject")
-  user: User @connection(name: "projectUser")
 }
 
 # DATA TYPES

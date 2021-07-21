@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { Alert, Box, Button, FormHelperText, TextField } from '@material-ui/core';
+import { /* Alert, */ Box, Button, FormHelperText, TextField } from '@material-ui/core';
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
 
@@ -106,7 +106,7 @@ const LoginAmplify = (props) => {
               Log In
             </Button>
           </Box>
-          <Box sx={{ mt: 3 }}>
+          {/* <Box sx={{ mt: 3 }}>
             <Alert severity="info">
               <div>
                 You can use
@@ -118,7 +118,7 @@ const LoginAmplify = (props) => {
                 <b>Password123!</b>
               </div>
             </Alert>
-          </Box>
+          </Box> */}
         </form>
       )}
     </Formik>

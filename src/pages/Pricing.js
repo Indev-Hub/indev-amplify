@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -8,9 +9,11 @@ import {
   Typography,
   Badge,
   Skeleton,
-  Hidden
+  Hidden,
+  Card
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
+import PlanDetails from '../components/pricing/PlanDetails';
 import { PricingPlan } from '../components/pricing';
 import gtm from '../lib/gtm';
 
@@ -25,6 +28,7 @@ const Pricing = () => {
 
   useEffect(() => {
     (async () => {
+      // const response = await fetch(`/static/pricing/pricing_${theme.palette.mode}.svg`);
       const response = await fetch(`/static/pricing/pricing_${theme.palette.mode}.svg`);
       const blob = await response.blob();
 
@@ -33,14 +37,88 @@ const Pricing = () => {
     })();
   }, [theme.palette.mode]);
 
+  const Alpha =
+  { features:
+    [
+      {
+        title: 'Showcase your current project',
+        detail: 'Promote your current project while it is in development. Share your progress and interact with your supporters along the way.'
+      },
+      {
+        title: 'Support payments',
+        detail: 'Collect monthly subscription payments from your supporters through our integration with Stripe. Safe, secure, and easy.'
+      },
+      {
+        title: 'Job Search',
+        detail: 'Indev can display your content to recruiters or companies that are looking to hire developers for on-site or remote positions.'
+      },
+      {
+        title: 'Live stream your updates',
+        detail: 'You can live stream your updates, announcements, progress reports, or anything else directly from your Indev account.'
+      },
+      {
+        title: 'Generate recurring revenue',
+        detail: 'Revenue collected from your supporters allows you to continue developing your product and all of your videos live in your library, becoming a product themselves.'
+      },
+      {
+        title: 'Supporter forum',
+        detail: ''
+      }
+    ]
+  };
+
+  const Beta =
+  { features:
+    [
+      {
+        title: 'All the features of Indev Alpha',
+        detail: 'The Indev Beta membership includes all of the things you get with our Alpha membership plus these extra features.'
+      },
+      {
+        title: 'Support payments',
+        detail: 'Automatically upload your zoom videos to your Indev video library. Record it with Zoom and promote and sell it with Indev.'
+      },
+      {
+        title: 'Up to 3 projects on your channel',
+        detail: `If you are working on more than one project this is the membership for you. Show your supporters everything they're supporting.`
+      },
+      {
+        title: 'Find the right people',
+        detail: `Get access to Indev's supporter database to see who has the desire and skillset to help with your Indev project`
+      }
+    ]
+  };
+
+  const Pro =
+  { features:
+    [
+      {
+        title: 'All the features of Indev Beta',
+        detail: 'The Indev Pro membership includes all of the things you get with our Beta and Alpha membership plus these extra features.'
+      },
+      {
+        title: 'Pre-sales',
+        detail: 'If you are ready to start collecting pre-sale revenue then Indev Pro will allow you to do just that.'
+      },
+      {
+        title: 'Even more projects',
+        detail: 'Create up to ten projects with the Pro account. Need even more projects? We can make that work if you give us a call.'
+      },
+      {
+        title: 'Team',
+        detail: 'You can have a team of people associated with your channel when your team needs multiple people to manage your Indev account.'
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>Pricing | Material Kit Pro</title>
+        <title>Pricing | Indev</title>
       </Helmet>
       <Box
         sx={{
-          backgroundColor: 'background.paper',
+          backgroundColor: 'background.default',
           minHeight: '100%',
           pb: 6
         }}
@@ -67,15 +145,14 @@ const Pricing = () => {
                   color="textPrimary"
                   variant="h3"
                 >
-                  Start today. Boost up your services!
+                  Start developing on Indev.
                 </Typography>
                 <Typography
                   color="textSecondary"
                   sx={{ my: 2 }}
                   variant="body1"
                 >
-                  Join 3,000+ developers &amp; designers using Devias to
-                  power modern web projects.
+                  Join a community where we support indie developers and independent projects.
                 </Typography>
                 <Switch color="primary" />
                 <Badge
@@ -145,76 +222,95 @@ const Pricing = () => {
               md={4}
               xs={12}
             >
-              <PricingPlan
-                cta="Start Free Trial"
-                currency="$"
-                description="To familiarize yourself with our tools."
-                features={[
-                  'Create contracts',
-                  'Chat support',
-                  'Email alerts'
-                ]}
-                image="/static/pricing/plan1.svg"
-                name="Startup"
-                price="0"
-                sx={{
-                  height: '100%',
-                  maxWidth: 460,
-                  mx: 'auto'
-                }}
-              />
+              <Card>
+                <PricingPlan
+                  cta="Sign Up |  Indev Free"
+                  currency="$"
+                  description="For individual independent developers."
+                  features={[
+                    '1 Project',
+                    'Receive support payments',
+                    'Job placement',
+                    'Live video updates',
+                    'Video library',
+                    'Supporter forum'
+                  ]}
+                  // image="/static/pricing/plan1.svg"
+                  name="ALPHA"
+                  price="0"
+                  sx={{
+                    height: '100%',
+                    maxWidth: 460,
+                    mx: 'auto'
+                  }}
+                />
+              </Card>
             </Grid>
             <Grid
               item
               md={4}
               xs={12}
             >
-              <PricingPlan
-                cta="Start Free Trial"
-                currency="$"
-                description="To familiarize yourself with our tools."
-                features={[
-                  'All previous',
-                  'Highlights reporting',
-                  'Data history',
-                  'Unlimited users'
-                ]}
-                image="/static/pricing/plan2.svg"
-                name="Standard"
-                popular
-                price="4.99"
-                sx={{
-                  height: '100%',
-                  maxWidth: 460,
-                  mx: 'auto'
-                }}
-              />
+              <Card>
+                <PricingPlan
+                  cta="Start Free Trial"
+                  currency="$"
+                  description="For small teams and advanced devs."
+                  features={[
+                    'Up to 3 projects',
+                    'Receive support payments',
+                    'Job placement',
+                    'Live video updates',
+                    'Video library',
+                    'Supporter forum',
+                    'Use your own logo',
+                    'Talent search',
+                    'Zoom integration'
+                  ]}
+                  image="/static/pricing/plan2.svg"
+                  name="BETA"
+                  popular
+                  price="16"
+                  sx={{
+                    height: '100%',
+                    maxWidth: 460,
+                    mx: 'auto'
+                  }}
+                />
+              </Card>
             </Grid>
             <Grid
               item
               md={4}
               xs={12}
             >
-              <PricingPlan
-                cta="Contact Us"
-                currency="$"
-                description="To familiarize yourself with our tools."
-                features={[
-                  'All previous',
-                  'Unlimited contacts',
-                  'Analytics platform',
-                  'Public API access',
-                  'Send and sign unlimited contracts'
-                ]}
-                image="/static/pricing/plan3.svg"
-                name="Business"
-                price="29.99"
-                sx={{
-                  height: '100%',
-                  maxWidth: 460,
-                  mx: 'auto'
-                }}
-              />
+              <Card>
+                <PricingPlan
+                  cta="Contact Us"
+                  currency="$"
+                  description="For studios and large teams."
+                  features={[
+                    'Up to 10 projects',
+                    'Receive support payments',
+                    'Job placement',
+                    'Live video updates',
+                    'Video library',
+                    'Supporter forum',
+                    'Use your own logo',
+                    'Talent search',
+                    'Zoom integration',
+                    'Custom logo and colors'
+                  ]}
+                  image="/static/pricing/plan3.svg"
+                  name="PRO"
+                  price="84"
+                  sx={{
+                    height: '100%',
+                    maxWidth: 460,
+                    mx: 'auto'
+                  }}
+                />
+              </Card>
             </Grid>
           </Grid>
         </Container>
@@ -226,6 +322,25 @@ const Pricing = () => {
         >
           30% of our income goes into Whale Charity
         </Typography>
+        <PlanDetails
+          plan="ALPHA"
+          cta="Sign up for free"
+          description="The Indev Alpha membership is your chance to get your project in front of supporters for free. If you are looking for a free option, we recommend signing up as an Indev Tester since you will get all the features of the most expensive membership in exchange for telling us about your experience."
+          primaryColor="brand.primary1"
+          feature={Alpha}
+        />
+        <PlanDetails
+          plan="BETA"
+          cta="Beta Membership"
+          description="The Beta membership is made for people that have more than one project currently in development. There are more integrations possible in this membership as well as the opportunity to use Indev to find other talented developers, artists, etc to help you out."
+          feature={Beta}
+        />
+        <PlanDetails
+          plan="PRO"
+          cta="Go PRO now"
+          description="The Pro membership is for teams or indie studios that are only “indie” because they like it that way. This is also a good membership for developers that have already achieved validation through a successful Kickstarter or Indiegogo campaign and want to move their customers onto an ongoing interactive platform."
+          feature={Beta}
+        />
       </Box>
     </>
   );

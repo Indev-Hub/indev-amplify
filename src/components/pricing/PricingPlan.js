@@ -14,8 +14,8 @@ const PricingPlan = (props) => {
       }}
       {...other}
     >
-      <Box sx={{ p: 3 }}>
-        <Box
+      <Box sx={{ p: 3, m: 'auto' }}>
+        {/* <Box
           sx={{
             height: 52,
             width: 52,
@@ -29,41 +29,41 @@ const PricingPlan = (props) => {
             alt=""
             src={image}
           />
-        </Box>
-        <Box sx={{ display: 'flex' }}>
+        </Box> */}
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Typography
             color="textPrimary"
-            variant="h6"
+            variant="h4"
           >
             {currency}
           </Typography>
           <Typography
             color="textPrimary"
-            variant="h4"
+            variant="h1"
+            mb="-8px"
           >
             {price}
           </Typography>
           <Typography
             color="textSecondary"
             sx={{
-              alignSelf: 'flex-end',
-              ml: 1
+              alignSelf: 'flex-end'
             }}
-            variant="subtitle2"
+            // variant="subtitle2"
           >
-            /mo
+            /month
           </Typography>
         </Box>
         <Typography
           color="textPrimary"
-          sx={{ mt: 2 }}
-          variant="h6"
+          sx={{ mt: 2, textAlign: 'center' }}
+          variant="h2"
         >
           {name}
         </Typography>
         <Typography
           color="textSecondary"
-          sx={{ mt: 2 }}
+          sx={{ mt: 0, textAlign: 'center' }}
           variant="body2"
         >
           {description}
@@ -108,7 +108,7 @@ const PricingPlan = (props) => {
         <Box sx={{ flexGrow: 1 }} />
         <Box
           sx={{
-            display: 'flex',
+            display: 'column',
             justifyContent: 'center',
             mt: 6
           }}
@@ -117,8 +117,22 @@ const PricingPlan = (props) => {
             fullWidth
             color="primary"
             variant={popular ? 'contained' : 'outlined'}
+            sx={{
+              p: 1.5,
+              borderRadius: '7px'
+            }}
+            href="#"
           >
             {cta}
+          </Button>
+          <Button
+            fullWidth
+            color="primary"
+            sx={{
+              mt: 1
+            }}
+          >
+            Find out more about the {name} membership
           </Button>
         </Box>
       </Box>

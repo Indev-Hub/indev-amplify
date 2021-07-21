@@ -13,9 +13,9 @@ import {
 } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import PublishIcon from '@material-ui/icons/Publish';
-import FileDropzone from 'src/components/FileDropzone';
+import FileDropzone from '../components/FileDropzone';
 import { v4 as uuid } from 'uuid';
-import { createVideo } from 'src/graphql/mutations';
+import { createVideo } from '../../graphql/mutations';
 
 Amplify.configure(awsconfig);
 

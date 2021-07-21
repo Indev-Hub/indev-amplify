@@ -2,17 +2,11 @@ import { useEffect } from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import { Helmet } from 'react-helmet-async';
-import {
-  // HomeClients,
-  ChannelTemplate
-  // HomeOverview,
-  // HomeRoles,
-  // HomeFeatures,
-  // ChannelSlider
-} from '../../components/channel';
 import gtm from '../../lib/gtm';
+// import Features from '../../components/other/Features';
+import { PricingPlan } from 'src/components/pricing';
 
-const Channel = () => {
+const MembershipPricing = () => {
   useEffect(() => {
     gtm.push({ event: 'page_view' });
   }, []);
@@ -22,13 +16,13 @@ const Channel = () => {
   return (
     <>
       <Helmet>
-        <title>Indev | Channel</title>
+        <title>Indev | Feature</title>
       </Helmet>
       <Box backgroundColor={theme.palette.brand.background2} minHeight="100vh">
-        <ChannelTemplate title="Channel Name" author="display name" supporters="180" videos="24" updates="33" target="2,400" amount="1,800" weeks="9" est="47" stage="Planning" price1="5" price2="10" trailer="440012560" />
+        <PricingPlan />
       </Box>
     </>
   );
 };
 
-export default Channel;
+export default MembershipPricing;

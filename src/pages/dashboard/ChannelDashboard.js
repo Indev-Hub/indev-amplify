@@ -122,23 +122,60 @@ const ChannelDashboard = (props) => {
             <Grid
               container
               justifyContent="center"
+              spacing={3}
+              xs={10}
+              m="auto"
               {...props}
             >
-              <Grid item>
-                <Link
-                  color="textSecondary"
-                  component={RouterLink}
-                  to="/dashboard/channels/new"
-                  underline="none"
-                  variant="body1"
-                >
-                  <Paper>
-                    <Plus sx={{ fontSize: 250, mt: -3 }} />
-                    <Typography variant="h4" sx={{ textAlign: 'center', pb: 2, mt: -6 }}>Add Channel</Typography>
-                  </Paper>
-                </Link>
+              <Grid item xs={6}>
+                <Card sx={{ p: 4, height: '100%' }}>
+                  <Typography variant="h5">
+                    STEP 1
+                  </Typography>
+                  <Typography variant="h6" fontWeight="700" mb={2}>
+                    Connect your bank account
+                  </Typography>
+                  <Typography mb={2}>
+                    The first step is connecting your bank accout so you can get paid as soon as you have subscribers.
+                    We use Stripe to securely handle all transactions.
+                    You must set this up first in order to make sure that you can receive payments.
+                  </Typography>
+                  <Box display="flex" alignItems="center">
+                    <Button variant="contained">
+                      Connect Account
+                    </Button>
+                    <Typography fontStyle="italic" pl={1}>
+                      {`<-- Link to setup connect account`}
+                    </Typography>
+                  </Box>
+                </Card>
               </Grid>
-              <Grid
+              <Grid item xs={6}>
+                <Card sx={{ p: 4, height: '100%' }}>
+                  <Typography variant="h5">
+                    STEP 2
+                  </Typography>
+                  <Typography variant="h6" fontWeight="700" mb={2}>
+                    Create your channel
+                  </Typography>
+                  <Typography mb={2}>
+                    You're halfway done. Now it's time for the fun part. Start setting up your channel so you can show 
+                    everyone what you are working on and receive support to continue developing!
+                  </Typography>
+                  <Link
+                    component={RouterLink}
+                    to="/dashboard/channels/new"
+                    underline="none"
+                  >
+                    <Button
+                      variant="contained"
+                    >
+                      Create Channel
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
+              {/* <Grid
                 item
                 lg={12}
                 md={12}
@@ -323,8 +360,8 @@ const ChannelDashboard = (props) => {
                     </form>
                   )}
                 </Formik>
-              </Grid>
-            </Grid>
+              </Grid> */}
+            </Grid> 
             {/* <ChannelAdd /> */}
           </Box>
         </Container>

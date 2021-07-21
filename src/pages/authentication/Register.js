@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Card, CardContent, Container, Divider, Link, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Container, Divider, Link /* , Typography */ } from '@material-ui/core';
 import AuthBanner from '../../components/authentication/AuthBanner';
 import {
   RegisterAmplify,
@@ -9,16 +9,17 @@ import {
   RegisterFirebase,
   RegisterJWT
 } from '../../components/authentication/register';
-import LogoIcon from '../../components/LogoIcon';
+// import LogoIcon from '../../components/LogoIcon';
+import IndevBeta from '../../components/assets/IndevBeta500px.png';
 import useAuth from '../../hooks/useAuth';
 import gtm from '../../lib/gtm';
 
-const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
-  Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
-  JWT: '/static/icons/jwt.svg'
-};
+// const platformIcons = {
+//   Amplify: '/static/icons/amplify.svg',
+//   Auth0: '/static/icons/auth0.svg',
+//   Firebase: '/static/icons/firebase.svg',
+//   JWT: '/static/icons/jwt.svg'
+// };
 
 const Register = () => {
   const { platform } = useAuth();
@@ -53,11 +54,15 @@ const Register = () => {
             }}
           >
             <RouterLink to="/">
-              <LogoIcon
+              <img
+                src={IndevBeta}
+                height="auto"
+                width="300px"
                 sx={{
-                  height: 40,
-                  width: 40
+                  height: 'auto',
+                  width: 0
                 }}
+                alt="Indev Beta"
               />
             </RouterLink>
           </Box>
@@ -74,10 +79,10 @@ const Register = () => {
                   alignItems: 'center',
                   display: 'flex',
                   justifyContent: 'space-between',
-                  mb: 3
+                  mb: 0
                 }}
               >
-                <div>
+                {/* <div>
                   <Typography
                     color="textPrimary"
                     gutterBottom
@@ -91,8 +96,8 @@ const Register = () => {
                   >
                     Register on the internal platform
                   </Typography>
-                </div>
-                <Box
+                </div> */}
+                {/* <Box
                   sx={{
                     height: 32,
                     '& > img': {
@@ -105,12 +110,12 @@ const Register = () => {
                     alt="Auth platform"
                     src={platformIcons[platform]}
                   />
-                </Box>
+                </Box> */}
               </Box>
               <Box
                 sx={{
                   flexGrow: 1,
-                  mt: 3
+                  mt: 0
                 }}
               >
                 {platform === 'Amplify' && <RegisterAmplify />}

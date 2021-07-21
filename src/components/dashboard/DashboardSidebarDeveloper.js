@@ -53,6 +53,11 @@ const sections = [
         title: 'Account',
         path: '/dashboard/account',
         icon: <UserIcon fontSize="small" />
+      },
+      {
+        title: 'Profile',
+        path: '/dashboard/profile',
+        icon: <ShareIcon fontSize="small" />
       }
     ]
   },
@@ -111,11 +116,6 @@ const sections = [
         title: 'VideoLibrary',
         path: '/dashboard/video-library',
         icon: <ClipboardListIcon fontSize="small" />
-      },
-      {
-        title: 'Profile',
-        path: '/dashboard/profile',
-        icon: <ShareIcon fontSize="small" />
       }
       // {
       //   title: 'Social',

@@ -108,7 +108,7 @@ const PricingPlan = (props) => {
         <Box sx={{ flexGrow: 1 }} />
         <Box
           sx={{
-            display: 'flex',
+            display: 'column',
             justifyContent: 'center',
             mt: 6
           }}
@@ -117,8 +117,22 @@ const PricingPlan = (props) => {
             fullWidth
             color="primary"
             variant={popular ? 'contained' : 'outlined'}
+            sx={{
+              p: 1.5,
+              borderRadius: '7px'
+            }}
+            href="#"
           >
             {cta}
+          </Button>
+          <Button
+            fullWidth
+            color="primary"
+            sx={{
+              mt: 1
+            }}
+          >
+            Find out more about the {name} membership
           </Button>
         </Box>
       </Box>

@@ -118,6 +118,7 @@ const themesOptions = {
         primary0: '#ffffff',
         primary1: '#27AAE1',
         primary2: '#EC008C',
+        primary2hover: '#EE1558',
         background0: '#ffffff',
         background1: '#141944',
         background2: '#ededed'

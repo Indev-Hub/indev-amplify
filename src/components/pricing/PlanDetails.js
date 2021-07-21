@@ -23,7 +23,7 @@ function PlanDetails (props) {
           <Typography variant="h2" color="white" textAlign="right" p={4} pr={8}>{plan}</Typography>
         </Grid>
       </Grid>
-      <Grid container xs={6} m="auto">
+      <Grid container xs={10} sm={8} lg={6} m="auto">
         <Grid>
           <Card>
             <Grid container xs={12} m="auto" p={4} pt={7}>
@@ -50,8 +50,16 @@ function PlanDetails (props) {
 
                 </>
               )}
-              <Grid item xs={12} display="column" alignItems="center">
-                <Button variant="contained">{cta}</Button>              
+              <Grid item xs={12} display="flex" justifyContent="center">
+                  <Button
+                    variant="contained"
+                    sx={{
+                      fontSize: '24px',
+                      px: 5
+                    }}
+                  >
+                    {cta}
+                  </Button>
               </Grid>
             </Grid>
           </Card>

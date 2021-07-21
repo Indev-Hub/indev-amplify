@@ -28,6 +28,7 @@ const Pricing = () => {
 
   useEffect(() => {
     (async () => {
+      // const response = await fetch(`/static/pricing/pricing_${theme.palette.mode}.svg`);
       const response = await fetch(`/static/pricing/pricing_${theme.palette.mode}.svg`);
       const blob = await response.blob();
 
@@ -225,7 +226,7 @@ const Pricing = () => {
                 <PricingPlan
                   cta="Sign Up |  Indev Free"
                   currency="$"
-                  description="To familiarize yourself with our tools."
+                  description="For individual independent developers."
                   features={[
                     '1 Project',
                     'Receive support payments',
@@ -254,7 +255,7 @@ const Pricing = () => {
                 <PricingPlan
                   cta="Start Free Trial"
                   currency="$"
-                  description="To familiarize yourself with our tools."
+                  description="For small teams and advanced devs."
                   features={[
                     'Up to 3 projects',
                     'Receive support payments',
@@ -287,7 +288,7 @@ const Pricing = () => {
                 <PricingPlan
                   cta="Contact Us"
                   currency="$"
-                  description="To familiarize yourself with our tools."
+                  description="For studios and large teams."
                   features={[
                     'Up to 10 projects',
                     'Receive support payments',
@@ -330,7 +331,7 @@ const Pricing = () => {
         />
         <PlanDetails
           plan="BETA"
-          cta="Sign up for the beta membership"
+          cta="Beta Membership"
           description="The Beta membership is made for people that have more than one project currently in development. There are more integrations possible in this membership as well as the opportunity to use Indev to find other talented developers, artists, etc to help you out."
           feature={Beta}
         />

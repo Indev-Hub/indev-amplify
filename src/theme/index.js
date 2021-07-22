@@ -123,6 +123,13 @@ const themesOptions = {
         background1: '#141944',
         background2: '#ededed'
       },
+      chip: {
+        chip1: 'grey',
+        chip2: 'orange',
+        chip3: 'purple',
+        chip4: 'magenta',
+        chip5: 'cyan'
+      },
       navbar: {
         default: '#141944',
         paper: '#27AAE1'

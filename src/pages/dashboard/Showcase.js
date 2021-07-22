@@ -2,6 +2,9 @@
 import React, { Component, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import {
   Box,
   Button,
@@ -16,6 +19,59 @@ import { getShowcase } from 'src/graphql/queries';
 import { Close, Edit, Publish, Undo } from '@material-ui/icons';
 import { updateShowcase } from '../../graphql/mutations';
 import wait from 'src/utils/wait';
+import { withStyles } from '@material-ui/styles';
+
+// modify accordion theme styles
+const Accordion = withStyles({
+  root: {
+    backgroundColor: 'transparent',
+    // border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: 'auto',
+    },
+  },
+  expanded: {},
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    backgroundColor: 'transparent',
+    // borderBottom: '1px solid rgba(0, 0, 0, .125)',
+    paddingRight: 20,
+    minHeight: 0,
+    '&$expanded': {
+      minHeight: 0
+    }
+  },
+  content: {
+    backgroundColor: 'transparent',
+    margin: 0,
+    '&$expanded': {
+      margin: 0
+    },
+  },
+  expandIconWrapper: {
+    // paddingRight: 20,
+    '&$expanded': {
+      display: 'none'
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, .03)',
+    padding: 1
+  }
+}))(MuiAccordionDetails);
 
 // a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
@@ -100,8 +156,12 @@ const Showcase = props => {
     const hrs = ~~(time / 3600);
     const mins = ~~((time % 3600) / 60);
     const secs = ~~time % 60;
+    // Only display hours and min if it is not 'zero'
+    const disHrs = hrs > 0 ? `${hrs}:` : '';
+    const disMins = mins > 0 ? `${mins}:` : '00:';
+    const disSecs = secs > 10 ? `${secs}` : `0${secs}`;
 
-    return `${hrs}:${mins}:${secs}`
+    return `${disHrs}${disMins}${disSecs}`
   }
 
   // Currently updates showcase information in database and adds order to orderCache. Might want to split functionalities. Or at least make a condition if the order is the same as the last saved order - Woo Jin
@@ -183,24 +243,11 @@ const Showcase = props => {
   };
 
   // Show/Hide Edit functionality for each video
-  const [videoEdit, setVideoEdit] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState('');
+  const [expanded, setExpanded] = useState(false);
 
-  const showVideoEdit = (index) => {
-    setVideoEdit(true);
-    setCurrentVideo(index);
-  }
-  const hideVideoEdit = () => {
-    setVideoEdit(false);
-  }
-
-  // useEffect(() => {
-  //   videoEdit === true ? false : true
-  //   console.log('from useEffect', videoEdit);
-  // }, [switchVideoEdit])
-
-
-
+  const handleExpand = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   // populates dropdown list as orderCache is updated. Currently does not work. - Woo Jin
   // const orderOptions = () => {
@@ -224,7 +271,7 @@ const Showcase = props => {
   // Normally you would want to split things out into separate components.
   // But in this example everything is just done in one place for simplicity
   return (
-    <Grid container m="auto" xs={10}>
+    <Grid container m="auto" xs={8}>
       {/* save button */}
       <Grid item xs={12} position="fixed" sx={{ top: '10%', right: '10%' }} zIndex="1000">
         <Box display="flex" justifyContent="flex-end">
@@ -245,34 +292,6 @@ const Showcase = props => {
           </IconButton> */}
         </Box>
       </Grid>
-      <Grid item xs={4} m={2}>
-        <Card sx={{ p: 2 }}>
-          <Typography>Options to update video title and description will go here. Also need to fix the position of this card so that it is visible when user scrolls down the video list</Typography>
-          <Box marginTop={2}>
-            <TextField
-              label="Video Name"
-              fullWidth
-            />
-          </Box>
-          <Box marginTop={1}>
-            <TextField
-              // error={Boolean(touched.channel_title && errors.channel_title)}
-              // helperText={touched.channel_title && errors.channel_title}
-              fullWidth
-              label="Channel Description"
-              name="description"
-              multiline="true"
-              maxRows="2"
-              // onBlur={handleBlur}
-              // onChange={handleChange}
-              // value={data.description}
-              // variant="outlined"
-            />
-          </Box>
-        </Card>
-
-      </Grid>
-
       {/* Dropdown order cache list. Currently doesn't function properly */}
       {/* <select options={orderOptions()} /> */}
       <Grid item display="column" xs>
@@ -285,7 +304,6 @@ const Showcase = props => {
                 style={getListStyle(snapshot.isDraggingOver)}
               >
                 {videos.map((item, index) => (
-
                   <Draggable key={item.uri} draggableId={item.uri} index={index}>
                     {(provided, snapshot) => (
                       <Card
@@ -301,68 +319,72 @@ const Showcase = props => {
                         }}
                       >
                         {/* <Card> */}
-                          <Grid container>
-                            <Grid item xs={3}>
-                              <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
+                        <Accordion expanded={expanded === `video-${index}`} onChange={handleExpand(`video-${index}`)}>
+                          <AccordionSummary
+                            expandIcon={<Edit />}
+                            id={`video-${index}`}
+                            sx={{
+                              p: 0,
+                              m: '0 !important'
+                            }}
+                          >
+                            <Grid container>
+                              <Grid item xs={3}>
+                                <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
+                              </Grid>
+                              <Grid item xs={8} p={2}>
+                                <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
+                                <Typography fontWeight="400">{formatTime(item.duration)}</Typography>
+                                <Typography fontStyle="italic" fontWeight="400">{item.description ? item.description : 'no description has been added yet'}</Typography>
+                              </Grid>
+                              {/* <Grid item xs={1}>
+                                { videoEdit === false ?
+                                  (  
+                                    <IconButton
+                                      onClick={showVideoEdit}
+                                    >
+                                      <Edit />
+                                    </IconButton>
+                                  ) : null
+                                }
+                              </Grid> */}
                             </Grid>
-                            <Grid item xs={8} p={2}>
-                              <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
-                              <Typography fontWeight="400">{formatTime(item.duration)}</Typography>
-                              <Typography fontStyle="italic" fontWeight="400">{item.description ? item.description : 'no description has been added yet'}</Typography>
-                            </Grid>
-                            <Grid item xs={1}>
-                              { videoEdit === false ?
-                                (  
-                                  <IconButton
-                                    onClick={showVideoEdit}
-                                  >
-                                    <Edit />
-                                  </IconButton>
-                                ) : null
-                              }
-                            </Grid>
-                            <Grid item xs={12}>
-                              { videoEdit === true ?
-                                (
-                                  <Box p={2}>
-                                    <Box marginTop={0}>
-                                      <TextField
-                                        label="Video Name"
-                                        fullWidth
-                                        value={item.name}
-                                      />
-                                    </Box>
-                                    <Box marginTop={1}>
-                                      <TextField
-                                        // error={Boolean(touched.channel_title && errors.channel_title)}
-                                        // helperText={touched.channel_title && errors.channel_title}
-                                        fullWidth
-                                        label="Channel Description"
-                                        name="description"
-                                        multiline="true"
-                                        maxRows="2"
-                                        // onBlur={handleBlur}
-                                        // onChange={handleChange}
-                                        value={item.description}
-                                        // variant="outlined"
-                                      />
-                                    </Box>
-                                    <Box mt={2} display="flex" justifyContent="space-between">
-                                      <Button variant="contained" sx={{ backgroundColor: 'black'}} onClick={hideVideoEdit}>Cancel</Button>
-                                      <Button variant="contained" onClick={hideVideoEdit}>Update Video</Button>
-                                    </Box>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            <Grid container>
+                              <Grid item xs={12}>
+                                <Box p={2}>
+                                  <Box marginTop={0}>
+                                    <TextField
+                                      label="Video Name"
+                                      fullWidth
+                                      value={item.name}
+                                    />
                                   </Box>
-                                ) : null
-                              }
+                                  <Box marginTop={1}>
+                                    <TextField
+                                      // error={Boolean(touched.channel_title && errors.channel_title)}
+                                      // helperText={touched.channel_title && errors.channel_title}
+                                      fullWidth
+                                      label="Channel Description"
+                                      name="description"
+                                      multiline="true"
+                                      maxRows="4"
+                                      // onBlur={handleBlur}
+                                      // onChange={handleChange}
+                                      value={item.description}
+                                      // variant="outlined"
+                                    />
+                                  </Box>
+                                  <Box mt={2} display="flex" justifyContent="space-between">
+                                    <Button variant="contained" sx={{ backgroundColor: 'black'}} onClick={handleExpand(`video-${index}`)}>Cancel</Button>
+                                    <Button variant="contained" onClick={handleExpand(`video-${index}`)}>Update Video</Button>
+                                  </Box>
+                                </Box>
+                              </Grid>
                             </Grid>
-                            {/* <Grid item xs={12}>
-                              {
-                                switchVideoEdit === index ? (
-                                  <Typography>Test Succes</Typography>
-                                ) : <Typography>Test Failure</Typography>
-                              }
-                            </Grid> */}
-                          </Grid>
+                          </AccordionDetails>
+                        </Accordion>
                         {/* </Card> */}
                       </Card>
                     )}

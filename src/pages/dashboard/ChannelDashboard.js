@@ -168,7 +168,6 @@ const ChannelDashboard = (props) => {
                       Connect Account
                     </Button>
                     <Typography fontStyle="italic" pl={1}>
-                      {`<-- Link to setup connect account`}
                     </Typography>
                   </Box>
                 </Card>

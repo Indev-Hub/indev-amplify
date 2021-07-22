@@ -62,6 +62,26 @@ const ChannelDashboard = (props) => {
     }
   };
 
+  const handleChannelCreation = () => {
+    console.log('click!')
+    fetch("/onboard-user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.url) {
+          window.location = data.url;
+        } else {
+          elmButton.removeAttribute("disabled");
+          elmButton.textContent = "<Something went wrong>";
+          console.log("data", data);
+        }
+      });
+  }
+
   useEffect(() => {
     getChannelInfo();
     gtm.push({ event: 'page_view' });
@@ -141,7 +161,10 @@ const ChannelDashboard = (props) => {
                     You must set this up before creating your channel to make sure that you can receive payments.
                   </Typography>
                   <Box display="flex" alignItems="center">
-                    <Button variant="contained">
+                    <Button 
+                    variant="contained"
+                    onClick={() => handleChannelCreation()}
+                    >
                       Connect Account
                     </Button>
                     <Typography fontStyle="italic" pl={1}>

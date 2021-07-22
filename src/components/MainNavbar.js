@@ -4,6 +4,7 @@ import {
   AppBar,
   Box,
   // Button,
+  // Button,
   // Chip,
   // Divider,
   // Grid,
@@ -62,12 +63,22 @@ const MainNavbar = (props) => {
           <Link
             color="text.reverse"
             component={RouterLink}
-            to="/channel"
+            to="/channel-test"
             underline="none"
             variant="body1"
             paddingRight="10px"
           >
-            Channel
+            Channel Test
+          </Link>
+          <Link
+            color="text.reverse"
+            component={RouterLink}
+            to="/features"
+            underline="none"
+            variant="body1"
+            paddingRight="10px"
+          >
+            Upcoming Features
           </Link>
           <Link
             color="text.reverse"

@@ -45,6 +45,7 @@ const ChannelDashboard = (props) => {
   const { settings } = useSettings();
   const { user } = useAuth();
   const [channelInfo, setChannelInfo] = useState([]);
+  const [connectFetch, setConnectFetch] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
   const getChannelInfo = async () => {
@@ -63,7 +64,8 @@ const ChannelDashboard = (props) => {
   };
 
   const handleChannelCreation = () => {
-    console.log('click!')
+    console.log('click!');
+    setConnectFetch(true);
     fetch("/onboard-user", {
       method: "POST",
       headers: {
@@ -161,14 +163,18 @@ const ChannelDashboard = (props) => {
                     You must set this up before creating your channel to make sure that you can receive payments.
                   </Typography>
                   <Box display="flex" alignItems="center">
-                    <Button 
-                    variant="contained"
-                    onClick={() => handleChannelCreation()}
-                    >
-                      Connect Account
-                    </Button>
-                    <Typography fontStyle="italic" pl={1}>
-                    </Typography>
+                    {!connectFetch ?
+                    (
+                      <Button 
+                        variant="contained"
+                        onClick={() => handleChannelCreation()}
+                      >
+                        Connect Account
+                      </Button>
+                    ) : (
+                      <Typography fontWeight="600" color="primary" p={.7}>Connecting to Stripe...</Typography>
+                    )
+                    }
                   </Box>
                 </Card>
               </Grid>
@@ -197,192 +203,6 @@ const ChannelDashboard = (props) => {
                   </Link>
                 </Card>
               </Grid>
-              {/* <Grid
-                item
-                lg={12}
-                md={12}
-                xl={12}
-                xs={12}
-                sx={{mt:2}}
-              >
-                <Formik
-                  enableReinitialize
-                  initialValues={{
-                    name: channelInfo.name || '',
-                    category: channelInfo.category || '',
-                    description: channelInfo.description || '',
-                    featuredImg: channelInfo.featuredImg || '',
-                    target: channelInfo.target || '',
-                    submit: null
-                  }}
-                  validationSchema={Yup
-                    .object()
-                    .shape({
-                      name: Yup
-                        .string()
-                        .min(2)
-                        .required('Your first name is required'),
-                      description: Yup
-                        .string()
-                        .min(2, `Give 'em a little more information to love`)
-                        .max(250, 'Keep your description short and sweet')
-                        .required('You have to have a description so people know why to support you!'),
-                      target: Yup
-                        .number()
-                        .required('Let everyone know how much money you need to focus on the development full-time')
-                    })}
-                  onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
-                    try {
-                      // NOTE: Make API request
-                      const UpdateChannelInput = {
-                        id: channelInfo.id,
-                        name: values.name,
-                        description: values.description,
-                        target: values.target
-                      };
-                      
-                      // Update Channel Table
-                      console.log('channel info', UpdateChannelInput);
-                      await API.graphql(graphqlOperation(updateChannel, { input: UpdateChannelInput }));
-                      console.log('channel info after add to db', UpdateChannelInput);
-
-                      // await wait(200);
-                      resetForm();
-                      setStatus({ success: true });
-                      setSubmitting(false);
-                      enqueueSnackbar('Channel updated', {
-                        anchorOrigin: {
-                          horizontal: 'right',
-                          vertical: 'top'
-                        },
-                        variant: 'success'
-                      });
-                    } catch (err) {
-                      console.error(err);
-                      setStatus({ success: false });
-                      setErrors({ submit: err.message });
-                      setSubmitting(false);
-                      console.log('failure to update channel', err)
-                    }
-                  }}
-                >
-                  {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-                    <form onSubmit={handleSubmit}>
-                      <Card>
-                        <CardHeader title="Channel" />
-                        <Divider />
-                        <CardContent>
-                          <Grid
-                            container
-                            spacing={4}
-                          >
-                            <Grid
-                              item
-                              md={12}
-                              xs={12}
-                            >
-                              <TextField
-                                error={Boolean(touched.name && errors.name)}
-                                fullWidth
-                                helperText={touched.name && errors.name}
-                                label="Channel Name"
-                                name="name"
-                                placeholder={values.name}
-                                onBlur={handleBlur}
-                                onChange={handleChange}
-                                value={values.name}
-                                variant="outlined"
-                              />
-                            </Grid>
-                            <Grid
-                              item
-                              md={12}
-                              xs={12}
-                            >
-                              <TextField
-                                error={Boolean(touched.description && errors.description)}
-                                fullWidth
-                                helperText={touched.description && errors.description}
-                                label="Desription"
-                                name="description"
-                                rowsMax="8"
-                                multiline="true"
-                                placeholder={values.description}
-                                onBlur={handleBlur}
-                                onChange={handleChange}
-                                value={values.description}
-                                variant="outlined"
-                              />
-                            </Grid>
-                            <Grid
-                              item
-                              md={12}
-                              xs={12}
-                            >
-                              <FormControl fullWidth>
-                                <InputLabel sx={{ ml:2, mt:-1 }}>Target Amount</InputLabel>
-                                <OutlinedInput
-                                  error={Boolean(touched.target && errors.target)}
-                                  fullWidth
-                                  helperText={touched.target && errors.target}
-                                  label="Target Amount"
-                                  name="target"
-                                  placeholder={values.target}
-                                  startAdornment={<InputAdornment position="start">$</InputAdornment>}
-                                  onBlur={handleBlur}
-                                  onChange={handleChange}
-                                  value={values.target}
-                                />
-                              </FormControl>
-                              <InputLabel sx={{ m:2, mb:-1 }} shrink="true" >Featured Image</InputLabel>
-                              <FileDropzone
-                                accept="image/*"
-                                maxFiles={1}
-                                value={values.featuredImg}
-                              />
-                            </Grid>
-                          </Grid>
-
-                        </CardContent>
-                        <Divider />
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            justifyContent: 'flex-end',
-                            p: 2
-                          }}
-                        >
-                          <Button
-                            color="primary"
-                            disabled={isSubmitting}
-                            type="button"
-                            variant="contained"
-                            onClick={getChannelInfo}
-                          >
-                            Get Channel Info
-                          </Button>
-                          <Button
-                            color="primary"
-                            disabled={isSubmitting}
-                            type="submit"
-                            variant="contained"
-                            onClick={getChannelInfo}
-                          >
-                            Save Changes
-                          </Button>
-                          {errors.submit && (
-                            <Box sx={{ mt: 3 }}>
-                              <FormHelperText error>
-                                {errors.submit}
-                              </FormHelperText>
-                            </Box>
-                          )}
-                        </Box>
-                      </Card>
-                    </form>
-                  )}
-                </Formik>
-              </Grid> */}
             </Grid> 
             {/* <ChannelAdd /> */}
           </Box>

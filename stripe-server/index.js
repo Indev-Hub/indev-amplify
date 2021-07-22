@@ -111,7 +111,7 @@ const generateAccountLink = (accountID, origin) => {
     type: "account_onboarding",
     account: accountID,
     refresh_url: `${origin}/onboard-user/refresh`,
-    return_url: `${origin}/dashboard/channel`
+    return_url: `${origin}/channel-test`
     // refresh_url: `http://localhost:4200/onboard-user/refresh`,
     // return_url: `http://localhost:4200/success.html`,
   }).then((link) => link.url);

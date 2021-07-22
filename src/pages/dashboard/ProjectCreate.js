@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Box, Breadcrumbs, Container, Grid, Link, Typography } from '@material-ui/core';
-import { ProjectCreateWizard } from '../../components/dashboard/project';
+import ProjectAdd from '../../components/dashboard/project/project-create/ProjectAdd';
 import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
@@ -17,7 +17,7 @@ const ProjectCreate = () => {
   return (
     <>
       <Helmet>
-        <title>Dashboard: Project Create | Material Kit Pro</title>
+        <title>Dashboard: Add Project | Indev</title>
       </Helmet>
       <Box
         sx={{
@@ -63,7 +63,7 @@ const ProjectCreate = () => {
             </Grid>
           </Grid>
           <Box sx={{ mt: 3 }}>
-            <ProjectCreateWizard />
+            <ProjectAdd />
           </Box>
         </Container>
       </Box>

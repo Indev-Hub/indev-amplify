@@ -138,7 +138,7 @@ const ChannelDashboard = (props) => {
                   <Typography mb={2}>
                     The first step is connecting your bank accout so you can get paid as soon as you have subscribers.
                     We use Stripe to securely handle all transactions.
-                    You must set this up first in order to make sure that you can receive payments.
+                    You must set this up before creating your channel to make sure that you can receive payments.
                   </Typography>
                   <Box display="flex" alignItems="center">
                     <Button variant="contained">

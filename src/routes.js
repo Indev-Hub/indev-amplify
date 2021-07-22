@@ -214,6 +214,10 @@ const routes = [
     element: <LiveStream />
   },
   {
+    path: 'channel-test',
+    element: <ChannelDashboard />
+  },
+  {
     path: 'dashboard',
     element: (
       <AuthGuard>

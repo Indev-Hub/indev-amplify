@@ -175,7 +175,7 @@ function ChannelTemplate(props) {
           >
             <Typography variant="h2" style={{ textTransform: 'uppercase' }}>{channelData.name ? channelData.name : title}</Typography>
             <Typography variant="h6">
-              {`by ${channelData.manager.username}`}
+              {`by ${channelData.manager.displayName}`}
             </Typography>
           </Box>
 

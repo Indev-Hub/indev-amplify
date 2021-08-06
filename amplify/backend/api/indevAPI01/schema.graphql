@@ -38,9 +38,11 @@ type Project @model {
   developers: [User]
   description: String
   category: String
-  devs: String 
-  target: Int
   featuredImg: String
+  startDate: String
+  endDate: String
+  devStage: String
+  showcase: Showcase @connection
 }
 
 type Showcase @model {

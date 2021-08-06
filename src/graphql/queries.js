@@ -30,9 +30,10 @@ export const getChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -85,9 +86,19 @@ export const getChannel = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -133,9 +144,10 @@ export const listChannels = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -186,9 +198,10 @@ export const getUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -229,9 +242,19 @@ export const getUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -260,9 +283,10 @@ export const getUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -311,9 +335,10 @@ export const listUsers = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -365,9 +390,10 @@ export const getProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -410,9 +436,10 @@ export const getProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -433,9 +460,19 @@ export const getProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -477,9 +514,19 @@ export const listProjects = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }

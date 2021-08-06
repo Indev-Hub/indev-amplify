@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Box, Button, Card, Paper, TextareaAutosize, TextField, Typography } from "@material-ui/core";
+import { Box, Button, Card, Grid, Paper, TextareaAutosize, TextField, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import FileDropzone from "src/components/FileDropzone";
 import QuillEditor from "src/components/QuillEditor";
@@ -39,6 +39,38 @@ const ProjectDescription = (props) => {
           />
           <Typography fontSize="12px" sx={{ml:2}}>Max 250 characters</Typography>
         </Box>
+        <Grid container display="flex" sx={{ mt: 2 }}>
+          <Grid item>
+            <TextField
+              label="Start Date"
+              name="startDate"
+              type="date"
+              onChange={handleChange}
+              value={data.startDate}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item sx={{ ml: 4 }}>
+            <TextField
+              label="Estimated End Date"
+              name="endDate"
+              type="date"
+              onChange={handleChange}
+              value={data.endDate}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item sx={{ ml: 4 }}>
+            <Typography> 
+              When did you start your project and when do you think it will be finished?
+            </Typography>
+          </Grid>
+
+        </Grid>
         <Typography
           color="textPrimary"
           variant="h6"

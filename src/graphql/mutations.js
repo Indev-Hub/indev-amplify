@@ -33,9 +33,10 @@ export const createChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -88,9 +89,19 @@ export const createChannel = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -136,9 +147,10 @@ export const updateChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -191,9 +203,19 @@ export const updateChannel = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -239,9 +261,10 @@ export const deleteChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -294,9 +317,19 @@ export const deleteChannel = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -348,9 +381,10 @@ export const createUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -391,9 +425,19 @@ export const createUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -422,9 +466,10 @@ export const createUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -480,9 +525,10 @@ export const updateUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -523,9 +569,19 @@ export const updateUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -554,9 +610,10 @@ export const updateUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -612,9 +669,10 @@ export const deleteUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -655,9 +713,19 @@ export const deleteUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -686,9 +754,10 @@ export const deleteUser = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -738,9 +807,10 @@ export const createProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -783,9 +853,10 @@ export const createProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -806,9 +877,19 @@ export const createProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -846,9 +927,10 @@ export const updateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -891,9 +973,10 @@ export const updateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -914,9 +997,19 @@ export const updateProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -954,9 +1047,10 @@ export const deleteProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -999,9 +1093,10 @@ export const deleteProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -1022,9 +1117,19 @@ export const deleteProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

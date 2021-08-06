@@ -17,7 +17,9 @@ const ProjectAdd = () => {
     operator: '',
     category: '',
     description: '',
-    featuredImg: ''  
+    featuredImg: '',
+    startDate: '',
+    endDate: ''
   });
   const handleChange = (e) => {
     setFormData({
@@ -43,21 +45,23 @@ const ProjectAdd = () => {
     console.log('user id', userId);
 
     // // Upload the featured image
-    const { name, description, category, operator, featuredImg } = formData;
+    const { name, description, category, operator, featuredImg, startDate, endDate } = formData;
     // const { key } = await Storage.put(`${userId}/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
 
     // Create Project Inputs
     const CreateProjectInput = {
       name: name,
-      ProjectManagerId: userId,
+      projectManagerId: userId,
       description: description,
       category: category,
-      operator: operator,
+      startDate: startDate,
+      endDate: endDate
       // featuredImg: key // featured image input
     };
     console.log('Project Name', name);
     console.log('Project Input', CreateProjectInput);
-    await API.graphql(graphqlOperation(createProject, { input: CreateProjectInput }));
+    const project = await API.graphql(graphqlOperation(createProject, { input: CreateProjectInput }));
+    console.log('Response', project);
     console.log('Project Name', name);
     // onUpload();
   };
@@ -65,22 +69,13 @@ const ProjectAdd = () => {
   switch (currentStep) {
     case 1:
       return (
-        <ProjectOwner
+        <ProjectDetails
           data={formData}
           handleChange={handleChange}
           next={next}
         />
       );
     case 2:
-      return (
-        <ProjectDetails
-          data={formData}
-          handleChange={handleChange}
-          next={next}
-          back={back}
-        />
-      );
-    case 3:
       return (
         <ProjectDescription
           data={formData}
@@ -89,6 +84,15 @@ const ProjectAdd = () => {
           back={back}
         />
       );
+    // case 3:
+    //   return (
+    //     <ProjectDescription
+    //       data={formData}
+    //       handleChange={handleChange}
+    //       next={next}
+    //       back={back}
+    //     />
+    //   );
     default:
       return (
         <>

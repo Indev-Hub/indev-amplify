@@ -8,7 +8,7 @@ type Channel @model {
   category: String
   operator: String 
   target: Int
-  projects: [Project]
+  projects: [Project] @connection
   featuredImg: S3Object
 }
 

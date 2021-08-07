@@ -22,14 +22,11 @@ const ChannelAdd = () => {
   });
   const [channel, setChannel] = useState();
   const [channelCreated, setChannelCreated] = useState(false);
-
-  // useEffect(() => {
-  //   userUpdate();
-  // }, [channelCreated])
+  // console.log('Channel is created:', channelCreated)
 
   // Get user attributes
   const { user } = useAuth();
-  console.log('user', user)
+  // console.log('user', user)
 
   const handleChange = (e) => {
     setFormData({
@@ -44,15 +41,9 @@ const ChannelAdd = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const addChannel = async () => {
-    // console.log('user name', userName);
-    // console.log('user id', user.id);
-
+  async function addChannel() {
     // Destructure formData
     const { name, description, category, operator, featuredImg } = formData;
-
-    // // Upload the featured image
-    // const { key } = await Storage.put(`${user.id}/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
 
     // Create Channel Inputs
     const CreateChannelInput = {
@@ -64,38 +55,26 @@ const ChannelAdd = () => {
       // featuredImg: key // featured image input
     };
 
-    try {
-    console.log('Channel Input', CreateChannelInput);
-
     // Create new channel
     const newChannel = await API.graphql(graphqlOperation(createChannel, { input: CreateChannelInput }));
-    const setNewChannel = newChannel.data.createChannel;
+    console.log('newChannel:', newChannel)
+    // if (!newChannel.ok) {
+    //   throw new Error('ERROR on creating new channel', console.error);
+    // }
+    return newChannel.data.createChannel;
+    // const setNewChannel = newChannel.data.createChannel;
+  }
 
-    // Set channel state with the items from the createChannel mutation
-    setChannel(setNewChannel);
-
-    // Set channelCreated state to true so that userUpdate will function
-    setChannelCreated(true);
-    console.log('channel response:', setNewChannel)
-    console.log('channel created:', channelCreated)
-
-     } catch (error) {
-      console.log('An error has occured', error)
-    }
-
-   
-  };
-
-  const userUpdate = async (addChannel) => {
-    console.log('channel update:', addChannel)
-    // Create User Inputs
-    if(channelCreated === true) {
-      console.log('new channel data', channel.id)
+  async function Update() {
+    // showPendingState();
+    try {
+      const response = await addChannel();
+      console.log('addChannel', response);
 
       // Data input for updateUser call
       const UpdateUserInput = {
         id: user.id,
-        userChannelId: channel.id
+        userChannelId: response.id
       }
 
       // Updates the User table to include the newly created Channel. Only one channel is allowed per user
@@ -103,8 +82,10 @@ const ChannelAdd = () => {
       const upUser = await API.graphql(graphqlOperation(updateUser, { input: UpdateUserInput }))
       console.log('User Updated!', upUser) 
 
-    }  
-  };
+    } catch (error) {
+        console.log('error on user update:', error);
+    }
+  }
 
 
   switch (currentStep) {
@@ -137,7 +118,7 @@ const ChannelAdd = () => {
     default:
       return (
         <>
-          <ChannelReview data={formData} addChannel={userUpdate} back={back} />
+          <ChannelReview data={formData} addChannel={Update} back={back} />
         </>
       );
   }

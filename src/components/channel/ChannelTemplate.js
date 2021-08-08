@@ -249,51 +249,51 @@ function ChannelTemplate(props) {
           </Grid>
 
           {/* Project Section */}
-          <Card className={classes.section}>
-            <Box
-              className={classes.sectionHeader}
-              backgroundColor={theme.palette.brand.background1}
-            >
-              <Typography variant="h3">PROJECT</Typography>
-            </Box>
-            <Grid container spacing={0} p={3}>
-              {channelData.projects.items.map((project, index) => (
-                <Grid container mb={3}>
-                  <ProjectTemplate projectData={channelData.projects.items[index]} />
-                </Grid>
-              ))}
-            </Grid>
-            <Grid container spacing={0}>
-              <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
-                <Typography>{channelData.description}</Typography>
+          {channelData.projects.items.map((project, index) => (
+            <Card className={classes.section}>
+              <Box
+                className={classes.sectionHeader}
+                backgroundColor={theme.palette.brand.background1}
+              >
+                <Typography variant="h3">{channelData.projects.items[index].name}</Typography>
+              </Box>
+              <Grid container spacing={0} p={3}>
+                  <Grid container mb={3}>
+                    <ProjectTemplate projectData={channelData.projects.items[index]} />
+                  </Grid>
               </Grid>
-              <Grid item className={classes.gridProjectColumnItem} xs lg={4}>
-                <Grid container direction="column" className={classes.subSection}>
-                  <Grid item backgroundColor={theme.palette.brand.background1} padding="5px">
-                    <Typography>Target goal</Typography>
-                  </Grid>
-                  <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-                    <Typography variant="h5">{`$${amount}`}</Typography>
-                    <Typography>{`of the $${channelData.target ? channelData.target.toLocaleString() : '0'} target`}</Typography>
-                  </Grid>
-                  <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
-                    <Typography>Weeks in Development</Typography>
-                  </Grid>
-                  <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-                    <Typography variant="h5">{`Week ${weeks}`}</Typography>
-                    <Typography>{`of ${est} expected weeks`}</Typography>
-                  </Grid>
-                  <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
-                    <Typography>Development Stage</Typography>
-                  </Grid>
-                  <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
-                    <Typography variant="h5">{`${stage}`}</Typography>
-                    <Typography>{`Week ${weeks} of ${stage} stage`}</Typography>
+              <Grid container spacing={0}>
+                <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
+                  <Typography>{channelData.description}</Typography>
+                </Grid>
+                <Grid item className={classes.gridProjectColumnItem} xs lg={4}>
+                  <Grid container direction="column" className={classes.subSection}>
+                    <Grid item backgroundColor={theme.palette.brand.background1} padding="5px">
+                      <Typography>Target goal</Typography>
+                    </Grid>
+                    <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                      <Typography variant="h5">{`$${amount}`}</Typography>
+                      <Typography>{`of the $${channelData.target ? channelData.target.toLocaleString() : '0'} target`}</Typography>
+                    </Grid>
+                    <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
+                      <Typography>Weeks in Development</Typography>
+                    </Grid>
+                    <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                      <Typography variant="h5">{`Week ${weeks}`}</Typography>
+                      <Typography>{`of ${est} expected weeks`}</Typography>
+                    </Grid>
+                    <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
+                      <Typography>Development Stage</Typography>
+                    </Grid>
+                    <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
+                      <Typography variant="h5">{`${stage}`}</Typography>
+                      <Typography>{`Week ${weeks} of ${stage} stage`}</Typography>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-          </Card>
+            </Card>
+          ))}
 
           {/* Video Section Unsupported */}
              <Card className={classes.section}> 

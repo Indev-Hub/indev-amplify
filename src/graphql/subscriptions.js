@@ -338,6 +338,9 @@ export const onCreateUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -472,6 +475,9 @@ export const onUpdateUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -605,6 +611,9 @@ export const onDeleteUser = /* GraphQL */ `
           videos
           createdAt
           updatedAt
+        }
+        updates {
+          nextToken
         }
         createdAt
         updatedAt
@@ -789,6 +798,18 @@ export const onCreateProject = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -936,6 +957,18 @@ export const onUpdateProject = /* GraphQL */ `
         videos
         createdAt
         updatedAt
+      }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
       }
       createdAt
       updatedAt
@@ -1085,6 +1118,18 @@ export const onDeleteProject = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -1124,6 +1169,375 @@ export const onDeleteShowcase = /* GraphQL */ `
       manager
       managerID
       videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUpdate = /* GraphQL */ `
+  subscription OnCreateUpdate {
+    onCreateUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUpdate = /* GraphQL */ `
+  subscription OnUpdateUpdate {
+    onUpdateUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUpdate = /* GraphQL */ `
+  subscription OnDeleteUpdate {
+    onDeleteUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }

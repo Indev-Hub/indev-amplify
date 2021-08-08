@@ -44,6 +44,7 @@ type Project @model {
   endDate: String
   devStage: String
   showcase: Showcase @connection
+  updates: [Update] @connection(name: "ProjectUpdates")
 }
 
 type Showcase @model {
@@ -52,6 +53,17 @@ type Showcase @model {
   manager: String
   managerID: String
   videos: AWSJSON
+}
+
+type Update @model {
+  id: ID!
+  project: Project @connection(name: "ProjectUpdates")
+  author: User @connection
+  name: String!
+  short: String
+  content: String
+  type: String!
+  coverImg: S3Object
 }
 
 # DATA TYPES

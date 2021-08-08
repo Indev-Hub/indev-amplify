@@ -288,6 +288,17 @@ export const onCreateUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -411,6 +422,17 @@ export const onUpdateUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -534,6 +556,17 @@ export const onDeleteUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -618,6 +651,37 @@ export const onCreateProject = /* GraphQL */ `
     onCreateProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -735,6 +799,37 @@ export const onUpdateProject = /* GraphQL */ `
     onUpdateProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -852,6 +947,37 @@ export const onDeleteProject = /* GraphQL */ `
     onDeleteProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName

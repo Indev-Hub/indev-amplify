@@ -8,7 +8,7 @@ type Channel @model {
   category: String
   operator: String 
   target: Int
-  projects: [Project] @connection
+  projects: [Project] @connection(name: "ProjectsToChannel")
   featuredImg: S3Object
 }
 
@@ -34,6 +34,7 @@ type User @model
 type Project @model {
   id: ID!
   name: String!
+  channel: Channel @connection(name: "ProjectsToChannel")
   manager: User @connection
   developers: [User]
   description: String

@@ -168,6 +168,17 @@ export const getUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -309,6 +320,37 @@ export const getProject = /* GraphQL */ `
     getProject(id: $id) {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -431,6 +473,17 @@ export const listProjects = /* GraphQL */ `
       items {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName

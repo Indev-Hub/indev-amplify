@@ -120,6 +120,7 @@ const Pricing = Loadable(lazy(() => import('./pages/Pricing')));
 // const MembershipAlpha = Loadable(lazy(() => import('./pages/MembershipAlpha')));
 const MembershipBeta = Loadable(lazy(() => import('./pages/MembershipBeta')));
 const Features = Loadable(lazy(() => import('./pages/other/FeaturesPage')));
+const Admin = Loadable(lazy(() => import('./pages/Admin')));
 
 const routes = [
   {
@@ -202,6 +203,10 @@ const routes = [
   {
     path: 'contact',
     element: <Contact />
+  },
+  {
+    path: 'admin',
+    element: <Admin />
   },
   {
     path: 'live-stream',

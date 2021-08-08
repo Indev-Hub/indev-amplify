@@ -151,7 +151,7 @@ function ChannelTemplate(props) {
 
   console.log('vidData', vidData)
   const loadVidData = async () => {
-    await fetch(`https://api.vimeo.com/me/albums/${showcaseId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+    await fetch(`https://api.vimeo.com/me/albums/${showcaseId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
       .then(data => setVidData(data.data));
   }

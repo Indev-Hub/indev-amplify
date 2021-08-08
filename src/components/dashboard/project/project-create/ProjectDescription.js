@@ -1,5 +1,17 @@
 /* eslint-disable */
-import { Box, Button, Card, Paper, TextareaAutosize, TextField, Typography } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Card,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Paper,
+  Select,
+  TextField,
+  Typography
+} from "@material-ui/core";
 import React, { useState } from "react";
 import FileDropzone from "src/components/FileDropzone";
 import QuillEditor from "src/components/QuillEditor";
@@ -23,7 +35,7 @@ const ProjectDescription = (props) => {
         >
           Tell us about the kinds of projects you plan to work on and why users will want to support your efforts.
         </Typography>
-        <Box sx={{ mt: 2 }}>
+        <Grid sx={{ mt: 2 }}>
           <TextField
             // error={Boolean(touched.channel_title && errors.channel_title)}
             // helperText={touched.channel_title && errors.channel_title}
@@ -38,7 +50,77 @@ const ProjectDescription = (props) => {
             variant="outlined"
           />
           <Typography fontSize="12px" sx={{ml:2}}>Max 250 characters</Typography>
-        </Box>
+        </Grid>
+        <Grid container display="flex" sx={{ mt: 2 }}>
+          <Grid item>
+            <TextField
+              label="Start Date"
+              name="startDate"
+              type="date"
+              onChange={handleChange}
+              value={data.startDate}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item sx={{ ml: 4 }}>
+            <TextField
+              label="Estimated End Date"
+              name="endDate"
+              type="date"
+              onChange={handleChange}
+              value={data.endDate}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item sx={{ ml: 4 }}>
+            <Typography> 
+              When did you start your project and when do you think it will be finished?
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container display="flex" sx={{ mt: 2 }}>
+          <FormControl
+            fullWidth
+            variant="outlined"
+          >
+            <InputLabel>
+              Development Stage
+            </InputLabel>
+            <Select
+              // error={Boolean(touched.channel_category && errors.channel_category)}
+              fullWidth
+              // helperText={touched.channel_category && errors.channel_category}
+              label="Stage of development"
+              name="devStage"
+              // onBlur={handleBlur}
+              onChange={handleChange}
+              value={data.devStage}
+            >
+              <MenuItem value="planning">
+                Planning
+              </MenuItem>
+              <MenuItem value="analysis">
+                Analysis
+              </MenuItem>
+              <MenuItem value="design">
+                Design
+              </MenuItem>
+              <MenuItem value="development">
+                Development
+              </MenuItem>
+              <MenuItem value="testing">
+                Testing
+              </MenuItem>
+              <MenuItem value="maintenance">
+                Maintenance
+              </MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
         <Typography
           color="textPrimary"
           variant="h6"

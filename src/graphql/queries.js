@@ -30,9 +30,10 @@ export const getChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -57,39 +58,19 @@ export const getChannel = /* GraphQL */ `
       operator
       target
       projects {
-        id
-        name
-        manager {
+        items {
           id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
-        developers {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
+        nextToken
       }
       featuredImg {
         bucket
@@ -129,15 +110,7 @@ export const listChannels = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -182,15 +155,7 @@ export const getUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -203,6 +168,17 @@ export const getUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -229,9 +205,19 @@ export const getUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -256,15 +242,7 @@ export const getUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -311,9 +289,10 @@ export const listUsers = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -341,6 +320,37 @@ export const getProject = /* GraphQL */ `
     getProject(id: $id) {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -365,9 +375,10 @@ export const getProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -410,9 +421,10 @@ export const getProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -433,9 +445,19 @@ export const getProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -451,6 +473,17 @@ export const listProjects = /* GraphQL */ `
       items {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -477,9 +510,19 @@ export const listProjects = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }

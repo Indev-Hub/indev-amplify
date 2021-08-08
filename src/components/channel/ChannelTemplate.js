@@ -19,6 +19,7 @@ import { API, graphqlOperation } from 'aws-amplify';
 import { getChannel } from '../../graphql/queries';
 import ChannelVideoAsk from './ChannelVideoAsk';
 import Gallery from '../gallery/Gallery';
+import ProjectTemplate from '../project/ProjectTemplate';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   MuiButton: {
@@ -129,6 +130,7 @@ function ChannelTemplate(props) {
   useEffect(() => {
     // eslint-disable-next-line
     getChannelInfo();
+    loadVidData();
   }, []);
 
   const getChannelInfo = async () => {
@@ -142,6 +144,17 @@ function ChannelTemplate(props) {
       console.log('error on fetching videos', error);
     }
   };
+
+  // Get number of videos in the vimeo showcase
+  const [vidData, setVidData] = useState([]);
+  const [showcaseId, setShowcaseId] = useState(7868357);
+
+  console.log('vidData', vidData)
+  const loadVidData = async () => {
+    await fetch(`https://api.vimeo.com/me/albums/${showcaseId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+      .then(response => response.json())
+      .then(data => setVidData(data.data));
+  }
 
   return (
     // Container
@@ -175,7 +188,7 @@ function ChannelTemplate(props) {
           >
             <Typography variant="h2" style={{ textTransform: 'uppercase' }}>{channelData.name ? channelData.name : title}</Typography>
             <Typography variant="h6">
-              {`by ${channelData.manager.username}`}
+              {`by ${channelData.manager.displayName}`}
             </Typography>
           </Box>
 
@@ -216,7 +229,7 @@ function ChannelTemplate(props) {
             <Grid item className={classes.gridInfo} xs>
               <Card className={classes.gridInfoItem}>
                 <Typography>Videos</Typography>
-                <Typography variant="h4">{videos}</Typography>
+                <Typography variant="h4">{vidData.length}</Typography>
               </Card>
             </Grid>
             <Grid item className={classes.gridInfo} xs>
@@ -229,7 +242,7 @@ function ChannelTemplate(props) {
               <Grid item className={classes.gridInfo} xs>
                 <Card className={classes.gridInfoItem}>
                   <Typography>Target</Typography>
-                  <Typography variant="h4">{channelData.target ? channelData.target : '--'}</Typography>
+                  <Typography variant="h4">{channelData.target ? channelData.target.toLocaleString() : '--'}</Typography>
                 </Card>
               </Grid>
             </Hidden>
@@ -243,6 +256,13 @@ function ChannelTemplate(props) {
             >
               <Typography variant="h3">PROJECT</Typography>
             </Box>
+            <Grid container spacing={0} p={3}>
+              {channelData.projects.items.map((project, index) => (
+                <Grid container mb={3}>
+                  <ProjectTemplate projectData={channelData.projects.items[index]} />
+                </Grid>
+              ))}
+            </Grid>
             <Grid container spacing={0}>
               <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
                 <Typography>{channelData.description}</Typography>
@@ -254,7 +274,7 @@ function ChannelTemplate(props) {
                   </Grid>
                   <Grid item backgroundColor={theme.palette.brand.primary1} padding="20px 0">
                     <Typography variant="h5">{`$${amount}`}</Typography>
-                    <Typography>{`of the $${target} target`}</Typography>
+                    <Typography>{`of the $${channelData.target ? channelData.target.toLocaleString() : '0'} target`}</Typography>
                   </Grid>
                   <Grid item backgroundColor={theme.palette.brand.background1} marginTop="10px" padding="5px">
                     <Typography>Weeks in Development</Typography>

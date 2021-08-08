@@ -14,7 +14,7 @@ import {
   Toolbar,
   Typography
 } from '@material-ui/core';
-import { UpdatePostCard, UpdateNewsletter } from '../../components/update';
+import { UpdateCard, UpdateNewsletter } from '../../components/update';
 import PlusIcon from '../../icons/Plus';
 import SortAscendingIcon from '../../icons/SortAscending';
 import SortDescendingIcon from '../../icons/SortDescending';
@@ -36,7 +36,7 @@ const sortOptions = [
   }
 ];
 
-const UpdatePostList = () => {
+const UpdateListPage = () => {
   const isMountedRef = useIsMountedRef();
   const sortRef = useRef(null);
   const [openSort, setOpenSort] = useState(false);
@@ -192,7 +192,7 @@ const UpdatePostList = () => {
                     md={6}
                     xs={12}
                   >
-                    <UpdatePostCard
+                    <UpdateCard
                       authorAvatar={post.author.avatar}
                       authorName={post.author.name}
                       category={post.category}
@@ -214,4 +214,4 @@ const UpdatePostList = () => {
   );
 };
 
-export default UpdatePostList;
+export default UpdateListPage;

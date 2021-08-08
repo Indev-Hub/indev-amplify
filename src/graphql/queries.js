@@ -218,6 +218,9 @@ export const getUser = /* GraphQL */ `
           createdAt
           updatedAt
         }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -458,6 +461,18 @@ export const getProject = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -523,6 +538,9 @@ export const listProjects = /* GraphQL */ `
           createdAt
           updatedAt
         }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -556,6 +574,178 @@ export const listShowcases = /* GraphQL */ `
         manager
         managerID
         videos
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getUpdate = /* GraphQL */ `
+  query GetUpdate($id: ID!) {
+    getUpdate(id: $id) {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listUpdates = /* GraphQL */ `
+  query ListUpdates(
+    $filter: ModelUpdateFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUpdates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        project {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        author {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        name
+        short
+        content
+        type
+        coverImg {
+          bucket
+          key
+          region
+        }
         createdAt
         updatedAt
       }

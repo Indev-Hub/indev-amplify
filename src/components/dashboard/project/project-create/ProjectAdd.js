@@ -32,7 +32,7 @@ const ProjectAdd = () => {
 
   // Get user attributes
   const { user } = useAuth();
-  console.log('user', user);
+  // console.log('user', user);
 
   // Load User table data
   useEffect(() => {

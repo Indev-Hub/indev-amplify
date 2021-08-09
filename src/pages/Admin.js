@@ -1,3 +1,5 @@
+import { Accordion, AccordionSummary, AccordionDetails, Container, Typography, Divider } from '@material-ui/core';
+import { ExpandMore } from '@material-ui/icons';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AdminShowcases from '../components/admin/AdminShowcases';
@@ -13,9 +15,19 @@ const Admin = () => {
       <Helmet>
         <title>Indev Admin</title>
       </Helmet>
-      <div>
-        <AdminShowcases />
-      </div>
+      <Container sx={{ mt: 5 }}>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMore />}
+          >
+            <Typography variant="h6" fontWeight="600">Showcases</Typography>
+          </AccordionSummary>
+          <Divider />
+          <AccordionDetails>
+            <AdminShowcases />
+          </AccordionDetails>
+        </Accordion>
+      </Container>
     </>
   );
 };

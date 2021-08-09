@@ -17,9 +17,9 @@ const AdminShowcases = () => {
     try {
       const vimShow = await fetch(`https://api.vimeo.com/me/albums?per_page=100`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json());
-      // console.log('vimShow', vimShow)
+      console.log('vimShow', vimShow)
       const vimShowData = vimShow.data;
-      // console.log('vimShowData', vimShowData)
+      console.log('vimShowData', vimShowData)
       setShowcases(vimShowData);
       setLoaded(true);
 
@@ -31,6 +31,8 @@ const AdminShowcases = () => {
   const removeShowcase = async () => {
     try {
       const vimDelete = await fetch(`https://api.vimeo.com/me/albums/${deleteShowcase}`, { method: 'DELETE', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_ADMIN_AUTH}` } })
+      .then(response => response.text())
+      .then(result => console.log('result', result))
       // .then(response => response.json());
       // console.log('vimDelete', vimDelete)
       // const vimDeleteData = vimDelete.data;
@@ -70,12 +72,13 @@ const AdminShowcases = () => {
           return (
             <Grid item
               onClick={() => onClick(showcase.uri.split("/")[4])}
-              xs={1.33}
+              xs={12}
+              sm={3}
+              md={2}
+              lg={1.5}
+              xl={1}
             >
-              <Card sx={{ p:2 }}>
-                <Grid item>
-                  {index}
-                </Grid>
+              <Card sx={{ p:2, cursor: 'pointer' }}>
                 <Grid item>
                   {showcase.name}
                 </Grid>

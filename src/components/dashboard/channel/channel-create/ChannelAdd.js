@@ -1,12 +1,13 @@
 /* eslint-disable */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ChannelOwner from "./ChannelOwner";
 import ChannelDetails from "./ChannelDetails";
 import ChannelDescription from "./ChannelDescription";
 import ChannelReview from "./ChannelReview";
-import { createChannel } from "src/graphql/mutations";
+import { createChannel, updateUser } from "src/graphql/mutations";
 import { Button } from "@material-ui/core";
 import { API, Auth, graphqlOperation } from "aws-amplify";
+import useAuth from "src/hooks/useAuth";
 
 const ChannelAdd = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -19,12 +20,19 @@ const ChannelAdd = () => {
     description: '',
     featuredImg: ''  
   });
+  const [channel, setChannel] = useState();
+  const [channelCreated, setChannelCreated] = useState(false);
+  // console.log('Channel is created:', channelCreated)
+
+  // Get user attributes
+  const { user } = useAuth();
+  // console.log('user', user)
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-    console.log('Change:', formData)
   };
   const next = () => {
     setCurrentStep(currentStep + 1);
@@ -33,34 +41,52 @@ const ChannelAdd = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const addChannel = async () => {
-    // Get user attributes
-    const { signInUserSession } = await Auth.currentAuthenticatedUser();
-    const userName = signInUserSession.accessToken.payload.username;
-    const userId = signInUserSession.accessToken.payload.sub
-
-    console.log('user name', userName);
-    console.log('user id', userId);
-
-    // // Upload the featured image
+  async function addChannel() {
+    // Destructure formData
     const { name, description, category, operator, featuredImg } = formData;
-    // const { key } = await Storage.put(`${userId}/${title}_${videoId}.mp4`, formatData, { contentType: 'video/*' });
 
     // Create Channel Inputs
     const CreateChannelInput = {
       name: name,
-      channelManagerId: userId,
+      channelManagerId: user.id,
       description: description,
       category: category,
       operator: operator,
       // featuredImg: key // featured image input
     };
-    console.log('Channel Name', name);
-    console.log('Channel Input', CreateChannelInput);
-    await API.graphql(graphqlOperation(createChannel, { input: CreateChannelInput }));
-    console.log('Channel Name', name);
-    // onUpload();
-  };
+
+    // Create new channel
+    const newChannel = await API.graphql(graphqlOperation(createChannel, { input: CreateChannelInput }));
+    console.log('newChannel:', newChannel)
+    // if (!newChannel.ok) {
+    //   throw new Error('ERROR on creating new channel', console.error);
+    // }
+    return newChannel.data.createChannel;
+    // const setNewChannel = newChannel.data.createChannel;
+  }
+
+  async function Update() {
+    // showPendingState();
+    try {
+      const response = await addChannel();
+      console.log('addChannel', response);
+
+      // Data input for updateUser call
+      const UpdateUserInput = {
+        id: user.id,
+        userChannelId: response.id
+      }
+
+      // Updates the User table to include the newly created Channel. Only one channel is allowed per user
+      // This will overwrite a channel if it exists in the user.channel field
+      const upUser = await API.graphql(graphqlOperation(updateUser, { input: UpdateUserInput }))
+      console.log('User Updated!', upUser) 
+
+    } catch (error) {
+        console.log('error on user update:', error);
+    }
+  }
+
 
   switch (currentStep) {
     case 1:
@@ -92,7 +118,7 @@ const ChannelAdd = () => {
     default:
       return (
         <>
-          <ChannelReview data={formData} addChannel={addChannel} back={back} />
+          <ChannelReview data={formData} addChannel={Update} back={back} />
         </>
       );
   }

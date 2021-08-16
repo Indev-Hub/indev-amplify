@@ -20,7 +20,7 @@ function GalleryVideo(props) {
           <iframe
             src={props.src}
             width="100%"
-            height={props.width*.3}
+            height={props.height}
             frameborder={props.frameborder}
             allow={props.allow}
             allowfullscreen={props.allowfullscreen}

@@ -94,7 +94,7 @@ function Gallery() {
   // data state // storage
 
   // new state for the video player. Attribute values can be dynamically coded? Woo Jin
-  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "640", height: "360", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
+  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "1280", height: "720", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
 
   const [data, setData] = useState([]);
   const [channelId, setId] = useState(8521543);
@@ -110,7 +110,7 @@ function Gallery() {
 
   // Get the vimeo showcase
   const loadData = () => {
-    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
       .then(data => setData(data.data));
   }

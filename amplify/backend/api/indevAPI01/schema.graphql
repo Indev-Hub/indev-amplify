@@ -8,7 +8,7 @@ type Channel @model {
   category: String
   operator: String 
   target: Int
-  projects: [Project]
+  projects: [Project] @connection(name: "ProjectsToChannel")
   featuredImg: S3Object
 }
 
@@ -34,13 +34,17 @@ type User @model
 type Project @model {
   id: ID!
   name: String!
+  channel: Channel @connection(name: "ProjectsToChannel")
   manager: User @connection
   developers: [User]
   description: String
   category: String
-  devs: String 
-  target: Int
   featuredImg: String
+  startDate: String
+  endDate: String
+  devStage: String
+  showcase: Showcase @connection
+  updates: [Update] @connection(name: "ProjectUpdates")
 }
 
 type Showcase @model {
@@ -49,6 +53,17 @@ type Showcase @model {
   manager: String
   managerID: String
   videos: AWSJSON
+}
+
+type Update @model {
+  id: ID!
+  project: Project @connection(name: "ProjectUpdates")
+  author: User @connection
+  name: String!
+  short: String
+  content: String
+  type: String!
+  coverImg: S3Object
 }
 
 # DATA TYPES

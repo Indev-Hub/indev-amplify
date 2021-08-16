@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import MobileDateTimePicker from '@material-ui/lab/MobileDateTimePicker';
 import {
   Box,
@@ -7,12 +8,18 @@ import {
   CardContent,
   CardHeader,
   Checkbox,
+  Container,
+  Divider,
   FormControlLabel,
   Grid,
+  IconButton,
   Switch,
   TextField,
+  Toolbar,
   Typography
 } from '@material-ui/core';
+import SaveIcon from '../../icons/Save';
+import DotsVertical from '../../icons/DotsVertical';
 import FileDropzone from '../FileDropzone';
 import QuillEditor from '../QuillEditor';
 
@@ -35,7 +42,7 @@ const toBase64 = (file) => new Promise((resolve, reject) => {
   reader.onerror = (error) => reject(error);
 });
 
-const UpdatePostCreateForm = () => {
+const UpdateCreateForm = () => {
   const [cover, setCover] = useState(null);
 
   const handleDropCover = async ([file]) => {
@@ -49,9 +56,58 @@ const UpdatePostCreateForm = () => {
 
   return (
     <div>
+      <Container maxWidth="lg">
+        <Toolbar
+          disableGutters
+          sx={{ py: 2 }}
+        >
+          <Grid
+            alignItems="center"
+            container
+            justifyContent="flex-end"
+            spacing={3}
+          >
+            {/* <Grid item>
+              <Typography
+                color="textPrimary"
+                variant="body2"
+              >
+                Hello, Jane Rotanson
+              </Typography>
+            </Grid> */}
+            <Grid item>
+              <Button
+                color="primary"
+                component={RouterLink}
+                size="large"
+                to="/update"
+                variant="outlined"
+              >
+                Cancel
+              </Button>
+              <Button
+                color="primary"
+                component={RouterLink}
+                size="large"
+                startIcon={<SaveIcon />}
+                sx={{ mx: 2 }}
+                to="/update/1"
+                variant="contained"
+              >
+                Publish Update
+              </Button>
+              <IconButton edge="end">
+                <DotsVertical fontSize="small" />
+              </IconButton>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </Container>
+      <Divider />
       <Grid
         container
         spacing={3}
+        pt={4}
       >
         <Grid
           item
@@ -95,7 +151,8 @@ const UpdatePostCreateForm = () => {
                         backgroundImage: `url(${cover})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
-                        height: 420
+                        height: 420,
+                        borderRadius: '20px'
                       }}
                     />
                     <Box
@@ -266,4 +323,4 @@ const UpdatePostCreateForm = () => {
   );
 };
 
-export default UpdatePostCreateForm;
+export default UpdateCreateForm;

@@ -30,9 +30,10 @@ export const onCreateChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -57,39 +58,19 @@ export const onCreateChannel = /* GraphQL */ `
       operator
       target
       projects {
-        id
-        name
-        manager {
+        items {
           id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
-        developers {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
+        nextToken
       }
       featuredImg {
         bucket
@@ -130,9 +111,10 @@ export const onUpdateChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -157,39 +139,19 @@ export const onUpdateChannel = /* GraphQL */ `
       operator
       target
       projects {
-        id
-        name
-        manager {
+        items {
           id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
-        developers {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
+        nextToken
       }
       featuredImg {
         bucket
@@ -230,9 +192,10 @@ export const onDeleteChannel = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -257,39 +220,19 @@ export const onDeleteChannel = /* GraphQL */ `
       operator
       target
       projects {
-        id
-        name
-        manager {
+        items {
           id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
-        developers {
-          id
-          firstName
-          lastName
-          username
-          displayName
-          canHire
-          email
-          role
-          createdAt
-          updatedAt
-        }
-        description
-        category
-        devs
-        target
-        featuredImg
-        createdAt
-        updatedAt
+        nextToken
       }
       featuredImg {
         bucket
@@ -332,15 +275,7 @@ export const onCreateUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -353,6 +288,17 @@ export const onCreateUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -379,9 +325,22 @@ export const onCreateUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -406,15 +365,7 @@ export const onCreateUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -461,15 +412,7 @@ export const onUpdateUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -482,6 +425,17 @@ export const onUpdateUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -508,9 +462,22 @@ export const onUpdateUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -535,15 +502,7 @@ export const onUpdateUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -590,15 +549,7 @@ export const onDeleteUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -611,6 +562,17 @@ export const onDeleteUser = /* GraphQL */ `
       developing {
         id
         name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
         manager {
           id
           firstName
@@ -637,9 +599,22 @@ export const onDeleteUser = /* GraphQL */ `
         }
         description
         category
-        devs
-        target
         featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -664,15 +639,7 @@ export const onDeleteUser = /* GraphQL */ `
         operator
         target
         projects {
-          id
-          name
-          description
-          category
-          devs
-          target
-          featuredImg
-          createdAt
-          updatedAt
+          nextToken
         }
         featuredImg {
           bucket
@@ -693,6 +660,37 @@ export const onCreateProject = /* GraphQL */ `
     onCreateProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -717,9 +715,10 @@ export const onCreateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -762,9 +761,10 @@ export const onCreateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -785,9 +785,31 @@ export const onCreateProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -798,6 +820,37 @@ export const onUpdateProject = /* GraphQL */ `
     onUpdateProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -822,9 +875,10 @@ export const onUpdateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -867,9 +921,10 @@ export const onUpdateProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -890,9 +945,31 @@ export const onUpdateProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -903,6 +980,37 @@ export const onDeleteProject = /* GraphQL */ `
     onDeleteProject {
       id
       name
+      channel {
+        id
+        name
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        supporters
+        description
+        category
+        operator
+        target
+        projects {
+          nextToken
+        }
+        featuredImg {
+          bucket
+          key
+          region
+        }
+        createdAt
+        updatedAt
+      }
       manager {
         id
         firstName
@@ -927,9 +1035,10 @@ export const onDeleteProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -972,9 +1081,10 @@ export const onDeleteProject = /* GraphQL */ `
           name
           description
           category
-          devs
-          target
           featuredImg
+          startDate
+          endDate
+          devStage
           createdAt
           updatedAt
         }
@@ -995,9 +1105,31 @@ export const onDeleteProject = /* GraphQL */ `
       }
       description
       category
-      devs
-      target
       featuredImg
+      startDate
+      endDate
+      devStage
+      showcase {
+        id
+        title
+        manager
+        managerID
+        videos
+        createdAt
+        updatedAt
+      }
+      updates {
+        items {
+          id
+          name
+          short
+          content
+          type
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -1037,6 +1169,375 @@ export const onDeleteShowcase = /* GraphQL */ `
       manager
       managerID
       videos
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUpdate = /* GraphQL */ `
+  subscription OnCreateUpdate {
+    onCreateUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUpdate = /* GraphQL */ `
+  subscription OnUpdateUpdate {
+    onUpdateUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUpdate = /* GraphQL */ `
+  subscription OnDeleteUpdate {
+    onDeleteUpdate {
+      id
+      project {
+        id
+        name
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        manager {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        developers {
+          id
+          firstName
+          lastName
+          username
+          displayName
+          canHire
+          email
+          role
+          createdAt
+          updatedAt
+        }
+        description
+        category
+        featuredImg
+        startDate
+        endDate
+        devStage
+        showcase {
+          id
+          title
+          manager
+          managerID
+          videos
+          createdAt
+          updatedAt
+        }
+        updates {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      author {
+        id
+        firstName
+        lastName
+        username
+        displayName
+        canHire
+        email
+        supporting {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        developing {
+          id
+          name
+          description
+          category
+          featuredImg
+          startDate
+          endDate
+          devStage
+          createdAt
+          updatedAt
+        }
+        channel {
+          id
+          name
+          supporters
+          description
+          category
+          operator
+          target
+          createdAt
+          updatedAt
+        }
+        role
+        createdAt
+        updatedAt
+      }
+      name
+      short
+      content
+      type
+      coverImg {
+        bucket
+        key
+        region
+      }
       createdAt
       updatedAt
     }

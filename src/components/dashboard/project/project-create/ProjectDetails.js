@@ -84,14 +84,14 @@ const ProjectDetails = (props) => {
             mt: 6
           }}
         >
-          <Button
+          {/* <Button
             color="primary"
             onClick={back}
             size="large"
             variant="text"
           >
             Previous
-          </Button>
+          </Button> */}
           <Box sx={{ flexGrow: 1 }} />
 
             {/* Send channel_title and channel_category to db */}

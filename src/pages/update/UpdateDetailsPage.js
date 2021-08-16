@@ -15,7 +15,7 @@ import {
   Typography
 } from '@material-ui/core';
 import { experimentalStyled } from '@material-ui/core/styles';
-import { UpdatePostComment, UpdateNewsletter } from '../../components/update';
+import { UpdateComment, UpdateNewsletter } from '../../components/update';
 import PencilAltIcon from '../../icons/PencilAlt';
 import useIsMountedRef from '../../hooks/useIsMountedRef';
 import axios from '../../lib/axios';
@@ -71,7 +71,7 @@ const MarkdownWrapper = experimentalStyled('div')(({ theme }) => ({
   }
 }));
 
-const UpdatePostDetails = () => {
+const UpdateDetailsPage = () => {
   const isMountedRef = useIsMountedRef();
   const [post, setPost] = useState(null);
 
@@ -242,7 +242,7 @@ const UpdatePostDetails = () => {
             </Typography>
             <Box sx={{ mt: 3 }}>
               {comments.map((comment) => (
-                <UpdatePostComment
+                <UpdateComment
                   key={comment.id}
                   {...comment}
                 />
@@ -256,4 +256,4 @@ const UpdatePostDetails = () => {
   );
 };
 
-export default UpdatePostDetails;
+export default UpdateDetailsPage;

@@ -1,9 +1,8 @@
-/* eslint-disable */
-import { createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer, useState } from 'react';
 import PropTypes from 'prop-types';
 import Amplify, { API, Auth, graphqlOperation } from 'aws-amplify';
 import { amplifyConfig } from '../config';
-import { getUser } from 'src/graphql/queries';
+import { getUser } from '../graphql/queries';
 
 Amplify.configure(amplifyConfig);
 
@@ -64,12 +63,31 @@ const AuthContext = createContext({
 export const AuthProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [userInfo, setUserInfo] = useState([]);
+
+  const getUserInfo = async () => {
+    try {
+      // eslint-disable-next-line
+      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+      const userList = userData.data.getUser;
+      setUserInfo(userList);
+      console.log('list', userList);
+    } catch (error) {
+      console.log('error on fetching videos', error);
+    }
+  };
+
+  useEffect(() => {
+    getUserInfo();
+  }, []);
 
   useEffect(() => {
     const initialize = async () => {
       try {
-        const user = await Auth.currentAuthenticatedUser();
+        const { user } = await Auth.currentAuthenticatedUser();
         getUserInfo();
+        console.log('user initialized context', userInfo);
+
         // Here you should extract the complete user profile to make it
         // available in your entire app.
         // The auth state only provides basic information.
@@ -82,8 +100,10 @@ export const AuthProvider = (props) => {
               id: user.attributes.sub,
               avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
               email: user.attributes.email,
-              name: user.username,
-              plan: 'Premium'
+              firstName: user.attributes.firstName,
+              lastName: user.attributes.lastName,
+              displayName: user.attributes.displayName,
+              plan: userInfo.role
             }
           }
         });
@@ -116,8 +136,10 @@ export const AuthProvider = (props) => {
           id: user.attributes.sub,
           avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
           email: user.attributes.email,
-          name: 'Jane Rotanson',
-          plan: 'Premium'
+          firstName: user.attributes.firstName,
+          lastName: user.attributes.lastName,
+          displayName: user.attributes.displayName,
+          plan: userInfo.role
         }
       }
     });
@@ -130,9 +152,9 @@ export const AuthProvider = (props) => {
     });
   };
 
-  const register = async (email, password) => {
+  const register = async (username, email, password) => {
     await Auth.signUp({
-      username: email,
+      username,
       password,
       attributes: { email }
     });
@@ -193,19 +215,3 @@ AuthProvider.propTypes = {
 };
 
 export default AuthContext;
-
-// Get user information from database User table
-const getUserInfo = async () => {  
-  try {
-    const userData = await API.graphql(graphqlOperation(getUser({ id: user.id })));
-    const userList = userData.data.getUser;
-    setUserInfo(userList);
-    console.log(userList);
-    sessionStorage.setItem('userInfo', JSON.stringify(userList));
-    console.log('user setItem successful');
-    
-    // console.log('list', userList);
-  } catch (error) {
-    console.log('error on fetching videos', error);
-  }
-}

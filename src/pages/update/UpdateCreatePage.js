@@ -1,22 +1,23 @@
 import { useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
   Box,
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Toolbar,
-  Typography,
-  IconButton
+  // Button,
+  Container
+  // Divider,
+  // Grid,
+  // Toolbar,
+  // Typography,
+  // IconButton
 } from '@material-ui/core';
-import { UpdatePostCreateForm } from '../../components/update';
-import SaveIcon from '../../icons/Save';
-import DotsVertical from '../../icons/DotsVertical';
+import { UpdateCreateForm } from '../../components/update';
+// import SaveIcon from '../../icons/Save';
+// import DotsVertical from '../../icons/DotsVertical';
 import gtm from '../../lib/gtm';
+import UpdateAdd from '../../components/dashboard/update/update-create/UpdateAdd';
 
-const UpdatePostCreate = () => {
+const UpdateCreatePage = () => {
   useEffect(() => {
     gtm.push({ event: 'page_view' });
   }, []);
@@ -32,8 +33,8 @@ const UpdatePostCreate = () => {
           minHeight: '100%'
         }}
       >
-        <div>
-          <Container maxWidth="lg">
+        {/* <div>
+           <Container maxWidth="lg">
             <Toolbar
               disableGutters
               sx={{ py: 2 }}
@@ -41,7 +42,7 @@ const UpdatePostCreate = () => {
               <Grid
                 alignItems="center"
                 container
-                justifyContent="space-between"
+                justifyContent="flex-end"
                 spacing={3}
               >
                 <Grid item>
@@ -81,10 +82,11 @@ const UpdatePostCreate = () => {
             </Toolbar>
           </Container>
         </div>
-        <Divider />
-        <Box sx={{ py: 6 }}>
+        <Divider /> */}
+        <Box sx={{ py: 0 }}>
           <Container maxWidth="lg">
-            <UpdatePostCreateForm />
+            <UpdateAdd />
+            <UpdateCreateForm />
           </Container>
         </Box>
       </Box>
@@ -92,4 +94,4 @@ const UpdatePostCreate = () => {
   );
 };
 
-export default UpdatePostCreate;
+export default UpdateCreatePage;

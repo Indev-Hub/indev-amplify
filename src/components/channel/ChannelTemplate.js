@@ -127,10 +127,14 @@ function ChannelTemplate(props) {
   const [channelData, setChannelData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Get number of videos in the vimeo showcase
+  const [vidData, setVidData] = useState([]);
+  const [showcaseId, setShowcaseId] = useState(7868357);
+
   useEffect(() => {
     // eslint-disable-next-line
     getChannelInfo();
-    loadVidData();
+    // loadVidData();
   }, []);
 
   const getChannelInfo = async () => {
@@ -139,22 +143,27 @@ function ChannelTemplate(props) {
       const listChannelData = getChannelData.data.getChannel;
       setChannelData(listChannelData);
       console.log('channel list', listChannelData);
+
+      fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
+      .then(response => response.json())
+      .then(data => setVidData(data.data));
+      console.log('vid data', vidData);
+
       setIsLoading(false);
     } catch (error) {
       console.log('error on fetching videos', error);
     }
   };
 
-  // Get number of videos in the vimeo showcase
-  const [vidData, setVidData] = useState([]);
-  const [showcaseId, setShowcaseId] = useState(7868357);
-
-  console.log('vidData', vidData)
-  const loadVidData = async () => {
-    await fetch(`https://api.vimeo.com/me/albums/${showcaseId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+  // Get the vimeo showcase
+  const loadData = () => {
+    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
+      // .then(data => setData(data.data))
       .then(data => setVidData(data.data));
   }
+
+
 
   return (
     // Container
@@ -229,7 +238,7 @@ function ChannelTemplate(props) {
             <Grid item className={classes.gridInfo} xs>
               <Card className={classes.gridInfoItem}>
                 <Typography>Videos</Typography>
-                <Typography variant="h4">{vidData.length}</Typography>
+                <Typography variant="h4">{vidData ? vidData.length: videos}</Typography>
               </Card>
             </Grid>
             <Grid item className={classes.gridInfo} xs>
@@ -305,7 +314,7 @@ function ChannelTemplate(props) {
               </Box>
 
               {/* Logged Out */}
-              <Grid container backgroundColor={theme.palette.brand.background0} spacing={0}>
+              {/* <Grid container backgroundColor={theme.palette.brand.background0} spacing={0}>
                 <Grid item className={classes.gridProjectColumnItem} style={{ backgroundColor: '#ffffff', padding: '20px' }} xs>
                   <Typography>Support [channel title] and get access to all of the videos and updates.</Typography>
                 </Grid>
@@ -321,15 +330,9 @@ function ChannelTemplate(props) {
                     </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
-              <Box backgroundColor={theme.palette.brand.background3} padding="10px">
-                <Button>SUPPORT</Button>
-              </Box>
-              <Gallery />
+              </Grid> */}
+              <Gallery setVidData={setVidData} vidData={vidData} />
             </Card>
-
-          {/* Logged In */}
-          {/* <Gallery /> */}
         </Box>
       )}
     </>

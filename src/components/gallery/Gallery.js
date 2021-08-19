@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import PropTypes from "prop-types";
 import GalleryVideo from "./GalleryVideo";
 import GalleryLibrary from "./GalleryLibrary";
@@ -90,17 +90,59 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 }));
 
 
-function Gallery() {
+function Gallery(props) {
   // data state // storage
-
+  const { setVidData, vidData } = props;
   // new state for the video player. Attribute values can be dynamically coded? Woo Jin
-  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "640", height: "360", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
+  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "1280", height: "720", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
+  
+  // Set hero vid object
+  const [heroVid, setHeroVid] = useState();
+  
+  const heroVidUpdate = (vid) => {
+    console.log('url', vid)
+    const updatedHero = vidData.filter(x => x.uri.split("/")[2] === vid)  //vidData.find(function( vid ) { return vid.uri.split("/")[2] === vidID; });
+    setHeroVid(updatedHero);
+    console.log('heroVid', heroVid)
+  }
 
   const [data, setData] = useState([]);
   const [channelId, setId] = useState(8521543);
 
   const classes = useStyles();
   const theme = useTheme();
+
+  // Resize Hero Video on window resize
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+
+  // Display window size (not used for anything besides testing)
+  function ShowWindowDimensions(props) {
+    const [width, height] = useWindowSize();
+    return <span>Window size: {width} x {height}</span>;
+  }
+  
+  // Get window width after window resize
+  function HeroVidWidth(vidWidth) {
+    const [width] = useWindowSize();
+    return width*vidWidth;
+  }
+
+  // Get window height after window resize
+  function HeroVidHeight(vidHeight) {
+    const [height] = useWindowSize();
+    return height*vidHeight;
+  }
 
   // Run loadData function 
   useEffect(() => {
@@ -110,9 +152,10 @@ function Gallery() {
 
   // Get the vimeo showcase
   const loadData = () => {
-    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 2d5b1461e957305ffc81def0383fe3a0' } })
+    fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
-      .then(data => setData(data.data));
+      // .then(data => setData(data.data))
+      .then(data => setVidData(data.data));
   }
 
   // Get video duration in hours:minutes:seconds
@@ -135,10 +178,11 @@ function Gallery() {
       src: `https://player.vimeo.com/video/${videoID}?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959`,
       title: `${titleID}`
     });
+    heroVidUpdate(videoID);
   }
 
   return (
-    console.log(data),
+    console.log(vidData),
     <Grid container spacing={0}>
 
       {/* Hero Video */}
@@ -147,22 +191,24 @@ function Gallery() {
       
       <GalleryVideo 
         src={video.src}
-        width={video.width}
-        height={video.height}
+        width="100%" //{video.width}
+        height={HeroVidHeight(.37)} //{video.height}
         frameborder={video.frameborder}
         allow={video.allow}
         allowfullscreen={video.allowfullscreen}
         title={video.title}
-        />
+        vidData={heroVid}
+      />
+      {/* {console.log('video data', vidData.reduce((acc, it) => (acc[it] = it, acc), []))}
+      {console.log('video src', video.src.substring(video.src.lastIndexOf("/video/"), video.src.lastIndexOf("?")))} */}
 
       {/* Library */}
-
       <GalleryLibrary 
-        data={data}
+        data={vidData}
         onThumbnailClick={onThumbnailClick}
         classes={classes}
         formatTime={formatTime}
-        />
+      />
 
       </Grid>
 

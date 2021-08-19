@@ -113,6 +113,7 @@ const UpdateDashboard = Loadable(lazy(() => import('./pages/dashboard/UpdateDash
 
 // Other pages
 
+const Admin = Loadable(lazy(() => import('./pages/Admin')));
 const Checkout = Loadable(lazy(() => import('./pages/Checkout')));
 const Contact = Loadable(lazy(() => import('./pages/Contact')));
 const Home = Loadable(lazy(() => import('./pages/Home')));
@@ -202,6 +203,10 @@ const routes = [
   {
     path: 'contact',
     element: <Contact />
+  },
+  {
+    path: 'admin',
+    element: <Admin />
   },
   {
     path: 'live-stream',

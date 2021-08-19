@@ -48,9 +48,9 @@ const BlogPostList = Loadable(lazy(() => import('./pages/blog/BlogPostList')));
 
 // Update pages
 
-const UpdatePostCreate = Loadable(lazy(() => import('./pages/update/UpdatePostCreate')));
-const UpdatePostDetails = Loadable(lazy(() => import('./pages/update/UpdatePostDetails')));
-const UpdatePostList = Loadable(lazy(() => import('./pages/update/UpdatePostList')));
+const UpdateCreatePage = Loadable(lazy(() => import('./pages/update/UpdateCreatePage')));
+const UpdateDetailsPage = Loadable(lazy(() => import('./pages/update/UpdateDetailsPage')));
+const UpdateListPage = Loadable(lazy(() => import('./pages/update/UpdateListPage')));
 
 // Channel pages
 const Channel = Loadable(lazy(() => import('./pages/channel/Channel')));
@@ -101,12 +101,6 @@ const ServerError = Loadable(lazy(() => import('./pages/ServerError')));
 
 // Projects pages
 
-// Updates pages
-
-// const UpdateBrowse = Loadable(lazy(() => import('./pages/dashboard/UpdateBrowse')));
-// const UpdateCreate = Loadable(lazy(() => import('./pages/dashboard/UpdateCreate')));
-// const UpdateDetails = Loadable(lazy(() => import('./pages/dashboard/UpdateDetails')));
-
 // Updates single page
 
 const UpdateDashboard = Loadable(lazy(() => import('./pages/dashboard/UpdateDashboard')));
@@ -119,6 +113,7 @@ const UpdateDashboard = Loadable(lazy(() => import('./pages/dashboard/UpdateDash
 
 // Other pages
 
+const Admin = Loadable(lazy(() => import('./pages/Admin')));
 const Checkout = Loadable(lazy(() => import('./pages/Checkout')));
 const Contact = Loadable(lazy(() => import('./pages/Contact')));
 const Home = Loadable(lazy(() => import('./pages/Home')));
@@ -193,21 +188,25 @@ const routes = [
     children: [
       {
         path: '/',
-        element: <UpdatePostList />
+        element: <UpdateListPage />
       },
       {
         path: 'new',
-        element: <UpdatePostCreate />
+        element: <UpdateCreatePage />
       },
       {
         path: ':postId',
-        element: <UpdatePostDetails />
+        element: <UpdateDetailsPage />
       }
     ]
   },
   {
     path: 'contact',
     element: <Contact />
+  },
+  {
+    path: 'admin',
+    element: <Admin />
   },
   {
     path: 'live-stream',
@@ -377,23 +376,23 @@ const routes = [
           }
         ]
       },
-      // {
-      //   path: 'updates',
-      //   children: [
-      //     {
-      //       path: 'browse',
-      //       element: <UpdateBrowse />
-      //     },
-      //     {
-      //       path: 'new',
-      //       element: <UpdateCreate />
-      //     },
-      //     {
-      //       path: ':projectId',
-      //       element: <UpdateDetails />
-      //     }
-      //   ]
-      // },
+      {
+        path: 'updates',
+        children: [
+          {
+            path: 'list',
+            element: <UpdateListPage />
+          },
+          {
+            path: 'new',
+            element: <UpdateCreatePage />
+          },
+          {
+            path: ':projectId',
+            element: <UpdateDetailsPage />
+          }
+        ]
+      },
       {
         path: 'channel',
         element: <ChannelDashboard />

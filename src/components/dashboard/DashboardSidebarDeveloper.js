@@ -17,10 +17,10 @@ import BriefcaseIcon from '../../icons/Briefcase';
 import CalendarIcon from '../../icons/Calendar';
 // import ChartPieIcon from '../../icons/ChartPie';
 import ChartSquareBarIcon from '../../icons/ChartSquareBar';
-import ChatAltIcon from '../../icons/ChatAlt';
+// import ChatAltIcon from '../../icons/ChatAlt';
 import ClipboardListIcon from '../../icons/ClipboardList';
 // import FolderOpenIcon from '../../icons/FolderOpen';
-import MailIcon from '../../icons/Mail';
+// import MailIcon from '../../icons/Mail';
 import ShareIcon from '../../icons/Share';
 // import ShoppingBagIcon from '../../icons/ShoppingBag';
 // import ShoppingCartIcon from '../../icons/ShoppingCart';
@@ -109,6 +109,25 @@ const sections = [
       },
       {
         title: 'Updates',
+        path: '/dashboard/updates',
+        icon: <BriefcaseIcon fontSize="small" />,
+        children: [
+          {
+            title: 'Browse',
+            path: '/dashboard/projects/browse'
+          },
+          {
+            title: 'List',
+            path: '/dashboard/updates/list'
+          },
+          {
+            title: 'Create',
+            path: '/dashboard/updates/new'
+          }
+        ]
+      },
+      {
+        title: 'Updates',
         path: '/dashboard/update-dashboard',
         icon: <CalendarIcon fontSize="small" />
       },
@@ -133,7 +152,7 @@ const sections = [
       //   ]
       // }
     ]
-  },
+  }
   // {
   //   title: 'Management',
   //   items: [
@@ -203,31 +222,31 @@ const sections = [
   //     }
   //   ]
   // },
-  {
-    title: 'Messages',
-    items: [
-      // {
-      //   title: 'Kanban',
-      //   path: '/dashboard/kanban',
-      //   icon: <ClipboardListIcon fontSize="small" />
-      // },
-      {
-        title: 'Mail',
-        path: '/dashboard/mail',
-        icon: <MailIcon fontSize="small" />
-      },
-      {
-        title: 'Chat',
-        path: '/dashboard/chat',
-        icon: <ChatAltIcon fontSize="small" />
-      }
-      // {
-      //   title: 'Calendar',
-      //   path: '/dashboard/calendar',
-      //   icon: <CalendarIcon fontSize="small" />
-      // }
-    ]
-  }
+  // {
+  //   title: 'Messages',
+  //   items: [
+  //     {
+  //       title: 'Kanban',
+  //       path: '/dashboard/kanban',
+  //       icon: <ClipboardListIcon fontSize="small" />
+  //     },
+  //     {
+  //       title: 'Mail',
+  //       path: '/dashboard/mail',
+  //       icon: <MailIcon fontSize="small" />
+  //     },
+  //     {
+  //       title: 'Chat',
+  //       path: '/dashboard/chat',
+  //       icon: <ChatAltIcon fontSize="small" />
+  //     }
+  //     {
+  //       title: 'Calendar',
+  //       path: '/dashboard/calendar',
+  //       icon: <CalendarIcon fontSize="small" />
+  //     }
+  //   ]
+  // }
 ];
 
 const DashboardSidebarDeveloper = (props) => {

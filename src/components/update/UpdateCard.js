@@ -4,12 +4,12 @@ import { format } from 'date-fns';
 import { Avatar, Box, CardMedia, Chip, Link, Typography } from '@material-ui/core';
 import { experimentalStyled } from '@material-ui/core/styles';
 
-const UpdatePostCardMediaWrapper = experimentalStyled('div')({
+const UpdateCardMediaWrapper = experimentalStyled('div')({
   paddingTop: 'calc(100% * 4 / 4)',
   position: 'relative'
 });
 
-const UpdatePostCard = (props) => {
+const UpdateCard = (props) => {
   const {
     authorAvatar,
     authorName,
@@ -24,7 +24,7 @@ const UpdatePostCard = (props) => {
 
   return (
     <div {...other}>
-      <UpdatePostCardMediaWrapper>
+      <UpdateCardMediaWrapper>
         <CardMedia
           image={cover}
           sx={{
@@ -34,7 +34,7 @@ const UpdatePostCard = (props) => {
             width: '100%'
           }}
         />
-      </UpdatePostCardMediaWrapper>
+      </UpdateCardMediaWrapper>
       <Box sx={{ mt: 2 }}>
         <div>
           <Chip
@@ -92,7 +92,7 @@ const UpdatePostCard = (props) => {
   );
 };
 
-UpdatePostCard.propTypes = {
+UpdateCard.propTypes = {
   authorAvatar: PropTypes.string.isRequired,
   authorName: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
@@ -103,4 +103,4 @@ UpdatePostCard.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default UpdatePostCard;
+export default UpdateCard;

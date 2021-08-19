@@ -5,7 +5,7 @@ import { Avatar, Box, IconButton, Paper, Tooltip, Typography } from '@material-u
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
-const UpdatePostComment = (props) => {
+const UpdateComment = (props) => {
   const {
     authorAvatar,
     authorName,
@@ -123,7 +123,7 @@ const UpdatePostComment = (props) => {
   );
 };
 
-UpdatePostComment.propTypes = {
+UpdateComment.propTypes = {
   authorAvatar: PropTypes.string.isRequired,
   authorName: PropTypes.string.isRequired,
   authorRole: PropTypes.string.isRequired,
@@ -133,4 +133,4 @@ UpdatePostComment.propTypes = {
   likes: PropTypes.number.isRequired
 };
 
-export default UpdatePostComment;
+export default UpdateComment;

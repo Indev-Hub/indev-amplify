@@ -6,6 +6,7 @@ import {
   Link,
   Typography
 } from '@material-ui/core';
+
 function GalleryVideo(props) {
   return(
     <Grid
@@ -19,7 +20,7 @@ function GalleryVideo(props) {
         <Grid item xs={12} className="heroContainer">
           <iframe
             src={props.src}
-            width="100%"
+            width={props.width}
             height={props.height}
             frameborder={props.frameborder}
             allow={props.allow}
@@ -27,8 +28,10 @@ function GalleryVideo(props) {
             title={props.title}
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} px={2}>
           <Typography>{props.title}</Typography>
+          {/* <Typography>{props.vidData[0].uri}</Typography>
+          {console.log("Gallery Video:", props.vidData[0].uri)} */}
         </Grid>
       </Grid>
   )

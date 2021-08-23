@@ -5,6 +5,21 @@ import { Box, Grid, Typography } from '@material-ui/core';
 const ProjectTemplate = (props) => {
   const { projectData } = props;
   console.log('projectData:', projectData);
+
+  // useEffect(() => {
+  //   getUpdatetInfo();
+  // }, [input])
+
+  // const getUpdatetInfo = async () => {
+  //   try {
+  //     const updateData = await API.graphql(graphqlOperation(updatesByProject, { projectID:  }));
+  //     const updateList = updateData.data.UpdatesByProject.items;
+  //     console.log('update list', updateList);
+  //   } catch (error) {
+  //     console.log('error on fetching updates', error);
+  //   }
+  // }
+
   return (
     <Box>
       <Grid container>

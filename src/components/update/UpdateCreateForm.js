@@ -29,10 +29,10 @@ const categoryOptions = [
   { label: 'Innovation', value: 'innovation' }
 ];
 
-const channelOptions = [
-  { label: 'Channel 1', value: 'channel 1' },
-  { label: 'Channel 2', value: 'channel 2' },
-  { label: 'Channel 3', value: 'channel 3' }
+const projectOptions = [
+  { label: 'Project 1', value: 'project 1' },
+  { label: 'Project 2', value: 'project 2' },
+  { label: 'Project 3', value: 'project 3' }
 ];
 
 const toBase64 = (file) => new Promise((resolve, reject) => {
@@ -275,18 +275,18 @@ const UpdateCreateForm = () => {
               <Box sx={{ mt: 3 }}>
                 <TextField
                   fullWidth
-                  label="Channel"
-                  name="channel"
+                  label="Project"
+                  name="project"
                   select
                   SelectProps={{ native: true }}
                   variant="outlined"
                 >
-                  {channelOptions.map((channel) => (
+                  {projectOptions.map((project) => (
                     <option
-                      key={channel.value}
-                      value={channel.value}
+                      key={project.value}
+                      value={project.value}
                     >
-                      {channel.label}
+                      {project.label}
                     </option>
                   ))}
                 </TextField>

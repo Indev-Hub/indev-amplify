@@ -182,7 +182,7 @@ function Gallery(props) {
   }
 
   return (
-    console.log(vidData),
+    // console.log(vidData),
     <Grid container spacing={0}>
 
       {/* Hero Video */}
@@ -197,7 +197,7 @@ function Gallery(props) {
         allow={video.allow}
         allowfullscreen={video.allowfullscreen}
         title={video.title}
-        vidData={heroVid}
+        vidData={vidData}
       />
       {/* {console.log('video data', vidData.reduce((acc, it) => (acc[it] = it, acc), []))}
       {console.log('video src', video.src.substring(video.src.lastIndexOf("/video/"), video.src.lastIndexOf("?")))} */}

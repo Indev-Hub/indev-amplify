@@ -22,7 +22,7 @@
           "nativeClientId": "5iu2pmk562t94pn9dj1cadgtph",
           "identityPoolId": "us-west-2:78db374d-4203-4097-9412-df63df95dbe0",
           "identityPoolName": "IndevIdentityPool",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "authRoleArn": "arn:aws:iam::676066083317:role/Cognito_IndevIdentityPoolAuth_Role",
           "authRoleName": "Cognito_IndevIdentityPoolAuth_Role",
           "unauthRoleArn": "arn:aws:iam::676066083317:role/Cognito_IndevIdentityPoolUnauth_Role",

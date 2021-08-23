@@ -55,27 +55,27 @@ const baseOptions = {
     fontFamily: 'DM Sans',
     h1: {
       fontWeight: 600,
-      fontSize: '3.5rem'
+      fontSize: '2.5rem'
     },
     h2: {
       fontWeight: 500,
-      fontSize: '3rem'
+      fontSize: '2rem'
     },
     h3: {
       fontWeight: 500,
-      fontSize: '2.25rem'
+      fontSize: '1.75rem'
     },
     h4: {
       fontWeight: 400,
-      fontSize: '2rem'
+      fontSize: '1.25rem'
     },
     h5: {
       fontWeight: 400,
-      fontSize: '1.5rem'
+      fontSize: '1rem'
     },
     h6: {
-      fontWeight: 400,
-      fontSize: '1.25rem',
+      fontWeight: 500,
+      fontSize: '.8rem',
       lineHeight: '1'
     },
     overline: {

@@ -8,18 +8,23 @@ import {
 } from '@material-ui/core/styles';
 // import PropTypes from 'prop-types';
 import {
+  AppBar,
   Box,
   Button,
   Card,
   Grid,
   Hidden,
+  Tab,
+  Tabs,
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import { getChannel } from '../../graphql/queries';
+import { getChannel, updatesByProject } from '../../graphql/queries';
 import ChannelVideoAsk from './ChannelVideoAsk';
 import Gallery from '../gallery/Gallery';
-import ProjectTemplate from '../project/ProjectTemplate';
+import ProjectTemplateV1 from '../project/ProjectTemplateV1';
+import loadingGif from '../assets/loading1.gif';
+import { TabPanel } from '@material-ui/lab';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   MuiButton: {
@@ -134,7 +139,7 @@ function ChannelTemplate(props) {
   useEffect(() => {
     // eslint-disable-next-line
     getChannelInfo();
-    // loadVidData();
+    // getUpdatetInfo();
   }, []);
 
   const getChannelInfo = async () => {
@@ -155,6 +160,7 @@ function ChannelTemplate(props) {
     }
   };
 
+
   // Get the vimeo showcase
   const loadData = () => {
     fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
@@ -163,13 +169,70 @@ function ChannelTemplate(props) {
       .then(data => setVidData(data.data));
   }
 
+  // Handle Tab state
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+  
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`project-tabpanel-${index}`}
+        aria-labelledby={`project-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box p={3}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+  
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+  };
+  
+  function menuProps(index) {
+    return {
+      id: `project-tab-${index}`,
+      'aria-controls': `project-tabpanel-${index}`,
+    };
+  }
 
+  const [value, setValue] = useState(0);
+
+  const handleTabChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     // Container
     <>
       {isLoading ? (
-        <Typography>Loading Channel...</Typography>
+        <Grid
+          container
+          height="80vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid
+            item
+
+          >
+            <img
+              src={loadingGif}
+              width="150px"
+              height="auto"
+              alt=""
+            />
+            <Typography align="center">Loading Channel...</Typography>
+          </Grid>
+        </Grid>
       ) : (
         <Box
           className={classes.container}
@@ -258,6 +321,31 @@ function ChannelTemplate(props) {
           </Grid>
 
           {/* Project Section */}
+          <AppBar position="static">
+            <Tabs value={value} onChange={handleTabChange} aria-label="simple tabs example">
+            {channelData.projects.items.map((project, index) => (
+              <Tab label={project.name} {...menuProps({index})} />
+            ))}
+            </Tabs>
+          </AppBar>
+          {channelData.projects.items.map((project, index) => (
+            <TabPanel value={value} index={index}>
+              <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
+            </TabPanel>
+          ))}
+
+      {/* <AppBar position="static">
+        <Tabs value={value} onChange={handleTabChange} textColor="white" indicatorColor="secondary" aria-label="simple tabs example">
+          <Tab label="Personal" {...menuProps(0)} />
+          <Tab label="Financial" {...menuProps(1)} />
+          <Tab label="Location" {...menuProps(2)} />
+        </Tabs>
+      </AppBar>          
+      <TabPanel value={value} index={0}>
+        <ProfilePersonal profileData={profileData} handleProfileChange={handleProfileChange} />
+        {console.log('profile data:', profileData)}
+      </TabPanel> */}
+
           {channelData.projects.items.map((project, index) => (
             <Card className={classes.section}>
               <Box
@@ -268,7 +356,7 @@ function ChannelTemplate(props) {
               </Box>
               <Grid container spacing={0} p={3}>
                   <Grid container mb={3}>
-                    <ProjectTemplate projectData={channelData.projects.items[index]} />
+                    <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
                   </Grid>
               </Grid>
               <Grid container spacing={0}>

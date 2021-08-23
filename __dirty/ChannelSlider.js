@@ -28,7 +28,7 @@ function ChannelSlider(props) {
     try {
       const channelData = await API.graphql(graphqlOperation(listChannels));
       const channelList = channelData.data.listChannels.items;
-      console.log('channel list', channelList);
+      // console.log('channel list', channelList);
       setChannels(channelList);
     } catch (error) {
       console.log('error on fetching channels', error);
@@ -91,7 +91,7 @@ function ChannelSlider(props) {
               <ChannelSliderTemplate channelImg={genre[1].image} title={genre[1].title} sliderHeight={sliderHeight} />
               {/* <SearchTemplate1 channel={channel} index={index} /> */}
             </Link>
-            {console.log('channel id:', channel.id)}
+            {/* {console.log('channel id:', channel.id)} */}
           </Grid>
         ))}
 

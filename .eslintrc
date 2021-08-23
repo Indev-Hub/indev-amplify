@@ -21,6 +21,7 @@
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-return-assign": "off",
+    "no-use-before-define": "off",
     "object-curly-newline": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-filename-extension": "off",

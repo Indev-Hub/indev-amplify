@@ -53,7 +53,7 @@ const ChannelDashboard = (props) => {
       console.log('user', user.id);
       console.log('channel info', channelInfo);
       // console.log('getChannelByManager', getChannelByManager, queries.getChannelByManager);
-      const channelData = await API.graphql(graphqlOperation(getChannelByManager , { id: '77929e49-a848-4b65-ade1-4882067d709b' }));
+      const channelData = await API.graphql(graphqlOperation(getChannelByManager , { id: user.id }));
       
       console.log('channel data', channelData.data.getChannel);
       setChannelInfo(channelData.data.getChannel);

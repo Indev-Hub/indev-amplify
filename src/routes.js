@@ -84,6 +84,8 @@ const ChannelDetails = Loadable(lazy(() => import('./pages/dashboard/ChannelDeta
 const ProjectBrowse = Loadable(lazy(() => import('./pages/dashboard/ProjectBrowse')));
 const ProjectCreate = Loadable(lazy(() => import('./pages/dashboard/ProjectCreate')));
 const ProjectDetails = Loadable(lazy(() => import('./pages/dashboard/ProjectDetails')));
+const ProjectDashboard = Loadable(lazy(() => import('./pages/dashboard/ProjectDashboard')));
+const ProjectDashboardEdit = Loadable(lazy(() => import('./pages/dashboard/ProjectDashboardEdit')));
 const VideoLibrary = Loadable(lazy(() => import('./pages/dashboard/VideoLibrary')));
 const SocialFeed = Loadable(lazy(() => import('./pages/dashboard/SocialFeed')));
 const SocialProfile = Loadable(lazy(() => import('./pages/dashboard/SocialProfile')));
@@ -373,6 +375,10 @@ const routes = [
           {
             path: ':projectId',
             element: <ProjectDetails />
+          },
+          {
+            path: 'edit',
+            element: <ProjectDashboardEdit />
           }
         ]
       },
@@ -388,7 +394,7 @@ const routes = [
             element: <UpdateCreatePage />
           },
           {
-            path: ':projectId',
+            path: ':updateId',
             element: <UpdateDetailsPage />
           }
         ]
@@ -396,6 +402,14 @@ const routes = [
       {
         path: 'channel',
         element: <ChannelDashboard />
+      },
+      {
+        path: 'project',
+        element: <ProjectDashboard />
+      },
+      {
+        path: 'project/:projectDashboardId',
+        element: <ProjectDashboardEdit />
       },
       {
         path: 'channels',

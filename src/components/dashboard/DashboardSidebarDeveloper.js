@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -67,6 +68,11 @@ const sections = [
       {
         title: 'Channel',
         path: '/dashboard/channel',
+        icon: <CalendarIcon fontSize="small" />
+      },
+      {
+        title: 'Project',
+        path: '/dashboard/project',
         icon: <CalendarIcon fontSize="small" />
       },
       {

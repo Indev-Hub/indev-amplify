@@ -43,12 +43,12 @@ const ProjectAdd = () => {
   // API call to get User table data
   const getUserTable = async () => {
     try {
-      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
-      const userList = userData.data.getUser;
+      const userInfo = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+      const userList = userInfo.data.getUser;
       setUserData(userList);
       console.log('list', userList);
     } catch (error) {
-      console.log('error on fetching videos', error);
+      console.log('error on fetching user table', error);
     }
   };
 
@@ -135,6 +135,7 @@ const ProjectAdd = () => {
       name: name,
       projectManagerId: user.id,
       projectChannelId: userData.channel.id,
+      channelID: userData.channel.id,
       description: description,
       category: category,
       startDate: startDate,

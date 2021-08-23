@@ -19,10 +19,11 @@ import {
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import { getChannel } from '../../graphql/queries';
+import { getChannel, updatesByProject } from '../../graphql/queries';
 import ChannelVideoAsk from './ChannelVideoAsk';
 import Gallery from '../gallery/Gallery';
-import ProjectTemplate from '../project/ProjectTemplate';
+import ProjectTemplateV1 from '../project/ProjectTemplateV1';
+import loadingGif from '../assets/loading1.gif';
 import { TabPanel } from '@material-ui/lab';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
@@ -138,7 +139,7 @@ function ChannelTemplate(props) {
   useEffect(() => {
     // eslint-disable-next-line
     getChannelInfo();
-    // loadVidData();
+    // getUpdatetInfo();
   }, []);
 
   const getChannelInfo = async () => {
@@ -158,6 +159,7 @@ function ChannelTemplate(props) {
       console.log('error on fetching videos', error);
     }
   };
+
 
   // Get the vimeo showcase
   const loadData = () => {
@@ -201,7 +203,7 @@ function ChannelTemplate(props) {
     };
   }
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleTabChange = (event, newValue) => {
     setValue(newValue);
@@ -211,7 +213,26 @@ function ChannelTemplate(props) {
     // Container
     <>
       {isLoading ? (
-        <Typography>Loading Channel...</Typography>
+        <Grid
+          container
+          height="80vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid
+            item
+
+          >
+            <img
+              src={loadingGif}
+              width="150px"
+              height="auto"
+              alt=""
+            />
+            <Typography align="center">Loading Channel...</Typography>
+          </Grid>
+        </Grid>
       ) : (
         <Box
           className={classes.container}
@@ -309,7 +330,7 @@ function ChannelTemplate(props) {
           </AppBar>
           {channelData.projects.items.map((project, index) => (
             <TabPanel value={value} index={index}>
-              <ProjectTemplate projectData={channelData.projects.items[index]} />
+              <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
             </TabPanel>
           ))}
 
@@ -325,7 +346,7 @@ function ChannelTemplate(props) {
         {console.log('profile data:', profileData)}
       </TabPanel> */}
 
-          {/* {channelData.projects.items.map((project, index) => (
+          {channelData.projects.items.map((project, index) => (
             <Card className={classes.section}>
               <Box
                 className={classes.sectionHeader}
@@ -335,7 +356,7 @@ function ChannelTemplate(props) {
               </Box>
               <Grid container spacing={0} p={3}>
                   <Grid container mb={3}>
-                    <ProjectTemplate projectData={channelData.projects.items[index]} />
+                    <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
                   </Grid>
               </Grid>
               <Grid container spacing={0}>
@@ -369,7 +390,7 @@ function ChannelTemplate(props) {
                 </Grid>
               </Grid>
             </Card>
-          ))} */}
+          ))}
 
           {/* Video Section Unsupported */}
              <Card className={classes.section}> 

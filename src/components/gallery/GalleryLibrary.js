@@ -10,7 +10,7 @@ import {
 
 function GalleryLibrary(props) {
   const { data, onThumbnailClick, classes, formatTime } = props;
-  console.log('data', data)
+  // console.log('data', data)
   return (
     <Grid container spacing={0}>
       { 

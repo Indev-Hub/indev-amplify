@@ -9,7 +9,7 @@ import ChannelSliderTemplate01 from './ChannelSliderTemplate01';
 
 function ChannelSlider(props) {
   const { genre, sliderHeight } = props;
-  console.log('channel genre', genre);
+  // console.log('channel genre', genre);
   const gliderRef = useRef(null);
 
   return (
@@ -69,7 +69,7 @@ function ChannelSlider(props) {
             >
               <ChannelSliderTemplate01 channelImg={channel.category} title={channel.name} sliderHeight={sliderHeight} />
             </Link>
-            {console.log('channel id:', channel.id)}
+            {/* {console.log('channel id:', channel.id)} */}
           </Grid>
         ))}
         {/* <ChannelSliderTemplate01 channelImg={genre[0].category} title={genre[0].name} sliderHeight={sliderHeight} />

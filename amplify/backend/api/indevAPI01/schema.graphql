@@ -35,6 +35,7 @@ type Project @model {
   id: ID!
   name: String!
   channel: Channel @connection(name: "ProjectsToChannel")
+  channelID: String!
   manager: User @connection
   developers: [User]
   description: String
@@ -44,7 +45,21 @@ type Project @model {
   endDate: String
   devStage: String
   showcase: Showcase @connection
-  updates: [Update] @connection(name: "ProjectUpdates")
+  updates: [Update] @connection(name: "ProjectUpdate")
+}
+
+type Update
+  @model
+  @key(name: "byProject", fields: ["projectID"], queryField: "UpdatesByProject") {
+  id: ID!
+  project: Project @connection(name: "ProjectUpdate")
+  projectID: String!
+  author: User @connection
+  name: String!
+  short: String
+  content: String
+  type: String!
+  coverImg: S3Object
 }
 
 type Showcase @model {
@@ -53,17 +68,6 @@ type Showcase @model {
   manager: String
   managerID: String
   videos: AWSJSON
-}
-
-type Update @model {
-  id: ID!
-  project: Project @connection(name: "ProjectUpdates")
-  author: User @connection
-  name: String!
-  short: String
-  content: String
-  type: String!
-  coverImg: S3Object
 }
 
 # DATA TYPES

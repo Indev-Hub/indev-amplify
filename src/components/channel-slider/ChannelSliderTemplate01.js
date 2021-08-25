@@ -10,7 +10,7 @@ const style = {
 };
 
 function ChannelSliderTemplate01(props) {
-  const { channelImg, title, sliderHeight } = props;
+  const { channelImg, channel, sliderHeight } = props;
   const theme = useTheme();
 
   return (
@@ -27,7 +27,8 @@ function ChannelSliderTemplate01(props) {
         backgroundColor={theme.palette.brand.primary1}
         padding="20px"
       >
-        <Typography variant="h6" color={theme.palette.text.reverse}>{title}</Typography>
+        <Typography variant="h6" color={theme.palette.text.reverse}>{channel.name}</Typography>
+        <Typography color={theme.palette.text.reverse}>{channel.category}</Typography>
       </Box>
     </Box>
   );
@@ -35,7 +36,7 @@ function ChannelSliderTemplate01(props) {
 
 ChannelSliderTemplate01.propTypes = {
   channelImg: PropTypes.string,
-  title: PropTypes.string,
+  channel: PropTypes.string,
   sliderHeight: PropTypes.string
 };
 

@@ -255,7 +255,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -504,7 +504,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -978,7 +978,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -1308,7 +1308,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -1529,7 +1529,7 @@ export const getChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -1784,7 +1784,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2033,7 +2033,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2517,7 +2517,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2847,7 +2847,7 @@ export const getChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -3068,7 +3068,7 @@ export const getChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -3723,7 +3723,7 @@ export const listChannels = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -4358,7 +4358,7 @@ export const listChannels = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -5018,7 +5018,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -5653,7 +5653,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -5921,7 +5921,7 @@ export const getUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -6170,7 +6170,7 @@ export const getUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -6809,7 +6809,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -7659,7 +7659,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -8059,7 +8059,7 @@ export const getUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -8206,7 +8206,7 @@ export const getUser = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -8842,7 +8842,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -9477,7 +9477,7 @@ export const getUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -9763,7 +9763,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -10012,7 +10012,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -10486,7 +10486,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -10816,7 +10816,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -11037,7 +11037,7 @@ export const listUsers = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -11292,7 +11292,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -11541,7 +11541,7 @@ export const listUsers = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -12195,7 +12195,7 @@ export const getProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -12830,7 +12830,7 @@ export const getProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -13104,7 +13104,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -13353,7 +13353,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -13827,7 +13827,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -14157,7 +14157,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -14378,7 +14378,7 @@ export const getProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -14633,7 +14633,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -14882,7 +14882,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -15154,7 +15154,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -15403,7 +15403,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -15877,7 +15877,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -16207,7 +16207,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -16428,7 +16428,7 @@ export const getProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -16683,7 +16683,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -16932,7 +16932,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -17371,7 +17371,7 @@ export const getProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -17624,7 +17624,7 @@ export const getProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -17719,7 +17719,7 @@ export const getProject = /* GraphQL */ `
           name
           short
           content
-          type
+          format
           coverImg {
             bucket
             key
@@ -17986,7 +17986,7 @@ export const listProjects = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -18235,7 +18235,7 @@ export const listProjects = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -18874,7 +18874,7 @@ export const listProjects = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -19724,7 +19724,7 @@ export const listProjects = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -20124,7 +20124,7 @@ export const listProjects = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -20271,7 +20271,7 @@ export const listProjects = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -20537,7 +20537,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -20786,7 +20786,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -21425,7 +21425,7 @@ export const getUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -22275,7 +22275,7 @@ export const getUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -22675,7 +22675,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -22822,7 +22822,7 @@ export const getUpdate = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -23086,7 +23086,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -23335,7 +23335,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -23809,7 +23809,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -24139,7 +24139,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -24360,7 +24360,7 @@ export const getUpdate = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -24615,7 +24615,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -24864,7 +24864,7 @@ export const getUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -24890,7 +24890,7 @@ export const getUpdate = /* GraphQL */ `
       name
       short
       content
-      type
+      format
       coverImg {
         bucket
         key
@@ -25365,7 +25365,7 @@ export const listUpdates = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -25695,7 +25695,7 @@ export const listUpdates = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -25916,7 +25916,7 @@ export const listUpdates = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -26550,7 +26550,7 @@ export const listUpdates = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -26784,7 +26784,7 @@ export const listUpdates = /* GraphQL */ `
         name
         short
         content
-        type
+        format
         coverImg {
           bucket
           key
@@ -27302,7 +27302,7 @@ export const updatesByProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -27632,7 +27632,7 @@ export const updatesByProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -27853,7 +27853,7 @@ export const updatesByProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -28487,7 +28487,7 @@ export const updatesByProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -28721,7 +28721,7 @@ export const updatesByProject = /* GraphQL */ `
         name
         short
         content
-        type
+        format
         coverImg {
           bucket
           key

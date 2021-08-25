@@ -255,7 +255,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -504,7 +504,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -978,7 +978,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -1308,7 +1308,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -1529,7 +1529,7 @@ export const onCreateChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -1784,7 +1784,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2033,7 +2033,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2517,7 +2517,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -2847,7 +2847,7 @@ export const onCreateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -3068,7 +3068,7 @@ export const onCreateChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -3348,7 +3348,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -3597,7 +3597,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -4071,7 +4071,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -4401,7 +4401,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -4622,7 +4622,7 @@ export const onUpdateChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -4877,7 +4877,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -5126,7 +5126,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -5610,7 +5610,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -5940,7 +5940,7 @@ export const onUpdateChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -6161,7 +6161,7 @@ export const onUpdateChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -6441,7 +6441,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -6690,7 +6690,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -7164,7 +7164,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -7494,7 +7494,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -7715,7 +7715,7 @@ export const onDeleteChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -7970,7 +7970,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -8219,7 +8219,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -8703,7 +8703,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -9033,7 +9033,7 @@ export const onDeleteChannel = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -9254,7 +9254,7 @@ export const onDeleteChannel = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -9912,7 +9912,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -10547,7 +10547,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -10815,7 +10815,7 @@ export const onCreateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -11064,7 +11064,7 @@ export const onCreateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -11703,7 +11703,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -12553,7 +12553,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -12953,7 +12953,7 @@ export const onCreateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -13100,7 +13100,7 @@ export const onCreateUser = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -13736,7 +13736,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -14371,7 +14371,7 @@ export const onCreateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -15033,7 +15033,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -15668,7 +15668,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -15936,7 +15936,7 @@ export const onUpdateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -16185,7 +16185,7 @@ export const onUpdateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -16824,7 +16824,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -17674,7 +17674,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -18074,7 +18074,7 @@ export const onUpdateUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -18221,7 +18221,7 @@ export const onUpdateUser = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -18857,7 +18857,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -19492,7 +19492,7 @@ export const onUpdateUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -20154,7 +20154,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -20789,7 +20789,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -21057,7 +21057,7 @@ export const onDeleteUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -21306,7 +21306,7 @@ export const onDeleteUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -21945,7 +21945,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -22795,7 +22795,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -23195,7 +23195,7 @@ export const onDeleteUser = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -23342,7 +23342,7 @@ export const onDeleteUser = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -23978,7 +23978,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -24613,7 +24613,7 @@ export const onDeleteUser = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -25270,7 +25270,7 @@ export const onCreateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -25905,7 +25905,7 @@ export const onCreateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -26179,7 +26179,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -26428,7 +26428,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -26902,7 +26902,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -27232,7 +27232,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -27453,7 +27453,7 @@ export const onCreateProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -27708,7 +27708,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -27957,7 +27957,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -28229,7 +28229,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -28478,7 +28478,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -28952,7 +28952,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -29282,7 +29282,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -29503,7 +29503,7 @@ export const onCreateProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -29758,7 +29758,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -30007,7 +30007,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -30446,7 +30446,7 @@ export const onCreateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -30699,7 +30699,7 @@ export const onCreateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -30794,7 +30794,7 @@ export const onCreateProject = /* GraphQL */ `
           name
           short
           content
-          type
+          format
           coverImg {
             bucket
             key
@@ -31437,7 +31437,7 @@ export const onUpdateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -32072,7 +32072,7 @@ export const onUpdateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -32346,7 +32346,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -32595,7 +32595,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -33069,7 +33069,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -33399,7 +33399,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -33620,7 +33620,7 @@ export const onUpdateProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -33875,7 +33875,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -34124,7 +34124,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -34396,7 +34396,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -34645,7 +34645,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -35119,7 +35119,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -35449,7 +35449,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -35670,7 +35670,7 @@ export const onUpdateProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -35925,7 +35925,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -36174,7 +36174,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -36613,7 +36613,7 @@ export const onUpdateProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -36866,7 +36866,7 @@ export const onUpdateProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -36961,7 +36961,7 @@ export const onUpdateProject = /* GraphQL */ `
           name
           short
           content
-          type
+          format
           coverImg {
             bucket
             key
@@ -37604,7 +37604,7 @@ export const onDeleteProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -38239,7 +38239,7 @@ export const onDeleteProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -38513,7 +38513,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -38762,7 +38762,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -39236,7 +39236,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -39566,7 +39566,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -39787,7 +39787,7 @@ export const onDeleteProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -40042,7 +40042,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -40291,7 +40291,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -40563,7 +40563,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -40812,7 +40812,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -41286,7 +41286,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -41616,7 +41616,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -41837,7 +41837,7 @@ export const onDeleteProject = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -42092,7 +42092,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -42341,7 +42341,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -42780,7 +42780,7 @@ export const onDeleteProject = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -43033,7 +43033,7 @@ export const onDeleteProject = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -43128,7 +43128,7 @@ export const onDeleteProject = /* GraphQL */ `
           name
           short
           content
-          type
+          format
           coverImg {
             bucket
             key
@@ -43392,7 +43392,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -43641,7 +43641,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -44280,7 +44280,7 @@ export const onCreateUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -45130,7 +45130,7 @@ export const onCreateUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -45530,7 +45530,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -45677,7 +45677,7 @@ export const onCreateUpdate = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -45941,7 +45941,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -46190,7 +46190,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -46664,7 +46664,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -46994,7 +46994,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -47215,7 +47215,7 @@ export const onCreateUpdate = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -47470,7 +47470,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -47719,7 +47719,7 @@ export const onCreateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -47745,7 +47745,7 @@ export const onCreateUpdate = /* GraphQL */ `
       name
       short
       content
-      type
+      format
       coverImg {
         bucket
         key
@@ -48004,7 +48004,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -48253,7 +48253,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -48892,7 +48892,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -49742,7 +49742,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -50142,7 +50142,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -50289,7 +50289,7 @@ export const onUpdateUpdate = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -50553,7 +50553,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -50802,7 +50802,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -51276,7 +51276,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -51606,7 +51606,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -51827,7 +51827,7 @@ export const onUpdateUpdate = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -52082,7 +52082,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -52331,7 +52331,7 @@ export const onUpdateUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -52357,7 +52357,7 @@ export const onUpdateUpdate = /* GraphQL */ `
       name
       short
       content
-      type
+      format
       coverImg {
         bucket
         key
@@ -52616,7 +52616,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -52865,7 +52865,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -53504,7 +53504,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -54354,7 +54354,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                 name
                 short
                 content
-                type
+                format
                 coverImg {
                   bucket
                   key
@@ -54754,7 +54754,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -54901,7 +54901,7 @@ export const onDeleteUpdate = /* GraphQL */ `
             name
             short
             content
-            type
+            format
             coverImg {
               bucket
               key
@@ -55165,7 +55165,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -55414,7 +55414,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -55888,7 +55888,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -56218,7 +56218,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -56439,7 +56439,7 @@ export const onDeleteUpdate = /* GraphQL */ `
               name
               short
               content
-              type
+              format
               coverImg {
                 bucket
                 key
@@ -56694,7 +56694,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -56943,7 +56943,7 @@ export const onDeleteUpdate = /* GraphQL */ `
                   name
                   short
                   content
-                  type
+                  format
                   createdAt
                   updatedAt
                 }
@@ -56969,7 +56969,7 @@ export const onDeleteUpdate = /* GraphQL */ `
       name
       short
       content
-      type
+      format
       coverImg {
         bucket
         key

@@ -137,10 +137,20 @@ const HomeHero = (props) => {
       const listChannelData = getChannelData.data.listChannels.items;
       setChannelData(listChannelData);
       setIsLoading(false);
-      // console.log('list', listChannelData);
+      console.log('list', listChannelData);
     } catch (error) {
       console.log('error on fetching channels', error);
     }
+  };
+
+  const categorySelect = (cat) => {
+    const catGame = channelData.filter(function (channel) {
+      return (
+        channel.category === cat
+      )
+    })
+
+    return catGame;
   };
 
   return (
@@ -180,11 +190,15 @@ const HomeHero = (props) => {
         ) : (
           <>
             <Typography variant="h4" style={{ marginTop: '0px' }}>Game Development</Typography>
-            <ChannelSlider genre={channelData} sliderHeight="500px" />
+            <ChannelSlider genre={categorySelect('game')} sliderHeight="500px" />
             <Typography variant="h4" style={{ marginTop: '40px' }}>Software Development</Typography>
-            <ChannelSlider genre={channelData} sliderHeight="500px" />
+            <ChannelSlider genre={categorySelect('software')} sliderHeight="500px" />
             <Typography variant="h4" marginTop="40px">Mobile App Development</Typography>
-            <ChannelSlider genre={channelData} sliderHeight="500px" />
+            <ChannelSlider genre={categorySelect('mobile')} sliderHeight="500px" />
+
+            {console.log('game', categorySelect('game'))}
+            {console.log('mobile', categorySelect('mobile'))}  
+            {console.log('software', categorySelect('software'))}  
           </>
           )}
         {/* <Typography variant="h4">Mobile App Development</Typography> */}

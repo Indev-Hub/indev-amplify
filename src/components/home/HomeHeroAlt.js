@@ -215,7 +215,7 @@ const HomeHeroAlt = (props) => {
                 container
                 justifyContent="center"
                 zIndex='5'
-                mt={-10}
+                mt={-8}
               >
                 <Grid container xs={12} sx={{ backgroundImage: `url(static/assets/unnamed.png)`, backgroundSize: 'contain', p: 5 }} justifyContent="center">
                   <Grid item xs={10}>
@@ -247,7 +247,7 @@ const HomeHeroAlt = (props) => {
                 container
                 justifyContent="center"
                 zIndex='5'
-                mt={-10}
+                mt={-8}
               >
                 <Grid container xs={12} sx={{ backgroundImage: `url(static/assets/6-2-graphic-design-transparent.png)`, backgroundSize: 'contain', backgroundRepeat: 'repeat-x', p: 5 }} justifyContent="center">
                   <Grid item xs={10}>
@@ -279,7 +279,7 @@ const HomeHeroAlt = (props) => {
                 container
                 justifyContent="center"
                 zIndex='5'
-                mt={-10}
+                mt={-8}
               >
                 <Grid container xs={12} sx={{ backgroundImage: `url(static/assets/GridAssets02.png)`, backgroundSize: '33%', p: 5 }} justifyContent="center">
                   <Grid item xs={10}>

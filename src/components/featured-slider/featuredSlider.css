@@ -4,7 +4,11 @@
   transform: translate3d(0, 0, 0);
 }
 
-.slider__frame[class*=active] {
+.slider__frame__featured {
+
+}
+
+.slider__frame__featured[class*=active] {
   z-index: 1;
 }
 

@@ -2,10 +2,9 @@ import { React, useRef } from 'react';
 import { Box } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Glide from 'react-glidejs';
-
-import './featuredSlider.css';
 import FeaturedSliderTemplate from './FeaturedSliderTemplate';
 // import './transitions.css';
+require('./featuredSlider.css');
 
 function FeaturedSlider(props) {
   const { genre, sliderHeight } = props;
@@ -34,7 +33,7 @@ function FeaturedSlider(props) {
         }}
         perView={1}
         startAt={0}
-        slideClassName="slider__frame"
+        slideClassName="slider__frame__featured"
         focusAt="center"
         breakpoints={{
           960: {

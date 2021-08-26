@@ -19,9 +19,8 @@ import useAuth from '../../hooks/useAuth';
 import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
-import { getProject } from '../../graphql/queries';
+import { getProject, getUser } from '../../graphql/queries';
 import ProjectEdit_v2 from '../../components/dashboard/project/project-edit/ProjectEdit_v2';
-// import ProjectUpdateAdd from '../../components/dashboard/update/update-create/ProjectUpdateAdd';
 
 const ProjectDashboardEdit = (props) => {
   const { projectDashboardId } = useParams();
@@ -48,12 +47,12 @@ const ProjectDashboardEdit = (props) => {
 
   const getUserInfo = async () => {
     try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
       const userList = userData.data.getUser;
       setUserData(userList);
       console.log('list', userList);
     } catch (error) {
-      console.log('error on fetching videos', error);
+      console.log('error on fetching user', error);
     }
   };
 

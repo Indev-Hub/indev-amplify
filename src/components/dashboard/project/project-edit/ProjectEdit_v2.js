@@ -25,9 +25,10 @@ import {
 } from '../../../../graphql/mutations';
 import useAuth from '../../../../hooks/useAuth';
 import wait from '../../../../utils/wait';
-import ProjectUpdateAdd from '../../update/update-create/ProjectUpdateAdd';
+import ProjectUpdateAdd from '../project-create/ProjectUpdateAdd';
 import ProjectEditInfo from './ProjectEditInfo';
 import { CameraAlt } from '@material-ui/icons';
+import ProjectUpdateList from './ProjectUpdateList';
 
 const offset = 5;
 
@@ -109,7 +110,7 @@ const ProjectEdit_v2 = (props) => {
                 p: 4
               }}
             >
-              {console.log('update length', project.updates.itemslength)}
+              {console.log('update length', project.updates.items.length)}
               {console.log('updates', project.updates)}
               {project.updates.items.length > 0 ? (
                 project.updates.items.map((update, index) => (
@@ -133,7 +134,8 @@ const ProjectEdit_v2 = (props) => {
             {/* <Button variant="contained" color="secondary">Change Image</Button>             */}
           </Grid>
           <ProjectEditInfo project={project} user={user} overlap={5} />
-          <ProjectUpdateAdd project={project} user={user} />
+          <ProjectUpdateList project={project} user={user} overlap={5} />
+          <ProjectUpdateAdd project={project} user={user} overlap={5} />
         </Grid>
       </Grid>
     </Grid>

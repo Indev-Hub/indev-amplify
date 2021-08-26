@@ -5,6 +5,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Box,
+  Button,
   Chip,
   Divider,
   Grid,
@@ -14,7 +15,7 @@ import {
   Card,
   CardContent
 } from '@material-ui/core';
-import { Visibility } from '@material-ui/icons';
+import { Add, Visibility } from '@material-ui/icons';
 
 const ProjectUpdateList = (props) => {
   const { project, user, overlap } = props;
@@ -23,7 +24,6 @@ const ProjectUpdateList = (props) => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
 
   return (
     <>
@@ -42,7 +42,20 @@ const ProjectUpdateList = (props) => {
           xs={12}
         >
           <Card>
-            <CardHeader title="Updates" />
+            <CardHeader
+              title="Updates"
+              // action={
+              //   <Button
+              //     variant="contained"
+              //     startIcon={<Add />}
+              //     sx={{
+              //       mr: 5
+              //     }}
+              //   >
+              //     Add Update
+              //   </Button>
+              // }
+            />
             <Divider />
             <CardContent>
               <Box

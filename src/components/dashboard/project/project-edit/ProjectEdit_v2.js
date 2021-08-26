@@ -27,13 +27,14 @@ import useAuth from '../../../../hooks/useAuth';
 import wait from '../../../../utils/wait';
 import ProjectUpdateAdd from '../project-create/ProjectUpdateAdd';
 import ProjectEditInfo from './ProjectEditInfo';
-import { CameraAlt } from '@material-ui/icons';
+import { Add, CameraAlt } from '@material-ui/icons';
 import ProjectUpdateList from './ProjectUpdateList';
 
 const offset = 5;
 
 const ProjectEdit_v2 = (props) => {
   const { project, user } = props;
+  const [ showUpdate, setShowUpdate ] = useState(false);
   // const { user } = useAuth();
   // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
@@ -48,6 +49,16 @@ const ProjectEdit_v2 = (props) => {
   //     console.log('error on fetching videos', error);
   //   }
   // };
+
+  const onThumbnailClick = (videoID,titleID) => {
+    // "...video" copies all of the video's current attributes, src overwrites the current src url by substituting the videoID
+    setVideo({
+      ...video,
+      src: `https://player.vimeo.com/video/${videoID}?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959`,
+      title: `${titleID}`
+    });
+    heroVidUpdate(videoID);
+  }
 
   const featImg = () => {
     const randomFeat = 'https://source.unsplash.com/weekly?water';
@@ -135,7 +146,15 @@ const ProjectEdit_v2 = (props) => {
           </Grid>
           <ProjectEditInfo project={project} user={user} overlap={5} />
           <ProjectUpdateList project={project} user={user} overlap={5} />
-          <ProjectUpdateAdd project={project} user={user} overlap={5} />
+          {showUpdate ? (
+            <ProjectUpdateAdd project={project} user={user} overlap={5} setShowUpdate={setShowUpdate} />
+          ) : (
+            <Grid container justifyContent="center" xs={12} mb={10}>
+              <Grid item xs={9}>
+                <Button fullWidth variant="contained" onClick={() => setShowUpdate(true)} startIcon={<Add />}>Add Update</Button>
+              </Grid>
+            </Grid>
+          )}
         </Grid>
       </Grid>
     </Grid>

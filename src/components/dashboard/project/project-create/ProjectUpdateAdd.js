@@ -31,41 +31,21 @@ import useAuth from '../../../../hooks/useAuth';
 import wait from '../../../../utils/wait';
 
 const ProjectUpdateAdd = (props) => {
-  const { project, user } = props;
-  // const [userInfo, setUserInfo] = useState([]);
-  // const [projectInfo, setProjectInfo] = useState([]);
+  const { project, user, overlap } = props;
 
   const { enqueueSnackbar } = useSnackbar();
-
-  // const getUserInfo = async () => {
-  //   try {
-  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-  //     const userList = userData.data.getUser;
-  //     setUserInfo(userList);
-  //     console.log('list', userList);
-  //     const projectList = userList.channel.projects.items;
-  //     setProjectInfo(projectList);
-  //     console.log('project list', projectList);
-
-  //   } catch (error) {
-  //     console.log('error on fetching videos', error);
-  //   }
-  // };
 
   const featImg = () => {
     const randomFeat = 'https://source.unsplash.com/weekly?water';
     return randomFeat;
   }
 
-  // useEffect(() => {
-  //   getUserInfo();
-  // }, []);
-
   return (
     <Grid
       container
       spacing={3}
       justifyContent="center"
+      mt={overlap}
       {...props}
     >
       <Grid
@@ -103,9 +83,10 @@ const ProjectUpdateAdd = (props) => {
                   updateProjectId: project.id,
                   projectID: project.id,
                   short: values.short,
-                  // author: user.id,
+                  updateAuthorId: user.id,
                   content: values.content,
-                  format: values.format
+                  format: values.format,
+                  index: project.updates.items.length+1
                   // coverImg: '',
                 };
                 console.log('update before', CreateUpdateInput);
@@ -137,7 +118,7 @@ const ProjectUpdateAdd = (props) => {
               <form onSubmit={handleSubmit}>
                 {console.log(values)}
                 <Card>
-                  <CardHeader title={`Create An Update For ${project.name}`} />
+                  <CardHeader title={`Update #${project.updates.items.length+1} for ${project.name}`} />
                   <Divider />
                   <CardContent>
                     <Grid

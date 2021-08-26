@@ -33,6 +33,8 @@ import wait from '../../../../utils/wait';
 const ProjectUpdateAdd = (props) => {
   const { project, user } = props;
   // const [userInfo, setUserInfo] = useState([]);
+  // const [projectInfo, setProjectInfo] = useState([]);
+
   const { enqueueSnackbar } = useSnackbar();
 
   // const getUserInfo = async () => {
@@ -41,6 +43,10 @@ const ProjectUpdateAdd = (props) => {
   //     const userList = userData.data.getUser;
   //     setUserInfo(userList);
   //     console.log('list', userList);
+  //     const projectList = userList.channel.projects.items;
+  //     setProjectInfo(projectList);
+  //     console.log('project list', projectList);
+
   //   } catch (error) {
   //     console.log('error on fetching videos', error);
   //   }
@@ -69,194 +75,196 @@ const ProjectUpdateAdd = (props) => {
         md={10}
         xs={12}
       >
-        <Formik
-          enableReinitialize
-          initialValues={{
-            name: '',
-            short: '',
-            content: '',
-            format: '',
-            coverImg: '',
-            submit: null           
-          }}
-          validationSchema={Yup
-            .object()
-            .shape({
-              name: Yup.string().max(50).required('Your update must have a name!'),
-              short: Yup.string().max(200).required('Your update must have a short description!'),
-              content: Yup.string().required('Your update must have a short description!'),
-              format: Yup.string().required('Please pick which type of update you are creating')
-            })}
-          onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
-            try {
-              console.log('project id', project.id)
-              // NOTE: Make API request
-              const CreateUpdateInput = {
-                name: values.name,
-                project: project.id,
-                projectID: project.id
-                // short: values.short,
-                // author: user.id,
-                // content: values.content,
-                // format: values.format,
-                // coverImg: '',
-              };
-              console.log('update before', CreateUpdateInput);
-              // Error occurring here:
-              const addUpdate = await API.graphql(graphqlOperation(createUpdate, { input: CreateUpdateInput }));
-              console.log('update after', addUpdate.data);
+        {console.log('project', project)}
+          <Formik
+            enableReinitialize
+            initialValues={{
+              name: '',
+              short: '',
+              content: '',
+              format: '',
+              // coverImg: '',
+              submit: null           
+            }}
+            validationSchema={Yup
+              .object()
+              .shape({
+                name: Yup.string().max(50).required('Your update must have a name!'),
+                short: Yup.string().max(200).required('Your update must have a short description!'),
+                content: Yup.string().required('Your update must have a short description!'),
+                format: Yup.array().required('Please pick which type of update you are creating')
+              })}
+            onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
+              try {
+                console.log('project id', project.id)
+                // NOTE: Make API request
+                const CreateUpdateInput = {
+                  name: values.name,
+                  updateProjectId: project.id,
+                  projectID: project.id,
+                  short: values.short,
+                  // author: user.id,
+                  content: values.content,
+                  format: values.format
+                  // coverImg: '',
+                };
+                console.log('update before', CreateUpdateInput);
+                // Error occurring here:
+                const addUpdate = await API.graphql(graphqlOperation(createUpdate, { input: CreateUpdateInput }));
+                console.log('update after', addUpdate.data);
 
-              await wait(200);
-              resetForm();
-              setStatus({ success: true });
-              setSubmitting(false);
-              enqueueSnackbar('Update Created Successfully', {
-                anchorOrigin: {
-                  horizontal: 'right',
-                  vertical: 'top'
-                },
-                variant: 'success'
-              });
-            } catch (err) {
-              console.log('An error occurred during update creation', err)
-              console.error(err);
-              setStatus({ success: false });
-              setErrors({ submit: err.message });
-              setSubmitting(false);
-            }
-          }}
-        >
-          {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-            <form onSubmit={handleSubmit}>
-              {/* {console.log(values)} */}
-              <Card>
-                <CardHeader title={`Create An Update For ${project.name}`} />
-                <Divider />
-                <CardContent>
-                  <Grid
-                    container
-                    spacing={4}
-                  >
+                await wait(200);
+                resetForm();
+                setStatus({ success: true });
+                setSubmitting(false);
+                enqueueSnackbar('Update Created Successfully', {
+                  anchorOrigin: {
+                    horizontal: 'right',
+                    vertical: 'top'
+                  },
+                  variant: 'success'
+                });
+              } catch (err) {
+                console.log('An error occurred during update creation', err)
+                console.error(err);
+                setStatus({ success: false });
+                setErrors({ submit: err.message });
+                setSubmitting(false);
+              }
+            }}
+          >
+            {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
+              <form onSubmit={handleSubmit}>
+                {console.log(values)}
+                <Card>
+                  <CardHeader title={`Create An Update For ${project.name}`} />
+                  <Divider />
+                  <CardContent>
                     <Grid
-                      item
-                      md={6}
-                      xs={12}
+                      container
+                      spacing={4}
                     >
-                      <TextField
-                        error={Boolean(touched.name && errors.name)}
-                        fullWidth
-                        helperText={touched.name && errors.name}
-                        label="Update Name"
-                        name="name"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.name}
-                        variant="outlined"
-                      />
-                    </Grid>
-                    <Grid
-                      item
-                      md={6}
-                      xs={12}
-                    >
-                      <FormControl component="fieldset">
-                        <FormLabel component="legend">Update Format</FormLabel>
-                        <FormControlLabel
-                          control={<Checkbox onChange={handleChange} name="format" value="text" />}
-                          label="text"
-                        />
-                        <FormControlLabel
-                          control={<Checkbox onChange={handleChange} name="format" value="images" />}
-                          label="images"
-                        />
-                        <FormControlLabel
-                          control={<Checkbox onChange={handleChange} name="format" value="video" />}
-                          label="video"
-                        />
-                      </FormControl>
-                      {/* <TextField
-                        error={Boolean(touched.content && errors.content)}
-                        fullWidth
-                        select
-                        helperText={touched.content && errors.content}
-                        label="Update Format"
-                        name="format"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.format}
-                        variant="outlined"
+                      <Grid
+                        item
+                        md={6}
+                        xs={12}
                       >
-                        {updateFormat.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </TextField> */}
+                        <TextField
+                          error={Boolean(touched.name && errors.name)}
+                          fullWidth
+                          helperText={touched.name && errors.name}
+                          label="Update Name"
+                          name="name"
+                          onBlur={handleBlur}
+                          onChange={handleChange}
+                          value={values.name}
+                          variant="outlined"
+                        />
+                      </Grid>
+                      <Grid
+                        item
+                        md={6}
+                        xs={12}
+                      >
+                        <FormControl component="fieldset">
+                          <FormLabel component="legend">Update Format</FormLabel>
+                          <FormControlLabel
+                            control={<Checkbox onChange={handleChange} name="format" value="text" />}
+                            label="text"
+                          />
+                          <FormControlLabel
+                            control={<Checkbox onChange={handleChange} name="format" value="images" />}
+                            label="images"
+                          />
+                          <FormControlLabel
+                            control={<Checkbox onChange={handleChange} name="format" value="video" />}
+                            label="video"
+                          />
+                        </FormControl>
+                        {/* <TextField
+                          error={Boolean(touched.content && errors.content)}
+                          fullWidth
+                          select
+                          helperText={touched.content && errors.content}
+                          label="Update Format"
+                          name="format"
+                          onBlur={handleBlur}
+                          onChange={handleChange}
+                          value={values.format}
+                          variant="outlined"
+                        >
+                          {updateFormat.map((option) => (
+                            <option key={option.value} value={option.value}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </TextField> */}
+                      </Grid>
+                      <Grid
+                        item
+                        md={6}
+                        xs={12}
+                      >
+                        <TextField
+                          error={Boolean(touched.short && errors.short)}
+                          fullWidth
+                          helperText={touched.short && errors.short}
+                          label="Short Description"
+                          name="short"
+                          onBlur={handleBlur}
+                          onChange={handleChange}
+                          value={values.short}
+                          variant="outlined"
+                        />
+                      </Grid>
+                      <Grid
+                        item
+                        md={6}
+                        xs={12}
+                      >
+                        <TextField
+                          error={Boolean(touched.content && errors.content)}
+                          fullWidth
+                          helperText={touched.content && errors.content}
+                          label="Update Content"
+                          name="content"
+                          onBlur={handleBlur}
+                          onChange={handleChange}
+                          value={values.content}
+                          variant="outlined"
+                        />
+                      </Grid>
                     </Grid>
-                    <Grid
-                      item
-                      md={6}
-                      xs={12}
-                    >
-                      <TextField
-                        error={Boolean(touched.short && errors.short)}
-                        fullWidth
-                        helperText={touched.short && errors.short}
-                        label="Short Description"
-                        name="short"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.short}
-                        variant="outlined"
-                      />
-                    </Grid>
-                    <Grid
-                      item
-                      md={6}
-                      xs={12}
-                    >
-                      <TextField
-                        error={Boolean(touched.content && errors.content)}
-                        fullWidth
-                        helperText={touched.content && errors.content}
-                        label="Update Content"
-                        name="content"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.content}
-                        variant="outlined"
-                      />
-                    </Grid>
-                  </Grid>
-                  {errors.submit && (
-                    <Box sx={{ mt: 3 }}>
-                      <FormHelperText error>
-                        {errors.submit}
-                      </FormHelperText>
-                    </Box>
-                  )}
-                </CardContent>
-                <Divider />
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    p: 2
-                  }}
-                >
-                  <Button
-                    color="primary"
-                    disabled={isSubmitting}
-                    type="submit"
-                    variant="contained"
+                    {errors.submit && (
+                      <Box sx={{ mt: 3 }}>
+                        <FormHelperText error>
+                          {errors.submit}
+                        </FormHelperText>
+                      </Box>
+                    )}
+                  </CardContent>
+                  <Divider />
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'flex-end',
+                      p: 2
+                    }}
                   >
-                    Create Update
-                  </Button>
-                </Box>
-              </Card>
-            </form>
-          )}
-        </Formik>
+                    <Button
+                      color="primary"
+                      // disabled={isSubmitting}
+                      type="submit"
+                      variant="contained"
+                    >
+                      Create Update
+                    </Button>
+                    {console.log('submitting', isSubmitting)}
+                  </Box>
+                </Card>
+              </form>
+            )}
+          </Formik>
       </Grid>
     </Grid>
   );

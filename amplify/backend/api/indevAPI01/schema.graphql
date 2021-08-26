@@ -60,6 +60,7 @@ type Update
   content: String
   format: [String]
   coverImg: S3Object
+  index: Int
 }
 
 type Showcase @model {

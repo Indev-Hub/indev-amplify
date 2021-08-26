@@ -21,8 +21,7 @@ import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
 import { getProject } from '../../graphql/queries';
 import ProjectEdit_v2 from '../../components/dashboard/project/project-edit/ProjectEdit_v2';
-import ProjectUpdateAdd from '../../components/dashboard/update/update-create/ProjectUpdateAdd';
-import UpdateAdd2 from 'src/components/dashboard/project/project-edit/UpdateAdd2';
+// import ProjectUpdateAdd from '../../components/dashboard/update/update-create/ProjectUpdateAdd';
 
 const ProjectDashboardEdit = (props) => {
   const { projectDashboardId } = useParams();
@@ -140,7 +139,6 @@ const ProjectDashboardEdit = (props) => {
               <Box sx={{ mt: 3 }}>
                 {/* <UpdateAdd2 project={projectData} user={userData} /> */}
                 <ProjectEdit_v2 project={projectData} user={userData} />
-                <ProjectUpdateAdd project={projectData} user={userData} />
               </Box>
             </Container>
           </Box>

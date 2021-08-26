@@ -256,6 +256,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -505,6 +506,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -979,6 +981,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -1309,6 +1312,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -1535,6 +1539,7 @@ export const getChannel = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -1785,6 +1790,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -2034,6 +2040,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -2518,6 +2525,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -2848,6 +2856,7 @@ export const getChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -3074,6 +3083,7 @@ export const getChannel = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -3729,6 +3739,7 @@ export const listChannels = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -4364,6 +4375,7 @@ export const listChannels = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -5024,6 +5036,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -5659,6 +5672,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -5922,6 +5936,7 @@ export const getUser = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -6171,6 +6186,7 @@ export const getUser = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -6815,6 +6831,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -7665,6 +7682,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -8060,6 +8078,7 @@ export const getUser = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -8212,6 +8231,7 @@ export const getUser = /* GraphQL */ `
               key
               region
             }
+            index
             createdAt
             updatedAt
           }
@@ -8848,6 +8868,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -9483,6 +9504,7 @@ export const getUser = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -9764,6 +9786,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -10013,6 +10036,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -10487,6 +10511,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -10817,6 +10842,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -11043,6 +11069,7 @@ export const listUsers = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -11293,6 +11320,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -11542,6 +11570,7 @@ export const listUsers = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -12201,6 +12230,7 @@ export const getProject = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -12836,6 +12866,7 @@ export const getProject = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -13105,6 +13136,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -13354,6 +13386,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -13828,6 +13861,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -14158,6 +14192,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -14384,6 +14419,7 @@ export const getProject = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -14634,6 +14670,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -14883,6 +14920,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -15155,6 +15193,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -15404,6 +15443,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -15878,6 +15918,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -16208,6 +16249,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -16434,6 +16476,7 @@ export const getProject = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -16684,6 +16727,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -16933,6 +16977,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -17377,6 +17422,7 @@ export const getProject = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -17625,6 +17671,7 @@ export const getProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -17725,6 +17772,7 @@ export const getProject = /* GraphQL */ `
             key
             region
           }
+          index
           createdAt
           updatedAt
         }
@@ -17987,6 +18035,7 @@ export const listProjects = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -18236,6 +18285,7 @@ export const listProjects = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -18880,6 +18930,7 @@ export const listProjects = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -19730,6 +19781,7 @@ export const listProjects = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -20125,6 +20177,7 @@ export const listProjects = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -20277,6 +20330,7 @@ export const listProjects = /* GraphQL */ `
               key
               region
             }
+            index
             createdAt
             updatedAt
           }
@@ -20538,6 +20592,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -20787,6 +20842,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -21431,6 +21487,7 @@ export const getUpdate = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -22281,6 +22338,7 @@ export const getUpdate = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -22676,6 +22734,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -22828,6 +22887,7 @@ export const getUpdate = /* GraphQL */ `
               key
               region
             }
+            index
             createdAt
             updatedAt
           }
@@ -23087,6 +23147,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -23336,6 +23397,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -23810,6 +23872,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -24140,6 +24203,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -24366,6 +24430,7 @@ export const getUpdate = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -24616,6 +24681,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -24865,6 +24931,7 @@ export const getUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -24896,6 +24963,7 @@ export const getUpdate = /* GraphQL */ `
         key
         region
       }
+      index
       createdAt
       updatedAt
     }
@@ -25366,6 +25434,7 @@ export const listUpdates = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -25696,6 +25765,7 @@ export const listUpdates = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -25922,6 +25992,7 @@ export const listUpdates = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -26556,6 +26627,7 @@ export const listUpdates = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -26790,6 +26862,7 @@ export const listUpdates = /* GraphQL */ `
           key
           region
         }
+        index
         createdAt
         updatedAt
       }
@@ -27303,6 +27376,7 @@ export const updatesByProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -27633,6 +27707,7 @@ export const updatesByProject = /* GraphQL */ `
                   short
                   content
                   format
+                  index
                   createdAt
                   updatedAt
                 }
@@ -27859,6 +27934,7 @@ export const updatesByProject = /* GraphQL */ `
                 key
                 region
               }
+              index
               createdAt
               updatedAt
             }
@@ -28493,6 +28569,7 @@ export const updatesByProject = /* GraphQL */ `
                   key
                   region
                 }
+                index
                 createdAt
                 updatedAt
               }
@@ -28727,6 +28804,7 @@ export const updatesByProject = /* GraphQL */ `
           key
           region
         }
+        index
         createdAt
         updatedAt
       }

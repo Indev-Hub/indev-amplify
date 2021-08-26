@@ -16,6 +16,7 @@ import { UpdateCreateForm } from '../../components/update';
 // import DotsVertical from '../../icons/DotsVertical';
 import gtm from '../../lib/gtm';
 import UpdateAdd from '../../components/dashboard/update/update-create/UpdateAdd';
+import ProjectUpdateAdd from '../../components/dashboard/update/update-create/ProjectUpdateAdd';
 
 const UpdateCreatePage = () => {
   useEffect(() => {
@@ -85,6 +86,7 @@ const UpdateCreatePage = () => {
         <Divider /> */}
         <Box sx={{ py: 0 }}>
           <Container maxWidth="lg">
+            <ProjectUpdateAdd />
             <UpdateAdd />
             <UpdateCreateForm />
           </Container>

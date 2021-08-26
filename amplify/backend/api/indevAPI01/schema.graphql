@@ -58,7 +58,7 @@ type Update
   name: String!
   short: String
   content: String
-  type: String!
+  format: [String]
   coverImg: S3Object
 }
 

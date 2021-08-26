@@ -20,7 +20,9 @@ import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
 import { getProject } from '../../graphql/queries';
-import ProjectEdit from '../../components/dashboard/project/project-edit/ProjectEdit';
+import ProjectEdit_v2 from '../../components/dashboard/project/project-edit/ProjectEdit_v2';
+import ProjectUpdateAdd from '../../components/dashboard/update/update-create/ProjectUpdateAdd';
+import UpdateAdd2 from 'src/components/dashboard/project/project-edit/UpdateAdd2';
 
 const ProjectDashboardEdit = (props) => {
   const { projectDashboardId } = useParams();
@@ -32,14 +34,29 @@ const ProjectDashboardEdit = (props) => {
   const { enqueueSnackbar } = useSnackbar();
   const [expanded, setExpanded] = useState(null);
 
+  // Set state for User table
+  const [userData, setUserData] = useState([]);
+
   // Set state for Project table
   const [projectData, setProjectData] = useState();
 
   // Load User table data
   useEffect(() => {
     gtm.push({ event: 'page_view' });
+    getUserInfo();
     getProjectInfo();
   }, []);
+
+  const getUserInfo = async () => {
+    try {
+      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+      const userList = userData.data.getUser;
+      setUserData(userList);
+      console.log('list', userList);
+    } catch (error) {
+      console.log('error on fetching videos', error);
+    }
+  };
 
   const getProjectInfo = async () => {
     try {
@@ -75,7 +92,7 @@ const ProjectDashboardEdit = (props) => {
                 alignItems="center"
                 container
                 justifyContent="space-between"
-                spacing={3}
+                spacing={0}
                 {...props}
               >
                 <Grid item>
@@ -120,8 +137,10 @@ const ProjectDashboardEdit = (props) => {
                   </Breadcrumbs>
                 </Grid>
               </Grid>
-              <Box>
-                <ProjectEdit project={projectData} />
+              <Box sx={{ mt: 3 }}>
+                {/* <UpdateAdd2 project={projectData} user={userData} /> */}
+                <ProjectEdit_v2 project={projectData} user={userData} />
+                <ProjectUpdateAdd project={projectData} user={userData} />
               </Box>
             </Container>
           </Box>

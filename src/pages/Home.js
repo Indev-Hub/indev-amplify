@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet-async';
 // import Gallery from '../components/gallery/Gallery';
 import {
   // HomeClients,
-  HomeHero
+  // HomeHero,
+  HomeHeroAlt
   // HomeOverview,
   // HomeRoles,
   // HomeFeatures,
@@ -22,7 +23,8 @@ const Home = () => {
         <title>indev home</title>
       </Helmet>
       <div>
-        <HomeHero />
+        {/* <HomeHero /> */}
+        <HomeHeroAlt />
         {/* <Gallery /> */}
         {/* <HomeOverview />
         <HomeRoles />

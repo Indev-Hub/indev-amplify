@@ -2,10 +2,21 @@
 .glide__slide {
   /* Fix for flashing background image on slide */
   transform: translate3d(0, 0, 0);
+  overflow: visible;
+}
+
+.glide__slides {
+  overflow: visible;
+}
+
+.slider__frame {
+  overflow: visible;
+  padding: 10px;
 }
 
 .slider__frame[class*=active] {
-  z-index: 1;
+  z-index: 100;
+  overflow: visible;
 }
 
 ._10XKC {

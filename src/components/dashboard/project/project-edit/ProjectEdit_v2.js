@@ -1,49 +1,18 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import {
-//   Grid,
-//   Typography
-// } from '@material-ui/core';
-
-// const ProjectEdit = (props) => {
-//   const { project } = props;
-//   return (
-//     <>
-//       <Grid container>
-//         <Grid item>
-//           <Typography>{project.name}</Typography>
-//         </Grid>
-
-//       </Grid>
-//     </>
-//   );
-// };
-
-// ProjectEdit.propTypes = {
-//   project: PropTypes.any
-// };
-
-// export default ProjectEdit;
 /* eslint-disable */
 import { useEffect, useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { useSnackbar } from 'notistack';
 import {
   // Autocomplete,
-  Avatar,
   Box,
   Button,
   Card,
-  CardActions,
   CardContent,
   CardHeader,
   Divider,
   FormHelperText,
   Grid,
-  Link,
-  Switch,
   TextField,
   Typography
 } from '@material-ui/core';
@@ -51,34 +20,37 @@ import { API, graphqlOperation } from 'aws-amplify';
 import * as queries from '../../../../graphql/queries';
 import {
   updateProject,
-  updateUser
 } from '../../../../graphql/mutations';
 import useAuth from '../../../../hooks/useAuth';
 import wait from '../../../../utils/wait';
-// import countries from './countries';
 
-const ProjectEdit = (props) => {
+const offset = 5;
+
+const ProjectEdit_v2 = (props) => {
   const { project } = props;
   const { user } = useAuth();
-  const [userInfo, setUserInfo] = useState([]);
+  // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
-  console.log('user', user.id);
-  console.log('userInfo:', userInfo);
 
-  const getUserInfo = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-      const userList = userData.data.getUser;
-      setUserInfo(userList);
-      console.log('list', userList);
-    } catch (error) {
-      console.log('error on fetching videos', error);
-    }
-  };
+  // const getUserInfo = async () => {
+  //   try {
+  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+  //     const userList = userData.data.getUser;
+  //     setUserInfo(userList);
+  //     console.log('list', userList);
+  //   } catch (error) {
+  //     console.log('error on fetching videos', error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserInfo();
-  }, []);
+  const featImg = () => {
+    const randomFeat = 'https://source.unsplash.com/weekly?water';
+    return randomFeat;
+  }
+
+  // useEffect(() => {
+  //   getUserInfo();
+  // }, []);
 
   return (
     <Grid
@@ -89,6 +61,76 @@ const ProjectEdit = (props) => {
     >
       <Grid
         item
+        sx={{
+          backgroundImage: `url(${featImg()})`,
+          backgroundSize: 'cover',
+          height: 300
+        }}
+        xs={12}
+      >
+        <Grid container>
+          <Grid
+            item
+            xs={3}
+            zIndex='20'
+          >
+            <Box
+              sx={{
+                backgroundColor: 'brand.background1',
+                pr: 5,
+                py: 2,
+                ml: -offset
+              }}
+            >
+              <Box
+                sx={{
+                  ml: offset
+                }}
+              >
+                <Typography variant="h2" textAlign="right" color="white" fontWeight="700">{project.name}</Typography>   
+              </Box>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={6}
+            zIndex="5"
+          >
+            <Box
+              sx={{
+                backgroundColor: 'white',
+                mt: 8,
+                ml: -4,
+                p: 4
+              }}
+            >
+              {console.log('update length', project.updates.itemslength)}
+              {console.log('updates', project.updates)}
+              {project.updates.items.length > 0 ? (
+                project.updates.items.map((update, index) => (
+                  <>
+                    <Typography>Update #{index+1}</Typography>
+                    <Typography>Name: {update.name}</Typography>
+                  </>
+                ))
+              ) : (
+                null
+              )}
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={3}
+            align="right"
+            pr={2}
+          >
+            <Button variant="contained" color="secondary">Change Image</Button>            
+          </Grid>
+        </Grid>
+
+      </Grid>
+      <Grid
+        item
         xl={9}
         lg={9}
         md={10}
@@ -97,31 +139,16 @@ const ProjectEdit = (props) => {
         <Formik
           enableReinitialize
           initialValues={{
-            name: project.name,
-            developers: project.developers,
-            description: project.description,
-            category: project.category,
-            featuredImg: project.featuredImg,
-            startDate: project.startDate,
-            endDate: project.endDate,
-            devStage: project.devStage,
-            updates: project.updates,
+            name: project.name || '',
+            developers: project.developers || '',
+            description: project.description || '',
+            category: project.category || '',
+            featuredImg: project.featuredImg || '',
+            startDate: project.startDate || '',
+            endDate: project.endDate || '',
+            devStage: project.devStage || '',
+            updates: project.updates || '',
             submit: null
-
-            /*
-            canHire: userInfo.canHire || false,
-            city: user.city || '',
-            country: user.country || '',
-            email: user.email || '',
-            isPublic: user.isPublic || false,
-            firstName: userInfo.firstName || '',
-            lastName: userInfo.lastName || '',
-            displayName: userInfo.displayName || '',
-            phone: user.phone || '',
-            state: user.state || '',
-            submit: null
-            */
-           
           }}
           validationSchema={Yup
             .object()
@@ -420,5 +447,5 @@ const ProjectEdit = (props) => {
   );
 };
 
-export default ProjectEdit;
+export default ProjectEdit_v2;
 

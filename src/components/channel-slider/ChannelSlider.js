@@ -2,10 +2,12 @@ import { React, useRef } from 'react';
 import { Box, Grid, Link } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Glide from 'react-glidejs';
-
-import './channelSlider.css';
+// import './channelSlider.css';
 import ChannelSliderTemplate01 from './ChannelSliderTemplate01';
+// import GridAssets02 from '../assets/Grid Assets 02.png';
+// import Graphics from '../graphics/Graphics';
 // import './transitions.css';
+require('./channelSlider.css');
 
 function ChannelSlider(props) {
   const { genre, sliderHeight } = props;
@@ -14,7 +16,6 @@ function ChannelSlider(props) {
 
   return (
     <Box
-      className="App"
       style={{
         background: 'transparent'
       }}
@@ -23,7 +24,7 @@ function ChannelSlider(props) {
         ref={gliderRef}
         throttle={0}
         type="carousel"
-        gap="10"
+        gap="0"
         customSlideAnimation={{
           timeout: 250,
           classNames: 'fade'
@@ -67,7 +68,9 @@ function ChannelSlider(props) {
                 }
               }}
             >
-              <ChannelSliderTemplate01 channelImg={channel.category} title={channel.name} sliderHeight={sliderHeight} />
+              <Box zIndex={400}>
+                <ChannelSliderTemplate01 channel={channel} sliderHeight={sliderHeight} />
+              </Box>
             </Link>
             {/* {console.log('channel id:', channel.id)} */}
           </Grid>

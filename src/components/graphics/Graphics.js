@@ -30,7 +30,20 @@ const graphicArray = [
 ];
 
 function Graphics(props) {
-  const { type, position, width, height, top, left, visible, graphicID } = props;
+  const {
+    type = 'img',
+    position = 'relative',
+    width = '100%',
+    height = 'auto',
+    boxWidth = '100%',
+    boxHeight = '100%',
+    marginTop = '0',
+    marginLeft = '0',
+    visibility = 'visible',
+    graphicID = '0',
+    objectFit = 'contain',
+    zIndex = '0'
+  } = props;
   // switch (type) {
   //   case 'img':
   //     return <img src={graphicArray[graphicID].graphic} width={width} height={height} style={{ objectFit: 'cover', position: position, marginTop: top, marginLeft: left, visibility: visible }} alt="" />;
@@ -38,10 +51,20 @@ function Graphics(props) {
   //     return graphicArray[graphicID]
   // }
   return (
-    <Box>
-      {/* eslint-disable-next-line */}
-      <img src={graphicArray[graphicID].graphic} width={width} height={height} style={{ objectFit: 'cover', position: position, marginTop: top, marginLeft: left, visibility: visible }} alt="" />;
-    </Box>
+    <Box className="funny">
+      <Box
+        overflow="hidden"
+        width={boxWidth}
+        height={boxHeight}
+        mt={marginTop}
+        ml={marginLeft}
+        position={position}
+        zIndex={zIndex}
+      >
+        {/* eslint-disable-next-line */}
+        <img src={graphicArray[graphicID].graphic} width={width} height={height} style={{ position: position, visibility: visibility, zIndex: zIndex }} alt="" />;
+        </Box>
+      </Box>
   );
 }
 

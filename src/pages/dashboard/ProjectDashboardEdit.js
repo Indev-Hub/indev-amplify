@@ -21,6 +21,7 @@ import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
 import { getProject, getUser } from '../../graphql/queries';
 import ProjectEdit_v2 from '../../components/dashboard/project/project-edit/ProjectEdit_v2';
+import loadingGif from '../../components/assets/loading1.gif';
 
 const ProjectDashboardEdit = (props) => {
   const { projectDashboardId } = useParams();
@@ -72,7 +73,26 @@ const ProjectDashboardEdit = (props) => {
   return (
     <>
       {loading ? (
-        <Typography>Loading...</Typography>
+        <Grid
+          container
+          height="80vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid
+            item
+
+          >
+            <img
+              src={loadingGif}
+              width="150px"
+              height="auto"
+              alt=""
+            />
+            <Typography align="center">Loading Projects...</Typography>
+          </Grid>
+        </Grid>
       ) : (
         <>
           <Helmet>

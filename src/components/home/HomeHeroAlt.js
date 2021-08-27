@@ -16,6 +16,7 @@ import ChannelSlider from '../channel-slider/ChannelSlider';
 import FeaturedSlider from '../featured-slider/FeaturedSlider';
 import Graphics from '../graphics/Graphics';
 import GridAssets02 from '../assets/Grid Assets 02.png';
+import loadingGif from '../../components/assets/loading1.gif';
 
 // import UploadVideo from 'src/pages/channel/UploadVideo';
 // import ShowcaseAdd from '../video/ShowcaseAdd';
@@ -190,7 +191,26 @@ const HomeHeroAlt = (props) => {
         {/* <VideoLibrary /> */}
         {/* <ChannelCreate /> */}
         {isLoading ? (
-          <Typography>Form is loading...</Typography>
+          <Grid
+            container
+            height="80vh"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Grid
+              item
+
+            >
+              <img
+                src={loadingGif}
+                width="150px"
+                height="auto"
+                alt=""
+              />
+              <Typography align="center">Loading Projects...</Typography>
+            </Grid>
+          </Grid>
         ) : (
           <>
             {/* GAME DEVELOPMENT CATEGORY */}
@@ -206,6 +226,8 @@ const HomeHeroAlt = (props) => {
                     py: 3,
                     // ml: offset
                   }}
+                  overflow="hidden"
+                  position="relative"
                   xs={5}
                 >
                   <Typography variant="h2" textAlign="right" color="white" fontWeight="700">Game Development</Typography>   
@@ -249,7 +271,18 @@ const HomeHeroAlt = (props) => {
                 zIndex='5'
                 mt={-8}
               >
-                <Grid container xs={12} sx={{ backgroundImage: `url(static/assets/6-2-graphic-design-transparent.png)`, backgroundSize: 'contain', backgroundRepeat: 'repeat-x', p: 5 }} justifyContent="center">
+                <Grid container xs={12} justifyContent="center">
+                <Graphics
+                    graphicID="1"
+                    marginLeft="-5vw"
+                    marginTop="-5vh"
+                    boxWidth="50%"
+                    boxHeight="40%"
+                    width="700px"
+                    objectFit="cover"
+                    position="absolute"
+                    zIndex="0"
+                  />
                   <Grid item xs={10}>
                     <ChannelSlider genre={categorySelect('software')} sliderHeight="500px" />
                   </Grid>
@@ -281,7 +314,18 @@ const HomeHeroAlt = (props) => {
                 zIndex='5'
                 mt={-8}
               >
-                <Grid container xs={12} sx={{ backgroundImage: `url(static/assets/GridAssets02.png)`, backgroundSize: '33%', p: 5 }} justifyContent="center">
+                <Grid container xs={12} justifyContent="center" p={5}>
+                  <Graphics
+                    graphicID="2"
+                    marginLeft="70vw"
+                    marginTop="-10vh"
+                    boxWidth="15%"
+                    boxHeight="30%"
+                    width="600"
+                    objectFit="cover"
+                    position="absolute"
+                    zIndex="0"
+                  />
                   <Grid item xs={10}>
                     <ChannelSlider genre={categorySelect('mobile')} sliderHeight="500px" />
                   </Grid>

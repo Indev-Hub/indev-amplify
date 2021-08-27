@@ -87,7 +87,7 @@ function ChannelSliderTemplate01(props) {
             >
               <Card raised sx={{ color: 'white', backgroundColor: '#ffffff55', px: 1, py: 2 }}>
                 <Typography variant="h3" align="center">{lastUpdate()}</Typography>
-                <Typography variant="h6" align="center">Days Ago</Typography>
+                <Typography variant="h6" align="center">Days</Typography>
               </Card>
             </Grid>
           </Grid>

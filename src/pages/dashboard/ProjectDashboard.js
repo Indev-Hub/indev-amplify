@@ -44,6 +44,7 @@ import { updateChannel } from '../../graphql/mutations';
 import { getChannel, getUser } from '../../graphql/queries';
 import { getChannelByManager } from 'src/graphql/customQueries';
 import { Edit } from '@material-ui/icons';
+import loadingGif from '../../components/assets/loading1.gif';
 // import ChannelAdd from '../../components/dashboard/channel/channel-create/ChannelAdd';
 
 const ProjectDashboard = (props) => {
@@ -110,8 +111,27 @@ const ProjectDashboard = (props) => {
   return (
     <>
       {loading ? (
-        <Typography>Loading...</Typography>
-      ) : (
+        <Grid
+        container
+        height="80vh"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Grid
+          item
+
+        >
+          <img
+            src={loadingGif}
+            width="150px"
+            height="auto"
+            alt=""
+          />
+          <Typography align="center">Loading Projects...</Typography>
+        </Grid>
+      </Grid>
+    ) : (
         <>
           <Helmet>
             <title>Dashboard: Projects | Indev</title>

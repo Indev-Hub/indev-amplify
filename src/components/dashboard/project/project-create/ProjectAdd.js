@@ -127,64 +127,82 @@ const ProjectAdd = () => {
   // };
 
   async function addProject() {
-    // Destructure formData
-    const { name, description, category, operator, featuredImg, startDate, endDate, devStage } = formData;
+    try {
+      // Destructure formData
+      const { name, description, category, operator, featuredImg, startDate, endDate, devStage } = formData;
 
-    // Create Project Inputs
-    const CreateProjectInput = {
-      name: name,
-      projectManagerId: user.id,
-      projectChannelId: userData.channel.id,
-      channelID: userData.channel.id,
-      description: description,
-      category: category,
-      startDate: startDate,
-      endDate: endDate,
-      devStage: devStage
-      // featuredImg: key // featured image input
-    };
+      // Create Project Inputs
+      const CreateProjectInput = {
+        name: name,
+        projectManagerId: user.id,
+        projectChannelId: userData.channel.id,
+        channelID: userData.channel.id,
+        description: description,
+        category: category,
+        startDate: startDate,
+        endDate: endDate,
+        devStage: devStage
+        // featuredImg: key // featured image input
+      };
 
-    // Create new project
-    const newProject = await API.graphql(graphqlOperation(createProject, { input: CreateProjectInput }));
-    // if (!newChannel.ok) {
-    //   throw new Error('ERROR on creating new channel', console.error);
-    // }
-    console.log('New Project Added', newProject.data.createProject)
-    return newProject.data.createProject;
-    // const setNewChannel = newChannel.data.createChannel;
+      // Create new project
+      const newProject = await API.graphql(graphqlOperation(createProject, { input: CreateProjectInput }));
+      console.log('New Project Added', newProject.data.createProject)
+      return newProject.data.createProject;
+
+    } catch (error) {
+      console.log('An error occurred when trying to create your project:', error);
+    } 
   }
 
-  // async function Update() {
-  //   // showPendingState();
-  //   try {
-  //     const response = await addProject();
-  //     console.log('addProject', response);
+  async function addProjectShowcase() {
+    // showPendingState();
+    try {
+      const response = await addProject();
+      console.log('addProject', response);
 
-  //     // Data input for updateUser call
-  //     const UpdateChannelInput = {
-  //       id: userData.channel.id,
-  //       userChannelId: response.id
-  //     }
+      // Create the vimeo showcase
+      
+      fetch('https://api.vimeo.com/me/albums', {
+        
+        // Adding method type
+        method: 'POST',
+          
+        // Adding body or content to send
+        body: JSON.stringify({
+            name: response.id
+        }),
+          
+        // Adding headers to the request
+        headers: {
+            'Content-type': 'application/json',
+            Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}`
+        }
+      })
+      
+    // Converting to JSON
+    .then(response => response.json())
+      
+    // Displaying results to console
+    .then(json => console.log(json));
 
-  //     // Updates the User table to include the newly created Channel. Only one channel is allowed per user
-  //     // This will overwrite a channel if it exists in the user.channel field
-  //     const upChannel = await API.graphql(graphqlOperation(updateChannel, { input: UpdateChannelInput }))
-  //     console.log('Channel Updated!', upChannel) 
-
-  //   } catch (error) {
-  //       console.log('error on channel update:', error);
-  //   }
-  // }
+    } catch (error) {
+        console.log('error on showcase creation:', error);
+    }
+  }
 
 
   switch (currentStep) {
     case 1:
       return (
-        <ProjectDetails
-          data={formData}
-          handleChange={handleChange}
-          next={next}
-        />
+        <>
+          <ProjectDetails
+            data={formData}
+            handleChange={handleChange}
+            next={next}
+          />
+          <Button onClick={() => addProjectShowcase()}>Add Showcase</Button>
+        </>
       );
     case 2:
       return (
@@ -207,7 +225,7 @@ const ProjectAdd = () => {
     default:
       return (
         <>
-          <ProjectReview data={formData} addProject={addProject} back={back} />
+          <ProjectReview data={formData} addProject={addProjectShowcase} back={back} />
         </>
       );
   }

@@ -42,27 +42,28 @@ const ChannelAdd = () => {
   };
 
   async function addChannel() {
-    // Destructure formData
-    const { name, description, category, operator, featuredImg } = formData;
+    try {
+      // Destructure formData
+      const { name, description, category, operator, featuredImg } = formData;
 
-    // Create Channel Inputs
-    const CreateChannelInput = {
-      name: name,
-      channelManagerId: user.id,
-      description: description,
-      category: category,
-      operator: operator,
-      // featuredImg: key // featured image input
-    };
+      // Create Channel Inputs
+      const CreateChannelInput = {
+        name: name,
+        channelManagerId: user.id,
+        description: description,
+        category: category,
+        operator: operator,
+        // featuredImg: key // featured image input
+      };
 
-    // Create new channel
-    const newChannel = await API.graphql(graphqlOperation(createChannel, { input: CreateChannelInput }));
-    console.log('newChannel:', newChannel)
-    // if (!newChannel.ok) {
-    //   throw new Error('ERROR on creating new channel', console.error);
-    // }
-    return newChannel.data.createChannel;
-    // const setNewChannel = newChannel.data.createChannel;
+      // Create new channel
+      const newChannel = await API.graphql(graphqlOperation(createChannel, { input: CreateChannelInput }));
+      console.log('newChannel:', newChannel)
+      return newChannel.data.createChannel;
+      
+    } catch (error) {
+      console.log('An error occurred when trying to create your channel:', error);
+    }
   }
 
   async function Update() {

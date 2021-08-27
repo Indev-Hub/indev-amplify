@@ -4,7 +4,7 @@ import ProjectOwner from "./ProjectOwner";
 import ProjectDetails from "./ProjectDetails";
 import ProjectDescription from "./ProjectDescription";
 import ProjectReview from "./ProjectReview";
-import { createProject, updateChannel } from "src/graphql/mutations";
+import { createProject, createShowcase, updateChannel } from "src/graphql/mutations";
 import { getUser } from "src/graphql/queries";
 import { Button } from "@material-ui/core";
 import { API, Auth, graphqlOperation } from "aws-amplify";
@@ -162,32 +162,36 @@ const ProjectAdd = () => {
       console.log('addProject', response);
 
       // Create the vimeo showcase
-      
       fetch('https://api.vimeo.com/me/albums', {
-        
         // Adding method type
         method: 'POST',
-          
         // Adding body or content to send
         body: JSON.stringify({
             name: response.id
         }),
-          
         // Adding headers to the request
         headers: {
             'Content-type': 'application/json',
             Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}`
         }
       })
-      
-    // Converting to JSON
-    .then(response => response.json())
-      
-    // Displaying results to console
-    .then(json => console.log(json));
+      // Converting to JSON
+      .then(response => response.json())
+      // Displaying results to console
+      .then(newShowcase => console.log(newShowcase));
+
+      // Create Showcase table item
+      // Create Showcase Inputs
+      const CreateProjectInput = {
+        id: response.id,
+      };
+
+      // Create new project
+      const newShowcase = await API.graphql(graphqlOperation(createShowcase, { input: CreateProjectInput }));
+      console.log('New Showcase Added', newShowcase.data.createShowcase);
 
     } catch (error) {
-        console.log('error on showcase creation:', error);
+        console.log('error on showcase table creation:', error);
     }
   }
 

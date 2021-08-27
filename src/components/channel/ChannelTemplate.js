@@ -22,7 +22,8 @@ import { API, graphqlOperation } from 'aws-amplify';
 import { getChannel, updatesByProject } from '../../graphql/queries';
 import ChannelVideoAsk from './ChannelVideoAsk';
 import Gallery from '../gallery/Gallery';
-import ProjectTemplateV1 from '../project/ProjectTemplateV1';
+// import ProjectTemplateV1 from '../project/ProjectTemplateV1';
+import ProjectTemplateV2 from '../project/ProjectTemplateV2';
 import loadingGif from '../assets/loading1.gif';
 import { TabPanel } from '@material-ui/lab';
 
@@ -116,7 +117,16 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     }
   },
   gridProjectRowItem: {
-    padding: 0
+    padding: 0,
+  },
+  tabs: {
+    // these arent working
+    fontColor: "#EC008C",
+    color: "#ffffff",
+    alignItems: "right"
+  },
+  tabItem: {
+    color: "#EC008C"
   }
 }));
 
@@ -148,6 +158,8 @@ function ChannelTemplate(props) {
       const listChannelData = getChannelData.data.getChannel;
       setChannelData(listChannelData);
       console.log('channel list', listChannelData);
+
+      console.log('this is the channelData: ', channelData)
 
       fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
@@ -321,16 +333,19 @@ function ChannelTemplate(props) {
           </Grid>
 
           {/* Project Section */}
-          <AppBar position="static">
-            <Tabs value={value} onChange={handleTabChange} aria-label="simple tabs example">
+          <AppBar position="static" style={{ background: '#141944' }}>
+            <Tabs
+              value={value} 
+              onChange={handleTabChange} 
+              aria-label="simple tabs example">
             {channelData.projects.items.map((project, index) => (
-              <Tab label={project.name} {...menuProps({index})} />
+            <Tab className={classes.tabItem} label={project.name} {...menuProps({index})} />
             ))}
             </Tabs>
           </AppBar>
           {channelData.projects.items.map((project, index) => (
             <TabPanel value={value} index={index}>
-              <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
+              <ProjectTemplateV2 projectData={channelData.projects.items[index]} />
             </TabPanel>
           ))}
 
@@ -356,7 +371,7 @@ function ChannelTemplate(props) {
               </Box>
               <Grid container spacing={0} p={3}>
                   <Grid container mb={3}>
-                    <ProjectTemplateV1 projectData={channelData.projects.items[index]} />
+                    <ProjectTemplateV2 projectData={channelData.projects.items[index]} />
                   </Grid>
               </Grid>
               <Grid container spacing={0}>

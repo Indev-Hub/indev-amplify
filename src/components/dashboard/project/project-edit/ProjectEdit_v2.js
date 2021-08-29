@@ -34,6 +34,7 @@ const offset = 5;
 
 const ProjectEdit_v2 = (props) => {
   const { project, user } = props;
+
   const [ showUpdate, setShowUpdate ] = useState(false);
   // const { user } = useAuth();
   // const [userInfo, setUserInfo] = useState([]);
@@ -49,6 +50,10 @@ const ProjectEdit_v2 = (props) => {
   //     console.log('error on fetching videos', error);
   //   }
   // };
+
+  function toggleUpdate() {
+    setShowUpdate(false);
+  }
 
   const onThumbnailClick = (videoID,titleID) => {
     // "...video" copies all of the video's current attributes, src overwrites the current src url by substituting the videoID
@@ -147,11 +152,11 @@ const ProjectEdit_v2 = (props) => {
           <ProjectEditInfo project={project} user={user} overlap={5} />
           <ProjectUpdateList project={project} user={user} overlap={5} />
           {showUpdate ? (
-            <ProjectUpdateAdd project={project} user={user} overlap={5} setShowUpdate={setShowUpdate} />
+            <ProjectUpdateAdd project={project} user={user} overlap={5} toggleUpdate={toggleUpdate} />
           ) : (
-            <Grid container justifyContent="center" xs={12} mb={10}>
+            <Grid container justifyContent="center" xs={12} mb={10} mt={1}>
               <Grid item xs={9}>
-                <Button fullWidth variant="contained" onClick={() => setShowUpdate(true)} startIcon={<Add />}>Add Update</Button>
+                <Button fullWidth sx={{ p: 1 }} variant="contained" onClick={() => setShowUpdate(true)} startIcon={<Add />}>Add Update</Button>
               </Grid>
             </Grid>
           )}
@@ -162,4 +167,3 @@ const ProjectEdit_v2 = (props) => {
 };
 
 export default ProjectEdit_v2;
-

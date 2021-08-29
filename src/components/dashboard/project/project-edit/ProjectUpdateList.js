@@ -19,7 +19,7 @@ import { Add, Visibility } from '@material-ui/icons';
 
 const ProjectUpdateList = (props) => {
   const { project, user, overlap } = props;
-
+  console.log('project ProjectUpdateList', project)
   const [expanded, setExpanded] = useState(null);
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -102,9 +102,14 @@ const ProjectUpdateList = (props) => {
                             </Grid>
                           </Grid>
                           <Divider sx={{ my: 3 }} />
-                          {update.format.map((format) => (
-                            <Chip label={format} variant="outlined" sx={{ color: 'brand.primary1', borderColor: 'brand.primary1', mr: 1 }} />
-                          ))}
+                          {update.format !== null ? (
+                            update.format.map((format) => (
+                              <Chip label={format} variant="outlined" sx={{ color: 'brand.primary1', borderColor: 'brand.primary1', mr: 1 }} />
+                            ))
+                          ) : (
+                            <Chip label="text" variant="outlined" sx={{ color: 'brand.primary1', borderColor: 'brand.primary1', mr: 1 }} />
+                          )
+                          }
                         </AccordionDetails>
                       </Accordion>
                     </>

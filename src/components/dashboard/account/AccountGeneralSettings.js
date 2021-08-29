@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -21,35 +21,37 @@ import {
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import * as queries from '../../../graphql/queries';
+// import * as queries from '../../../graphql/queries';
 import {
   updateUser
 } from '../../../graphql/mutations';
-import useAuth from '../../../hooks/useAuth';
+// import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
 // import countries from './countries';
 
 const AccountGeneralSettings = (props) => {
-  const { user } = useAuth();
-  const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
-  console.log('user', user.id);
-  console.log('userInfo:', userInfo);
+  // const { user } = useAuth();
+  // const [userInfo, setUserInfo] = useState([]);
+  // console.log('user', user.id);
+  // console.log('userInfo:', userInfo);
 
-  const getUserInfo = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-      const userList = userData.data.getUser;
-      setUserInfo(userList);
-      console.log('list', userList);
-    } catch (error) {
-      console.log('error on fetching videos', error);
-    }
-  };
+  // const getUserInfo = async () => {
+  //   try {
+  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+  //     const userList = userData.data.getUser;
+  //     setUserInfo(userList);
+  //     console.log('list', userList);
+  //   } catch (error) {
+  //     console.log('error on fetching videos', error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserInfo();
-  }, []);
+  // useEffect(() => {
+  //   getUserInfo();
+  // }, []);
+
+  const userSession = JSON.parse(sessionStorage.getItem('userData'));
 
   return (
     <Grid
@@ -82,7 +84,7 @@ const AccountGeneralSettings = (props) => {
                 }}
               >
                 <Avatar
-                  src={user.avatar}
+                  src={userSession.avatar}
                   sx={{
                     height: 100,
                     width: 100
@@ -94,7 +96,7 @@ const AccountGeneralSettings = (props) => {
                 sx={{ mt: 1 }}
                 variant="subtitle2"
               >
-                {user.name}
+                {userSession.name}
               </Typography>
               <Typography
                 color="textSecondary"
@@ -107,7 +109,7 @@ const AccountGeneralSettings = (props) => {
                   component={RouterLink}
                   to="/dashboard/account"
                 >
-                  {user.plan}
+                  {userSession.plan}
                 </Link>
               </Typography>
             </Box>
@@ -133,17 +135,17 @@ const AccountGeneralSettings = (props) => {
         <Formik
           enableReinitialize
           initialValues={{
-            // canHire: userInfo.canHire = userInfo.canHire ? userInfo.canHire : false,
-            canHire: userInfo.canHire || false,
-            city: user.city || '',
-            country: user.country || '',
-            email: user.email || '',
-            isPublic: user.isPublic || false,
-            firstName: userInfo.firstName || '',
-            lastName: userInfo.lastName || '',
-            displayName: userInfo.displayName || '',
-            phone: user.phone || '',
-            state: user.state || '',
+            // canHire: userSession.canHire = userSession.canHire ? userSession.canHire : false,
+            canHire: userSession.canHire || false,
+            city: userSession.city || '',
+            country: userSession.country || '',
+            email: userSession.email || '',
+            isPublic: userSession.isPublic || false,
+            firstName: userSession.firstName || '',
+            lastName: userSession.lastName || '',
+            displayName: userSession.displayName || '',
+            phone: userSession.phone || '',
+            state: userSession.state || '',
             submit: null
           }}
           validationSchema={Yup
@@ -173,16 +175,20 @@ const AccountGeneralSettings = (props) => {
             try {
               // NOTE: Make API request
               const UpdateUserInput = {
-                id: user.id,
+                id: userSession.id,
                 firstName: values.firstName,
                 lastName: values.lastName,
                 displayName: values.displayName,
-                email: user.email,
+                email: userSession.email,
                 canHire: values.canHire
               };
               console.log('user info', UpdateUserInput);
-              console.log('user.id:', user.id, 'user.sub', user.sub);
-              await API.graphql(graphqlOperation(updateUser, { input: UpdateUserInput }));
+
+              const userInfo = await API.graphql(graphqlOperation(updateUser, { input: UpdateUserInput }));
+              console.log('user info:', userInfo);
+              const userNewData = userInfo.data.updateUser;
+              console.log('user data:', userNewData);
+              sessionStorage.setItem('userData', JSON.stringify(userNewData));
               console.log('user info', UpdateUserInput);
 
               await wait(200);

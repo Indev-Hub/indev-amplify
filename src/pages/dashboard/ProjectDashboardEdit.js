@@ -33,67 +33,76 @@ const ProjectDashboardEdit = (props) => {
   const { enqueueSnackbar } = useSnackbar();
   const [expanded, setExpanded] = useState(null);
 
-  // Set state for User table
-  const [userData, setUserData] = useState([]);
+  // // Set state for User table
+  // const [userData, setUserData] = useState([]);
 
-  // Set state for Project table
-  const [projectData, setProjectData] = useState();
+  // // Set state for Project table
+  // const [projectData, setProjectData] = useState();
 
   // Load User table data
   useEffect(() => {
     gtm.push({ event: 'page_view' });
-    getUserInfo();
-    getProjectInfo();
+    // getUserInfo();
+    // getProjectInfo();
   }, []);
 
-  const getUserInfo = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
-      const userList = userData.data.getUser;
-      setUserData(userList);
-      console.log('list', userList);
-    } catch (error) {
-      console.log('error on fetching user', error);
-    }
-  };
+  // const getUserInfo = async () => {
+  //   try {
+  //     const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+  //     const userList = userData.data.getUser;
+  //     setUserData(userList);
+  //     console.log('list', userList);
+  //   } catch (error) {
+  //     console.log('error on fetching user', error);
+  //   }
+  // };
 
-  const getProjectInfo = async () => {
-    try {
-      const getProjectData = await API.graphql(graphqlOperation(getProject, { id: projectDashboardId }));
-      const listProjectData = getProjectData.data.getProject;
-      setProjectData(listProjectData);
-      console.log('Project list', listProjectData);
+  // const getProjectInfo = async () => {
+  //   try {
+  //     const getProjectData = await API.graphql(graphqlOperation(getProject, { id: projectDashboardId }));
+  //     const listProjectData = getProjectData.data.getProject;
+  //     setProjectData(listProjectData);
+  //     console.log('Project list', listProjectData);
 
-      setLoading(false);
-    } catch (error) {
-      console.log('error on fetching videos', error);
-    }
-  };
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.log('error on fetching project', error);
+  //   }
+  // };
+
+  const userSession = JSON.parse(sessionStorage.getItem('userData'));
+  console.log('userSession', userSession);
+  const projectSession = userSession.channel.projects.items.find(function (project) {
+    return (
+      project.id === projectDashboardId
+    )
+  })
+  console.log('project session', projectSession);
 
   return (
-    <>
-      {loading ? (
-        <Grid
-          container
-          height="80vh"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Grid
-            item
+    // <>
+    //   {loading ? (
+    //     <Grid
+    //       container
+    //       height="80vh"
+    //       display="flex"
+    //       alignItems="center"
+    //       justifyContent="center"
+    //     >
+    //       <Grid
+    //         item
 
-          >
-            <img
-              src={loadingGif}
-              width="150px"
-              height="auto"
-              alt=""
-            />
-            <Typography align="center">Loading Projects...</Typography>
-          </Grid>
-        </Grid>
-      ) : (
+    //       >
+    //         <img
+    //           src={loadingGif}
+    //           width="150px"
+    //           height="auto"
+    //           alt=""
+    //         />
+    //         <Typography align="center">Loading Projects...</Typography>
+    //       </Grid>
+    //     </Grid>
+    //   ) : (
         <>
           <Helmet>
             <title>Dashboard: Project Edit | Indev</title>
@@ -150,20 +159,20 @@ const ProjectDashboardEdit = (props) => {
                       color="textSecondary"
                       variant="subtitle2"
                     >
-                      {projectData.name}
+                      {projectSession.name}
                     </Typography>
                   </Breadcrumbs>
                 </Grid>
               </Grid>
               <Box sx={{ mt: 3 }}>
-                {/* <UpdateAdd2 project={projectData} user={userData} /> */}
-                <ProjectEdit_v2 project={projectData} user={userData} />
+                {/* <UpdateAdd2 project={projectSession} user={userSession} /> */}
+                <ProjectEdit_v2 project={projectSession} user={userSession} />
               </Box>
             </Container>
           </Box>
         </>
-      )}
-    </>
+    //   )}
+    // </>
   );
 };
 

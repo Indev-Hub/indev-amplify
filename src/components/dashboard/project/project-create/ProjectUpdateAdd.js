@@ -31,7 +31,7 @@ import useAuth from '../../../../hooks/useAuth';
 import wait from '../../../../utils/wait';
 
 const ProjectUpdateAdd = (props) => {
-  const { project, user, overlap } = props;
+  const { project, user, toggleUpdate, overlap } = props;
 
   const { enqueueSnackbar } = useSnackbar();
 
@@ -105,6 +105,7 @@ const ProjectUpdateAdd = (props) => {
                   },
                   variant: 'success'
                 });
+                toggleUpdate();
               } catch (err) {
                 console.log('An error occurred during update creation', err)
                 console.error(err);
@@ -228,10 +229,18 @@ const ProjectUpdateAdd = (props) => {
                   <Box
                     sx={{
                       display: 'flex',
-                      justifyContent: 'flex-end',
+                      justifyContent: 'space-between',
                       p: 2
                     }}
                   >
+                    <Button
+                      color="primary"
+                      // disabled={isSubmitting}
+                      variant="contained"
+                      onClick={toggleUpdate}
+                    >
+                      Cancel
+                    </Button>
                     <Button
                       color="primary"
                       // disabled={isSubmitting}

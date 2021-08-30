@@ -37,6 +37,7 @@ const FileDropzone = (props) => {
     onRemoveAll,
     onUpload,
     preventDropOnDocument,
+    showUpload,
     ...other
   } = props;
 
@@ -167,16 +168,21 @@ const FileDropzone = (props) => {
             >
               Remove All
             </Button>
-            <Button
-              color="primary"
-              onClick={onUpload}
-              size="small"
-              sx={{ ml: 2 }}
-              type="button"
-              variant="contained"
-            >
-              Upload
-            </Button>
+            {showUpload ?
+              (
+                <Button
+                  color="primary"
+                  onClick={onUpload}
+                  size="small"
+                  sx={{ ml: 2 }}
+                  type="button"
+                  variant="contained"
+                >
+                  Upload
+                </Button>
+              ) : (
+                null
+              )}
           </Box>
         </Box>
       )}
@@ -206,7 +212,8 @@ FileDropzone.propTypes = {
   onRemove: PropTypes.func,
   onRemoveAll: PropTypes.func,
   onUpload: PropTypes.func,
-  preventDropOnDocument: PropTypes.bool
+  preventDropOnDocument: PropTypes.bool,
+  showUpload: PropTypes.bool
 };
 
 FileDropzone.defaultProps = {

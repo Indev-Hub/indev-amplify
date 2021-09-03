@@ -112,73 +112,69 @@ const ProjectEditInfo = (props) => {
                     >
                       <Grid
                         item
-                        md={6}
+                        md={8}
                         xs={12}
                       >
-                        <TextField
-                          error={Boolean(touched.name && errors.name)}
-                          fullWidth
-                          helperText={touched.name && errors.name}
-                          label="Project Name"
-                          name="name"
-                          onBlur={handleBlur}
-                          onChange={handleChange}
-                          value={values.name}
-                          variant="outlined"
-                        />
+                        <Box>
+                          <TextField
+                            error={Boolean(touched.name && errors.name)}
+                            fullWidth
+                            helperText={touched.name && errors.name}
+                            label="Project Name"
+                            name="name"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.name}
+                            variant="outlined"
+                          />
+                        </Box>
+                        <Box mt={3}>
+                          <TextField
+                            error={Boolean(touched.description && errors.description)}
+                            fullWidth
+                            helperText={touched.description && errors.description}
+                            label="Description"
+                            name="description"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.description}
+                            variant="outlined"
+                          />
+                        </Box>
                       </Grid>
                       <Grid
                         item
-                        md={6}
+                        md={3}
                         xs={12}
                       >
-                        <TextField
-                          error={Boolean(touched.description && errors.description)}
-                          fullWidth
-                          helperText={touched.description && errors.description}
-                          label="Description"
-                          name="description"
-                          onBlur={handleBlur}
-                          onChange={handleChange}
-                          value={values.description}
-                          variant="outlined"
-                        />
-                      </Grid>
-                      <Grid
-                        item
-                        md={6}
-                        xs={12}
-                      >
-                        <TextField
-                          error={Boolean(touched.displayName && errors.displayName)}
-                          fullWidth
-                          helperText={touched.displayName && errors.displayName}
-                          label="Start Date"
-                          name="startDate"
-                          type="date"
-                          onBlur={handleBlur}
-                          onChange={handleChange}
-                          value={values.startDate}
-                          variant="outlined"
-                        />
-                      </Grid>
-                      <Grid
-                        item
-                        md={6}
-                        xs={12}
-                      >
-                        <TextField
-                          error={Boolean(touched.displayName && errors.displayName)}
-                          fullWidth
-                          helperText={touched.displayName && errors.displayName}
-                          label="End Date"
-                          name="endDate"
-                          type="date"
-                          onBlur={handleBlur}
-                          onChange={handleChange}
-                          value={values.endDate}
-                          variant="outlined"
-                        />
+                        <Box>
+                          <TextField
+                            error={Boolean(touched.startDate && errors.startDate)}
+                            fullWidth
+                            helperText={touched.startDate && errors.startDate}
+                            label="Start Date"
+                            name="startDate"
+                            type="date"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.startDate}
+                            variant="outlined"
+                          />
+                        </Box>
+                        <Box mt={3}>
+                          <TextField
+                            error={Boolean(touched.endDate && errors.endDate)}
+                            fullWidth
+                            helperText={touched.endDate && errors.endDate}
+                            label="End Date"
+                            name="endDate"
+                            type="date"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.endDate}
+                            variant="outlined"
+                          />
+                        </Box>
                       </Grid>
                     </Grid>
                     {errors.submit && (

@@ -18,7 +18,7 @@ import {
   TextField,
   Typography
 } from '@material-ui/core';
-import { API, graphqlOperation } from 'aws-amplify';
+import { API, graphqlOperation, Storage } from 'aws-amplify';
 import * as queries from '../../../../graphql/queries';
 import {
   updateProject,
@@ -30,6 +30,7 @@ import ProjectEditInfo from './ProjectEditInfo';
 import { Add, CameraAlt } from '@material-ui/icons';
 import ProjectUpdateList from './ProjectUpdateList';
 import ProjectVideoAdd from '../project-create/ProjectVideoAdd';
+import ProjectImageModal from './ProjectImageModal';
 
 const offset = 5;
 
@@ -38,6 +39,8 @@ const ProjectEdit_v2 = (props) => {
 
   const [ showUpdate, setShowUpdate ] = useState(false);
   const [ showUpload, setShowUpload ] = useState(false);
+  const [ featImage, setFeatImage ] = useState();
+  const [isApplicationOpen, setIsApplicationOpen] = useState(false);
   // const { user } = useAuth();
   // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
@@ -66,9 +69,36 @@ const ProjectEdit_v2 = (props) => {
     return randomFeat;
   }
 
-  // useEffect(() => {
-  //   getUserInfo();
-  // }, []);
+  useEffect(() => {
+    featuredImg();
+    console.log("HELLO")
+  }, [])
+
+  const featuredImg = async () => {
+    if (featImage === null) {
+        featImg();
+        console.log('featImg', featImg)
+        return;
+    }
+
+    const imageFilePath = `${project.id}/featuredImg`;
+    try {
+        const fileAccessURL = await Storage.listObjects();
+        console.log('access url', fileAccessURL);
+        setFeatImage(fileAccessURL);
+        return;
+    } catch (error) {
+        console.error('error accessing the file from s3', error);
+    }
+};
+
+  const handleApplyModalOpen = () => {
+    setIsApplicationOpen(true);
+  };
+
+  const handleApplyModalClose = () => {
+    setIsApplicationOpen(false);
+  };
 
   return (
     <Grid
@@ -80,12 +110,13 @@ const ProjectEdit_v2 = (props) => {
       <Grid
         item
         sx={{
-          backgroundImage: `url(${featImg()})`,
+          backgroundImage: featImage,
           backgroundSize: 'cover',
           height: 300
         }}
         xs={12}
       >
+        <img height="300px" src={featImage} alt='' />
         <Grid container justifyContent="space-between">
           <Grid
             item
@@ -142,7 +173,11 @@ const ProjectEdit_v2 = (props) => {
             align="right"
             pr={2}
           >
-            <Avatar sx={{ backgroundColor: 'brand.primary0' }}><IconButton><CameraAlt sx={{ color: 'brand.primary2' }} /></IconButton></Avatar>
+            <Avatar sx={{ backgroundColor: 'brand.primary0' }}>
+              <IconButton onClick={handleApplyModalOpen}>
+                <CameraAlt sx={{ color: 'brand.primary2' }} />
+              </IconButton>
+            </Avatar>
             {/* <Button variant="contained" color="secondary">Change Image</Button>             */}
           </Grid>
           <ProjectEditInfo project={project} user={user} overlap={5} />
@@ -165,6 +200,15 @@ const ProjectEdit_v2 = (props) => {
               </Grid>
             </Grid>
           )}
+            <ProjectImageModal
+              // authorAvatar={project.author.avatar}
+              // authorName={project.author.name}
+              onApply={handleApplyModalClose}
+              onClose={handleApplyModalClose}
+              open={isApplicationOpen}
+              project={project}
+              user={user}
+            />
         </Grid>
       </Grid>
     </Grid>

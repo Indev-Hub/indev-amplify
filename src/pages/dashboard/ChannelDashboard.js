@@ -37,29 +37,33 @@ import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
 import { updateChannel } from '../../graphql/mutations';
-import { getChannel } from '../../graphql/queries';
+import { getUser } from '../../graphql/queries';
 import { getChannelByManager } from 'src/graphql/customQueries';
 // import ChannelAdd from '../../components/dashboard/channel/channel-create/ChannelAdd';
 
 const ChannelDashboard = (props) => {
   const { settings } = useSettings();
   const { user } = useAuth();
-  const [channelInfo, setChannelInfo] = useState([]);
   const [connectFetch, setConnectFetch] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
-  const getChannelInfo = async () => {
+  // Set state for User table
+  const [userData, setUserData] = useState([]);
+
+  // Load User table data
+  useEffect(() => {
+    gtm.push({ event: 'page_view' });
+    getUserInfo();
+  }, []);
+
+  const getUserInfo = async () => {
     try {
-      console.log('user', user.id);
-      console.log('channel info', channelInfo);
-      // console.log('getChannelByManager', getChannelByManager, queries.getChannelByManager);
-      const channelData = await API.graphql(graphqlOperation(getChannelByManager , { id: user.id }));
-      
-      console.log('channel data', channelData.data.getChannel);
-      setChannelInfo(channelData.data.getChannel);
-      console.log('channel info after setChannelInfo', channelInfo)
+      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+      const userList = userData.data.getUser;
+      setUserData(userList);
+      console.log('list', userList);
     } catch (error) {
-      console.log('error on fetching channel', error);
+      console.log('error on fetching user', error);
     }
   };
 
@@ -83,13 +87,6 @@ const ChannelDashboard = (props) => {
         }
       });
   }
-
-  useEffect(() => {
-    getChannelInfo();
-    gtm.push({ event: 'page_view' });
-
-    console.log('channel info after setChannelInfo', channelInfo)
-  }, []);
 
   return (
     <>

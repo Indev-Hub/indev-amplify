@@ -82,10 +82,10 @@ const ProjectDashboardEdit = (props) => {
             sx={{
               backgroundColor: 'background.default',
               minHeight: '100%',
-              py: 8
+              py: 0
             }}
           >
-            <Container maxWidth={settings.compact ? 'xl' : false}>
+            {/* <Container maxWidth={settings.compact ? 'xl' : false}> */}
               <Grid
                 alignItems="center"
                 container
@@ -93,7 +93,7 @@ const ProjectDashboardEdit = (props) => {
                 spacing={0}
                 {...props}
               >
-                <Grid item>
+                {/* <Grid item>
                   <Typography
                     color="textPrimary"
                     variant="h5"
@@ -133,13 +133,13 @@ const ProjectDashboardEdit = (props) => {
                       {projectData.name}
                     </Typography>
                   </Breadcrumbs>
-                </Grid>
+                </Grid> */}
               </Grid>
               <Box sx={{ mt: 3 }}>
                 {/* <UpdateAdd2 project={projectData} user={userData} /> */}
                 <ProjectEdit_v2 project={projectData} user={userData} />
               </Box>
-            </Container>
+            {/* </Container> */}
           </Box>
         </>
       )}

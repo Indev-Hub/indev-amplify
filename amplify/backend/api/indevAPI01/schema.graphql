@@ -9,7 +9,7 @@ type Channel @model {
   operator: String 
   target: Int
   projects: [Project] @connection(name: "ProjectsToChannel")
-  featuredImg: S3Object
+  featuredImg: String
 }
 
 type User @model
@@ -29,6 +29,7 @@ type User @model
   developing: [Project]
   channel: Channel @connection
   role: String
+  avatar: String
 }
 
 type Project @model {
@@ -59,7 +60,7 @@ type Update
   short: String
   content: String
   format: [String]
-  coverImg: S3Object
+  coverImg: String
   index: Int
 }
 

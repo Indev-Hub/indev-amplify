@@ -47,6 +47,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -71,10 +72,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -99,11 +102,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -122,6 +121,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -133,11 +133,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -158,6 +154,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -182,10 +179,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -205,6 +204,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -229,10 +229,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -259,6 +261,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -287,6 +290,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -311,10 +315,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -339,15 +345,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -372,6 +375,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -383,11 +387,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -408,6 +408,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -432,10 +433,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -455,6 +458,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -479,10 +483,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -509,6 +515,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -520,11 +527,7 @@ export const createChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -554,6 +557,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -565,11 +569,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -584,6 +584,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -597,6 +598,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -609,6 +611,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -645,6 +648,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -656,15 +660,12 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -685,6 +686,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -698,6 +700,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -710,6 +713,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -736,11 +740,7 @@ export const createChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -772,6 +772,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -796,10 +797,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -824,11 +827,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -847,6 +846,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -858,11 +858,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -883,6 +879,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -907,10 +904,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -930,6 +929,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -954,10 +954,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -984,6 +986,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -1012,6 +1015,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1036,10 +1040,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1064,15 +1070,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -1103,6 +1106,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1127,10 +1131,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1155,11 +1161,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -1178,6 +1180,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -1189,11 +1192,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -1214,6 +1213,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1238,10 +1238,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1261,6 +1263,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1285,10 +1288,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1315,6 +1320,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -1343,6 +1349,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1367,10 +1374,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1395,15 +1404,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -1436,6 +1442,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1449,6 +1456,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -1461,6 +1469,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -1502,6 +1511,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1526,10 +1536,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1537,11 +1549,7 @@ export const createChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -1581,6 +1589,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1605,10 +1614,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1633,11 +1644,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -1656,6 +1663,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -1667,11 +1675,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -1692,6 +1696,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1716,10 +1721,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1739,6 +1746,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1763,10 +1771,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1793,6 +1803,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -1821,6 +1832,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1845,10 +1857,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1873,15 +1887,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -1906,6 +1917,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -1917,11 +1929,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -1942,6 +1950,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -1966,10 +1975,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -1989,6 +2000,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2013,10 +2025,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2043,6 +2057,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -2054,15 +2069,12 @@ export const createChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -2098,6 +2110,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2109,11 +2122,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -2128,6 +2137,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2141,6 +2151,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2153,6 +2164,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2189,6 +2201,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2200,15 +2213,12 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -2229,6 +2239,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2242,6 +2253,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2254,6 +2266,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2280,11 +2293,7 @@ export const createChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -2316,6 +2325,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2340,10 +2350,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2368,11 +2380,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -2391,6 +2399,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2402,11 +2411,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -2427,6 +2432,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2451,10 +2457,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2474,6 +2482,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2498,10 +2507,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2528,6 +2539,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -2556,6 +2568,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2580,10 +2593,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2608,15 +2623,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -2647,6 +2659,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2671,10 +2684,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2699,11 +2714,7 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -2722,6 +2733,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -2733,11 +2745,7 @@ export const createChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -2758,6 +2766,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2782,10 +2791,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2805,6 +2816,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2829,10 +2841,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2859,6 +2873,7 @@ export const createChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -2887,6 +2902,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2911,10 +2927,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -2939,15 +2957,12 @@ export const createChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -2980,6 +2995,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -2993,6 +3009,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3005,6 +3022,7 @@ export const createChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3046,6 +3064,7 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3070,10 +3089,12 @@ export const createChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3081,11 +3102,7 @@ export const createChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -3097,11 +3114,7 @@ export const createChannel = /* GraphQL */ `
         }
         nextToken
       }
-      featuredImg {
-        bucket
-        key
-        region
-      }
+      featuredImg
       createdAt
       updatedAt
     }
@@ -3153,6 +3166,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3177,10 +3191,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3205,11 +3221,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -3228,6 +3240,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3239,11 +3252,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -3264,6 +3273,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3288,10 +3298,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3311,6 +3323,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3335,10 +3348,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3365,6 +3380,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -3393,6 +3409,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3417,10 +3434,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3445,15 +3464,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -3478,6 +3494,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3489,11 +3506,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -3514,6 +3527,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3538,10 +3552,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3561,6 +3577,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3585,10 +3602,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3615,6 +3634,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -3626,11 +3646,7 @@ export const updateChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -3660,6 +3676,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3671,11 +3688,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -3690,6 +3703,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3703,6 +3717,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3715,6 +3730,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3751,6 +3767,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3762,15 +3779,12 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -3791,6 +3805,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3804,6 +3819,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3816,6 +3832,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3842,11 +3859,7 @@ export const updateChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -3878,6 +3891,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -3902,10 +3916,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -3930,11 +3946,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -3953,6 +3965,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -3964,11 +3977,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -3989,6 +3998,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4013,10 +4023,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4036,6 +4048,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4060,10 +4073,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4090,6 +4105,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -4118,6 +4134,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4142,10 +4159,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4170,15 +4189,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -4209,6 +4225,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4233,10 +4250,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4261,11 +4280,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -4284,6 +4299,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -4295,11 +4311,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -4320,6 +4332,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4344,10 +4357,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4367,6 +4382,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4391,10 +4407,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4421,6 +4439,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -4449,6 +4468,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4473,10 +4493,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4501,15 +4523,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -4542,6 +4561,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4555,6 +4575,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -4567,6 +4588,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -4608,6 +4630,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4632,10 +4655,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4643,11 +4668,7 @@ export const updateChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -4687,6 +4708,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4711,10 +4733,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4739,11 +4763,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -4762,6 +4782,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -4773,11 +4794,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -4798,6 +4815,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4822,10 +4840,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4845,6 +4865,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4869,10 +4890,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4899,6 +4922,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -4927,6 +4951,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -4951,10 +4976,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -4979,15 +5006,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -5012,6 +5036,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5023,11 +5048,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -5048,6 +5069,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5072,10 +5094,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5095,6 +5119,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5119,10 +5144,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5149,6 +5176,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -5160,15 +5188,12 @@ export const updateChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -5204,6 +5229,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5215,11 +5241,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -5234,6 +5256,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5247,6 +5270,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5259,6 +5283,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5295,6 +5320,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5306,15 +5332,12 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -5335,6 +5358,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5348,6 +5372,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5360,6 +5385,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5386,11 +5412,7 @@ export const updateChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -5422,6 +5444,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5446,10 +5469,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5474,11 +5499,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -5497,6 +5518,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5508,11 +5530,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -5533,6 +5551,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5557,10 +5576,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5580,6 +5601,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5604,10 +5626,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5634,6 +5658,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -5662,6 +5687,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5686,10 +5712,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5714,15 +5742,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -5753,6 +5778,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5777,10 +5803,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5805,11 +5833,7 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -5828,6 +5852,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -5839,11 +5864,7 @@ export const updateChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -5864,6 +5885,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5888,10 +5910,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5911,6 +5935,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -5935,10 +5960,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -5965,6 +5992,7 @@ export const updateChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -5993,6 +6021,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6017,10 +6046,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6045,15 +6076,12 @@ export const updateChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -6086,6 +6114,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6099,6 +6128,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6111,6 +6141,7 @@ export const updateChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6152,6 +6183,7 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6176,10 +6208,12 @@ export const updateChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6187,11 +6221,7 @@ export const updateChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -6203,11 +6233,7 @@ export const updateChannel = /* GraphQL */ `
         }
         nextToken
       }
-      featuredImg {
-        bucket
-        key
-        region
-      }
+      featuredImg
       createdAt
       updatedAt
     }
@@ -6259,6 +6285,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6283,10 +6310,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6311,11 +6340,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -6334,6 +6359,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6345,11 +6371,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -6370,6 +6392,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6394,10 +6417,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6417,6 +6442,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6441,10 +6467,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6471,6 +6499,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -6499,6 +6528,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6523,10 +6553,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6551,15 +6583,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -6584,6 +6613,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6595,11 +6625,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -6620,6 +6646,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6644,10 +6671,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6667,6 +6696,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6691,10 +6721,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -6721,6 +6753,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -6732,11 +6765,7 @@ export const deleteChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -6766,6 +6795,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6777,11 +6807,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -6796,6 +6822,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6809,6 +6836,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6821,6 +6849,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6857,6 +6886,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6868,15 +6898,12 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -6897,6 +6924,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -6910,6 +6938,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6922,6 +6951,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -6948,11 +6978,7 @@ export const deleteChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -6984,6 +7010,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7008,10 +7035,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7036,11 +7065,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -7059,6 +7084,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -7070,11 +7096,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -7095,6 +7117,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7119,10 +7142,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7142,6 +7167,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7166,10 +7192,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7196,6 +7224,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -7224,6 +7253,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7248,10 +7278,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7276,15 +7308,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -7315,6 +7344,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7339,10 +7369,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7367,11 +7399,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -7390,6 +7418,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -7401,11 +7430,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -7426,6 +7451,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7450,10 +7476,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7473,6 +7501,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7497,10 +7526,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7527,6 +7558,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -7555,6 +7587,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7579,10 +7612,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7607,15 +7642,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -7648,6 +7680,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7661,6 +7694,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -7673,6 +7707,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -7714,6 +7749,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7738,10 +7774,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7749,11 +7787,7 @@ export const deleteChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -7793,6 +7827,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7817,10 +7852,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7845,11 +7882,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -7868,6 +7901,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -7879,11 +7913,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -7904,6 +7934,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7928,10 +7959,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -7951,6 +7984,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -7975,10 +8009,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8005,6 +8041,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -8033,6 +8070,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8057,10 +8095,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8085,15 +8125,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -8118,6 +8155,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8129,11 +8167,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -8154,6 +8188,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8178,10 +8213,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8201,6 +8238,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8225,10 +8263,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8255,6 +8295,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -8266,15 +8307,12 @@ export const deleteChannel = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -8310,6 +8348,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8321,11 +8360,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -8340,6 +8375,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8353,6 +8389,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8365,6 +8402,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8401,6 +8439,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8412,15 +8451,12 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -8441,6 +8477,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8454,6 +8491,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8466,6 +8504,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8492,11 +8531,7 @@ export const deleteChannel = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -8528,6 +8563,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8552,10 +8588,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8580,11 +8618,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -8603,6 +8637,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8614,11 +8649,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -8639,6 +8670,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8663,10 +8695,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8686,6 +8720,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8710,10 +8745,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8740,6 +8777,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -8768,6 +8806,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8792,10 +8831,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8820,15 +8861,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -8859,6 +8897,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8883,10 +8922,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -8911,11 +8952,7 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -8934,6 +8971,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -8945,11 +8983,7 @@ export const deleteChannel = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -8970,6 +9004,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -8994,10 +9029,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -9017,6 +9054,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9041,10 +9079,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -9071,6 +9111,7 @@ export const deleteChannel = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -9099,6 +9140,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9123,10 +9165,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -9151,15 +9195,12 @@ export const deleteChannel = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -9192,6 +9233,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9205,6 +9247,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9217,6 +9260,7 @@ export const deleteChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9258,6 +9302,7 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9282,10 +9327,12 @@ export const deleteChannel = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -9293,11 +9340,7 @@ export const deleteChannel = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -9309,11 +9352,7 @@ export const deleteChannel = /* GraphQL */ `
         }
         nextToken
       }
-      featuredImg {
-        bucket
-        key
-        region
-      }
+      featuredImg
       createdAt
       updatedAt
     }
@@ -9366,6 +9405,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9377,11 +9417,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -9396,6 +9432,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9409,6 +9446,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9421,6 +9459,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9457,6 +9496,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9468,15 +9508,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -9497,6 +9534,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9510,6 +9548,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9522,6 +9561,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9548,11 +9588,7 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -9578,6 +9614,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9602,10 +9639,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -9630,11 +9669,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -9659,6 +9694,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9670,11 +9706,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -9689,6 +9721,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9702,6 +9735,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9714,6 +9748,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9750,6 +9785,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9761,15 +9797,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -9793,6 +9826,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9804,11 +9838,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -9823,6 +9853,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -9836,6 +9867,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9848,6 +9880,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9884,6 +9917,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9895,15 +9929,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -9948,6 +9979,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -9955,11 +9987,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -9992,6 +10020,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10003,11 +10032,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -10022,6 +10047,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10035,6 +10061,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10047,6 +10074,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10083,6 +10111,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10094,15 +10123,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -10123,6 +10149,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10136,6 +10163,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10148,6 +10176,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10174,15 +10203,12 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -10214,6 +10240,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10238,10 +10265,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -10266,11 +10295,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -10295,6 +10320,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10306,11 +10332,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -10325,6 +10347,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10338,6 +10361,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10350,6 +10374,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10386,6 +10411,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10397,15 +10423,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -10429,6 +10452,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10440,11 +10464,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -10459,6 +10479,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10472,6 +10493,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10484,6 +10506,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10520,6 +10543,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10531,15 +10555,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -10584,6 +10605,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10591,11 +10613,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -10607,11 +10625,7 @@ export const createUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -10648,6 +10662,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10672,10 +10687,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -10700,11 +10717,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -10723,6 +10736,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10734,11 +10748,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -10759,6 +10769,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10783,10 +10794,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -10806,6 +10819,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10830,10 +10844,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -10860,6 +10876,7 @@ export const createUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -10888,6 +10905,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -10912,10 +10930,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -10940,15 +10960,12 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -10973,6 +10990,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -10984,11 +11002,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -11009,6 +11023,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11033,10 +11048,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -11056,6 +11073,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11080,10 +11098,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -11110,6 +11130,7 @@ export const createUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -11121,11 +11142,7 @@ export const createUser = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -11161,6 +11178,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11172,11 +11190,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -11191,6 +11205,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11204,6 +11219,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11216,6 +11232,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11252,6 +11269,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11263,15 +11281,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -11292,6 +11307,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11305,6 +11321,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11317,6 +11334,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11343,11 +11361,7 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -11373,6 +11387,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11397,10 +11412,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -11425,11 +11442,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -11454,6 +11467,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11465,11 +11479,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -11484,6 +11494,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11497,6 +11508,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11509,6 +11521,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11545,6 +11558,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11556,15 +11570,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -11588,6 +11599,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11599,11 +11611,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -11618,6 +11626,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11631,6 +11640,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11643,6 +11653,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11679,6 +11690,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11690,15 +11702,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -11743,6 +11752,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11750,11 +11760,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -11787,6 +11793,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11798,11 +11805,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -11817,6 +11820,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11830,6 +11834,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11842,6 +11847,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11878,6 +11884,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11889,15 +11896,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -11918,6 +11922,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -11931,6 +11936,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11943,6 +11949,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -11969,15 +11976,12 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -12012,6 +12016,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12023,11 +12028,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -12042,6 +12043,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12055,6 +12057,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12067,6 +12070,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12103,6 +12107,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12114,15 +12119,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -12143,6 +12145,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12156,6 +12159,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12168,6 +12172,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12194,11 +12199,7 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -12224,6 +12225,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12248,10 +12250,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -12276,11 +12280,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -12305,6 +12305,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12316,11 +12317,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -12335,6 +12332,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12348,6 +12346,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12360,6 +12359,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12396,6 +12396,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12407,15 +12408,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -12439,6 +12437,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12450,11 +12449,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -12469,6 +12464,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12482,6 +12478,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12494,6 +12491,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12530,6 +12528,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12541,15 +12540,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -12594,6 +12590,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12601,11 +12598,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -12638,6 +12631,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12649,11 +12643,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -12668,6 +12658,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12681,6 +12672,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12693,6 +12685,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12729,6 +12722,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12740,15 +12734,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -12769,6 +12760,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12782,6 +12774,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12794,6 +12787,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12820,15 +12814,12 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -12865,6 +12856,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -12876,11 +12868,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -12901,6 +12889,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12925,10 +12914,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -12948,6 +12939,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -12972,10 +12964,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -13002,6 +12996,7 @@ export const createUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -13032,6 +13027,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13043,11 +13039,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -13062,6 +13054,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13075,6 +13068,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13087,6 +13081,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13123,6 +13118,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13134,15 +13130,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -13150,11 +13143,7 @@ export const createUser = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -13198,6 +13187,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13209,11 +13199,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -13228,6 +13214,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13241,6 +13228,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13253,6 +13241,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13289,6 +13278,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13300,15 +13290,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -13329,6 +13316,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13342,6 +13330,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13354,6 +13343,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13380,11 +13370,7 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -13410,6 +13396,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13434,10 +13421,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -13462,11 +13451,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -13491,6 +13476,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13502,11 +13488,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -13521,6 +13503,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13534,6 +13517,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13546,6 +13530,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13582,6 +13567,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13593,15 +13579,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -13625,6 +13608,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13636,11 +13620,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -13655,6 +13635,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13668,6 +13649,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13680,6 +13662,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13716,6 +13699,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13727,15 +13711,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -13780,6 +13761,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13787,11 +13769,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -13824,6 +13802,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13835,11 +13814,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -13854,6 +13829,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13867,6 +13843,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13879,6 +13856,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13915,6 +13893,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13926,15 +13905,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -13955,6 +13931,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -13968,6 +13945,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -13980,6 +13958,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14006,15 +13985,12 @@ export const createUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -14046,6 +14022,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14070,10 +14047,12 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -14098,11 +14077,7 @@ export const createUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -14127,6 +14102,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14138,11 +14114,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -14157,6 +14129,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14170,6 +14143,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14182,6 +14156,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14218,6 +14193,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14229,15 +14205,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -14261,6 +14234,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14272,11 +14246,7 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -14291,6 +14261,7 @@ export const createUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14304,6 +14275,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14316,6 +14288,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14352,6 +14325,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14363,15 +14337,12 @@ export const createUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -14416,6 +14387,7 @@ export const createUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14423,11 +14395,7 @@ export const createUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -14439,15 +14407,12 @@ export const createUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
       role
+      avatar
       createdAt
       updatedAt
     }
@@ -14500,6 +14465,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14511,11 +14477,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -14530,6 +14492,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14543,6 +14506,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14555,6 +14519,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14591,6 +14556,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14602,15 +14568,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -14631,6 +14594,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14644,6 +14608,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14656,6 +14621,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14682,11 +14648,7 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -14712,6 +14674,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14736,10 +14699,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -14764,11 +14729,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -14793,6 +14754,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14804,11 +14766,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -14823,6 +14781,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14836,6 +14795,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14848,6 +14808,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14884,6 +14845,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14895,15 +14857,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -14927,6 +14886,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14938,11 +14898,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -14957,6 +14913,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -14970,6 +14927,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -14982,6 +14940,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15018,6 +14977,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15029,15 +14989,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -15082,6 +15039,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15089,11 +15047,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -15126,6 +15080,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15137,11 +15092,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -15156,6 +15107,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15169,6 +15121,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15181,6 +15134,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15217,6 +15171,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15228,15 +15183,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -15257,6 +15209,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15270,6 +15223,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15282,6 +15236,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15308,15 +15263,12 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -15348,6 +15300,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15372,10 +15325,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -15400,11 +15355,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -15429,6 +15380,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15440,11 +15392,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -15459,6 +15407,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15472,6 +15421,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15484,6 +15434,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15520,6 +15471,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15531,15 +15483,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -15563,6 +15512,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15574,11 +15524,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -15593,6 +15539,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15606,6 +15553,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15618,6 +15566,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15654,6 +15603,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15665,15 +15615,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -15718,6 +15665,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15725,11 +15673,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -15741,11 +15685,7 @@ export const updateUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -15782,6 +15722,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15806,10 +15747,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -15834,11 +15777,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -15857,6 +15796,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -15868,11 +15808,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -15893,6 +15829,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15917,10 +15854,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -15940,6 +15879,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -15964,10 +15904,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -15994,6 +15936,7 @@ export const updateUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -16022,6 +15965,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16046,10 +15990,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -16074,15 +16020,12 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -16107,6 +16050,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16118,11 +16062,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -16143,6 +16083,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16167,10 +16108,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -16190,6 +16133,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16214,10 +16158,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -16244,6 +16190,7 @@ export const updateUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -16255,11 +16202,7 @@ export const updateUser = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -16295,6 +16238,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16306,11 +16250,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -16325,6 +16265,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16338,6 +16279,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16350,6 +16292,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16386,6 +16329,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16397,15 +16341,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -16426,6 +16367,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16439,6 +16381,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16451,6 +16394,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16477,11 +16421,7 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -16507,6 +16447,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16531,10 +16472,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -16559,11 +16502,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -16588,6 +16527,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16599,11 +16539,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -16618,6 +16554,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16631,6 +16568,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16643,6 +16581,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16679,6 +16618,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16690,15 +16630,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -16722,6 +16659,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16733,11 +16671,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -16752,6 +16686,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16765,6 +16700,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16777,6 +16713,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16813,6 +16750,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16824,15 +16762,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -16877,6 +16812,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16884,11 +16820,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -16921,6 +16853,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16932,11 +16865,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -16951,6 +16880,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -16964,6 +16894,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -16976,6 +16907,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17012,6 +16944,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17023,15 +16956,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -17052,6 +16982,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17065,6 +16996,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17077,6 +17009,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17103,15 +17036,12 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -17146,6 +17076,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17157,11 +17088,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -17176,6 +17103,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17189,6 +17117,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17201,6 +17130,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17237,6 +17167,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17248,15 +17179,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -17277,6 +17205,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17290,6 +17219,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17302,6 +17232,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17328,11 +17259,7 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -17358,6 +17285,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17382,10 +17310,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -17410,11 +17340,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -17439,6 +17365,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17450,11 +17377,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -17469,6 +17392,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17482,6 +17406,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17494,6 +17419,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17530,6 +17456,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17541,15 +17468,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -17573,6 +17497,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17584,11 +17509,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -17603,6 +17524,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17616,6 +17538,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17628,6 +17551,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17664,6 +17588,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17675,15 +17600,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -17728,6 +17650,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17735,11 +17658,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -17772,6 +17691,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17783,11 +17703,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -17802,6 +17718,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17815,6 +17732,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17827,6 +17745,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17863,6 +17782,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17874,15 +17794,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -17903,6 +17820,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -17916,6 +17834,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17928,6 +17847,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -17954,15 +17874,12 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -17999,6 +17916,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18010,11 +17928,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18035,6 +17949,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18059,10 +17974,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -18082,6 +17999,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18106,10 +18024,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -18136,6 +18056,7 @@ export const updateUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -18166,6 +18087,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18177,11 +18099,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18196,6 +18114,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18209,6 +18128,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18221,6 +18141,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18257,6 +18178,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18268,15 +18190,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -18284,11 +18203,7 @@ export const updateUser = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -18332,6 +18247,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18343,11 +18259,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18362,6 +18274,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18375,6 +18288,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18387,6 +18301,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18423,6 +18338,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18434,15 +18350,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -18463,6 +18376,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18476,6 +18390,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18488,6 +18403,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18514,11 +18430,7 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -18544,6 +18456,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18568,10 +18481,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -18596,11 +18511,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -18625,6 +18536,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18636,11 +18548,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18655,6 +18563,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18668,6 +18577,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18680,6 +18590,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18716,6 +18627,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18727,15 +18639,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -18759,6 +18668,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18770,11 +18680,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18789,6 +18695,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -18802,6 +18709,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18814,6 +18722,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18850,6 +18759,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18861,15 +18771,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -18914,6 +18821,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18921,11 +18829,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -18958,6 +18862,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -18969,11 +18874,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -18988,6 +18889,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19001,6 +18903,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19013,6 +18916,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19049,6 +18953,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19060,15 +18965,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -19089,6 +18991,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19102,6 +19005,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19114,6 +19018,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19140,15 +19045,12 @@ export const updateUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -19180,6 +19082,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19204,10 +19107,12 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -19232,11 +19137,7 @@ export const updateUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -19261,6 +19162,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19272,11 +19174,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -19291,6 +19189,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19304,6 +19203,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19316,6 +19216,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19352,6 +19253,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19363,15 +19265,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -19395,6 +19294,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19406,11 +19306,7 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -19425,6 +19321,7 @@ export const updateUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19438,6 +19335,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19450,6 +19348,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19486,6 +19385,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19497,15 +19397,12 @@ export const updateUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -19550,6 +19447,7 @@ export const updateUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19557,11 +19455,7 @@ export const updateUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -19573,15 +19467,12 @@ export const updateUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
       role
+      avatar
       createdAt
       updatedAt
     }
@@ -19634,6 +19525,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19645,11 +19537,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -19664,6 +19552,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19677,6 +19566,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19689,6 +19579,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19725,6 +19616,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19736,15 +19628,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -19765,6 +19654,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19778,6 +19668,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19790,6 +19681,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19816,11 +19708,7 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -19846,6 +19734,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19870,10 +19759,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -19898,11 +19789,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -19927,6 +19814,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19938,11 +19826,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -19957,6 +19841,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -19970,6 +19855,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -19982,6 +19868,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20018,6 +19905,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20029,15 +19917,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -20061,6 +19946,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20072,11 +19958,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -20091,6 +19973,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20104,6 +19987,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20116,6 +20000,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20152,6 +20037,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20163,15 +20049,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -20216,6 +20099,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20223,11 +20107,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -20260,6 +20140,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20271,11 +20152,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -20290,6 +20167,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20303,6 +20181,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20315,6 +20194,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20351,6 +20231,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20362,15 +20243,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -20391,6 +20269,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20404,6 +20283,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20416,6 +20296,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20442,15 +20323,12 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -20482,6 +20360,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20506,10 +20385,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -20534,11 +20415,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -20563,6 +20440,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20574,11 +20452,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -20593,6 +20467,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20606,6 +20481,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20618,6 +20494,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20654,6 +20531,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20665,15 +20543,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -20697,6 +20572,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20708,11 +20584,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -20727,6 +20599,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20740,6 +20613,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20752,6 +20626,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20788,6 +20663,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20799,15 +20675,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -20852,6 +20725,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -20859,11 +20733,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -20875,11 +20745,7 @@ export const deleteUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -20916,6 +20782,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -20940,10 +20807,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -20968,11 +20837,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -20991,6 +20856,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21002,11 +20868,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -21027,6 +20889,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21051,10 +20914,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21074,6 +20939,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21098,10 +20964,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21128,6 +20996,7 @@ export const deleteUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -21156,6 +21025,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21180,10 +21050,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21208,15 +21080,12 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -21241,6 +21110,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21252,11 +21122,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -21277,6 +21143,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21301,10 +21168,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21324,6 +21193,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21348,10 +21218,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21378,6 +21250,7 @@ export const deleteUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -21389,11 +21262,7 @@ export const deleteUser = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -21429,6 +21298,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21440,11 +21310,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -21459,6 +21325,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21472,6 +21339,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21484,6 +21352,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21520,6 +21389,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21531,15 +21401,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -21560,6 +21427,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21573,6 +21441,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21585,6 +21454,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21611,11 +21481,7 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -21641,6 +21507,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21665,10 +21532,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -21693,11 +21562,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -21722,6 +21587,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21733,11 +21599,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -21752,6 +21614,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21765,6 +21628,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21777,6 +21641,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21813,6 +21678,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21824,15 +21690,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -21856,6 +21719,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21867,11 +21731,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -21886,6 +21746,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -21899,6 +21760,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21911,6 +21773,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21947,6 +21810,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -21958,15 +21822,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -22011,6 +21872,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22018,11 +21880,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -22055,6 +21913,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22066,11 +21925,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -22085,6 +21940,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22098,6 +21954,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22110,6 +21967,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22146,6 +22004,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22157,15 +22016,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -22186,6 +22042,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22199,6 +22056,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22211,6 +22069,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22237,15 +22096,12 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -22280,6 +22136,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22291,11 +22148,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -22310,6 +22163,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22323,6 +22177,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22335,6 +22190,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22371,6 +22227,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22382,15 +22239,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -22411,6 +22265,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22424,6 +22279,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22436,6 +22292,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22462,11 +22319,7 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -22492,6 +22345,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22516,10 +22370,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -22544,11 +22400,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -22573,6 +22425,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22584,11 +22437,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -22603,6 +22452,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22616,6 +22466,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22628,6 +22479,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22664,6 +22516,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22675,15 +22528,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -22707,6 +22557,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22718,11 +22569,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -22737,6 +22584,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22750,6 +22598,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22762,6 +22611,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22798,6 +22648,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22809,15 +22660,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -22862,6 +22710,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22869,11 +22718,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -22906,6 +22751,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22917,11 +22763,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -22936,6 +22778,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -22949,6 +22792,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22961,6 +22805,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -22997,6 +22842,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23008,15 +22854,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -23037,6 +22880,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23050,6 +22894,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23062,6 +22907,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23088,15 +22934,12 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -23133,6 +22976,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23144,11 +22988,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -23169,6 +23009,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23193,10 +23034,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -23216,6 +23059,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23240,10 +23084,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -23270,6 +23116,7 @@ export const deleteUser = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -23300,6 +23147,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23311,11 +23159,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -23330,6 +23174,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23343,6 +23188,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23355,6 +23201,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23391,6 +23238,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23402,15 +23250,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -23418,11 +23263,7 @@ export const deleteUser = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -23466,6 +23307,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23477,11 +23319,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -23496,6 +23334,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23509,6 +23348,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23521,6 +23361,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23557,6 +23398,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23568,15 +23410,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -23597,6 +23436,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23610,6 +23450,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23622,6 +23463,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23648,11 +23490,7 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -23678,6 +23516,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23702,10 +23541,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -23730,11 +23571,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -23759,6 +23596,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23770,11 +23608,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -23789,6 +23623,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23802,6 +23637,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23814,6 +23650,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23850,6 +23687,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23861,15 +23699,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -23893,6 +23728,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23904,11 +23740,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -23923,6 +23755,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -23936,6 +23769,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23948,6 +23782,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23984,6 +23819,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -23995,15 +23831,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -24048,6 +23881,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24055,11 +23889,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -24092,6 +23922,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24103,11 +23934,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -24122,6 +23949,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24135,6 +23963,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24147,6 +23976,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24183,6 +24013,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24194,15 +24025,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -24223,6 +24051,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24236,6 +24065,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24248,6 +24078,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24274,15 +24105,12 @@ export const deleteUser = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -24314,6 +24142,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24338,10 +24167,12 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -24366,11 +24197,7 @@ export const deleteUser = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -24395,6 +24222,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24406,11 +24234,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -24425,6 +24249,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24438,6 +24263,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24450,6 +24276,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24486,6 +24313,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24497,15 +24325,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -24529,6 +24354,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24540,11 +24366,7 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -24559,6 +24381,7 @@ export const deleteUser = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24572,6 +24395,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24584,6 +24408,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24620,6 +24445,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24631,15 +24457,12 @@ export const deleteUser = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -24684,6 +24507,7 @@ export const deleteUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24691,11 +24515,7 @@ export const deleteUser = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -24707,15 +24527,12 @@ export const deleteUser = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
       role
+      avatar
       createdAt
       updatedAt
     }
@@ -24763,6 +24580,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24774,11 +24592,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -24793,6 +24607,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24806,6 +24621,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24818,6 +24634,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24854,6 +24671,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24865,15 +24683,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -24894,6 +24709,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24907,6 +24723,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24919,6 +24736,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -24945,11 +24763,7 @@ export const createProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -24975,6 +24789,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -24999,10 +24814,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -25027,11 +24844,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -25056,6 +24869,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25067,11 +24881,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -25086,6 +24896,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25099,6 +24910,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25111,6 +24923,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25147,6 +24960,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25158,15 +24972,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -25190,6 +25001,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25201,11 +25013,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -25220,6 +25028,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25233,6 +25042,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25245,6 +25055,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25281,6 +25092,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25292,15 +25104,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -25345,6 +25154,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25352,11 +25162,7 @@ export const createProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -25389,6 +25195,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25400,11 +25207,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -25419,6 +25222,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25432,6 +25236,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25444,6 +25249,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25480,6 +25286,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25491,15 +25298,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -25520,6 +25324,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25533,6 +25338,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25545,6 +25351,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25571,15 +25378,12 @@ export const createProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -25611,6 +25415,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25635,10 +25440,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -25663,11 +25470,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -25692,6 +25495,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25703,11 +25507,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -25722,6 +25522,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25735,6 +25536,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25747,6 +25549,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25783,6 +25586,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25794,15 +25598,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -25826,6 +25627,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25837,11 +25639,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -25856,6 +25654,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -25869,6 +25668,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25881,6 +25681,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25917,6 +25718,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25928,15 +25730,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -25981,6 +25780,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -25988,11 +25788,7 @@ export const createProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -26004,11 +25800,7 @@ export const createProject = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -26051,6 +25843,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26075,10 +25868,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26103,11 +25898,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -26126,6 +25917,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26137,11 +25929,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -26162,6 +25950,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26186,10 +25975,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26209,6 +26000,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26233,10 +26025,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26263,6 +26057,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -26291,6 +26086,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26315,10 +26111,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26343,15 +26141,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -26376,6 +26171,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26387,11 +26183,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -26412,6 +26204,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26436,10 +26229,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26459,6 +26254,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26483,10 +26279,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26513,6 +26311,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -26524,11 +26323,7 @@ export const createProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -26558,6 +26353,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26569,11 +26365,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -26588,6 +26380,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26601,6 +26394,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26613,6 +26407,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26649,6 +26444,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26660,15 +26456,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -26689,6 +26482,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26702,6 +26496,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26714,6 +26509,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26740,11 +26536,7 @@ export const createProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -26776,6 +26568,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26800,10 +26593,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26828,11 +26623,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -26851,6 +26642,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -26862,11 +26654,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -26887,6 +26675,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26911,10 +26700,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26934,6 +26725,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -26958,10 +26750,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -26988,6 +26782,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -27016,6 +26811,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27040,10 +26836,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27068,15 +26866,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -27107,6 +26902,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27131,10 +26927,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27159,11 +26957,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -27182,6 +26976,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -27193,11 +26988,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -27218,6 +27009,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27242,10 +27034,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27265,6 +27059,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27289,10 +27084,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27319,6 +27116,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -27347,6 +27145,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27371,10 +27170,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27399,15 +27200,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -27440,6 +27238,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27453,6 +27252,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -27465,6 +27265,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -27506,6 +27307,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27530,10 +27332,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27541,11 +27345,7 @@ export const createProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -27585,6 +27385,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27609,10 +27410,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27637,11 +27440,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -27660,6 +27459,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -27671,11 +27471,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -27696,6 +27492,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27720,10 +27517,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27743,6 +27542,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27767,10 +27567,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27797,6 +27599,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -27825,6 +27628,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27849,10 +27653,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27877,15 +27683,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -27910,6 +27713,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -27921,11 +27725,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -27946,6 +27746,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -27970,10 +27771,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -27993,6 +27796,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28017,10 +27821,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28047,6 +27853,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -28058,15 +27865,12 @@ export const createProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -28108,6 +27912,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28132,10 +27937,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28160,11 +27967,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -28183,6 +27986,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28194,11 +27998,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -28219,6 +28019,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28243,10 +28044,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28266,6 +28069,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28290,10 +28094,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28320,6 +28126,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -28348,6 +28155,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28372,10 +28180,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28400,15 +28210,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -28433,6 +28240,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28444,11 +28252,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -28469,6 +28273,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28493,10 +28298,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28516,6 +28323,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28540,10 +28348,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28570,6 +28380,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -28581,11 +28392,7 @@ export const createProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -28615,6 +28422,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28626,11 +28434,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -28645,6 +28449,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28658,6 +28463,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28670,6 +28476,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28706,6 +28513,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28717,15 +28525,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -28746,6 +28551,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28759,6 +28565,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28771,6 +28578,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28797,11 +28605,7 @@ export const createProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -28833,6 +28637,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28857,10 +28662,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28885,11 +28692,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -28908,6 +28711,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -28919,11 +28723,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -28944,6 +28744,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -28968,10 +28769,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -28991,6 +28794,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29015,10 +28819,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29045,6 +28851,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -29073,6 +28880,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29097,10 +28905,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29125,15 +28935,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -29164,6 +28971,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29188,10 +28996,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29216,11 +29026,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -29239,6 +29045,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -29250,11 +29057,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -29275,6 +29078,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29299,10 +29103,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29322,6 +29128,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29346,10 +29153,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29376,6 +29185,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -29404,6 +29214,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29428,10 +29239,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29456,15 +29269,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -29497,6 +29307,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29510,6 +29321,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -29522,6 +29334,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -29563,6 +29376,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29587,10 +29401,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29598,11 +29414,7 @@ export const createProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -29642,6 +29454,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29666,10 +29479,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29694,11 +29509,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -29717,6 +29528,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -29728,11 +29540,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -29753,6 +29561,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29777,10 +29586,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29800,6 +29611,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29824,10 +29636,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29854,6 +29668,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -29882,6 +29697,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -29906,10 +29722,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -29934,15 +29752,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -29967,6 +29782,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -29978,11 +29794,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -30003,6 +29815,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30027,10 +29840,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30050,6 +29865,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30074,10 +29890,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30104,6 +29922,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -30115,15 +29934,12 @@ export const createProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -30167,6 +29983,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30191,10 +30008,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30219,11 +30038,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -30248,6 +30063,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30259,11 +30075,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -30278,6 +30090,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30291,6 +30104,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30303,6 +30117,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30339,6 +30154,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30350,15 +30166,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -30382,6 +30195,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30393,11 +30207,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -30412,6 +30222,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30425,6 +30236,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30437,6 +30249,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30473,6 +30286,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30484,15 +30298,12 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -30537,6 +30348,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30544,11 +30356,7 @@ export const createProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -30586,6 +30394,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30610,10 +30419,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30638,11 +30449,7 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -30661,6 +30468,7 @@ export const createProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30672,11 +30480,7 @@ export const createProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -30697,6 +30501,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30721,10 +30526,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30744,6 +30551,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30768,10 +30576,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30798,6 +30608,7 @@ export const createProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -30826,6 +30637,7 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30850,10 +30662,12 @@ export const createProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -30878,15 +30692,12 @@ export const createProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -30894,11 +30705,7 @@ export const createProject = /* GraphQL */ `
           short
           content
           format
-          coverImg {
-            bucket
-            key
-            region
-          }
+          coverImg
           index
           createdAt
           updatedAt
@@ -30952,6 +30759,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -30963,11 +30771,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -30982,6 +30786,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -30995,6 +30800,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31007,6 +30813,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31043,6 +30850,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31054,15 +30862,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -31083,6 +30888,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31096,6 +30902,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31108,6 +30915,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31134,11 +30942,7 @@ export const updateProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -31164,6 +30968,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31188,10 +30993,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -31216,11 +31023,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -31245,6 +31048,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31256,11 +31060,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -31275,6 +31075,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31288,6 +31089,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31300,6 +31102,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31336,6 +31139,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31347,15 +31151,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -31379,6 +31180,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31390,11 +31192,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -31409,6 +31207,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31422,6 +31221,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31434,6 +31234,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31470,6 +31271,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31481,15 +31283,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -31534,6 +31333,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31541,11 +31341,7 @@ export const updateProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -31578,6 +31374,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31589,11 +31386,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -31608,6 +31401,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31621,6 +31415,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31633,6 +31428,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31669,6 +31465,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31680,15 +31477,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -31709,6 +31503,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31722,6 +31517,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31734,6 +31530,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31760,15 +31557,12 @@ export const updateProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -31800,6 +31594,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31824,10 +31619,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -31852,11 +31649,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -31881,6 +31674,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31892,11 +31686,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -31911,6 +31701,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -31924,6 +31715,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31936,6 +31728,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31972,6 +31765,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -31983,15 +31777,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -32015,6 +31806,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32026,11 +31818,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -32045,6 +31833,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32058,6 +31847,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32070,6 +31860,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32106,6 +31897,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32117,15 +31909,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -32170,6 +31959,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32177,11 +31967,7 @@ export const updateProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -32193,11 +31979,7 @@ export const updateProject = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -32240,6 +32022,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32264,10 +32047,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32292,11 +32077,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -32315,6 +32096,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32326,11 +32108,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -32351,6 +32129,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32375,10 +32154,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32398,6 +32179,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32422,10 +32204,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32452,6 +32236,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -32480,6 +32265,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32504,10 +32290,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32532,15 +32320,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -32565,6 +32350,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32576,11 +32362,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -32601,6 +32383,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32625,10 +32408,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32648,6 +32433,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32672,10 +32458,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -32702,6 +32490,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -32713,11 +32502,7 @@ export const updateProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -32747,6 +32532,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32758,11 +32544,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -32777,6 +32559,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32790,6 +32573,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32802,6 +32586,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32838,6 +32623,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32849,15 +32635,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -32878,6 +32661,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32891,6 +32675,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32903,6 +32688,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -32929,11 +32715,7 @@ export const updateProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -32965,6 +32747,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -32989,10 +32772,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33017,11 +32802,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -33040,6 +32821,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -33051,11 +32833,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -33076,6 +32854,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33100,10 +32879,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33123,6 +32904,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33147,10 +32929,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33177,6 +32961,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -33205,6 +32990,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33229,10 +33015,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33257,15 +33045,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -33296,6 +33081,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33320,10 +33106,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33348,11 +33136,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -33371,6 +33155,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -33382,11 +33167,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -33407,6 +33188,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33431,10 +33213,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33454,6 +33238,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33478,10 +33263,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33508,6 +33295,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -33536,6 +33324,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33560,10 +33349,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33588,15 +33379,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -33629,6 +33417,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33642,6 +33431,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -33654,6 +33444,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -33695,6 +33486,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33719,10 +33511,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33730,11 +33524,7 @@ export const updateProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -33774,6 +33564,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33798,10 +33589,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33826,11 +33619,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -33849,6 +33638,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -33860,11 +33650,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -33885,6 +33671,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33909,10 +33696,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33932,6 +33721,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -33956,10 +33746,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -33986,6 +33778,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -34014,6 +33807,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34038,10 +33832,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34066,15 +33862,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -34099,6 +33892,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34110,11 +33904,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -34135,6 +33925,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34159,10 +33950,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34182,6 +33975,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34206,10 +34000,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34236,6 +34032,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -34247,15 +34044,12 @@ export const updateProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -34297,6 +34091,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34321,10 +34116,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34349,11 +34146,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -34372,6 +34165,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34383,11 +34177,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -34408,6 +34198,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34432,10 +34223,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34455,6 +34248,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34479,10 +34273,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34509,6 +34305,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -34537,6 +34334,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34561,10 +34359,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34589,15 +34389,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -34622,6 +34419,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34633,11 +34431,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -34658,6 +34452,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34682,10 +34477,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34705,6 +34502,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34729,10 +34527,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -34759,6 +34559,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -34770,11 +34571,7 @@ export const updateProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -34804,6 +34601,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34815,11 +34613,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -34834,6 +34628,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34847,6 +34642,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34859,6 +34655,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34895,6 +34692,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34906,15 +34704,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -34935,6 +34730,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -34948,6 +34744,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34960,6 +34757,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -34986,11 +34784,7 @@ export const updateProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -35022,6 +34816,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35046,10 +34841,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35074,11 +34871,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -35097,6 +34890,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -35108,11 +34902,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -35133,6 +34923,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35157,10 +34948,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35180,6 +34973,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35204,10 +34998,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35234,6 +35030,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -35262,6 +35059,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35286,10 +35084,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35314,15 +35114,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -35353,6 +35150,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35377,10 +35175,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35405,11 +35205,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -35428,6 +35224,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -35439,11 +35236,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -35464,6 +35257,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35488,10 +35282,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35511,6 +35307,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35535,10 +35332,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35565,6 +35364,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -35593,6 +35393,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35617,10 +35418,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35645,15 +35448,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -35686,6 +35486,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35699,6 +35500,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -35711,6 +35513,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -35752,6 +35555,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35776,10 +35580,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35787,11 +35593,7 @@ export const updateProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -35831,6 +35633,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35855,10 +35658,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35883,11 +35688,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -35906,6 +35707,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -35917,11 +35719,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -35942,6 +35740,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -35966,10 +35765,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -35989,6 +35790,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36013,10 +35815,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36043,6 +35847,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -36071,6 +35876,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36095,10 +35901,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36123,15 +35931,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -36156,6 +35961,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36167,11 +35973,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -36192,6 +35994,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36216,10 +36019,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36239,6 +36044,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36263,10 +36069,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36293,6 +36101,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -36304,15 +36113,12 @@ export const updateProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -36356,6 +36162,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36380,10 +36187,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36408,11 +36217,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -36437,6 +36242,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36448,11 +36254,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -36467,6 +36269,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36480,6 +36283,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36492,6 +36296,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36528,6 +36333,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36539,15 +36345,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -36571,6 +36374,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36582,11 +36386,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -36601,6 +36401,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36614,6 +36415,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36626,6 +36428,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36662,6 +36465,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36673,15 +36477,12 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -36726,6 +36527,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36733,11 +36535,7 @@ export const updateProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -36775,6 +36573,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36799,10 +36598,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36827,11 +36628,7 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -36850,6 +36647,7 @@ export const updateProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -36861,11 +36659,7 @@ export const updateProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -36886,6 +36680,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36910,10 +36705,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36933,6 +36730,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -36957,10 +36755,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -36987,6 +36787,7 @@ export const updateProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -37015,6 +36816,7 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37039,10 +36841,12 @@ export const updateProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -37067,15 +36871,12 @@ export const updateProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -37083,11 +36884,7 @@ export const updateProject = /* GraphQL */ `
           short
           content
           format
-          coverImg {
-            bucket
-            key
-            region
-          }
+          coverImg
           index
           createdAt
           updatedAt
@@ -37141,6 +36938,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37152,11 +36950,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -37171,6 +36965,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37184,6 +36979,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37196,6 +36992,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37232,6 +37029,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37243,15 +37041,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -37272,6 +37067,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37285,6 +37081,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37297,6 +37094,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37323,11 +37121,7 @@ export const deleteProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -37353,6 +37147,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37377,10 +37172,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -37405,11 +37202,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -37434,6 +37227,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37445,11 +37239,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -37464,6 +37254,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37477,6 +37268,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37489,6 +37281,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37525,6 +37318,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37536,15 +37330,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -37568,6 +37359,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37579,11 +37371,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -37598,6 +37386,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37611,6 +37400,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37623,6 +37413,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37659,6 +37450,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37670,15 +37462,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -37723,6 +37512,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37730,11 +37520,7 @@ export const deleteProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -37767,6 +37553,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37778,11 +37565,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -37797,6 +37580,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37810,6 +37594,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37822,6 +37607,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37858,6 +37644,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37869,15 +37656,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -37898,6 +37682,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -37911,6 +37696,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37923,6 +37709,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -37949,15 +37736,12 @@ export const deleteProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -37989,6 +37773,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38013,10 +37798,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38041,11 +37828,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -38070,6 +37853,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38081,11 +37865,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -38100,6 +37880,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38113,6 +37894,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38125,6 +37907,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38161,6 +37944,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38172,15 +37956,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -38204,6 +37985,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38215,11 +37997,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -38234,6 +38012,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38247,6 +38026,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38259,6 +38039,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38295,6 +38076,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38306,15 +38088,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -38359,6 +38138,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38366,11 +38146,7 @@ export const deleteProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -38382,11 +38158,7 @@ export const deleteProject = /* GraphQL */ `
           }
           nextToken
         }
-        featuredImg {
-          bucket
-          key
-          region
-        }
+        featuredImg
         createdAt
         updatedAt
       }
@@ -38429,6 +38201,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38453,10 +38226,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38481,11 +38256,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -38504,6 +38275,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38515,11 +38287,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -38540,6 +38308,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38564,10 +38333,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38587,6 +38358,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38611,10 +38383,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38641,6 +38415,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -38669,6 +38444,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38693,10 +38469,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38721,15 +38499,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -38754,6 +38529,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38765,11 +38541,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -38790,6 +38562,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38814,10 +38587,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38837,6 +38612,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38861,10 +38637,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -38891,6 +38669,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -38902,11 +38681,7 @@ export const deleteProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -38936,6 +38711,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38947,11 +38723,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -38966,6 +38738,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -38979,6 +38752,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -38991,6 +38765,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39027,6 +38802,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39038,15 +38814,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -39067,6 +38840,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39080,6 +38854,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39092,6 +38867,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39118,11 +38894,7 @@ export const deleteProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -39154,6 +38926,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39178,10 +38951,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39206,11 +38981,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -39229,6 +39000,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39240,11 +39012,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -39265,6 +39033,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39289,10 +39058,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39312,6 +39083,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39336,10 +39108,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39366,6 +39140,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -39394,6 +39169,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39418,10 +39194,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39446,15 +39224,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -39485,6 +39260,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39509,10 +39285,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39537,11 +39315,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -39560,6 +39334,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39571,11 +39346,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -39596,6 +39367,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39620,10 +39392,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39643,6 +39417,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39667,10 +39442,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39697,6 +39474,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -39725,6 +39503,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39749,10 +39528,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39777,15 +39558,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -39818,6 +39596,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39831,6 +39610,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39843,6 +39623,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -39884,6 +39665,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39908,10 +39690,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -39919,11 +39703,7 @@ export const deleteProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -39963,6 +39743,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -39987,10 +39768,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40015,11 +39798,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -40038,6 +39817,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -40049,11 +39829,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -40074,6 +39850,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40098,10 +39875,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40121,6 +39900,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40145,10 +39925,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40175,6 +39957,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -40203,6 +39986,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40227,10 +40011,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40255,15 +40041,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -40288,6 +40071,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -40299,11 +40083,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -40324,6 +40104,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40348,10 +40129,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40371,6 +40154,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40395,10 +40179,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40425,6 +40211,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -40436,15 +40223,12 @@ export const deleteProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -40486,6 +40270,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40510,10 +40295,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40538,11 +40325,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -40561,6 +40344,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -40572,11 +40356,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -40597,6 +40377,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40621,10 +40402,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40644,6 +40427,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40668,10 +40452,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40698,6 +40484,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -40726,6 +40513,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40750,10 +40538,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40778,15 +40568,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -40811,6 +40598,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -40822,11 +40610,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -40847,6 +40631,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40871,10 +40656,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40894,6 +40681,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -40918,10 +40706,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -40948,6 +40738,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -40959,11 +40750,7 @@ export const deleteProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -40993,6 +40780,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41004,11 +40792,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -41023,6 +40807,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41036,6 +40821,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41048,6 +40834,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41084,6 +40871,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41095,15 +40883,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -41124,6 +40909,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41137,6 +40923,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41149,6 +40936,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41175,11 +40963,7 @@ export const deleteProject = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -41211,6 +40995,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41235,10 +41020,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41263,11 +41050,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -41286,6 +41069,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41297,11 +41081,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -41322,6 +41102,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41346,10 +41127,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41369,6 +41152,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41393,10 +41177,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41423,6 +41209,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -41451,6 +41238,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41475,10 +41263,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41503,15 +41293,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -41542,6 +41329,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41566,10 +41354,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41594,11 +41384,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -41617,6 +41403,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41628,11 +41415,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -41653,6 +41436,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41677,10 +41461,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41700,6 +41486,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41724,10 +41511,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41754,6 +41543,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -41782,6 +41572,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41806,10 +41597,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41834,15 +41627,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -41875,6 +41665,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41888,6 +41679,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41900,6 +41692,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -41941,6 +41734,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -41965,10 +41759,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -41976,11 +41772,7 @@ export const deleteProject = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -42020,6 +41812,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42044,10 +41837,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42072,11 +41867,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -42095,6 +41886,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42106,11 +41898,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -42131,6 +41919,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42155,10 +41944,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42178,6 +41969,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42202,10 +41994,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42232,6 +42026,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -42260,6 +42055,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42284,10 +42080,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42312,15 +42110,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -42345,6 +42140,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42356,11 +42152,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -42381,6 +42173,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42405,10 +42198,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42428,6 +42223,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42452,10 +42248,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42482,6 +42280,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -42493,15 +42292,12 @@ export const deleteProject = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -42545,6 +42341,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42569,10 +42366,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -42597,11 +42396,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -42626,6 +42421,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42637,11 +42433,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -42656,6 +42448,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42669,6 +42462,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42681,6 +42475,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42717,6 +42512,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42728,15 +42524,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -42760,6 +42553,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42771,11 +42565,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -42790,6 +42580,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42803,6 +42594,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42815,6 +42607,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42851,6 +42644,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42862,15 +42656,12 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -42915,6 +42706,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -42922,11 +42714,7 @@ export const deleteProject = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -42964,6 +42752,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -42988,10 +42777,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43016,11 +42807,7 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -43039,6 +42826,7 @@ export const deleteProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43050,11 +42838,7 @@ export const deleteProject = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -43075,6 +42859,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43099,10 +42884,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43122,6 +42909,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43146,10 +42934,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43176,6 +42966,7 @@ export const deleteProject = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -43204,6 +42995,7 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43228,10 +43020,12 @@ export const deleteProject = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43256,15 +43050,12 @@ export const deleteProject = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -43272,11 +43063,7 @@ export const deleteProject = /* GraphQL */ `
           short
           content
           format
-          coverImg {
-            bucket
-            key
-            region
-          }
+          coverImg
           index
           createdAt
           updatedAt
@@ -43328,6 +43115,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43352,10 +43140,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43380,11 +43170,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -43403,6 +43189,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43414,11 +43201,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -43439,6 +43222,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43463,10 +43247,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43486,6 +43272,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43510,10 +43297,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43540,6 +43329,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -43568,6 +43358,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43592,10 +43383,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43620,15 +43413,12 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -43653,6 +43443,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43664,11 +43455,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -43689,6 +43476,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43713,10 +43501,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43736,6 +43526,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43760,10 +43551,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -43790,6 +43583,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -43801,11 +43595,7 @@ export const createUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -43841,6 +43631,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43852,11 +43643,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -43871,6 +43658,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43884,6 +43672,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43896,6 +43685,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43932,6 +43722,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43943,15 +43734,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -43972,6 +43760,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -43985,6 +43774,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -43997,6 +43787,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44023,11 +43814,7 @@ export const createUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -44053,6 +43840,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44077,10 +43865,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -44105,11 +43895,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -44134,6 +43920,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44145,11 +43932,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -44164,6 +43947,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44177,6 +43961,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44189,6 +43974,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44225,6 +44011,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44236,15 +44023,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -44268,6 +44052,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44279,11 +44064,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -44298,6 +44079,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44311,6 +44093,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44323,6 +44106,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44359,6 +44143,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44370,15 +44155,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -44423,6 +44205,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44430,11 +44213,7 @@ export const createUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -44467,6 +44246,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44478,11 +44258,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -44497,6 +44273,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44510,6 +44287,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44522,6 +44300,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44558,6 +44337,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44569,15 +44349,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -44598,6 +44375,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44611,6 +44389,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44623,6 +44402,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44649,15 +44429,12 @@ export const createUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -44692,6 +44469,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44703,11 +44481,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -44722,6 +44496,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44735,6 +44510,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44747,6 +44523,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44783,6 +44560,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44794,15 +44572,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -44823,6 +44598,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44836,6 +44612,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44848,6 +44625,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44874,11 +44652,7 @@ export const createUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -44904,6 +44678,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -44928,10 +44703,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -44956,11 +44733,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -44985,6 +44758,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -44996,11 +44770,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45015,6 +44785,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45028,6 +44799,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45040,6 +44812,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45076,6 +44849,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45087,15 +44861,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -45119,6 +44890,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45130,11 +44902,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45149,6 +44917,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45162,6 +44931,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45174,6 +44944,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45210,6 +44981,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45221,15 +44993,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -45274,6 +45043,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45281,11 +45051,7 @@ export const createUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -45318,6 +45084,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45329,11 +45096,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45348,6 +45111,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45361,6 +45125,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45373,6 +45138,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45409,6 +45175,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45420,15 +45187,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -45449,6 +45213,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45462,6 +45227,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45474,6 +45240,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45500,15 +45267,12 @@ export const createUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -45545,6 +45309,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45556,11 +45321,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45581,6 +45342,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45605,10 +45367,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -45628,6 +45392,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45652,10 +45417,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -45682,6 +45449,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -45712,6 +45480,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45723,11 +45492,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45742,6 +45507,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45755,6 +45521,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45767,6 +45534,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45803,6 +45571,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45814,15 +45583,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -45830,11 +45596,7 @@ export const createUpdate = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -45883,6 +45645,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -45907,10 +45670,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -45935,11 +45700,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -45958,6 +45719,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -45969,11 +45731,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -45994,6 +45752,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46018,10 +45777,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46041,6 +45802,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46065,10 +45827,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46095,6 +45859,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -46123,6 +45888,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46147,10 +45913,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46175,15 +45943,12 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -46208,6 +45973,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46219,11 +45985,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -46244,6 +46006,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46268,10 +46031,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46291,6 +46056,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46315,10 +46081,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46345,6 +46113,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -46356,11 +46125,7 @@ export const createUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -46390,6 +46155,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46401,11 +46167,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -46420,6 +46182,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46433,6 +46196,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46445,6 +46209,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46481,6 +46246,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46492,15 +46258,12 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -46521,6 +46284,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46534,6 +46298,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46546,6 +46311,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46572,11 +46338,7 @@ export const createUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -46608,6 +46370,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46632,10 +46395,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46660,11 +46425,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -46683,6 +46444,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -46694,11 +46456,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -46719,6 +46477,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46743,10 +46502,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46766,6 +46527,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46790,10 +46552,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46820,6 +46584,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -46848,6 +46613,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46872,10 +46638,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46900,15 +46668,12 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -46939,6 +46704,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -46963,10 +46729,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -46991,11 +46759,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -47014,6 +46778,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -47025,11 +46790,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -47050,6 +46811,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47074,10 +46836,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47097,6 +46861,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47121,10 +46886,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47151,6 +46918,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -47179,6 +46947,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47203,10 +46972,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47231,15 +47002,12 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -47272,6 +47040,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47285,6 +47054,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -47297,6 +47067,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -47338,6 +47109,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47362,10 +47134,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47373,11 +47147,7 @@ export const createUpdate = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -47417,6 +47187,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47441,10 +47212,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47469,11 +47242,7 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -47492,6 +47261,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -47503,11 +47273,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -47528,6 +47294,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47552,10 +47319,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47575,6 +47344,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47599,10 +47369,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47629,6 +47401,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -47657,6 +47430,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47681,10 +47455,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47709,15 +47485,12 @@ export const createUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -47742,6 +47515,7 @@ export const createUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -47753,11 +47527,7 @@ export const createUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -47778,6 +47548,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47802,10 +47573,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47825,6 +47598,7 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47849,10 +47623,12 @@ export const createUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -47879,6 +47655,7 @@ export const createUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -47890,15 +47667,12 @@ export const createUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -47906,11 +47680,7 @@ export const createUpdate = /* GraphQL */ `
       short
       content
       format
-      coverImg {
-        bucket
-        key
-        region
-      }
+      coverImg
       index
       createdAt
       updatedAt
@@ -47957,6 +47727,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -47981,10 +47752,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48009,11 +47782,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -48032,6 +47801,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48043,11 +47813,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -48068,6 +47834,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48092,10 +47859,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48115,6 +47884,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48139,10 +47909,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48169,6 +47941,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -48197,6 +47970,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48221,10 +47995,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48249,15 +48025,12 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -48282,6 +48055,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48293,11 +48067,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -48318,6 +48088,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48342,10 +48113,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48365,6 +48138,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48389,10 +48163,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48419,6 +48195,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -48430,11 +48207,7 @@ export const updateUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -48470,6 +48243,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48481,11 +48255,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -48500,6 +48270,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48513,6 +48284,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48525,6 +48297,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48561,6 +48334,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48572,15 +48346,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -48601,6 +48372,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48614,6 +48386,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48626,6 +48399,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48652,11 +48426,7 @@ export const updateUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -48682,6 +48452,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48706,10 +48477,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -48734,11 +48507,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -48763,6 +48532,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48774,11 +48544,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -48793,6 +48559,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48806,6 +48573,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48818,6 +48586,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48854,6 +48623,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48865,15 +48635,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -48897,6 +48664,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48908,11 +48676,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -48927,6 +48691,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -48940,6 +48705,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48952,6 +48718,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48988,6 +48755,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -48999,15 +48767,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -49052,6 +48817,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49059,11 +48825,7 @@ export const updateUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -49096,6 +48858,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49107,11 +48870,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -49126,6 +48885,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49139,6 +48899,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49151,6 +48912,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49187,6 +48949,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49198,15 +48961,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -49227,6 +48987,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49240,6 +49001,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49252,6 +49014,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49278,15 +49041,12 @@ export const updateUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -49321,6 +49081,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49332,11 +49093,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -49351,6 +49108,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49364,6 +49122,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49376,6 +49135,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49412,6 +49172,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49423,15 +49184,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -49452,6 +49210,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49465,6 +49224,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49477,6 +49237,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49503,11 +49264,7 @@ export const updateUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -49533,6 +49290,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49557,10 +49315,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -49585,11 +49345,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -49614,6 +49370,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49625,11 +49382,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -49644,6 +49397,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49657,6 +49411,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49669,6 +49424,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49705,6 +49461,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49716,15 +49473,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -49748,6 +49502,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49759,11 +49514,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -49778,6 +49529,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49791,6 +49543,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49803,6 +49556,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49839,6 +49593,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49850,15 +49605,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -49903,6 +49655,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49910,11 +49663,7 @@ export const updateUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -49947,6 +49696,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -49958,11 +49708,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -49977,6 +49723,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -49990,6 +49737,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50002,6 +49750,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50038,6 +49787,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50049,15 +49799,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -50078,6 +49825,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50091,6 +49839,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50103,6 +49852,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50129,15 +49879,12 @@ export const updateUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -50174,6 +49921,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50185,11 +49933,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -50210,6 +49954,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50234,10 +49979,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50257,6 +50004,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50281,10 +50029,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50311,6 +50061,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -50341,6 +50092,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50352,11 +50104,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -50371,6 +50119,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50384,6 +50133,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50396,6 +50146,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50432,6 +50183,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50443,15 +50195,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -50459,11 +50208,7 @@ export const updateUpdate = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -50512,6 +50257,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50536,10 +50282,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50564,11 +50312,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -50587,6 +50331,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50598,11 +50343,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -50623,6 +50364,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50647,10 +50389,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50670,6 +50414,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50694,10 +50439,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50724,6 +50471,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -50752,6 +50500,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50776,10 +50525,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50804,15 +50555,12 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -50837,6 +50585,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -50848,11 +50597,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -50873,6 +50618,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50897,10 +50643,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50920,6 +50668,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -50944,10 +50693,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -50974,6 +50725,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -50985,11 +50737,7 @@ export const updateUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -51019,6 +50767,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51030,11 +50779,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -51049,6 +50794,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51062,6 +50808,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51074,6 +50821,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51110,6 +50858,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51121,15 +50870,12 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -51150,6 +50896,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51163,6 +50910,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51175,6 +50923,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51201,11 +50950,7 @@ export const updateUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -51237,6 +50982,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51261,10 +51007,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51289,11 +51037,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -51312,6 +51056,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51323,11 +51068,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -51348,6 +51089,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51372,10 +51114,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51395,6 +51139,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51419,10 +51164,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51449,6 +51196,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -51477,6 +51225,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51501,10 +51250,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51529,15 +51280,12 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -51568,6 +51316,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51592,10 +51341,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51620,11 +51371,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -51643,6 +51390,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51654,11 +51402,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -51679,6 +51423,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51703,10 +51448,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51726,6 +51473,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51750,10 +51498,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51780,6 +51530,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -51808,6 +51559,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51832,10 +51584,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -51860,15 +51614,12 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -51901,6 +51652,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51914,6 +51666,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51926,6 +51679,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -51967,6 +51721,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -51991,10 +51746,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52002,11 +51759,7 @@ export const updateUpdate = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -52046,6 +51799,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52070,10 +51824,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52098,11 +51854,7 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -52121,6 +51873,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -52132,11 +51885,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -52157,6 +51906,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52181,10 +51931,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52204,6 +51956,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52228,10 +51981,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52258,6 +52013,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -52286,6 +52042,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52310,10 +52067,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52338,15 +52097,12 @@ export const updateUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -52371,6 +52127,7 @@ export const updateUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -52382,11 +52139,7 @@ export const updateUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -52407,6 +52160,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52431,10 +52185,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52454,6 +52210,7 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52478,10 +52235,12 @@ export const updateUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52508,6 +52267,7 @@ export const updateUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -52519,15 +52279,12 @@ export const updateUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -52535,11 +52292,7 @@ export const updateUpdate = /* GraphQL */ `
       short
       content
       format
-      coverImg {
-        bucket
-        key
-        region
-      }
+      coverImg
       index
       createdAt
       updatedAt
@@ -52586,6 +52339,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52610,10 +52364,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52638,11 +52394,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -52661,6 +52413,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -52672,11 +52425,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -52697,6 +52446,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52721,10 +52471,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52744,6 +52496,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52768,10 +52521,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52798,6 +52553,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -52826,6 +52582,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52850,10 +52607,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52878,15 +52637,12 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -52911,6 +52667,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -52922,11 +52679,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -52947,6 +52700,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -52971,10 +52725,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -52994,6 +52750,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53018,10 +52775,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -53048,6 +52807,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -53059,11 +52819,7 @@ export const deleteUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -53099,6 +52855,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53110,11 +52867,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -53129,6 +52882,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53142,6 +52896,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53154,6 +52909,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53190,6 +52946,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53201,15 +52958,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -53230,6 +52984,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53243,6 +52998,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53255,6 +53011,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53281,11 +53038,7 @@ export const deleteUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -53311,6 +53064,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53335,10 +53089,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -53363,11 +53119,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -53392,6 +53144,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53403,11 +53156,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -53422,6 +53171,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53435,6 +53185,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53447,6 +53198,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53483,6 +53235,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53494,15 +53247,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -53526,6 +53276,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53537,11 +53288,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -53556,6 +53303,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53569,6 +53317,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53581,6 +53330,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53617,6 +53367,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53628,15 +53379,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -53681,6 +53429,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53688,11 +53437,7 @@ export const deleteUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -53725,6 +53470,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53736,11 +53482,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -53755,6 +53497,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53768,6 +53511,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53780,6 +53524,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53816,6 +53561,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53827,15 +53573,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -53856,6 +53599,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53869,6 +53613,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53881,6 +53626,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53907,15 +53653,12 @@ export const deleteUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -53950,6 +53693,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -53961,11 +53705,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -53980,6 +53720,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -53993,6 +53734,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54005,6 +53747,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54041,6 +53784,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54052,15 +53796,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -54081,6 +53822,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54094,6 +53836,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54106,6 +53849,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54132,11 +53876,7 @@ export const deleteUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -54162,6 +53902,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54186,10 +53927,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -54214,11 +53957,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -54243,6 +53982,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54254,11 +53994,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -54273,6 +54009,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54286,6 +54023,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54298,6 +54036,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54334,6 +54073,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54345,15 +54085,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -54377,6 +54114,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54388,11 +54126,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -54407,6 +54141,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54420,6 +54155,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54432,6 +54168,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54468,6 +54205,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54479,15 +54217,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -54532,6 +54267,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54539,11 +54275,7 @@ export const deleteUpdate = /* GraphQL */ `
                 short
                 content
                 format
-                coverImg {
-                  bucket
-                  key
-                  region
-                }
+                coverImg
                 index
                 createdAt
                 updatedAt
@@ -54576,6 +54308,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54587,11 +54320,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -54606,6 +54335,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54619,6 +54349,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54631,6 +54362,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54667,6 +54399,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54678,15 +54411,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -54707,6 +54437,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54720,6 +54451,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54732,6 +54464,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54758,15 +54491,12 @@ export const deleteUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
           role
+          avatar
           createdAt
           updatedAt
         }
@@ -54803,6 +54533,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54814,11 +54545,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -54839,6 +54566,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54863,10 +54591,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -54886,6 +54616,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -54910,10 +54641,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -54940,6 +54673,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -54970,6 +54704,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -54981,11 +54716,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -55000,6 +54731,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55013,6 +54745,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55025,6 +54758,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55061,6 +54795,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55072,15 +54807,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -55088,11 +54820,7 @@ export const deleteUpdate = /* GraphQL */ `
             short
             content
             format
-            coverImg {
-              bucket
-              key
-              region
-            }
+            coverImg
             index
             createdAt
             updatedAt
@@ -55141,6 +54869,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55165,10 +54894,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55193,11 +54924,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -55216,6 +54943,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55227,11 +54955,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -55252,6 +54976,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55276,10 +55001,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55299,6 +55026,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55323,10 +55051,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55353,6 +55083,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -55381,6 +55112,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55405,10 +55137,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55433,15 +55167,12 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -55466,6 +55197,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55477,11 +55209,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -55502,6 +55230,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55526,10 +55255,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55549,6 +55280,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55573,10 +55305,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55603,6 +55337,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -55614,11 +55349,7 @@ export const deleteUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
@@ -55648,6 +55379,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55659,11 +55391,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -55678,6 +55406,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55691,6 +55420,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55703,6 +55433,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55739,6 +55470,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55750,15 +55482,12 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
               role
+              avatar
               createdAt
               updatedAt
             }
@@ -55779,6 +55508,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55792,6 +55522,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55804,6 +55535,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55830,11 +55562,7 @@ export const deleteUpdate = /* GraphQL */ `
               }
               nextToken
             }
-            featuredImg {
-              bucket
-              key
-              region
-            }
+            featuredImg
             createdAt
             updatedAt
           }
@@ -55866,6 +55594,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -55890,10 +55619,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -55918,11 +55649,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -55941,6 +55668,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -55952,11 +55680,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -55977,6 +55701,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56001,10 +55726,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56024,6 +55751,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56048,10 +55776,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56078,6 +55808,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -56106,6 +55837,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56130,10 +55862,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56158,15 +55892,12 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -56197,6 +55928,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56221,10 +55953,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56249,11 +55983,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -56272,6 +56002,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -56283,11 +56014,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -56308,6 +56035,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56332,10 +56060,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56355,6 +56085,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56379,10 +56110,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56409,6 +56142,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -56437,6 +56171,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56461,10 +56196,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56489,15 +56226,12 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -56530,6 +56264,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56543,6 +56278,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -56555,6 +56291,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -56596,6 +56333,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56620,10 +56358,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56631,11 +56371,7 @@ export const deleteUpdate = /* GraphQL */ `
               short
               content
               format
-              coverImg {
-                bucket
-                key
-                region
-              }
+              coverImg
               index
               createdAt
               updatedAt
@@ -56675,6 +56411,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56699,10 +56436,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56727,11 +56466,7 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
@@ -56750,6 +56485,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -56761,11 +56497,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -56786,6 +56518,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56810,10 +56543,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56833,6 +56568,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56857,10 +56593,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56887,6 +56625,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -56915,6 +56654,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -56939,10 +56679,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -56967,15 +56709,12 @@ export const deleteUpdate = /* GraphQL */ `
                 }
                 nextToken
               }
-              featuredImg {
-                bucket
-                key
-                region
-              }
+              featuredImg
               createdAt
               updatedAt
             }
             role
+            avatar
             createdAt
             updatedAt
           }
@@ -57000,6 +56739,7 @@ export const deleteUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  avatar
                   createdAt
                   updatedAt
                 }
@@ -57011,11 +56751,7 @@ export const deleteUpdate = /* GraphQL */ `
                 projects {
                   nextToken
                 }
-                featuredImg {
-                  bucket
-                  key
-                  region
-                }
+                featuredImg
                 createdAt
                 updatedAt
               }
@@ -57036,6 +56772,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -57060,10 +56797,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -57083,6 +56822,7 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
@@ -57107,10 +56847,12 @@ export const deleteUpdate = /* GraphQL */ `
                   category
                   operator
                   target
+                  featuredImg
                   createdAt
                   updatedAt
                 }
                 role
+                avatar
                 createdAt
                 updatedAt
               }
@@ -57137,6 +56879,7 @@ export const deleteUpdate = /* GraphQL */ `
                   short
                   content
                   format
+                  coverImg
                   index
                   createdAt
                   updatedAt
@@ -57148,15 +56891,12 @@ export const deleteUpdate = /* GraphQL */ `
             }
             nextToken
           }
-          featuredImg {
-            bucket
-            key
-            region
-          }
+          featuredImg
           createdAt
           updatedAt
         }
         role
+        avatar
         createdAt
         updatedAt
       }
@@ -57164,11 +56904,7 @@ export const deleteUpdate = /* GraphQL */ `
       short
       content
       format
-      coverImg {
-        bucket
-        key
-        region
-      }
+      coverImg
       index
       createdAt
       updatedAt

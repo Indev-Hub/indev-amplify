@@ -333,21 +333,23 @@ function ChannelTemplate(props) {
           </Grid>
 
           {/* Project Section */}
-          <AppBar position="static" style={{ background: '#141944' }}>
-            <Tabs
-              value={value} 
-              onChange={handleTabChange} 
-              aria-label="simple tabs example">
+          <Card className={classes.section}>
+            <AppBar position="static" style={{ background: '#141944' }}>
+              <Tabs
+                value={value} 
+                onChange={handleTabChange} 
+                aria-label="simple tabs example">
+                {channelData.projects.items.map((project, index) => (
+                <Tab className={classes.tabItem} label={project.name} {...menuProps({index})} />
+                ))}
+              </Tabs>
+            </AppBar>
             {channelData.projects.items.map((project, index) => (
-            <Tab className={classes.tabItem} label={project.name} {...menuProps({index})} />
-            ))}
-            </Tabs>
-          </AppBar>
-          {channelData.projects.items.map((project, index) => (
             <TabPanel value={value} index={index}>
               <ProjectTemplateV2 projectData={channelData.projects.items[index]} />
             </TabPanel>
-          ))}
+            ))}
+          </Card>
 
       {/* <AppBar position="static">
         <Tabs value={value} onChange={handleTabChange} textColor="white" indicatorColor="secondary" aria-label="simple tabs example">

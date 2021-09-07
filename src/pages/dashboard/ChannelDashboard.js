@@ -160,46 +160,52 @@ const ChannelDashboard = (props) => {
                     You must set this up before creating your channel to make sure that you can receive payments.
                   </Typography>
                   <Box display="flex" alignItems="center">
-                    {!connectFetch ?
-                    (
+                    {!connectFetch 
+                    ?(
                       <Button 
                         variant="contained"
                         onClick={() => handleChannelCreation()}
                       >
                         Connect Account
                       </Button>
-                    ) : (
-                      <Typography fontWeight="600" color="primary" p={.7}>Connecting to Stripe...</Typography>
+                    ) 
+                    :(
+                        <Typography fontWeight="600" color="primary" p={.7}>Connecting to Stripe...</Typography>
                     )
                     }
                   </Box>
                 </Card>
               </Grid>
-              <Grid item xs={6}>
-                <Card sx={{ p: 4, height: '100%' }}>
-                  <Typography variant="h5">
-                    STEP 2
-                  </Typography>
-                  <Typography variant="h6" fontWeight="700" mb={2}>
-                    Create your channel
-                  </Typography>
-                  <Typography mb={2}>
-                    You're halfway done. Now it's time for the fun part. Start setting up your channel so you can show 
-                    everyone what you are working on and receive support to continue developing!
-                  </Typography>
-                  <Link
-                    component={RouterLink}
-                    to="/dashboard/channels/new"
-                    underline="none"
-                  >
-                    <Button
-                      variant="contained"
-                    >
-                      Create Channel
-                    </Button>
-                  </Link>
-                </Card>
-              </Grid>
+              {userData.channel !== null
+                ? null
+                : ( 
+                    <Grid item xs={6}>
+                      <Card sx={{ p: 4, height: '100%' }}>
+                        <Typography variant="h5">
+                          STEP 2
+                        </Typography>
+                        <Typography variant="h6" fontWeight="700" mb={2}>
+                          Create your channel
+                        </Typography>
+                        <Typography mb={2}>
+                          You're halfway done. Now it's time for the fun part. Start setting up your channel so you can show 
+                          everyone what you are working on and receive support to continue developing!
+                        </Typography>
+                        <Link
+                          component={RouterLink}
+                          to="/dashboard/channels/new"
+                          underline="none"
+                        >
+                          <Button
+                            variant="contained"
+                          >
+                            Create Channel
+                          </Button>
+                        </Link>
+                      </Card>
+                    </Grid>
+                  )
+              }
             </Grid> 
             {/* <ChannelAdd /> */}
           </Box>

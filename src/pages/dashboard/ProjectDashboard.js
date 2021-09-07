@@ -107,6 +107,35 @@ const ProjectDashboard = (props) => {
     setExpanded(newExpanded ? panel : false);
   };
 
+  const planCheck = () => {
+    console.log("the USER PLAN: ", user.plan)
+
+    return (
+      <Grid>
+        {userData.role === 'Supporter'
+          ? userData.channel.projects.items.length >= 1
+            ? (<Typography>Number of projects: {userData.channel.projects.items.length}</Typography>) 
+            : (<Button
+                variant="contained"
+                size="large"
+                color="primary"
+                component={RouterLink}
+                to="/dashboard/projects/new"
+              >
+                Add a Project
+              </Button>)
+          : (<Button
+              variant="contained"
+              size="large"
+              color="primary"
+            >
+              Do you want to Upgrade your Plan?
+            </Button>)
+        }
+      </Grid>
+    )
+  }
+
   return (
     <>
       {loading ? (
@@ -224,9 +253,10 @@ const ProjectDashboard = (props) => {
                     })}
                   </Grid>
                 </Grid>
+                {planCheck()}
               </Box>
             </Container>
-          </Box>
+          </Box> 
         </>
       )}
     </>

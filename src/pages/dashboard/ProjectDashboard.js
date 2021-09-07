@@ -82,6 +82,7 @@ const ProjectDashboard = (props) => {
     }
   };
 
+
   const handleChannelCreation = () => {
     console.log('click!');
     setConnectFetch(true);
@@ -108,13 +109,21 @@ const ProjectDashboard = (props) => {
   };
 
   const planCheck = () => {
+    const membershipLevel = userData.role
+    const numOfProjects = userData.channel.projects.items.length
+
     console.log("the USER PLAN: ", user.plan)
+    console.log("items length: ", userData.channel.projects.items.length)
 
     return (
-      <Grid>
-        {userData.role === 'Supporter'
-          ? userData.channel.projects.items.length >= 1
-            ? (<Typography>Number of projects: {userData.channel.projects.items.length}</Typography>) 
+      <Grid 
+        container 
+        xs={12} 
+        m="auto"
+      >
+        {membershipLevel === 'Supporter'
+          ? numOfProjects >= 1
+            ? (<Typography>Number of projects: {numOfProjects}</Typography>) 
             : (<Button
                 variant="contained"
                 size="large"

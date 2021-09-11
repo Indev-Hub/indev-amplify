@@ -74,6 +74,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -118,6 +119,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -181,6 +183,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -231,6 +234,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -317,6 +321,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -347,6 +352,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -372,6 +378,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -435,6 +442,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -485,6 +493,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -554,6 +563,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -595,6 +605,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -608,6 +619,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -645,6 +657,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -662,6 +675,7 @@ export const getChannel = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -697,6 +711,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -710,6 +725,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -799,6 +815,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -843,6 +860,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -906,6 +924,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -956,6 +975,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1042,6 +1062,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1072,6 +1093,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -1133,6 +1155,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1177,6 +1200,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -1240,6 +1264,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1290,6 +1315,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1376,6 +1402,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1406,6 +1433,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -1453,6 +1481,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -1466,6 +1495,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -1538,6 +1568,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1616,6 +1647,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1660,6 +1692,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -1723,6 +1756,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1773,6 +1807,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1859,6 +1894,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -1889,6 +1925,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -1914,6 +1951,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -1977,6 +2015,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2027,6 +2066,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2071,6 +2111,7 @@ export const getChannel = /* GraphQL */ `
           updatedAt
         }
         role
+        membership
         avatar
         createdAt
         updatedAt
@@ -2107,6 +2148,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2148,6 +2190,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2161,6 +2204,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2198,6 +2242,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2215,6 +2260,7 @@ export const getChannel = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -2250,6 +2296,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2263,6 +2310,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2352,6 +2400,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2396,6 +2445,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2459,6 +2509,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2509,6 +2560,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2595,6 +2647,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2625,6 +2678,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -2686,6 +2740,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2730,6 +2785,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -2793,6 +2849,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2843,6 +2900,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2929,6 +2987,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -2959,6 +3018,7 @@ export const getChannel = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -3006,6 +3066,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3019,6 +3080,7 @@ export const getChannel = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3091,6 +3153,7 @@ export const getChannel = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -3158,6 +3221,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3199,6 +3263,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3212,6 +3277,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3249,6 +3315,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3266,6 +3333,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -3301,6 +3369,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3314,6 +3383,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3397,6 +3467,7 @@ export const listChannels = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -3447,6 +3518,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3488,6 +3560,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3501,6 +3574,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3538,6 +3612,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3555,6 +3630,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -3579,6 +3655,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3620,6 +3697,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3633,6 +3711,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3670,6 +3749,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3687,6 +3767,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -3732,6 +3813,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3773,6 +3855,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3814,6 +3897,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3827,6 +3911,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3864,6 +3949,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3881,6 +3967,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -3916,6 +4003,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3929,6 +4017,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -3961,6 +4050,7 @@ export const listChannels = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -4023,6 +4113,7 @@ export const listChannels = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -4073,6 +4164,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4114,6 +4206,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4127,6 +4220,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4164,6 +4258,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4181,6 +4276,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -4205,6 +4301,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4246,6 +4343,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4259,6 +4357,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4296,6 +4395,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4313,6 +4413,7 @@ export const listChannels = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -4358,6 +4459,7 @@ export const listChannels = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4430,6 +4532,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4471,6 +4574,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4484,6 +4588,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4521,6 +4626,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4538,6 +4644,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -4573,6 +4680,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4586,6 +4694,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4669,6 +4778,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -4719,6 +4829,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4760,6 +4871,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4773,6 +4885,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4810,6 +4923,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4827,6 +4941,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -4851,6 +4966,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4892,6 +5008,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4905,6 +5022,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4942,6 +5060,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -4959,6 +5078,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -5004,6 +5124,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5045,6 +5166,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5086,6 +5208,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5099,6 +5222,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5136,6 +5260,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5153,6 +5278,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -5188,6 +5314,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5201,6 +5328,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5233,6 +5361,7 @@ export const getUser = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -5295,6 +5424,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -5345,6 +5475,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5386,6 +5517,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5399,6 +5531,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5436,6 +5569,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5453,6 +5587,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -5477,6 +5612,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5518,6 +5654,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5531,6 +5668,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5568,6 +5706,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5585,6 +5724,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -5630,6 +5770,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5717,6 +5858,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -5761,6 +5903,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -5824,6 +5967,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -5874,6 +6018,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -5960,6 +6105,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -5990,6 +6136,7 @@ export const getUser = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -6015,6 +6162,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6078,6 +6226,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -6128,6 +6277,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -6203,6 +6353,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6244,6 +6395,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6257,6 +6409,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6294,6 +6447,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6311,6 +6465,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -6346,6 +6501,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6359,6 +6515,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6442,6 +6599,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -6492,6 +6650,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6533,6 +6692,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6546,6 +6706,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6583,6 +6744,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6600,6 +6762,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -6624,6 +6787,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6665,6 +6829,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6678,6 +6843,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6715,6 +6881,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6732,6 +6899,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -6777,6 +6945,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6818,6 +6987,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6859,6 +7029,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6872,6 +7043,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6909,6 +7081,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6926,6 +7099,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -6961,6 +7135,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -6974,6 +7149,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7006,6 +7182,7 @@ export const getUser = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -7041,6 +7218,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7082,6 +7260,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7095,6 +7274,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7132,6 +7312,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7149,6 +7330,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -7184,6 +7366,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7197,6 +7380,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7280,6 +7464,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -7330,6 +7515,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7371,6 +7557,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7384,6 +7571,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7421,6 +7609,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7438,6 +7627,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -7462,6 +7652,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7503,6 +7694,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7516,6 +7708,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7553,6 +7746,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7570,6 +7764,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -7615,6 +7810,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7656,6 +7852,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7697,6 +7894,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7710,6 +7908,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7747,6 +7946,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7764,6 +7964,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -7799,6 +8000,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7812,6 +8014,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7844,6 +8047,7 @@ export const getUser = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -7881,6 +8085,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -7944,6 +8149,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -7994,6 +8200,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -8052,6 +8259,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8093,6 +8301,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8106,6 +8315,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8143,6 +8353,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8160,6 +8371,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -8212,6 +8424,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8253,6 +8466,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8266,6 +8480,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8303,6 +8518,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8320,6 +8536,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -8355,6 +8572,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8368,6 +8586,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8451,6 +8670,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -8501,6 +8721,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8542,6 +8763,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8555,6 +8777,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8592,6 +8815,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8609,6 +8833,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -8633,6 +8858,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8674,6 +8900,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8687,6 +8914,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8724,6 +8952,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8741,6 +8970,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -8786,6 +9016,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8827,6 +9058,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8868,6 +9100,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8881,6 +9114,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8918,6 +9152,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8935,6 +9170,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -8970,6 +9206,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -8983,6 +9220,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9015,6 +9253,7 @@ export const getUser = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -9077,6 +9316,7 @@ export const getUser = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9127,6 +9367,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9168,6 +9409,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9181,6 +9423,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9218,6 +9461,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9235,6 +9479,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -9259,6 +9504,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9300,6 +9546,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9313,6 +9560,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9350,6 +9598,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9367,6 +9616,7 @@ export const getUser = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -9412,6 +9662,7 @@ export const getUser = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9437,6 +9688,7 @@ export const getUser = /* GraphQL */ `
         updatedAt
       }
       role
+      membership
       avatar
       createdAt
       updatedAt
@@ -9518,6 +9770,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9562,6 +9815,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9625,6 +9879,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9675,6 +9930,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9761,6 +10017,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9791,6 +10048,7 @@ export const listUsers = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -9816,6 +10074,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -9879,6 +10138,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9929,6 +10189,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -9998,6 +10259,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10039,6 +10301,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10052,6 +10315,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10089,6 +10353,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10106,6 +10371,7 @@ export const listUsers = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -10141,6 +10407,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10154,6 +10421,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10243,6 +10511,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10287,6 +10556,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10350,6 +10620,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10400,6 +10671,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10486,6 +10758,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10516,6 +10789,7 @@ export const listUsers = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -10577,6 +10851,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10621,6 +10896,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10684,6 +10960,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10734,6 +11011,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10820,6 +11098,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -10850,6 +11129,7 @@ export const listUsers = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -10897,6 +11177,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10910,6 +11191,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -10982,6 +11264,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11060,6 +11343,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11104,6 +11388,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11167,6 +11452,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11217,6 +11503,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11303,6 +11590,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11333,6 +11621,7 @@ export const listUsers = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -11358,6 +11647,7 @@ export const listUsers = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11421,6 +11711,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11471,6 +11762,7 @@ export const listUsers = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11515,6 +11807,7 @@ export const listUsers = /* GraphQL */ `
           updatedAt
         }
         role
+        membership
         avatar
         createdAt
         updatedAt
@@ -11562,6 +11855,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11603,6 +11897,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11616,6 +11911,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11653,6 +11949,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11670,6 +11967,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -11705,6 +12003,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11718,6 +12017,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11801,6 +12101,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -11851,6 +12152,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11892,6 +12194,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11905,6 +12208,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11942,6 +12246,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -11959,6 +12264,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -11983,6 +12289,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12024,6 +12331,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12037,6 +12345,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12074,6 +12383,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12091,6 +12401,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -12136,6 +12447,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12177,6 +12489,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12218,6 +12531,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12231,6 +12545,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12268,6 +12583,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12285,6 +12601,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -12320,6 +12637,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12333,6 +12651,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12365,6 +12684,7 @@ export const getProject = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -12427,6 +12747,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -12477,6 +12798,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12518,6 +12840,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12531,6 +12854,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12568,6 +12892,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12585,6 +12910,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -12609,6 +12935,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12650,6 +12977,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12663,6 +12991,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12700,6 +13029,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12717,6 +13047,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -12762,6 +13093,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12855,6 +13187,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -12899,6 +13232,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -12962,6 +13296,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13012,6 +13347,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13098,6 +13434,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13128,6 +13465,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -13153,6 +13491,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13216,6 +13555,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13266,6 +13606,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13335,6 +13676,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13376,6 +13718,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13389,6 +13732,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13426,6 +13770,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13443,6 +13788,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -13478,6 +13824,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13491,6 +13838,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13580,6 +13928,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13624,6 +13973,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -13687,6 +14037,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13737,6 +14088,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13823,6 +14175,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13853,6 +14206,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -13914,6 +14268,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -13958,6 +14313,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -14021,6 +14377,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14071,6 +14428,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14157,6 +14515,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14187,6 +14546,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -14234,6 +14594,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -14247,6 +14608,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -14319,6 +14681,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14397,6 +14760,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14441,6 +14805,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -14504,6 +14869,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14554,6 +14920,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14640,6 +15007,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14670,6 +15038,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -14695,6 +15064,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -14758,6 +15128,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14808,6 +15179,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14852,6 +15224,7 @@ export const getProject = /* GraphQL */ `
           updatedAt
         }
         role
+        membership
         avatar
         createdAt
         updatedAt
@@ -14924,6 +15297,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -14968,6 +15342,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15031,6 +15406,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15081,6 +15457,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15167,6 +15544,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15197,6 +15575,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -15222,6 +15601,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15285,6 +15665,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15335,6 +15716,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15404,6 +15786,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15445,6 +15828,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15458,6 +15842,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15495,6 +15880,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15512,6 +15898,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -15547,6 +15934,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15560,6 +15948,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15649,6 +16038,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15693,6 +16083,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -15756,6 +16147,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15806,6 +16198,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15892,6 +16285,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -15922,6 +16316,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -15983,6 +16378,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16027,6 +16423,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -16090,6 +16487,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16140,6 +16538,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16226,6 +16625,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16256,6 +16656,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -16303,6 +16704,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -16316,6 +16718,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -16388,6 +16791,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16466,6 +16870,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16510,6 +16915,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -16573,6 +16979,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16623,6 +17030,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16709,6 +17117,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16739,6 +17148,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -16764,6 +17174,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -16827,6 +17238,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16877,6 +17289,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -16921,6 +17334,7 @@ export const getProject = /* GraphQL */ `
           updatedAt
         }
         role
+        membership
         avatar
         createdAt
         updatedAt
@@ -16995,6 +17409,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17045,6 +17460,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17086,6 +17502,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17099,6 +17516,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17136,6 +17554,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17153,6 +17572,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -17177,6 +17597,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17218,6 +17639,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17231,6 +17653,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17268,6 +17691,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17285,6 +17709,7 @@ export const getProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -17330,6 +17755,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17406,6 +17832,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17450,6 +17877,7 @@ export const getProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17513,6 +17941,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17563,6 +17992,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17649,6 +18079,7 @@ export const getProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17679,6 +18110,7 @@ export const getProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -17769,6 +18201,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17813,6 +18246,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -17876,6 +18310,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -17926,6 +18361,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -18012,6 +18448,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -18042,6 +18479,7 @@ export const listProjects = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -18067,6 +18505,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18130,6 +18569,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -18180,6 +18620,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -18255,6 +18696,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18296,6 +18738,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18309,6 +18752,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18346,6 +18790,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18363,6 +18808,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -18398,6 +18844,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18411,6 +18858,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18494,6 +18942,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -18544,6 +18993,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18585,6 +19035,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18598,6 +19049,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18635,6 +19087,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18652,6 +19105,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -18676,6 +19130,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18717,6 +19172,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18730,6 +19186,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18767,6 +19224,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18784,6 +19242,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -18829,6 +19288,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18870,6 +19330,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18911,6 +19372,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18924,6 +19386,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18961,6 +19424,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -18978,6 +19442,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -19013,6 +19478,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19026,6 +19492,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19058,6 +19525,7 @@ export const listProjects = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -19093,6 +19561,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19134,6 +19603,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19147,6 +19617,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19184,6 +19655,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19201,6 +19673,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -19236,6 +19709,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19249,6 +19723,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19332,6 +19807,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -19382,6 +19858,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19423,6 +19900,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19436,6 +19914,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19473,6 +19952,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19490,6 +19970,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -19514,6 +19995,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19555,6 +20037,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19568,6 +20051,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19605,6 +20089,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19622,6 +20107,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -19667,6 +20153,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19708,6 +20195,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19749,6 +20237,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19762,6 +20251,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19799,6 +20289,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19816,6 +20307,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -19851,6 +20343,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19864,6 +20357,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19896,6 +20390,7 @@ export const listProjects = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -19933,6 +20428,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -19996,6 +20492,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20046,6 +20543,7 @@ export const listProjects = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20104,6 +20602,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20145,6 +20644,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20158,6 +20658,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20195,6 +20696,7 @@ export const listProjects = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20212,6 +20714,7 @@ export const listProjects = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -20301,6 +20804,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20345,6 +20849,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20408,6 +20913,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20458,6 +20964,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20544,6 +21051,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20574,6 +21082,7 @@ export const getUpdate = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -20599,6 +21108,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20662,6 +21172,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20712,6 +21223,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -20787,6 +21299,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20828,6 +21341,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20841,6 +21355,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20878,6 +21393,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20895,6 +21411,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -20930,6 +21447,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -20943,6 +21461,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21026,6 +21545,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -21076,6 +21596,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21117,6 +21638,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21130,6 +21652,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21167,6 +21690,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21184,6 +21708,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -21208,6 +21733,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21249,6 +21775,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21262,6 +21789,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21299,6 +21827,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21316,6 +21845,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -21361,6 +21891,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21402,6 +21933,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21443,6 +21975,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21456,6 +21989,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21493,6 +22027,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21510,6 +22045,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -21545,6 +22081,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21558,6 +22095,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21590,6 +22128,7 @@ export const getUpdate = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -21625,6 +22164,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21666,6 +22206,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21679,6 +22220,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21716,6 +22258,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21733,6 +22276,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -21768,6 +22312,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21781,6 +22326,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21864,6 +22410,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -21914,6 +22461,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21955,6 +22503,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -21968,6 +22517,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22005,6 +22555,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22022,6 +22573,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -22046,6 +22598,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22087,6 +22640,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22100,6 +22654,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22137,6 +22692,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22154,6 +22710,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -22199,6 +22756,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22240,6 +22798,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22281,6 +22840,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22294,6 +22854,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22331,6 +22892,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22348,6 +22910,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -22383,6 +22946,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22396,6 +22960,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22428,6 +22993,7 @@ export const getUpdate = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -22465,6 +23031,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22528,6 +23095,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -22578,6 +23146,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -22636,6 +23205,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22677,6 +23247,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22690,6 +23261,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22727,6 +23299,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22744,6 +23317,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -22831,6 +23405,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -22875,6 +23450,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -22938,6 +23514,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -22988,6 +23565,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23074,6 +23652,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23104,6 +23683,7 @@ export const getUpdate = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -23129,6 +23709,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23192,6 +23773,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23242,6 +23824,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23311,6 +23894,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23352,6 +23936,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23365,6 +23950,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23402,6 +23988,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23419,6 +24006,7 @@ export const getUpdate = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -23454,6 +24042,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23467,6 +24056,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23556,6 +24146,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23600,6 +24191,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23663,6 +24255,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23713,6 +24306,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23799,6 +24393,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23829,6 +24424,7 @@ export const getUpdate = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -23890,6 +24486,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -23934,6 +24531,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -23997,6 +24595,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24047,6 +24646,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24133,6 +24733,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24163,6 +24764,7 @@ export const getUpdate = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -24210,6 +24812,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24223,6 +24826,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24295,6 +24899,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24373,6 +24978,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24417,6 +25023,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24480,6 +25087,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24530,6 +25138,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24616,6 +25225,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24646,6 +25256,7 @@ export const getUpdate = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -24671,6 +25282,7 @@ export const getUpdate = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24734,6 +25346,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24784,6 +25397,7 @@ export const getUpdate = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -24828,6 +25442,7 @@ export const getUpdate = /* GraphQL */ `
           updatedAt
         }
         role
+        membership
         avatar
         createdAt
         updatedAt
@@ -24878,6 +25493,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24919,6 +25535,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24932,6 +25549,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24969,6 +25587,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -24986,6 +25605,7 @@ export const listUpdates = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -25021,6 +25641,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25034,6 +25655,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25123,6 +25745,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25167,6 +25790,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25230,6 +25854,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25280,6 +25905,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25366,6 +25992,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25396,6 +26023,7 @@ export const listUpdates = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -25457,6 +26085,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25501,6 +26130,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25564,6 +26194,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25614,6 +26245,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25700,6 +26332,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25730,6 +26363,7 @@ export const listUpdates = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -25777,6 +26411,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25790,6 +26425,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25862,6 +26498,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -25912,6 +26549,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25953,6 +26591,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -25966,6 +26605,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26003,6 +26643,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26020,6 +26661,7 @@ export const listUpdates = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -26055,6 +26697,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26068,6 +26711,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26151,6 +26795,7 @@ export const listUpdates = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -26201,6 +26846,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26242,6 +26888,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26255,6 +26902,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26292,6 +26940,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26309,6 +26958,7 @@ export const listUpdates = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -26333,6 +26983,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26374,6 +27025,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26387,6 +27039,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26424,6 +27077,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26441,6 +27095,7 @@ export const listUpdates = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -26486,6 +27141,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26527,6 +27183,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26568,6 +27225,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26581,6 +27239,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26618,6 +27277,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26635,6 +27295,7 @@ export const listUpdates = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -26670,6 +27331,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26683,6 +27345,7 @@ export const listUpdates = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26715,6 +27378,7 @@ export const listUpdates = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt
@@ -26808,6 +27472,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26849,6 +27514,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26862,6 +27528,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26899,6 +27566,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26916,6 +27584,7 @@ export const updatesByProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -26951,6 +27620,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -26964,6 +27634,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27053,6 +27724,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27097,6 +27769,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27160,6 +27833,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27210,6 +27884,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27296,6 +27971,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27326,6 +28002,7 @@ export const updatesByProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -27387,6 +28064,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27431,6 +28109,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27494,6 +28173,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27544,6 +28224,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27630,6 +28311,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27660,6 +28342,7 @@ export const updatesByProject = /* GraphQL */ `
               updatedAt
             }
             role
+            membership
             avatar
             createdAt
             updatedAt
@@ -27707,6 +28390,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27720,6 +28404,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27792,6 +28477,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -27842,6 +28528,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27883,6 +28570,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27896,6 +28584,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27933,6 +28622,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27950,6 +28640,7 @@ export const updatesByProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -27985,6 +28676,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -27998,6 +28690,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28081,6 +28774,7 @@ export const updatesByProject = /* GraphQL */ `
                   updatedAt
                 }
                 role
+                membership
                 avatar
                 createdAt
                 updatedAt
@@ -28131,6 +28825,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28172,6 +28867,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28185,6 +28881,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28222,6 +28919,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28239,6 +28937,7 @@ export const updatesByProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -28263,6 +28962,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28304,6 +29004,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28317,6 +29018,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28354,6 +29056,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28371,6 +29074,7 @@ export const updatesByProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -28416,6 +29120,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28457,6 +29162,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28498,6 +29204,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28511,6 +29218,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28548,6 +29256,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28565,6 +29274,7 @@ export const updatesByProject = /* GraphQL */ `
                 updatedAt
               }
               role
+              membership
               avatar
               createdAt
               updatedAt
@@ -28600,6 +29310,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28613,6 +29324,7 @@ export const updatesByProject = /* GraphQL */ `
                   canHire
                   email
                   role
+                  membership
                   avatar
                   createdAt
                   updatedAt
@@ -28645,6 +29357,7 @@ export const updatesByProject = /* GraphQL */ `
             updatedAt
           }
           role
+          membership
           avatar
           createdAt
           updatedAt

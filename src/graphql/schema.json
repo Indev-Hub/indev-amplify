@@ -738,6 +738,17 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
+          "name" : "membership",
+          "description" : null,
+          "args" : [ ],
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        }, {
           "name" : "avatar",
           "description" : null,
           "args" : [ ],
@@ -2410,6 +2421,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "membership",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelStringInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "avatar",
           "description" : null,
           "type" : {
@@ -3533,6 +3553,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "membership",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "avatar",
           "description" : null,
           "type" : {
@@ -3615,6 +3644,15 @@
           "defaultValue" : null
         }, {
           "name" : "role",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelStringInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "membership",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -3744,6 +3782,15 @@
           "defaultValue" : null
         }, {
           "name" : "role",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "membership",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -5855,6 +5902,14 @@
         "onFragment" : false,
         "onField" : true
       }, {
+        "name" : "aws_iam",
+        "description" : "Tells the service this field/object has access authorized by sigv4 signing.",
+        "locations" : [ "OBJECT", "FIELD_DEFINITION" ],
+        "args" : [ ],
+        "onOperation" : false,
+        "onFragment" : false,
+        "onField" : false
+      }, {
         "name" : "deprecated",
         "description" : null,
         "locations" : [ "FIELD_DEFINITION", "ENUM_VALUE" ],
@@ -5868,14 +5923,6 @@
           },
           "defaultValue" : "\"No longer supported\""
         } ],
-        "onOperation" : false,
-        "onFragment" : false,
-        "onField" : false
-      }, {
-        "name" : "aws_iam",
-        "description" : "Tells the service this field/object has access authorized by sigv4 signing.",
-        "locations" : [ "OBJECT", "FIELD_DEFINITION" ],
-        "args" : [ ],
         "onOperation" : false,
         "onFragment" : false,
         "onField" : false

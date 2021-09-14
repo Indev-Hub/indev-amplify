@@ -25,6 +25,8 @@ import Gallery from '../gallery/Gallery';
 import ProjectTemplateV1 from '../project/ProjectTemplateV1';
 import loadingGif from '../assets/loading1.gif';
 import { TabPanel } from '@material-ui/lab';
+import { updateChannel, updateUser } from 'src/graphql/mutations';
+import useAuth from 'src/hooks/useAuth';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   MuiButton: {
@@ -136,6 +138,9 @@ function ChannelTemplate(props) {
   const [vidData, setVidData] = useState([]);
   const [showcaseId, setShowcaseId] = useState(7868357);
 
+  const user = useAuth();
+  console.log(user.id)
+
   useEffect(() => {
     // eslint-disable-next-line
     getChannelInfo();
@@ -167,6 +172,25 @@ function ChannelTemplate(props) {
       .then(response => response.json())
       // .then(data => setData(data.data))
       .then(data => setVidData(data.data));
+  }
+
+  async function ShowcaseUpdate() {
+    // showPendingState();
+    try {
+      // Data input for updateUser call
+      const UpdateChannelInput = {
+        id: channelId,
+        supporters: user.id
+      }
+
+      // Updates the User table to include the newly created Channel. Only one channel is allowed per user
+      // This will overwrite a channel if it exists in the user.channel field
+      const upUser = await API.graphql(graphqlOperation(updateChannel, { input: UpdateUserInput }))
+      console.log('User Updated!', upUser) 
+
+    } catch (error) {
+        console.log('error on user update:', error);
+    }
   }
 
   // Handle Tab state

@@ -36,10 +36,12 @@ const ProjectVideoAdd = (props) => {
   const { project, user, toggleUpload, overlap } = props;
   const { enqueueSnackbar } = useSnackbar();
   const [files, setFiles] = useState([]);
-  console.log('files:', files);
+
   const handleDrop = (newFiles) => {
     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
   };
+
+  console.log('files:', files);
 
   const handleRemove = (file) => {
     setFiles((prevFiles) => prevFiles.filter((_file) => _file.path
@@ -65,6 +67,24 @@ const ProjectVideoAdd = (props) => {
     console.log('before', file, path)
     await Storage.put(path, file, { contentType: 'video' });
     console.log('after success!')
+  }
+
+  // limit number of video uploads to 2 per month
+  const videoLimit= () => {
+
+    const presentMonth = new Date().toISOString().match(/(?<=\W)\d{2}/) // present month
+    const projectCreated = project.createdAt.match(/(?<=\W)\d{2}/) // month project was created
+
+    {console.log('Date when project was created: ', projectCreated[0])}
+    {console.log('Present Month: ', presentMonth[0])}
+
+    const itemsArr = user.channel.projects.items
+
+    {console.log('Items Arr: ', itemsArr)}
+
+    // Go through all the items and look at the 
+    // const itemsMap = itemsArr.map(item => item.createdAt)
+  
   }
 
   return (
@@ -192,6 +212,7 @@ const ProjectVideoAdd = (props) => {
                     >
                       Cancel
                     </Button>
+                    {videoLimit()}
                     <Button
                       color="primary"
                       // disabled={isSubmitting}

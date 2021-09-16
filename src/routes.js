@@ -127,6 +127,13 @@ const Features = Loadable(lazy(() => import('./pages/other/FeaturesPage')));
 // Policy pages
 
 const TermsAndConditionsPage = Loadable(lazy(() => import('./pages/policies/TermsAndConditionsPage')));
+const PrivacyPolicyPage = Loadable(lazy(() => import('./pages/policies/PrivacyPolicyPage')));
+const CommunityGuidelinesPage = Loadable(lazy(() => import('./pages/policies/CommunityGuidelinesPage')));
+const AdsAndSponsorshipPage = Loadable(lazy(() => import('./pages/policies/AdsAndSponsorshipPage')));
+const CopyrightPage = Loadable(lazy(() => import('./pages/policies/CopyrightPage')));
+const InstagramPage = Loadable(lazy(() => import('./pages/community/InstagramPage')));
+const LinkedInPage = Loadable(lazy(() => import('./pages/community/LinkedInPage')));
+const OurTeamPage = Loadable(lazy(() => import('./pages/community/OurTeamPage')));
 
 const routes = [
   {
@@ -197,12 +204,38 @@ const routes = [
         element: <TermsAndConditionsPage />
       },
       {
-        path: 'new',
-        element: <UpdateCreatePage />
+        path: 'privacy-policy',
+        element: <PrivacyPolicyPage />
       },
       {
-        path: ':postId',
-        element: <UpdateDetailsPage />
+        path: 'community-guidelines',
+        element: <CommunityGuidelinesPage />
+      },
+      {
+        path: 'ads-and-sponsorship',
+        element: <AdsAndSponsorshipPage />
+      },
+      {
+        path: 'copyright',
+        element: <CopyrightPage />
+      }
+    ]
+  },
+  {
+    path: 'community',
+    element: <UpdateLayout />,
+    children: [
+      {
+        path: 'instagram',
+        element: <InstagramPage />
+      },
+      {
+        path: 'linkedin',
+        element: <LinkedInPage />
+      },
+      {
+        path: 'our-team',
+        element: <OurTeamPage />
       }
     ]
   },

@@ -138,8 +138,8 @@ function ChannelTemplate(props) {
   const [vidData, setVidData] = useState([]);
   const [showcaseId, setShowcaseId] = useState(7868357);
 
-  const user = useAuth();
-  console.log(user.id)
+  const { user } = useAuth();
+  console.log('UserId:', user.id)
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -185,11 +185,11 @@ function ChannelTemplate(props) {
 
       // Updates the User table to include the newly created Channel. Only one channel is allowed per user
       // This will overwrite a channel if it exists in the user.channel field
-      const upUser = await API.graphql(graphqlOperation(updateChannel, { input: UpdateUserInput }))
-      console.log('User Updated!', upUser) 
+      const upChannel = await API.graphql(graphqlOperation(updateChannel, { input: UpdateChannelInput }))
+      console.log('Channel Updated!', upChannel) 
 
     } catch (error) {
-        console.log('error on user update:', error);
+        console.log('error on channel update:', error);
     }
   }
 
@@ -308,7 +308,7 @@ function ChannelTemplate(props) {
                     return (
                       <>
                         {/* <Typography>Become the first supporter</Typography> */}
-                        <Button variant="contained">SUPPORT</Button>
+                        <Button variant="contained" onClick={ShowcaseUpdate}>SUPPORT</Button>
                         {/* {console.log('Supporters DO NOT EXIST', channelData.supporters.length)} */}
                       </>                    );
                   } else {

@@ -124,6 +124,10 @@ const Pricing = Loadable(lazy(() => import('./pages/Pricing')));
 const MembershipBeta = Loadable(lazy(() => import('./pages/MembershipBeta')));
 const Features = Loadable(lazy(() => import('./pages/other/FeaturesPage')));
 
+// Policy pages
+
+const TermsAndConditionsPage = Loadable(lazy(() => import('./pages/policies/TermsAndConditionsPage')));
+
 const routes = [
   {
     path: 'authentication',
@@ -181,6 +185,24 @@ const routes = [
       {
         path: ':postId',
         element: <BlogPostDetails />
+      }
+    ]
+  },
+  {
+    path: 'policies',
+    element: <UpdateLayout />,
+    children: [
+      {
+        path: 'terms-and-conditions',
+        element: <TermsAndConditionsPage />
+      },
+      {
+        path: 'new',
+        element: <UpdateCreatePage />
+      },
+      {
+        path: ':postId',
+        element: <UpdateDetailsPage />
       }
     ]
   },

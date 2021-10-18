@@ -130,9 +130,10 @@ export const AuthProvider = (props) => {
     });
   };
 
-  const register = async (email, password) => {
+  const register = async (username, email, password) => {
     await Auth.signUp({
-      username: email,
+      username: username,
+      // email: email,
       password,
       attributes: { email }
     });

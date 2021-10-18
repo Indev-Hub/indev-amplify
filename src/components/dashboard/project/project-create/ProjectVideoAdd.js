@@ -36,10 +36,18 @@ const ProjectVideoAdd = (props) => {
   const { project, user, toggleUpload, overlap } = props;
   const { enqueueSnackbar } = useSnackbar();
   const [files, setFiles] = useState([]);
-  console.log('files:', files);
+  const [vidData, setVidData] = useState([]);
+
+  useEffect(() => {
+    loadData();
+    console.log('vidDATA: ', vidData)
+  }, []);
+
   const handleDrop = (newFiles) => {
     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
   };
+
+  console.log('files:', files);
 
   const handleRemove = (file) => {
     setFiles((prevFiles) => prevFiles.filter((_file) => _file.path
@@ -65,6 +73,48 @@ const ProjectVideoAdd = (props) => {
     console.log('before', file, path)
     await Storage.put(path, file, { contentType: 'video' });
     console.log('after success!')
+  }
+
+    // Get the vimeo showcase
+    const loadData = async () => {
+      try {
+        const vidFetch = await fetch(`https://api.vimeo.com/me/albums/8521543/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
+        .then(response => response.json())
+        const vidList = vidFetch.data
+        setVidData(vidList);
+      } catch (error){
+        console.log('ERorr:', error)
+      }
+    }
+
+  // limit number of video uploads to 2 per month
+  const videoLimit = () => {
+    const presentYearAndMonth = new Date().toISOString().match(/\d{4}-\d{2}/)[0]
+    const matchingMonthUploads = vidData.filter(video => video.created_time.match(presentYearAndMonth))
+    
+    console.log("Matching Month Uploads:", matchingMonthUploads)
+
+    return (
+      <>
+        {matchingMonthUploads.length <= 1
+          ? (<Button
+              color="primary"
+              // disabled={isSubmitting}
+              type="submit"
+              variant="contained"
+            >
+              Upload Video
+            </Button>)
+          : (<Button
+              color="primary"
+              type="submit"
+              variant="contained"
+            >
+              Upgrade Plan
+            </Button>)
+        }
+      </>
+    )
   }
 
   return (
@@ -192,14 +242,24 @@ const ProjectVideoAdd = (props) => {
                     >
                       Cancel
                     </Button>
-                    <Button
+
+                    {/* <TextField
+                      label="Can you Upload?!"
+                      name="upload"
+                      type="hidden"
+                      // value="Allowed to upload"
+                      required
+                    /> */}
+
+                    {videoLimit()}
+                    {/* <Button
                       color="primary"
                       // disabled={isSubmitting}
                       type="submit"
                       variant="contained"
                     >
                       Upload Video
-                    </Button>
+                    </Button> */}
                     {console.log('submitting', isSubmitting)}
                   </Box>
                 </Card>

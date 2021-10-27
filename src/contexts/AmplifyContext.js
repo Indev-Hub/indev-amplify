@@ -204,7 +204,7 @@ const getUserInfo = async () => {
     console.log(userList);
     sessionStorage.setItem('userInfo', JSON.stringify(userList));
     console.log('user setItem successful');
-    
+    // error getting user is not defined
     // console.log('list', userList);
   } catch (error) {
     console.log('error on fetching videos', error);

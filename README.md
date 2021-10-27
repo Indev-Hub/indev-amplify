@@ -1,3 +1,12 @@
+To Dos
+- Analyzing project
+- Context with auth
+  - Unauthorized user access
+  - After registering, a lambda function will add user information to database. Cognito has limited fields to utilize. Add user id input into user table, from user table can build out new tables. Persistent Context with user table information.
+- Stripe, alot of stuff
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

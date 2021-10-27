@@ -103,6 +103,7 @@ export const AuthProvider = (props) => {
 
   const login = async (email, password) => {
     const user = await Auth.signIn(email, password);
+    
 
     if (user.challengeName) {
       console.error(`Unable to login, because challenge "${user.challengeName}" is mandated and we did not handle this case.`);
@@ -116,7 +117,7 @@ export const AuthProvider = (props) => {
           id: user.attributes.sub,
           avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
           email: user.attributes.email,
-          name: 'Jane Rotanson',
+          name: user.username,
           plan: 'Premium'
         }
       }

@@ -4386,7 +4386,7 @@ export const listChannels = /* GraphQL */ `
     }
   }
 `;
-export const getUser = /* GraphQL */ `
+export const getUser =/* GraphQL */ `
   query GetUser($id: ID!) {
     getUser(id: $id) {
       id
@@ -9442,7 +9442,7 @@ export const getUser = /* GraphQL */ `
       updatedAt
     }
   }
-`;
+`
 export const listUsers = /* GraphQL */ `
   query ListUsers(
     $filter: ModelUserFilterInput

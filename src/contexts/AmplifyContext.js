@@ -7,6 +7,33 @@ import { getUser } from 'src/graphql/queries';
 
 Amplify.configure(amplifyConfig);
 
+async function getUserObject(){
+  const user = await Auth.currentAuthenticatedUser();
+  return user;
+}
+
+async function getUserInfo(){
+  try {
+    // console.log(getUser());
+    const userVariable = await getUserObject();
+    const userData = await API.graphql(graphqlOperation(getUser, {id: userVariable.attributes.sub}));
+    console.log(userData);
+
+    // Above logic is retrieving the user data.
+
+
+    // const userList = await userData.data.getUser;
+    // console.log(userList)
+    // setUserInfo(userList);
+    // sessionStorage.setItem('userInfo', JSON.stringify(userList));
+    // console.log('user setItem successful');
+    // // error getting user is not defined
+    // console.log('list', userList);
+  } catch (error) {
+    console.log('error on fetching videos', error);
+  }
+}
+
 const initialState = {
   isAuthenticated: false,
   isInitialized: false,
@@ -196,17 +223,18 @@ AuthProvider.propTypes = {
 export default AuthContext;
 
 // Get user information from database User table
-const getUserInfo = async () => {  
-  try {
-    const userData = await API.graphql(graphqlOperation(getUser({ id: user.id })));
-    const userList = userData.data.getUser;
-    setUserInfo(userList);
-    console.log(userList);
-    sessionStorage.setItem('userInfo', JSON.stringify(userList));
-    console.log('user setItem successful');
-    // error getting user is not defined
-    // console.log('list', userList);
-  } catch (error) {
-    console.log('error on fetching videos', error);
-  }
-}
+// const getUserInfo = async (userId) => {  
+//   try {
+//     // console.log(getUser());
+//     const userData = await API.graphql(graphqlOperation(getUser(userId)));
+//     const userList = await userData.data.getUser;
+//     setUserInfo(userList);
+//     console.log(userList);
+//     sessionStorage.setItem('userInfo', JSON.stringify(userList));
+//     console.log('user setItem successful');
+//     // error getting user is not defined
+//     // console.log('list', userList);
+//   } catch (error) {
+//     console.log('error on fetching videos', error);
+//   }
+// }

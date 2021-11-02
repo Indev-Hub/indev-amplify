@@ -22,7 +22,6 @@ function UserInfo() {
       const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
       const userList = userData.data.getUser;
       setUserInfo(userList);
-      
       // console.log('list', userList);
     } catch (error) {
       console.log('error on fetching videos', error);

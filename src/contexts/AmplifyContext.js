@@ -17,7 +17,7 @@ async function getUserInfo(){
     // console.log(getUser());
     const userVariable = await getUserObject();
     const userData = await API.graphql(graphqlOperation(getUser, {id: userVariable.attributes.sub}));
-    console.log(userData);
+    return userData
 
     // Above logic is retrieving the user data.
 
@@ -96,7 +96,8 @@ export const AuthProvider = (props) => {
     const initialize = async () => {
       try {
         const user = await Auth.currentAuthenticatedUser();
-        getUserInfo();
+        const userData = await getUserInfo();
+
         // Here you should extract the complete user profile to make it
         // available in your entire app.
         // The auth state only provides basic information.
@@ -110,7 +111,8 @@ export const AuthProvider = (props) => {
               avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
               email: user.attributes.email,
               name: user.username,
-              plan: 'Premium'
+              plan: 'Premium',
+              userInformation: userData,
             }
           }
         });

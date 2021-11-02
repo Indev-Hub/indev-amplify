@@ -2,7 +2,10 @@ To Dos
 - Analyzing project
 - Context with auth
   - Unauthorized user access
+    - Access to "form is loading" portion of site for unlogged in users
+    - error on fetching channels No current user
   - After registering, a lambda function will add user information to database. Cognito has limited fields to utilize. Add user id input into user table, from user table can build out new tables. Persistent Context with user table information.
+    - Partially complete, data table is retrieved but not currently being stored in context yet. 
 - Stripe, alot of stuff
 
 

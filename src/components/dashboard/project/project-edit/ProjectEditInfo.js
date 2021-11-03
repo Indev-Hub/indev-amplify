@@ -159,6 +159,9 @@ const ProjectEditInfo = (props) => {
                             onChange={handleChange}
                             value={values.startDate}
                             variant="outlined"
+                            InputLabelProps={{
+                              shrink: true,
+                            }}
                           />
                         </Box>
                         <Box mt={3}>
@@ -173,6 +176,9 @@ const ProjectEditInfo = (props) => {
                             onChange={handleChange}
                             value={values.endDate}
                             variant="outlined"
+                            InputLabelProps={{
+                              shrink: true,
+                            }}
                           />
                         </Box>
                       </Grid>

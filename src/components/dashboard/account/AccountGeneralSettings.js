@@ -20,6 +20,7 @@ import {
   TextField,
   Typography
 } from '@material-ui/core';
+
 import { API, graphqlOperation } from 'aws-amplify';
 import * as queries from '../../../graphql/queries';
 import {
@@ -27,11 +28,14 @@ import {
 } from '../../../graphql/mutations';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
+import ProfileImageModal from './ProfileImageModal';
+
 // import countries from './countries';
 
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
   const [userInfo, setUserInfo] = useState([]);
+  const [isApplicationOpen, setIsApplicationOpen] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   console.log('user', user.id);
   console.log('userInfo:', userInfo);
@@ -45,6 +49,13 @@ const AccountGeneralSettings = (props) => {
     } catch (error) {
       console.log('error on fetching videos', error);
     }
+  };
+  const handleApplyModalOpen = () => {
+    setIsApplicationOpen(true);
+  };
+
+  const handleApplyModalClose = () => {
+    setIsApplicationOpen(false);
   };
 
   useEffect(() => {
@@ -117,8 +128,9 @@ const AccountGeneralSettings = (props) => {
               color="primary"
               fullWidth
               variant="text"
+              onClick={handleApplyModalOpen}
             >
-              Remove Picture
+              Upload Profile Picture
             </Button>
           </CardActions>
         </Card>
@@ -450,6 +462,11 @@ const AccountGeneralSettings = (props) => {
             </form>
           )}
         </Formik>
+        <ProfileImageModal
+          onApply={handleApplyModalClose}
+          onClose={handleApplyModalClose}
+          open={isApplicationOpen}
+        />
       </Grid>
     </Grid>
   );

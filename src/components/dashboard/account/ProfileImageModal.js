@@ -6,11 +6,11 @@ import { Formik } from 'formik';
 import { useSnackbar } from 'notistack';
 import { Box, Button, Card, CardContent, CardHeader, Divider, Dialog, FormHelperText,  Grid, TextField, Typography } from '@material-ui/core';
 import { API, graphqlOperation, Storage } from 'aws-amplify';
-import FileDropzone from '../../../FileDropzone';
+import FileDropzone from '../../FileDropzone';
 import { updateProject } from 'src/graphql/mutations';
 import wait from 'src/utils/wait';
 
-const ProjectImageModal = (props) => {
+const ProfileImageModal = (props) => {
   const { authorAvatar, authorName, onApply, onClose, open, project, user, ...other } = props;
   const [value, setValue] = useState('');
   const { enqueueSnackbar } = useSnackbar();
@@ -34,22 +34,25 @@ const ProjectImageModal = (props) => {
 
   // The 'title' prop is passed through in the onSubmit Formik function (line 101-ish)
   const uploadImage = (files) => {
-    // Set path within channel-storage194552-feat/public/ bucket
-    // Currently saving inside the project id
-    const path = `${project.id}/featuredImg`;
-    // const path = `user/${user.id}/profileImg`;
+    try {
+      // Set path within channel-storage194552-feat/public/ bucket
+      // Currently saving inside the project id
+      const path = `user/${user.id}/profileImg`;
 
-    // path is defined above and files is from state
-    handleUpload(files, path);
+      // path is defined above and files is from state
+      handleUpload(files, path);
 
-    // Create Project Inputs
-    const UpdateProjectInput = {
-      id: project.id,
-      featuredImg: path 
-    };
+      // Create Project Inputs
+      const UpdateProjectInput = {
+        id: project.id,
+        avatar: path 
+      };
 
-    console.log('project info before', UpdateProjectInput)
-    const upProj = API.graphql(gAPIraphqlOperation(updateProject, { input: UpdateProjectInput }));
+      console.log('project info before', UpdateProjectInput)
+      const upProj = API.graphql(gAPIraphqlOperation(updateProject, { input: UpdateProjectInput }));
+    } catch (error){ 
+      console.log("error on updating avatar", error)
+    }
   };
 
   // Upload image to S3
@@ -75,6 +78,7 @@ const ProjectImageModal = (props) => {
       },
       variant: 'success'
     });
+    // uploadImage(files);
 
     if (onApply) {
       onApply();
@@ -113,8 +117,7 @@ const ProjectImageModal = (props) => {
                 })}
               onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
                 try {
-                  console.log('files', files);
-                  console.log('values', values)
+                  console.log('values', files, path)
                   uploadImage(files);
 
                   await wait(200);
@@ -138,11 +141,10 @@ const ProjectImageModal = (props) => {
               }}
             >
               {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-
                 <form onSubmit={handleSubmit}>
                   {console.log(values)}
                   <Card>
-                    <CardHeader title={`Upload an image for ${project.name}`} />
+                    <CardHeader title={`Upload an image for your profile picture!`} />
                     <Divider />
                     <CardContent>
                       <Grid
@@ -154,7 +156,7 @@ const ProjectImageModal = (props) => {
                           md={12}
                           xs={12}
                         >
-                          <TextField
+                          {/* <TextField
                             error={Boolean(touched.title && errors.title)}
                             fullWidth
                             helperText={touched.title && errors.title}
@@ -164,7 +166,7 @@ const ProjectImageModal = (props) => {
                             onChange={handleChange}
                             value={values.title}
                             variant="outlined"
-                          />
+                          /> */}
                         </Grid>
                         <Grid
                           item
@@ -211,11 +213,11 @@ const ProjectImageModal = (props) => {
                         disabled={isSubmitting}
                         type="submit"
                         variant="contained"
-                        // onClick={onSubmit}
+                        // onClick={handleApply}
                       >
                         Upload Image
                       </Button>
-                      {console.log('submitting', isSubmitting)}
+                      {/* {console.log('submitting', isSubmitting)} */}
                     </Box>
                   </Card>
                 </form>
@@ -227,7 +229,7 @@ const ProjectImageModal = (props) => {
   );
 };
 
-ProjectImageModal.propTypes = {
+ProfileImageModal.propTypes = {
   authorAvatar: PropTypes.string.isRequired,
   authorName: PropTypes.string.isRequired,
   onApply: PropTypes.func,
@@ -235,4 +237,4 @@ ProjectImageModal.propTypes = {
   open: PropTypes.bool.isRequired
 };
 
-export default ProjectImageModal;
+export default ProfileImageModal;

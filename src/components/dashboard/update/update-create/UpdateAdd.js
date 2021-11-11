@@ -16,7 +16,7 @@ import DotsVertical from '../../../../icons/DotsVertical';
 // import ProjectDescription from "./ProjectDescription";
 // import ProjectReview from "./ProjectReview";
 import { createUpdate } from "../../../../graphql/mutations";
-import { getUser } from "../../../../graphql/queries";
+// import { getUser } from "../../../../graphql/queries";
 import { API, Auth, graphqlOperation } from "aws-amplify";
 import useAuth from "src/hooks/useAuth";
 import UpdateForm from "./UpdateForm";
@@ -30,32 +30,32 @@ const UpdateAdd = () => {
     content: '',
     type: ''
   });
-  // console.log('Update is created:', updateCreated)
-
-  // Set state for User table
-  const [userData, setUserData] = useState();
 
   // Get user attributes
   const { user } = useAuth();
+
+  // Set state for User table
+  // const [userData, setUserData] = useState();
+
   // console.log('user', user);
 
   // Load User table data
   useEffect(() => {
-    getUserTable();
+    // getUserTable();
     console.log('user table:', userData)
   }, [])
 
-  // API call to get User table data
-  const getUserTable = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
-      const userList = userData.data.getUser;
-      setUserData(userList);
-      console.log('list', userList);
-    } catch (error) {
-      console.log('error on fetching videos', error);
-    }
-  };
+  // // API call to get User table data
+  // const getUserTable = async () => {
+  //   try {
+  //     const userData = await API.graphql(graphqlOperation(getUser, { id: user.id }));
+  //     const userList = userData.data.getUser;
+  //     setUserData(userList);
+  //     console.log('list', userList);
+  //   } catch (error) {
+  //     console.log('error on fetching videos', error);
+  //   }
+  // };
 
   const handleChange = (e) => {
     setFormData({

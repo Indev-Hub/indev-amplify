@@ -35,8 +35,8 @@ import ProjectImageModal from './ProjectImageModal';
 const offset = 5;
 
 const ProjectEdit_v2 = (props) => {
-  const { project, user } = props;
-
+  const { project } = props;
+  const { user } = useAuth();
   const [ showUpdate, setShowUpdate ] = useState(false);
   const [ showUpload, setShowUpload ] = useState(false);
   const [ featImage, setFeatImage ] = useState();
@@ -44,17 +44,6 @@ const ProjectEdit_v2 = (props) => {
   // const { user } = useAuth();
   // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
-
-  // const getUserInfo = async () => {
-  //   try {
-  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-  //     const userList = userData.data.getUser;
-  //     setUserInfo(userList);
-  //     console.log('list', userList);
-  //   } catch (error) {
-  //     console.log('error on fetching videos', error);
-  //   }
-  // };
 
   function toggleUpdate() {
     setShowUpdate(false);

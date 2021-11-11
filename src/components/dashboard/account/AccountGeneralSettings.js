@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -21,7 +21,7 @@ import {
   Typography
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
-import * as queries from '../../../graphql/queries';
+// import * as queries from '../../../graphql/queries';
 import {
   updateUser
 } from '../../../graphql/mutations';
@@ -31,25 +31,25 @@ import wait from '../../../utils/wait';
 
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
-  const [userInfo, setUserInfo] = useState([]);
+  // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
   console.log('user', user.id);
-  console.log('userInfo:', userInfo);
+  // console.log('userInfo:', userInfo);
 
-  const getUserInfo = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-      const userList = userData.data.getUser;
-      setUserInfo(userList);
-      console.log('list', userList);
-    } catch (error) {
-      console.log('error on fetching videos', error);
-    }
-  };
+  // const getUserInfo = async () => {
+  //   try {
+  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
+  //     const userList = userData.data.getUser;
+  //     setUserInfo(userList);
+  //     console.log('list', userList);
+  //   } catch (error) {
+  //     console.log('error on fetching videos', error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserInfo();
-  }, []);
+  // useEffect(() => {
+  //   getUserInfo();
+  // }, []);
 
   return (
     <Grid
@@ -134,14 +134,14 @@ const AccountGeneralSettings = (props) => {
           enableReinitialize
           initialValues={{
             // canHire: userInfo.canHire = userInfo.canHire ? userInfo.canHire : false,
-            canHire: userInfo.canHire || false,
+            canHire: user.userTable.canHire || false,
             city: user.city || '',
             country: user.country || '',
             email: user.email || '',
             isPublic: user.isPublic || false,
-            firstName: userInfo.firstName || '',
-            lastName: userInfo.lastName || '',
-            displayName: userInfo.displayName || '',
+            firstName: user.userTable.firstName || '',
+            lastName: user.userTable.lastName || '',
+            displayName: user.userTable.displayName || '',
             phone: user.phone || '',
             state: user.state || '',
             submit: null

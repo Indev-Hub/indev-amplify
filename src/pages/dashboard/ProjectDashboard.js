@@ -1,31 +1,15 @@
 /* eslint-disable */
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
 import { useSnackbar } from 'notistack';
-import FileDropzone from "src/components/FileDropzone";
 import { Helmet } from 'react-helmet-async';
 import {
   Box,
-  Button,
   Breadcrumbs,
   Container,
-  Card,
-  CardContent,
-  CardHeader,
   Divider,
-  FormControl,
-  FormHelperText,
   Grid,
-  // IconButton,
-  OutlinedInput,
-  InputAdornment,
-  InputLabel,
   Link,
-  Paper,
-  Switch,
-  TextField,
   Typography,
   Accordion,
   AccordionSummary,
@@ -35,14 +19,10 @@ import {
 } from '@material-ui/core';
 import { API, graphqlOperation } from 'aws-amplify';
 import useAuth from '../../hooks/useAuth';
-import Plus from '../../icons/Plus';
 // import { ChannelCreateWizard } from '../../components/dashboard/channel';
 import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';
-import { updateChannel } from '../../graphql/mutations';
-import { getChannel, getUser } from '../../graphql/queries';
-import { getChannelByManager } from 'src/graphql/customQueries';
 import { Edit } from '@material-ui/icons';
 // import ChannelAdd from '../../components/dashboard/channel/channel-create/ChannelAdd';
 
@@ -50,37 +30,18 @@ const ProjectDashboard = (props) => {
   const { settings } = useSettings();
   const { user } = useAuth();
   console.log('user', user)
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [connectFetch, setConnectFetch] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const [expanded, setExpanded] = useState(null);
 
   // Set state for User table
-  const [userData, setUserData] = useState();
   const [projectData, setProjectData] = useState();
 
   // Load User table data
   useEffect(() => {
     gtm.push({ event: 'page_view' });
-    getUserTable();
   }, []);
-
-  // API call to get User table data
-  const getUserTable = async () => {
-    try {
-      const userInfo = await API.graphql(graphqlOperation(getUser, { id: user.id }));
-      console.log('user info', userInfo);
-      const userList = userInfo.data.getUser;
-      setUserData(userList);
-      setProjectData(userList.channel.projects.items);
-      setLoading(false);
-      console.log('userList', userList);
-      console.log('project data', projectData);
-      console.log('is loading', loading);
-    } catch (error) {
-      console.log('error on fetching user table', error);
-    }
-  };
 
   const handleChannelCreation = () => {
     console.log('click!');
@@ -168,7 +129,7 @@ const ProjectDashboard = (props) => {
                   m="auto"
                 >
                   <Grid item xs={12}>
-                    {projectData.map((project, index) => {
+                    {user.userTable.channel.projects.items.map((project, index) => {
                       return (
                         <Grid
                           key={index}

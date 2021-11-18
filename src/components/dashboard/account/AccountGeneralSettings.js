@@ -1,4 +1,4 @@
-// import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -27,29 +27,23 @@ import {
 } from '../../../graphql/mutations';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
+import AvatarModal from './AvatarModal';
 // import countries from './countries';
 
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
+  const [isApplicationOpen, setIsApplicationOpen] = useState(false);
   // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
   console.log('user', user.id);
-  // console.log('userInfo:', userInfo);
 
-  // const getUserInfo = async () => {
-  //   try {
-  //     const userData = await API.graphql(graphqlOperation(queries.getUser, { id: user.id }));
-  //     const userList = userData.data.getUser;
-  //     setUserInfo(userList);
-  //     console.log('list', userList);
-  //   } catch (error) {
-  //     console.log('error on fetching videos', error);
-  //   }
-  // };
+  const handleApplyModalOpen = () => {
+    setIsApplicationOpen(true);
+  };
 
-  // useEffect(() => {
-  //   getUserInfo();
-  // }, []);
+  const handleApplyModalClose = () => {
+    setIsApplicationOpen(false);
+  };
 
   return (
     <Grid
@@ -117,8 +111,9 @@ const AccountGeneralSettings = (props) => {
               color="primary"
               fullWidth
               variant="text"
+              onClick={handleApplyModalOpen}
             >
-              Remove Picture
+              Change Profile Picture
             </Button>
           </CardActions>
         </Card>
@@ -451,6 +446,14 @@ const AccountGeneralSettings = (props) => {
           )}
         </Formik>
       </Grid>
+      <AvatarModal
+        // authorAvatar={project.author.avatar}
+        // authorName={project.author.name}
+        onApply={handleApplyModalClose}
+        onClose={handleApplyModalClose}
+        open={isApplicationOpen}
+        user={user}
+      />
     </Grid>
   );
 };

@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { createContext, useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
-import Amplify, { API, Auth, graphqlOperation } from 'aws-amplify';
+import Amplify, { API, Auth, Storage, graphqlOperation } from 'aws-amplify';
 import { amplifyConfig } from '../config';
 import { getUser } from 'src/graphql/queries';
+
 
 Amplify.configure(amplifyConfig);
 
@@ -92,23 +93,36 @@ const AuthContext = createContext({
 export const AuthProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
+  // This below gets the user profile picture
+  const fetchAvatar = async (userid) => {
+    try {
+      const avatar = await Storage.get(`user/${userid}/avatar.png`)
+      // setfileUrl(avatar)
+      return avatar
+    } catch (err){
+      console.log('error fetching image', err)
+    }
+  }
 
   useEffect(() => {
     const initialize = async () => {
       try {
         const user = await Auth.currentAuthenticatedUser();
+        const avatarUrl = await fetchAvatar(user.attributes.sub)
         const userData = await getUserInfo();
         // Here you should extract the complete user profile to make it
         // available in your entire app.
         // The auth state only provides basic information.
-
+        console.log('This is user', user)
+        console.log('This is userData', userData)
+        console.log('This is user avatar', avatarUrl)
         dispatch({
           type: 'INITIALIZE',
           payload: {
-            isAuthenticated: true,
+            isAuthenticated: true, 
             user: {
               id: user.attributes.sub,
-              avatar: '/static/mock-images/avatars/avatar-jane_rotanson.png',
+              avatar: avatarUrl,
               email: user.attributes.email,
               name: user.username,
               plan: 'Premium',

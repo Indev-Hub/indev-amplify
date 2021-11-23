@@ -90,6 +90,7 @@ const AuthContext = createContext({
   passwordReset: () => Promise.resolve()
 });
 
+
 export const AuthProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -97,6 +98,7 @@ export const AuthProvider = (props) => {
   const fetchAvatar = async (userid) => {
     try {
       const avatar = await Storage.get(`user/${userid}/avatar.png`)
+      console.log('This is an avatar', avatar)
       // setfileUrl(avatar)
       return avatar
     } catch (err){

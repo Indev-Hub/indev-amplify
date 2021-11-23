@@ -33,6 +33,7 @@ import AvatarModal from './AvatarModal';
 const AccountGeneralSettings = (props) => {
   const { user } = useAuth();
   const [isApplicationOpen, setIsApplicationOpen] = useState(false);
+  // const [userData, setUserData] = useState({});
   // const [userInfo, setUserInfo] = useState([]);
   const { enqueueSnackbar } = useSnackbar();
   console.log('user', user.id);
@@ -44,6 +45,13 @@ const AccountGeneralSettings = (props) => {
   const handleApplyModalClose = () => {
     setIsApplicationOpen(false);
   };
+
+  // useEffect(() => {
+  // console.log('This is a user', user);
+  // setUserData({ ...user });
+  // console.log('This is a userData', userData);
+  //   window.location.reload(false);
+  // }, [user]);
 
   return (
     <Grid

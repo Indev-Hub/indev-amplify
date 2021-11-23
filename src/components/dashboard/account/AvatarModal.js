@@ -57,6 +57,8 @@ const AvatarModal = (props) => {
       console.log('before', files, path)
       await Storage.put(path, files[0], { contentType: 'image/png' });
       console.log('after success!')
+      // window.locatoin.reload refreshes the page.
+      window.location.reload(false)
     } catch (err) {
       console.log('error during image upload', err)
     }
@@ -105,14 +107,9 @@ const AvatarModal = (props) => {
               initialValues={{
                 submit: null           
               }}
-              validationSchema={Yup
-                .object()
-                .shape({
-                  title: Yup.string().max(50).required('Your image must have a title!')
-                })}
               onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
                 try {
-                  uploadImage(values.title);
+                  uploadImage('avatar');
 
                   await wait(200);
                   resetForm();
@@ -150,17 +147,7 @@ const AvatarModal = (props) => {
                           md={12}
                           xs={12}
                         >
-                          <TextField
-                            error={Boolean(touched.title && errors.title)}
-                            fullWidth
-                            helperText={touched.title && errors.title}
-                            label="Image Title"
-                            name="title"
-                            onBlur={handleBlur}
-                            onChange={handleChange}
-                            value={values.title}
-                            variant="outlined"
-                          />
+
                         </Grid>
                         <Grid
                           item

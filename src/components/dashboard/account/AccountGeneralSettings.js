@@ -134,7 +134,7 @@ const AccountGeneralSettings = (props) => {
           enableReinitialize
           initialValues={{
             // canHire: userInfo.canHire = userInfo.canHire ? userInfo.canHire : false,
-            canHire: user.userTable.canHire || false,
+            canHire: user?.userTable?.canHire || false,
             city: user.city || '',
             country: user.country || '',
             email: user.email || '',

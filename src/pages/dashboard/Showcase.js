@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { Component, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -333,7 +334,9 @@ const Showcase = props => {
                                 <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
                               </Grid>
                               <Grid item xs={8} p={2}>
-                                <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
+                                <Link to="/vidoe/3">
+                                  <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
+                                </Link>
                                 <Typography fontWeight="400">{formatTime(item.duration)}</Typography>
                                 <Typography fontStyle="italic" fontWeight="400">{item.description ? item.description : 'no description has been added yet'}</Typography>
                               </Grid>

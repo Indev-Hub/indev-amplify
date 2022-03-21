@@ -334,7 +334,7 @@ const Showcase = props => {
                                 <img style={getThumbnailStyle} src={item.pictures.sizes[8].link} />
                               </Grid>
                               <Grid item xs={8} p={2}>
-                                <Link to="/vidoe/3">
+                                <Link to={`../../showcase/${item.uri}`}>
                                   <Typography fontWeight="600">{index + 1}. {item.name}</Typography>
                                 </Link>
                                 <Typography fontWeight="400">{formatTime(item.duration)}</Typography>

@@ -17,7 +17,7 @@ const VideoLibrary = () => {
 	useEffect(() => {
 		fetchVideos();
 	}, [])
-
+// TODO: This component will be used as the ind'l vid through  mapping from the given Showcase item, and saved as an obj ( array match )
 	const fetchVideos = async () => {
 		try {
 			const videoData = await API.graphql(graphqlOperation(listShowcases));

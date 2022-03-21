@@ -219,6 +219,16 @@ const routes = [
     element: <ChannelDashboard />
   },
   {
+    path: 'showcase',
+    element: <VideoLibrary />,
+    children: [
+      {
+        path: 'videos/:videoId',
+        element: <Contact /> // ToDo: component
+      }
+    ]
+  },
+  {
     path: 'dashboard',
     element: (
       <AuthGuard>

@@ -148,12 +148,13 @@ function ChannelTemplate(props) {
       const listChannelData = getChannelData.data.getChannel;
       setChannelData(listChannelData);
       console.log('channel list', listChannelData);
-
-      fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
+    
+      /*
+      fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer f9a9d3f4e6ced877f1c6283c829907b0` } })
       .then(response => response.json())
       .then(data => setVidData(data.data));
       console.log('vid data', vidData);
-
+      */
       setIsLoading(false);
     } catch (error) {
       console.log('error on fetching videos', error);

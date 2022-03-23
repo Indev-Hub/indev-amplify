@@ -108,6 +108,7 @@ const ServerError = Loadable(lazy(() => import('./pages/ServerError')));
 const UpdateDashboard = Loadable(lazy(() => import('./pages/dashboard/UpdateDashboard')));
 
 // Video pages
+const SingleVideoPage = Loadable(lazy(() => import('./pages/dashboard/SingleVideoPage')));
 
 // Social pages
 
@@ -220,11 +221,10 @@ const routes = [
   },
   {
     path: 'showcase',
-    element: <VideoLibrary />,
     children: [
       {
         path: 'videos/:videoId',
-        element: <Contact /> // ToDo: component
+        element: <SingleVideoPage />
       }
     ]
   },

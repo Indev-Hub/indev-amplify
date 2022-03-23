@@ -146,7 +146,7 @@ function Gallery(props) {
 
   // Run loadData function 
   useEffect(() => {
-    loadData();
+    // loadData();
     // getData();
   }, [])
 
@@ -155,7 +155,10 @@ function Gallery(props) {
     fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
       // .then(data => setData(data.data))
-      .then(data => setVidData(data.data));
+      .then(data => {
+        console.log('before setVidData', data)
+        setVidData(data.data)
+      });
   }
 
   // Get video duration in hours:minutes:seconds
@@ -181,6 +184,7 @@ function Gallery(props) {
     heroVidUpdate(videoID);
   }
 
+  console.log('Gallery data', video)
   return (
     // console.log(vidData),
     <Grid container spacing={0}>

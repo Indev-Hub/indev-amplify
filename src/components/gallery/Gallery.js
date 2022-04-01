@@ -94,7 +94,14 @@ function Gallery(props) {
   // data state // storage
   const { setVidData, vidData } = props;
   // new state for the video player. Attribute values can be dynamically coded? Woo Jin
-  const [video, setVideo] = useState({ src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", width: "1280", height: "720", frameborder: "0", allow: "autoplay; fullscreen; picture-in-picture", allowfullscreen: true, title: "Test Video Converse" });
+  const [video, setVideo] = useState({ 
+    src: "https://player.vimeo.com/video/477406181?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=172959", 
+    width: "1280", 
+    height: "720", 
+    frameborder: "0", 
+    allow: "autoplay; fullscreen; picture-in-picture", 
+    allowfullscreen: true, 
+    title: "Test Video Converse" });
   
   // Set hero vid object
   const [heroVid, setHeroVid] = useState();
@@ -154,7 +161,7 @@ function Gallery(props) {
   const loadData = () => {
     fetch(`https://api.vimeo.com/me/albums/${channelId}/videos`, { method: 'GET', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.REACT_APP_SHOWCASE_AUTH}` } })
       .then(response => response.json())
-      // .then(data => setData(data.data))
+     // .then(data => setData(data.data))
       .then(data => {
         console.log('before setVidData', data)
         setVidData(data.data)

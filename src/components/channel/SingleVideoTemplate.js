@@ -120,9 +120,9 @@ const SingleVideo = () => {
             setVideos(videoLibrary);
       
             console.log('videoLibrary:', videoLibrary);
-            setVideo(videoLibrary[0])
+            setVideo(videoLibrary[0].filter(getShowcase(id)))  // filter? map? 
           } catch (error) {
-            console.log('error on fetching videos', error);
+            console.log(' VW:error on fetching videos', error);
           }
 		// try {
 		// 	const videoData = await API.graphql(graphqlOperation(listShowcases));
@@ -155,7 +155,7 @@ const SingleVideo = () => {
 							<Typography className="videoTitle">{video.name}</Typography>
 						</Grid>
 						<Grid item>
-							<Typography className="videoDescription">Video Description (replace with variable)</Typography>
+							<Typography className="videoDescription">Video Description (replace with variable){video.name}</Typography>
 						</Grid>
                         <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
                         <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}> {/* Added new onClick function - Woo Jin */}

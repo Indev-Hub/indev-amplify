@@ -110,7 +110,7 @@ const SingleVideoPage = () => {
             </Typography>
           </Breadcrumbs>
         </Box>
-        {/* <ShowcaseLibrary /> */}
+        {/* <ShowcaseLibrary /> && <Link to={`../../showcase/${item.uri}`} */}
         <SingleVideo />
       </Box>
     </>

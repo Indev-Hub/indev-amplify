@@ -120,7 +120,7 @@ const SingleVideo = () => {
             setVideos(videoLibrary);
       
             console.log('videoLibrary:', videoLibrary);
-            setVideo(videoLibrary[0].filter(getShowcase(id)))  // filter? map? 
+            setVideo(videoLibrary[0]); //.filter(getShowcase(id)))  // filter? id = undefined. 
           } catch (error) {
             console.log(' VW:error on fetching videos', error);
           }
@@ -158,7 +158,7 @@ const SingleVideo = () => {
 							<Typography className="videoDescription">Video Description (replace with variable){video.name}</Typography>
 						</Grid>
                         <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
-                        <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}> {/* Added new onClick function - Woo Jin */}
+                        <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}>
                             <img className={classes.thumbnail} src={video.pictures.sizes[6].link} />
                             <Box className={classes.gridText}>
                             <Typography>{video.name}</Typography>

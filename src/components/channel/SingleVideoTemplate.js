@@ -16,6 +16,13 @@ import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
 
+
+
+window.onblur = function () { document.title = 'you went?'; }
+
+window.onfocus = function () { document.title = 'you came back'; }
+
+
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     root: {
       flexGrow: 1
@@ -121,11 +128,7 @@ const SingleVideo = () => {
       
             console.log('videoLibrary:', videoLibrary);
               setVideo(videoLibrary[0]);
-            /////  setVideo(videoLibrary[Object.keys(obj)].filter((key) => key.includes('app')).reduce((cur, key) => { return Object.assign(cur, { [key]: obj[key] })}, {}));
-            /////  setVideo(videoLibrary[0].app);
-             //MAY
-             // setVideo(videoLibrary[0].filter(getShowcase(id))) 
-            //  setVideo(videoLibrary[0].filter(getShowcase(id, {id}))) // filter? id = undefined;
+            // array match/filter
           } catch (error) {
             console.log(' VW:error on fetching videos', error);
           }

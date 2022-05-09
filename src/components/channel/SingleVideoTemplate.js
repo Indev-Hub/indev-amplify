@@ -1,17 +1,16 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
 	Box,
 	IconButton,
 	Paper,
-	Typography,
-	// Typography
+	Typography
 } from '@material-ui/core'
 import {
     makeStyles,
     useTheme
   } from '@material-ui/core/styles';
-
 import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
@@ -90,7 +89,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       maxWidth: '100%'
     }
   }));
-
+  // 
 const SingleVideo = () => {
   const [showcaseID, setShowcaseID] = useState(7868357)
 	const [videos, setVideos] = useState([]);
@@ -136,12 +135,34 @@ const SingleVideo = () => {
 	}
 	const idx = 0;
 
-  //Change Tab to Video Name
-  window.onblur = function () { document.title = 'you went?'; } // className="videoTitle"> CommonProps.Video {video.name} ; }// 
+  // Change Tab to Video Name: Only functions when we leave tab and return
+  window.onblur = function () { document.title = 'you went?'; } 
+  // TODO: className="videoTitle"> CommonProps.Video {video.name} ; }// 
 
   window.onfocus = function () { document.title = 'you came back'; }
 
-	return (
+ // Remove/Suppress class H5:"VideoLibrary" verbiage
+    // function Hide() {
+    // <div>
+    //   <class = "MuiTypography-root MuiTypography-h5 css-s1aozc-MuiTypography-root"> 
+    // </div>
+  
+return (
+  <>
+  
+  <Helmet>
+    <title>V?</title>
+  </Helmet>
+  <Box
+        sx={{
+          backgroundColor: 'background.default',
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100%',
+          paddingBottom: 4
+          // overflow: 'hidden'
+        }}
+      >
 		<Box
 			width="100%"
 			alignItems="center"
@@ -176,6 +197,8 @@ const SingleVideo = () => {
 				</Paper>) : null
 			})
 		</Box>
+    </Box>
+    </>
 	)
 }
 

@@ -16,13 +16,6 @@ import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
 
-
-
-window.onblur = function () { document.title = 'you went?'; }
-
-window.onfocus = function () { document.title = 'you came back'; }
-
-
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     root: {
       flexGrow: 1
@@ -142,6 +135,11 @@ const SingleVideo = () => {
 		// }
 	}
 	const idx = 0;
+
+  //Change Tab to Video Name
+  window.onblur = function () { document.title = 'you went?'; } // className="videoTitle"> CommonProps.Video {video.name} ; }// 
+
+  window.onfocus = function () { document.title = 'you came back'; }
 
 	return (
 		<Box

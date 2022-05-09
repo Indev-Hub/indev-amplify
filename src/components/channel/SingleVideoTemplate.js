@@ -92,9 +92,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }));
 
 const SingleVideo = () => {
-    const [showcaseID, setShowcaseID] = useState(7868357)
+  const [showcaseID, setShowcaseID] = useState(7868357)
 	const [videos, setVideos] = useState([]);
-    const [video, setVideo] = useState(null)
+  const [video, setVideo] = useState(null);
 
 
   const classes = useStyles();
@@ -120,7 +120,12 @@ const SingleVideo = () => {
             setVideos(videoLibrary);
       
             console.log('videoLibrary:', videoLibrary);
-            setVideo(videoLibrary[0]); //.filter(getShowcase(id)))  // filter? id = undefined. 
+              setVideo(videoLibrary[0]);
+            /////  setVideo(videoLibrary[Object.keys(obj)].filter((key) => key.includes('app')).reduce((cur, key) => { return Object.assign(cur, { [key]: obj[key] })}, {}));
+            /////  setVideo(videoLibrary[0].app);
+             //MAY
+             // setVideo(videoLibrary[0].filter(getShowcase(id))) 
+            //  setVideo(videoLibrary[0].filter(getShowcase(id, {id}))) // filter? id = undefined;
           } catch (error) {
             console.log(' VW:error on fetching videos', error);
           }
@@ -152,10 +157,10 @@ const SingleVideo = () => {
 						justify="center"
 					>
 						<Grid item xs={6}>
-							<Typography className="videoTitle">{video.name}</Typography>
+							<Typography className="videoTitle">Video Title: {video.name}</Typography>
 						</Grid>
 						<Grid item>
-							<Typography className="videoDescription">Video Description (replace with variable){video.name}</Typography>
+							<Typography className="videoDescription">Video URL: http://localhost:3000/showcase{video.uri}</Typography>
 						</Grid>
                         <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
                         <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}>
@@ -168,7 +173,7 @@ const SingleVideo = () => {
                         </Grid>
 					</Grid>
 				</Paper>) : null
-			})}
+			})
 		</Box>
 	)
 }

@@ -135,17 +135,20 @@ const SingleVideo = () => {
 	}
 	const idx = 0;
 
-  // Change Tab to Video Name: Only functions when we leave tab and return
-  window.onblur = function () { document.title = 'you went?'; } 
-  // TODO: className="videoTitle"> CommonProps.Video {video.name} ; }// 
+  // <HELMET> changes name; TODO: Use <LINK> to capture video library name// Change Tab to Video Name: Only functions when we leave tab and return
+  // window.onblur = function () { document.title = 'you went?'; } 
+  // window.onfocus = function () { document.title = 'you came back'; }
 
-  window.onfocus = function () { document.title = 'you came back'; }
-
- // Remove/Suppress class H5:"VideoLibrary" verbiage
-    // function Hide() {
-    // <div>
-    //   <class = "MuiTypography-root MuiTypography-h5 css-s1aozc-MuiTypography-root"> 
-    // </div>
+  /* TODO: Same as array = [match,filter]
+  <Link
+    color="textPrimary"
+    component={RouterLink}
+    to="/dashboard"
+    variant="subtitle2"
+  >
+    Dashboard
+  </Link>
+  */
   
 return (
   <>

@@ -119,15 +119,15 @@ const SingleVideo = () => {
             setVideos(videoLibrary);
       
             console.log('videoLibrary:', videoLibrary);
-           // console.log('singleVideo:', singleVideo);
             setVideo(videoLibrary[0]);  
             //
-            // const singleVideo = JSON.stringify(fetchVideos); // for DB
+            // // const singleVideo = JSON.stringify(fetchVideos); // for DB
             // JSON.parse( singleVideo, (key, value) => {
-              if(key === 'video') {
-                  return 'id:' + value.id + ',name: ' + value.name +  ', uri: ' + value.uri;
-              }
-              return value;
+            //   if(key === 'video') {
+            //       return 'id: ' + value.showcaseID + ', State: ' + value.state;
+            //   }
+           // console.log('singleVideo:', singleVideo);
+            //   return value;
             // })
             // array match/filter
           } catch (error) {
@@ -210,7 +210,7 @@ return (
                         </Grid>
 					</Grid>
 				</Paper>) : null
-			})
+			}
 		</Box>
     </Box>
     </>

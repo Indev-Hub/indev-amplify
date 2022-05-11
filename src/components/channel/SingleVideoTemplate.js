@@ -119,7 +119,16 @@ const SingleVideo = () => {
             setVideos(videoLibrary);
       
             console.log('videoLibrary:', videoLibrary);
-              setVideo(videoLibrary[0]);
+           // console.log('singleVideo:', singleVideo);
+            setVideo(videoLibrary[0]);  
+            //
+            // const singleVideo = JSON.stringify(fetchVideos); // for DB
+            // JSON.parse( singleVideo, (key, value) => {
+              if(key === 'video') {
+                  return 'id:' + value.id + ',name: ' + value.name +  ', uri: ' + value.uri;
+              }
+              return value;
+            // })
             // array match/filter
           } catch (error) {
             console.log(' VW:error on fetching videos', error);
@@ -133,6 +142,7 @@ const SingleVideo = () => {
 		// 	console.log('error on fetching videos', error);
 		// }
 	}
+
 	const idx = 0;
 
   // <HELMET> changes name; TODO: Use <LINK> to capture video library name// Change Tab to Video Name: Only functions when we leave tab and return
@@ -150,11 +160,13 @@ const SingleVideo = () => {
   </Link>
   */
   
+  // 
+// let videoLibraray = <Typography className="videoTitle">Video Title: {video.name}</Typography>
 return (
   <>
   
   <Helmet>
-    <title>V?</title>
+    <title></title>
   </Helmet>
   <Box
         sx={{

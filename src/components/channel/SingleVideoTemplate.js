@@ -142,6 +142,7 @@ const SingleVideo = () => {
 		// 	console.log('error on fetching videos', error);
 		// }
 	}
+  fetchVideos();
 
 	const idx = 0;
 
@@ -162,11 +163,12 @@ const SingleVideo = () => {
   
   // 
 // let videoLibraray = <Typography className="videoTitle">Video Title: {video.name}</Typography>
+  //  <Typography > {video.name}</Typography>
 return (
   <>
   
-  <Helmet>
-    <title></title>
+  <Helmet className="videoTitle">
+    <title>Video Page {`${idx}`}</title>
   </Helmet>
   <Box
         sx={{
@@ -199,15 +201,15 @@ return (
 						<Grid item>
 							<Typography className="videoDescription">Video URL: http://localhost:3000/showcase{video.uri}</Typography>
 						</Grid>
-                        <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
-                        <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}>
-                            <img className={classes.thumbnail} src={video.pictures.sizes[6].link} />
-                            <Box className={classes.gridText}>
-                            <Typography>{video.name}</Typography>
-                            <Typography lineHeight="10px">{formatTime(video.duration)}</Typography>
-                            </Box>
-                        </Box>
-                        </Grid>
+                <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
+                  <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}>
+                      <img className={classes.thumbnail} src={video.pictures.sizes[6].link} />
+                      <Box className={classes.gridText}>
+                        <Typography>{video.name}</Typography>
+                        <Typography lineHeight="10px">{formatTime(video.duration)}</Typography>
+                      </Box>
+                  </Box>
+                </Grid>
 					</Grid>
 				</Paper>) : null
 			}

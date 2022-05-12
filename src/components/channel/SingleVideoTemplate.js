@@ -142,7 +142,8 @@ const SingleVideo = () => {
 		// 	console.log('error on fetching videos', error);
 		// }
 	}
-  fetchVideos();
+  const vidFetchResult = fetchVideos();
+  console.log("vidFetchResult: ", vidFetchResult);
 
 	const idx = 0;
 

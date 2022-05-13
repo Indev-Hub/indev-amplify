@@ -96,14 +96,18 @@ const SingleVideo = () => {
   const [video, setVideo] = useState(null);
   const classes = useStyles();
 
+//
   useEffect(() => {
     fetchVideos();
   }, [])
   // TODO: This component will be used as the ind'l vid through  mapping from the given Showcase item, and saved as an obj ( array match )
+  const videoData = ''; 
+  const videoLibrary = ''; 
   const fetchVideos = async () => {
     try {
-      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
-      const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
+      videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
+      videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
+      
       setVideos(videoLibrary);
 
       console.log('videoLibrary:', videoLibrary);
@@ -130,7 +134,7 @@ const SingleVideo = () => {
     // 	console.log('error on fetching videos', error);
     // }
   }
-  const vidFetchResult = fetchVideos(setVideo);
+  const vidFetchResult = fetchVideos(setVideo(videoLibrary[0]));
   console.log("vidFetchResult: ", vidFetchResult);
 
   const idx = 0;

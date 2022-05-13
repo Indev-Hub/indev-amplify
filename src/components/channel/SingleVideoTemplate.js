@@ -165,12 +165,17 @@ const SingleVideo = () => {
     const secs = ~~time % 60;
     return `${hrs}:${mins}:${secs}`
   }
+// <title>Video Page {`${idx}`}</title>
 
   return (
     <>
 
       <Helmet className="videoTitle">
-        <title>Video Page {`${idx}`}</title>
+        <Grid item xs={6}>
+          <Typography className="videoTitle">
+            <title>Video Title: {video.name}</title>
+          </Typography>
+        </Grid>
       </Helmet>
       <Box
         sx={{

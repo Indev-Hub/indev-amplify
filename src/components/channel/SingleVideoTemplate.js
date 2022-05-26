@@ -165,17 +165,36 @@ const SingleVideo = () => {
     const secs = ~~time % 60;
     return `${hrs}:${mins}:${secs}`
   }
-// <title>Video Page {`${idx}`}</title>
+/* <Grid item xs={6}>
+    <Typography className="videoTitle">
+      <title>Video Title: {video.name}</title>
+    </Typography>
+  // </Grid>
+  const singleVideoTitle = {video:"name"};
+  console.log("video: ", video);
+  console.log("video: ", SingleVideoTitle);
+ */
+  
+  /*
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" name="This is the unique leaf page description"> 
+    <title>A Cool Leaf Page</title>
+    <link rel="stylesheet" href="${ROOT}/static/index.css">
+  </head>
+</html>
+*/ 
+//<title>Video Page {`${idx}`}</title>
+
+
 
   return (
     <>
-
       <Helmet className="videoTitle">
-        <Grid item xs={6}>
-          <Typography className="videoTitle">
-            <title>Video Title: {video.name}</title>
-          </Typography>
-        </Grid>
+             
+            <title>A Cool Leaf Page</title>
+            <link rel="stylesheet" href="${ROOT}/static/index.css"></link>
       </Helmet>
       <Box
         sx={{

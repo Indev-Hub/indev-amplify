@@ -14,6 +14,7 @@ import {
 import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
+import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -110,6 +111,8 @@ const SingleVideo = () => {
       setVideos(videoLibrary);
 
       console.log('videoLibrary:', videoLibrary);
+      let DynamicFeed = DynamicFeed(VideoLibrary); 
+      console.log("Dynamic Feeed: ", DynamicFeed); 
       setVideo(videoLibrary[0]);
       //
       // // const singleVideo = JSON.stringify(fetchVideos); // for DB

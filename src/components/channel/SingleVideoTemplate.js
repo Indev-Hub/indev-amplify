@@ -111,8 +111,6 @@ const SingleVideo = () => {
       setVideos(videoLibrary);
 
       console.log('videoLibrary:', videoLibrary);
-      let DynamicFeed = DynamicFeed(VideoLibrary); 
-      console.log("Dynamic Feeed: ", DynamicFeed); 
       setVideo(videoLibrary[0]);
       //
       // // const singleVideo = JSON.stringify(fetchVideos); // for DB

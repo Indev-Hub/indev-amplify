@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link as RouterLink, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { useSnackbar } from 'notistack';
@@ -13,14 +13,27 @@ import { useDispatch, useSelector } from '../../store';
 import ShowcaseLibrary from 'src/components/video/ShowcaseLibrary';
 import Showcase from './Showcase';
 import SingleVideo from 'src/components/channel/SingleVideoTemplate';
+import { API, graphqlOperation } from 'aws-amplify';
+import { getShowcase } from 'src/graphql/queries';
 
-const SingleVideoPage = () => {
+
+const SingleVideoPage = ( props ) => {
   const dispatch = useDispatch();
+  const params = useParams();
+  console.log("params", params); //now i can use find to get vidArr; getting video out of array using the params: video id; using .find() out of []
   const { columns } = useSelector((state) => state.kanban);
   const { enqueueSnackbar } = useSnackbar();
+  const [showcaseID, setShowcaseID] = useState(7868357); 
+  const fetchVideos = async()=>{
+     const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
+    const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
+    console.log(props);
+  };
 
   useEffect(() => {
     gtm.push({ event: 'page_view' });
+    fetchVideos(); //this way i can use async await.
+    // Loop through the vids to get correct id; [vidLibrary.find()] using anonymous fxn to get desired video back;  this is until I find the way  to use graphQL.ShowcaseID
   }, []);
 
   useEffect(() => {
@@ -87,7 +100,7 @@ const SingleVideoPage = () => {
             color="textPrimary"
             variant="h5"
           >
-            VideoLibrary
+            {/* VideoLibrary */}
           </Typography>
           <Breadcrumbs
             aria-label="breadcrumb"

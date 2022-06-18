@@ -110,17 +110,17 @@ const SingleVideoPage = ( props ) => {
             <Link
               color="textPrimary"
               component={RouterLink}
-              to="/dashboard"
+              to="/dashboard/video-library"
               variant="subtitle2"
             >
-              Dashboard
+              Video Channel 
             </Link>
-            <Typography
+            {/* <Typography
               color="textSecondary"
               variant="subtitle2"
             >
-              VideoLibrary
-            </Typography>
+              VideoLibrary 
+            </Typography>*/}
           </Breadcrumbs>
         </Box>
         {/* <ShowcaseLibrary /> && <Link to={`../../showcase/${item.uri}`} */}

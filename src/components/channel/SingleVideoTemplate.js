@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
+import { Link as useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
   Box,
@@ -91,8 +92,8 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 // 
-const SingleVideo = () => {
-  const [showcaseID, setShowcaseID] = useState(7868357)
+const SingleVideo = ( props ) => {
+  const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState(null);
   const classes = useStyles();
@@ -103,7 +104,7 @@ const SingleVideo = () => {
   }, [])
   // TODO: This component will be used as the ind'l vid through  mapping from the given Showcase item, and saved as an obj ( array match )
   const fetchVideos = async () => {
-  
+  // this works for the single static vid
     try {
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
      const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
@@ -112,6 +113,7 @@ const SingleVideo = () => {
 
       console.log('videoLibrary:', videoLibrary);
       setVideo(videoLibrary[0]);
+
       //
       // // const singleVideo = JSON.stringify(fetchVideos); // for DB
       // JSON.parse( singleVideo, (key, value) => {
@@ -137,11 +139,12 @@ const SingleVideo = () => {
   // const vidFetchResult = fetchVideos(setVideo(videoLibrary[0]));
   // console.log("vidFetchResult: ", vidFetchResult);
 
-  const idx = 0;
+  // This works for static vids;
+ const idx = 0;
 
   // <HELMET> changes name; TODO: Use <LINK> to capture video library name// Change Tab to Video Name: Only functions when we leave tab and return
-  // window.onblur = function () { document.title = 'you went?'; } 
-  // window.onfocus = function () { document.title = 'you came back'; }
+  // window.onblur = function () { document.title = 'you went?'; } // vid name
+  // window.onfocus = function () { document.title = 'you came back'; } // vid channel name
 
   /* TODO: Same as array = [match,filter]
   <Link

@@ -16,6 +16,7 @@ import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
 import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
+import { indexOf } from 'lodash';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -112,6 +113,7 @@ const SingleVideo = ( props ) => {
       setVideos(videoLibrary);
 
       console.log('videoLibrary:', videoLibrary);
+
       setVideo(videoLibrary[0]);
 
       //

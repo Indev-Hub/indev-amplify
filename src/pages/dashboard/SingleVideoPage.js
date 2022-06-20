@@ -21,8 +21,7 @@ const SingleVideoPage = ( props ) => {
   const dispatch = useDispatch();
   const params = useParams();
   console.log("params", params); //now i can use .find to get vidArr; getting video out of array using the params: video id; using .find() out of []
-  // const foundShowcaseVideo = //fetchVideos(setVideo(videoLibrary[{}]));
-  // console.log("foundShowcaseVideo: ", foundShowcaseVideo);
+ 
   const { columns } = useSelector((state) => state.kanban);
   const { enqueueSnackbar } = useSnackbar();
   const [showcaseID, setShowcaseID] = useState(7868357); 
@@ -37,7 +36,7 @@ const SingleVideoPage = ( props ) => {
     fetchVideos(); //; //this way i can use async await.
     // Loop through the vids to get correct id; [vidLibrary.find()] using anonymous fxn to get desired video back;  this is until I find the way  to use graphQL.ShowcaseID
   }, []);
-//  const foundShowcaseVideo = 
+  
   useEffect(() => {
     dispatch(getBoard());
   }, []);
@@ -125,6 +124,10 @@ const SingleVideoPage = ( props ) => {
             </Typography>*/}
           </Breadcrumbs>
         </Box>
+        <div>
+          Selected id is: { params.videoId}
+          {/* { getShowcase.localeCompare(())} */}
+        </div>
         {/* <ShowcaseLibrary /> && <Link to={`../../showcase/${item.uri}`} */}
         <SingleVideo />
       </Box>

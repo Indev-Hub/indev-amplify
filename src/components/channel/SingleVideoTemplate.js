@@ -93,12 +93,12 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 // 
-const SingleVideo = ( props) => {
+const SingleVideo = ( ) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState(null);
   const classes = useStyles();
-console.log(props);
+// console.log(props);
 //
   useEffect(() => {
     fetchVideos();
@@ -114,9 +114,19 @@ console.log(props);
 
       console.log('videoLibrary:', videoLibrary);
 
-      setVideo(videoLibrary[0]);
-
-      //
+     const vidZero = setVideo(videoLibrary[0]);
+     console.log("vidZero: ", vidZero); // == undefined
+    //  const videoLibrarySelection = [];
+for(var i = 0; i<videoLibrary.length; i++) {
+   var videoLibrarySelection = videoLibrary[i].videoLibrarySelection;
+   videoLibrarySelection = videoLibrary.split(' '); 
+   //do whatever you want with your videoLibrarySelection. transform.
+   videoLibrarySelections.push(videoLibrarySelection); //push the final version of the videoLibrarySelection you want to store
+}
+return videoLibrarySelections;  //return an array of videoLibrarySelections
+     console.log("videoLibrarySelection", videoLibrarySelection);
+     
+     //
       // // const singleVideo = JSON.stringify(fetchVideos); // for DB
       // JSON.parse( singleVideo, (key, value) => {
       //   if(key === 'video') {
@@ -192,8 +202,6 @@ console.log(props);
 </html>
 */ 
 //<title>Video Page {`${idx}`}</title>
-
-
 
   return (
     <>

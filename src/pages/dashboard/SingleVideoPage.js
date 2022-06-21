@@ -28,7 +28,7 @@ const SingleVideoPage = ( props ) => {
   const fetchVideos = async()=>{
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
     const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
-    console.log(props);
+    console.log("props: ", props);
   };
 
   useEffect(() => {

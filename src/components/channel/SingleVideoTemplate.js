@@ -93,12 +93,12 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 // 
-const SingleVideo = ( props ) => {
+const SingleVideo = ( props) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState(null);
   const classes = useStyles();
-
+console.log(props);
 //
   useEffect(() => {
     fetchVideos();
@@ -234,7 +234,8 @@ const SingleVideo = ( props ) => {
                 <Typography className="videoDescription">Video URL: http://localhost:3000/showcase{video.uri}</Typography>
               </Grid>
               <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
-                <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}>
+                <Box>
+                {/* <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}> */}
                   <img className={classes.thumbnail} src={video.pictures.sizes[6].link} />
                   <Box className={classes.gridText}>
                     <Typography>{video.name}</Typography>

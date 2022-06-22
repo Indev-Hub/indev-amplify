@@ -93,11 +93,13 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 // 
-const SingleVideo = ( ) => {
+const SingleVideo = (props ) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState(null);
   const classes = useStyles();
+  //  const params = useParams();
+  console.log("const SingleVideo SVT props ", props); 
 // console.log(props);
 //
   useEffect(() => {
@@ -116,16 +118,20 @@ const SingleVideo = ( ) => {
 
      const vidZero = setVideo(videoLibrary[0]);
      console.log("vidZero: ", vidZero); // == undefined
-    //  const videoLibrarySelection = [];
+    
+     let result = videoLibrary.map(({ idx }) => idx );
+    console.log("idx: ", idx);
+     //  const videoLibrarySelection = [];
+/* runs; not getting in the fxn for console log; BECAUSE VIDvideoLibrary.split(' ') IS NOT A FXN
 for(var i = 0; i<videoLibrary.length; i++) {
    var videoLibrarySelection = videoLibrary[i].videoLibrarySelection;
    videoLibrarySelection = videoLibrary.split(' '); 
    //do whatever you want with your videoLibrarySelection. transform.
    videoLibrarySelections.push(videoLibrarySelection); //push the final version of the videoLibrarySelection you want to store
 }
-return videoLibrarySelections;  //return an array of videoLibrarySelections
      console.log("videoLibrarySelection", videoLibrarySelection);
-     
+return videoLibrarySelections;  //return an array of videoLibrarySelections
+     */
      //
       // // const singleVideo = JSON.stringify(fetchVideos); // for DB
       // JSON.parse( singleVideo, (key, value) => {

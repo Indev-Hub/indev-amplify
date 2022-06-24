@@ -21,38 +21,31 @@ const SingleVideoPage = ( props ) => {
   const dispatch = useDispatch();
   const params = useParams();
   console.log("params", params); //now i can use .find to get vidArr; getting video out of array using the params: video id; using .find() out of []
+  console.log("params.videoId", params.videoId); 
  
   const { columns } = useSelector((state) => state.kanban);
   const { enqueueSnackbar } = useSnackbar();
   const [showcaseID, setShowcaseID] = useState(7868357); 
   // const [SingleVideo, setVideoId] =  useState(""); // selected Video Id
-  console.log("Single Video: ", SingleVideo);
+  // console.log("Single Video:")
   // const [vids, setVids] = useState([]);
   const fetchVideos = async()=>{
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
     const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
     console.log("props: ", props);
   };
-  console.log("is SVP fxn props: ", props);
-  console.log("is SVP fxn params.videoId: ", params.videoId);
-  // const foundVideo = vids.find((vids) = props.id === params.videoId);
+
+  // const foundVideo = fetchVideos.find((props) = props.id === params.videoId);
   // console.log("foundVideo: ", foundVideo);
 
   useEffect(() => {
     gtm.push({ event: 'page_view' });
-    fetchVideos()
-  //; //this way i can use async await.
+    fetchVideos(); //; //this way i can use async await.
     // Loop through the vids to get correct id; [vidLibrary.find()] using anonymous fxn to get desired video back;  this is until I find the way  to use graphQL.ShowcaseID
-  //   .catch((err) => {
-  //   console.log(err);
-  // });
   }, []);
   
   useEffect(() => {
-    dispatch(getBoard())
-    // .catch((err) => {
-    //   console.log(err);
-    // });
+    dispatch(getBoard());
   }, []);
 
   const handleDragEnd = async ({ source, destination, draggableId }) => {

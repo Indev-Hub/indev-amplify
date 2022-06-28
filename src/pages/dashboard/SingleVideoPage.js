@@ -33,8 +33,21 @@ const SingleVideoPage = ( props ) => {
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
     const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
     console.log("props: ", props);
-  };
-
+ };
+ // 
+   /*// let [params, videoLibrary] 
+    fetch(fetchVideos(videoLibrary)).
+    then((response)=>{
+      console.log("running api call"); 
+      return response.json();
+    }).
+    videoData.getResultsByCriteria(videoLibrary).
+    then((video)=> this.onResponseSuccess(video, index)).
+    catch(window.alert(' Oops! VW:error on fetching videos' // no error define 
+    )
+    ). 
+    finally(() => this.setState({ loadingResults: false}));// error => 
+ };*/
   // const foundVideo = fetchVideos.find((props) = props.id === params.videoId);
   // console.log("foundVideo: ", foundVideo);
 

@@ -17,7 +17,7 @@ import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
 import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
 import { indexOf } from 'lodash';
-
+import SingleVideoPage from 'src/pages/dashboard/SingleVideoPage';
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
     flexGrow: 1
@@ -93,21 +93,37 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 // 
-const SingleVideo = (props ) => {
+const SingleVideo = ( props ) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState(null);
   const classes = useStyles();
-  //  const params = useParams();
-  console.log("const SingleVideo SVT props ", props); 
-// console.log(props);
-//
+
+//   const videoId = useParams(); // ERR: TypeError: Object(...) is not a function
+// console.log(videoId);
+// let { id } = useParams(); 
+//   useEffect(() => {
+//     console.log(`/something/${id}`);
+//  }, []);
+
+// 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const uriVidId = urlParams.get('uriVidId');
+console.log("queryString ", queryString); 
+console.log("urlParams ", urlParams); 
+console.log("uriVidId ", uriVidId); // null
+// if uriVidId isEqual to params.videoId: ret T, else 
+console.log(" All SVT videos: ", videos); // all vids[]
+console.log("1 SVT  video: ", video); // {} info
+
+// console.log("1 SVT video.Object.uri: ", video.Object.uri); // {} info
+
   useEffect(() => {
     fetchVideos();
   }, [])
   // TODO: This component will be used as the ind'l vid through  mapping from the given Showcase item, and saved as an obj ( array match )
   const fetchVideos = async () => {
-  // this works for the single static vid
     try {
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
      const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
@@ -116,32 +132,9 @@ const SingleVideo = (props ) => {
 
       console.log('videoLibrary:', videoLibrary);
 
-     const vidZero = setVideo(videoLibrary[0]);
-     console.log("vidZero: ", vidZero); // == undefined
-    
-     let result = videoLibrary.map(({ idx }) => idx );
-    console.log("idx: ", idx);
-     //  const videoLibrarySelection = [];
-/* runs; not getting in the fxn for console log; BECAUSE VIDvideoLibrary.split(' ') IS NOT A FXN
-for(var i = 0; i<videoLibrary.length; i++) {
-   var videoLibrarySelection = videoLibrary[i].videoLibrarySelection;
-   videoLibrarySelection = videoLibrary.split(' '); 
-   //do whatever you want with your videoLibrarySelection. transform.
-   videoLibrarySelections.push(videoLibrarySelection); //push the final version of the videoLibrarySelection you want to store
-}
-     console.log("videoLibrarySelection", videoLibrarySelection);
-return videoLibrarySelections;  //return an array of videoLibrarySelections
-     */
-     //
-      // // const singleVideo = JSON.stringify(fetchVideos); // for DB
-      // JSON.parse( singleVideo, (key, value) => {
-      //   if(key === 'video') {
-      //       return 'id: ' + value.showcaseID + ', State: ' + value.state;
-      //   }
-      // console.log('singleVideo:', singleVideo);
-      //   return value;
-      // })
-      // array match/filter
+  // this works for the single static vid
+      setVideo(videoLibrary[0]);
+
     } catch (error) {
       console.log(' VW:error on fetching videos', error);
     }
@@ -152,62 +145,24 @@ return videoLibrarySelections;  //return an array of videoLibrarySelections
     // 	setVideos(videoList);
     // } catch (error) {
     // 	console.log('error on fetching videos', error);
-    // }
-  }
-  // const vidFetchResult = fetchVideos(setVideo(videoLibrary[0]));
+    // } 
+     
+    // const vidFetchResult = fetchVideos(setVideo(videoLibrary[0]));
   // console.log("vidFetchResult: ", vidFetchResult);
+  }
+//  const foundVideo = videos.find((selectedVideo) = selectedVideo === video);
+//   console.log("foundVideo: ", foundVideo);
 
   // This works for static vids;
  const idx = 0;
 
-  // <HELMET> changes name; TODO: Use <LINK> to capture video library name// Change Tab to Video Name: Only functions when we leave tab and return
-  // window.onblur = function () { document.title = 'you went?'; } // vid name
-  // window.onfocus = function () { document.title = 'you came back'; } // vid channel name
-
-  /* TODO: Same as array = [match,filter]
-  <Link
-    color="textPrimary"
-    component={RouterLink}
-    to="/dashboard"
-    variant="subtitle2"
-  >
-    Dashboard
-  </Link>
-  */
-
-  // 
-  // let videoLibraray = <Typography className="videoTitle">Video Title: {video.name}</Typography>
-  //  <Typography > {video.name}</Typography>	
-  
   // Get video duration in hours:minutes:seconds
   const formatTime = (time) => {
-    // Hours, minutes and seconds
     const hrs = ~~(time / 3600);
     const mins = ~~((time % 3600) / 60);
     const secs = ~~time % 60;
     return `${hrs}:${mins}:${secs}`
   }
-/* <Grid item xs={6}>
-    <Typography className="videoTitle">
-      <title>Video Title: {video.name}</title>
-    </Typography>
-  // </Grid>
-  const singleVideoTitle = {video:"name"};
-  console.log("video: ", video);
-  console.log("video: ", SingleVideoTitle);
- */
-  
-  /*
-  <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" name="This is the unique leaf page description"> 
-    <title>A Cool Leaf Page</title>
-    <link rel="stylesheet" href="${ROOT}/static/index.css">
-  </head>
-</html>
-*/ 
-//<title>Video Page {`${idx}`}</title>
 
   return (
     <>
@@ -247,15 +202,14 @@ return videoLibrarySelections;  //return an array of videoLibrarySelections
               <Grid item>
                 <Typography className="videoDescription">Video URL: http://localhost:3000/showcase{video.uri}</Typography>
               </Grid>
+              {/* <SingleVideoPage {...params}/> */}
+              {/* params is not defined */}
               <Grid item className={classes.gridItems} xs={12} md={6} lg={4}>
-                <Box>
-                {/* <Box sx={{ cursor: 'pointer' }} className={classes.gridContent} boxShadow={2} onClick={() => onThumbnailClick(video.uri.replace("/videos/", ""), video.name)}> */}
                   <img className={classes.thumbnail} src={video.pictures.sizes[6].link} />
                   <Box className={classes.gridText}>
                     <Typography>{video.name}</Typography>
                     <Typography lineHeight="10px">{formatTime(video.duration)}</Typography>
                   </Box>
-                </Box>
               </Grid>
             </Grid>
           </Paper>) : null

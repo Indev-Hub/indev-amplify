@@ -109,6 +109,8 @@ const UpdateDashboard = Loadable(lazy(() => import('./pages/dashboard/UpdateDash
 
 // Video pages
 const SingleVideoPage = Loadable(lazy(() => import('./pages/dashboard/SingleVideoPage')));
+// const SingleVideoTemplate = Loadable(lazy(() => import('./pages/dashboard/SingleVideoPage/:id')));
+// <Route path="/something/:id" element={<Something />} />
 
 // Social pages
 

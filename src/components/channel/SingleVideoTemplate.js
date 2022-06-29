@@ -16,7 +16,7 @@ import { API, graphqlOperation, Storage } from 'aws-amplify'
 import { getShowcase } from '../../graphql/queries'
 import { Grid } from '@material-ui/core'
 import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
-import { indexOf } from 'lodash';
+import { indexOf, map } from 'lodash';
 import SingleVideoPage from 'src/pages/dashboard/SingleVideoPage';
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -128,12 +128,15 @@ console.log("1 SVT  video: ", video); // {} info
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
      const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
       
-      setVideos(videoLibrary);
+      const vids = setVideos(videoLibrary);
 
       console.log('videoLibrary:', videoLibrary);
+      console.log('vids:', vids);
 
   // this works for the single static vid
-      setVideo(videoLibrary[0]);
+      // setVideo(videoLibrary[0]); 
+      // let index = setVideo(videoLibrary.map(({ key, value}) => ({ [key]: value })));
+      // console.library("Index: ", index);
 
     } catch (error) {
       console.log(' VW:error on fetching videos', error);

@@ -102,6 +102,9 @@ const SingleVideoPage = ( props ) => {
   };
 
 
+  let text = params.videoId;
+  let result = text.match(params.videoId);
+ // document.getElementById("demo").innerHTML = result;
   return (
     <>
       <Helmet>
@@ -149,7 +152,17 @@ const SingleVideoPage = ( props ) => {
           Selected id is: { params.videoId}
           {/* { getShowcase.localeCompare(())} */}
         </div>
-        {/* <ShowcaseLibrary /> && <Link to={`../../showcase/${item.uri}`} */}
+        <div>
+        <p>Do a search for { params.videoId}:</p>
+
+        {/* <p id="demo"></p> */}
+        </div>
+
+       {/* <div>
+          Selected id is: 
+         <ShowcaseLibrary /> && 
+        <Link to={`../../showcase/videos/${ params.videoId}`}>  
+        </div>*/}
         <SingleVideo />
       </Box>
     </>

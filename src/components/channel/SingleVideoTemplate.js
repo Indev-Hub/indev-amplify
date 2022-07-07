@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import { Link as useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
   Box,
@@ -18,6 +18,7 @@ import { Grid } from '@material-ui/core'
 import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
 import { indexOf, map } from 'lodash';
 import SingleVideoPage from 'src/pages/dashboard/SingleVideoPage';
+
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
     flexGrow: 1
@@ -96,68 +97,41 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const SingleVideo = ( props ) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
-  const [video, setVideo] = useState(null);
+  const [video, setVideo] = useState();
   const classes = useStyles();
-
-//   const videoId = useParams(); // ERR: TypeError: Object(...) is not a function
-// console.log(videoId);
-// let { id } = useParams(); 
-//   useEffect(() => {
-//     console.log(`/something/${id}`);
-//  }, []);
-
-// 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const uriVidId = urlParams.get('uriVidId');
-console.log("queryString ", queryString); 
-console.log("urlParams ", urlParams); 
-console.log("uriVidId ", uriVidId); // null
-// if uriVidId isEqual to params.videoId: ret T, else 
-console.log(" All SVT videos: ", videos); // all vids[]
-console.log("1 SVT  video: ", video); // {} info
-
-// console.log("1 SVT video.Object.uri: ", video.Object.uri); // {} info
+  const { videoId } = useParams();
 
   useEffect(() => {
     fetchVideos();
-  }, [])
-  // TODO: This component will be used as the ind'l vid through  mapping from the given Showcase item, and saved as an obj ( array match )
+  }, []);
+
   const fetchVideos = async () => {
-    try {
-     const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
-     const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
-      
-      const vids = setVideos(videoLibrary);
-
+      try {
+      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
+      const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
+        ;
+        setVideos(videoLibrary)
       console.log('videoLibrary:', videoLibrary);
-      console.log('vids:', vids);
-
-  // this works for the single static vid
-      // setVideo(videoLibrary[0]); 
-      // let index = setVideo(videoLibrary.map(({ key, value}) => ({ [key]: value })));
-      // console.library("Index: ", index);
-
     } catch (error) {
       console.log(' VW:error on fetching videos', error);
     }
-    // try {
-    // 	const videoData = await API.graphql(graphqlOperation(listShowcases));
-    // 	const videoList = videoData.data.listShowcases.items;
-    // 	console.log('video list', videoList);
-    // 	setVideos(videoList);
-    // } catch (error) {
-    // 	console.log('error on fetching videos', error);
-    // } 
-     
-    // const vidFetchResult = fetchVideos(setVideo(videoLibrary[0]));
-  // console.log("vidFetchResult: ", vidFetchResult);
   }
-//  const foundVideo = videos.find((selectedVideo) = selectedVideo === video);
-//   console.log("foundVideo: ", foundVideo);
 
-  // This works for static vids;
- const idx = 0;
+  useEffect(() => {
+    if( videos ){
+      getSingleVideo();
+    }
+  }, [videos]);
+
+  const getSingleVideo = () =>{
+    if ( videos ) {
+      const vidObj = videos;
+      const singleVid = vidObj.filter(
+        vid => vid.uri == `/videos/${videoId}`
+      )[0];
+    }
+  }
+  console.log("Single Video: ", video);
 
   // Get video duration in hours:minutes:seconds
   const formatTime = (time) => {
@@ -171,7 +145,7 @@ console.log("1 SVT  video: ", video); // {} info
     <>
       <Helmet className="videoTitle">
              
-            <title>A Cool Leaf Page</title>
+            <title>Channel Video Page</title>
             <link rel="stylesheet" href="${ROOT}/static/index.css"></link>
       </Helmet>
       <Box
@@ -190,7 +164,7 @@ console.log("1 SVT  video: ", video); // {} info
           justify="center"
           margin="auto"
         >
-          {video ? (<Paper variant="outlined" sx={{ py: 2, px: 5, m: 1 }} key={`showcase_${idx}`}>
+          {video ? (<Paper variant="outlined" sx={{ py: 2, px: 5, m: 1 }} key={`showcase_${ video }`}>
             <Grid
               container
               display="flex"

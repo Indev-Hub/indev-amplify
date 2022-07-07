@@ -20,41 +20,19 @@ import { getShowcase } from 'src/graphql/queries';
 const SingleVideoPage = ( props ) => {
   const dispatch = useDispatch();
   const params = useParams();
-  console.log("params", params); //now i can use .find to get vidArr; getting video out of array using the params: video id; using .find() out of []
-  console.log("params.videoId", params.videoId); 
- 
+  console.log("params", params);
   const { columns } = useSelector((state) => state.kanban);
   const { enqueueSnackbar } = useSnackbar();
   const [showcaseID, setShowcaseID] = useState(7868357); 
-  // const [SingleVideo, setVideoId] =  useState(""); // selected Video Id
-  // console.log("Single Video:")
-  // const [vids, setVids] = useState([]);
   const fetchVideos = async()=>{
      const videoData = await API.graphql(graphqlOperation(getShowcase, { id: showcaseID }));
     const videoLibrary = JSON.parse(videoData.data.getShowcase.videos);
     console.log("props: ", props);
  };
- // 
-   /*// let [params, videoLibrary] 
-    fetch(fetchVideos(videoLibrary)).
-    then((response)=>{
-      console.log("running api call"); 
-      return response.json();
-    }).
-    videoData.getResultsByCriteria(videoLibrary).
-    then((video)=> this.onResponseSuccess(video, index)).
-    catch(window.alert(' Oops! VW:error on fetching videos' // no error define 
-    )
-    ). 
-    finally(() => this.setState({ loadingResults: false}));// error => 
- };*/
-  // const foundVideo = fetchVideos.find((props) = props.id === params.videoId);
-  // console.log("foundVideo: ", foundVideo);
-
+ 
   useEffect(() => {
     gtm.push({ event: 'page_view' });
-    fetchVideos(); //; //this way i can use async await.
-    // Loop through the vids to get correct id; [vidLibrary.find()] using anonymous fxn to get desired video back;  this is until I find the way  to use graphQL.ShowcaseID
+    fetchVideos(); 
   }, []);
   
   useEffect(() => {
@@ -101,10 +79,6 @@ const SingleVideoPage = ( props ) => {
     }
   };
 
-
-  let text = params.videoId;
-  let result = text.match(params.videoId);
- // document.getElementById("demo").innerHTML = result;
   return (
     <>
       <Helmet>
@@ -125,7 +99,6 @@ const SingleVideoPage = ( props ) => {
             color="textPrimary"
             variant="h5"
           >
-            {/* VideoLibrary */}
           </Typography>
           <Breadcrumbs
             aria-label="breadcrumb"
@@ -140,29 +113,8 @@ const SingleVideoPage = ( props ) => {
             >
               Video Channel 
             </Link>
-            {/* <Typography
-              color="textSecondary"
-              variant="subtitle2"
-            >
-              VideoLibrary 
-            </Typography>*/}
           </Breadcrumbs>
         </Box>
-        <div>
-          Selected id is: { params.videoId}
-          {/* { getShowcase.localeCompare(())} */}
-        </div>
-        <div>
-        <p>Do a search for { params.videoId}:</p>
-
-        {/* <p id="demo"></p> */}
-        </div>
-
-       {/* <div>
-          Selected id is: 
-         <ShowcaseLibrary /> && 
-        <Link to={`../../showcase/videos/${ params.videoId}`}>  
-        </div>*/}
         <SingleVideo />
       </Box>
     </>

@@ -12,11 +12,11 @@ import {
   makeStyles,
   useTheme
 } from '@material-ui/core/styles';
-import { API, graphqlOperation, Storage } from 'aws-amplify'
-import { getShowcase } from '../../graphql/queries'
-import { Grid } from '@material-ui/core'
+import { API, graphqlOperation, Storage } from 'aws-amplify';
+import { getShowcase } from '../../graphql/queries';
+import { Grid } from '@material-ui/core';
 import { DynamicFeed, VideoLibrary } from '@material-ui/icons';
-import { indexOf, map } from 'lodash';
+import { indexOf, map, find } from 'lodash';
 import SingleVideoPage from 'src/pages/dashboard/SingleVideoPage';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
@@ -93,13 +93,14 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     maxWidth: '100%'
   }
 }));
-// 
+
 const SingleVideo = ( props ) => {
   const [showcaseID, setShowcaseID] = useState(7868357);
   const [videos, setVideos] = useState([]);
   const [video, setVideo] = useState();
   const classes = useStyles();
   const { videoId } = useParams();
+  console.log("videoId, ", video);
 
   useEffect(() => {
     fetchVideos();
@@ -129,6 +130,7 @@ const SingleVideo = ( props ) => {
       const singleVid = vidObj.filter(
         vid => vid.uri == `/videos/${videoId}`
       )[0];
+      setVideo(singleVid);
     }
   }
   console.log("Single Video: ", video);

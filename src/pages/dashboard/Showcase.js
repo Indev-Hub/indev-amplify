@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react'; // {useRef} tbd from import Canvas from scr/comp/live/Camera.js
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -22,7 +22,7 @@ import { updateShowcase } from '../../graphql/mutations';
 import wait from 'src/utils/wait';
 import { withStyles } from '@material-ui/styles';
 import QRCode from 'qrcode';
-const canvas = document.getElementById('canvas');
+// const canvas = document.getElementById('canvas'); // Works wo uiKit's embedded content if imported in public/index.html
 
 // modify accordion theme styles
 const Accordion = withStyles({

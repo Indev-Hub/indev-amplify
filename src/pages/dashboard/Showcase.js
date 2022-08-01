@@ -21,6 +21,8 @@ import { Close, Edit, Publish, Undo } from '@material-ui/icons';
 import { updateShowcase } from '../../graphql/mutations';
 import wait from 'src/utils/wait';
 import { withStyles } from '@material-ui/styles';
+import QRCode from 'qrcode';
+const canvas = document.getElementById('canvas');
 
 // modify accordion theme styles
 const Accordion = withStyles({

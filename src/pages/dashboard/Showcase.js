@@ -22,7 +22,7 @@ import { updateShowcase } from '../../graphql/mutations';
 import wait from 'src/utils/wait';
 import { withStyles } from '@material-ui/styles';
 import QRCode from 'qrcode';
-// const canvas = document.getElementById('canvas'); // Works wo uiKit's embedded content if imported in public/index.html
+const canvas = document.getElementById('canvas'); // Bundler works wo uiKit's embedded content if imported in public/index.html
 
 // modify accordion theme styles
 const Accordion = withStyles({
